@@ -7,6 +7,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Container, DashboardShell, Header, logos } from "@policyengine/ui-kit";
 
 import { IntervalPlot } from "@/components/interval-plot";
@@ -29,15 +30,22 @@ interface DashboardClientProps {
   data: DashboardSummaryData;
 }
 
+const DEFAULT_METHOD_ID: IntervalMethodId = "pooled";
+const DEFAULT_SORT_MODE = "model" as const;
+
 export function DashboardClient({ data }: DashboardClientProps) {
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
   const deferredSearch = useDeferredValue(search);
   const [selectedQuantityId, setSelectedQuantityId] = useState(
     data.quantities[0]?.quantityId ?? "",
   );
   const [selectedMethodId, setSelectedMethodId] =
-    useState<IntervalMethodId>("pooled");
-  const [sortMode, setSortMode] = useState<"model" | "pointEstimate">("model");
+    useState<IntervalMethodId>(DEFAULT_METHOD_ID);
+  const [sortMode, setSortMode] =
+    useState<"model" | "pointEstimate">(DEFAULT_SORT_MODE);
 
   /* Inspector drawer state */
   const [inspectorOpen, setInspectorOpen] = useState(false);
@@ -46,7 +54,12 @@ export function DashboardClient({ data }: DashboardClientProps) {
   );
   const [selectedRunIndex, setSelectedRunIndex] = useState<number | null>(null);
   const [runCache, setRunCache] = useState<Record<string, ModelRunPayload>>({});
+  const [copyState, setCopyState] = useState<"idle" | "copied" | "error">(
+    "idle",
+  );
   const drawerRef = useRef<HTMLDivElement>(null);
+  const hydratedFromUrlRef = useRef(false);
+  const copyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const filteredQuantities = data.quantities.filter((quantity) => {
     const haystack =
@@ -175,6 +188,93 @@ export function DashboardClient({ data }: DashboardClientProps) {
   const inspectedModelSummary = selectedQuantity?.modelSummaries.find(
     (s) => s.modelName === inspectedModelName,
   );
+
+  useEffect(() => {
+    const urlQuantityId = normalizeQuantityId(
+      searchParams.get("quantity"),
+      data,
+    );
+    const urlQuantity =
+      data.quantities.find((quantity) => quantity.quantityId === urlQuantityId) ??
+      data.quantities[0] ??
+      null;
+    const urlMethodId = normalizeMethodId(searchParams.get("method"), data);
+    const urlSortMode = normalizeSortMode(searchParams.get("sort"));
+    const urlModelName = normalizeModelName(
+      searchParams.get("model"),
+      urlQuantity,
+    );
+    const urlRunIndex = normalizeRunIndex(searchParams.get("run"));
+    const nextInspectorOpen = Boolean(
+      urlModelName &&
+        urlQuantity?.availableModels.includes(urlModelName),
+    );
+
+    startTransition(() => {
+      setSelectedQuantityId((current) =>
+        current === urlQuantityId ? current : urlQuantityId,
+      );
+      setSelectedMethodId((current) =>
+        current === urlMethodId ? current : urlMethodId,
+      );
+      setSortMode((current) =>
+        current === urlSortMode ? current : urlSortMode,
+      );
+      setInspectedModelName((current) =>
+        current === urlModelName ? current : urlModelName,
+      );
+      setSelectedRunIndex((current) =>
+        current === urlRunIndex ? current : urlRunIndex,
+      );
+      setInspectorOpen((current) =>
+        current === nextInspectorOpen ? current : nextInspectorOpen,
+      );
+    });
+
+    hydratedFromUrlRef.current = true;
+  }, [data, searchParams]);
+
+  useEffect(() => {
+    if (!hydratedFromUrlRef.current || !pathname) {
+      return;
+    }
+
+    const nextParams = buildAtlasSearchParams({
+      quantityId: selectedQuantityId,
+      methodId: selectedMethodId,
+      sortMode,
+      inspectorOpen,
+      modelName: inspectedModelName,
+      runIndex: selectedRunIndex,
+    });
+    const nextSearch = nextParams.toString();
+    const currentSearch = searchParams.toString();
+
+    if (nextSearch === currentSearch) {
+      return;
+    }
+
+    const nextUrl = nextSearch ? `${pathname}?${nextSearch}` : pathname;
+    router.replace(nextUrl, { scroll: false });
+  }, [
+    inspectedModelName,
+    inspectorOpen,
+    pathname,
+    router,
+    searchParams,
+    selectedMethodId,
+    selectedQuantityId,
+    selectedRunIndex,
+    sortMode,
+  ]);
+
+  useEffect(() => {
+    return () => {
+      if (copyTimerRef.current) {
+        clearTimeout(copyTimerRef.current);
+      }
+    };
+  }, []);
 
   if (!selectedQuantity) {
     return (
@@ -399,6 +499,63 @@ export function DashboardClient({ data }: DashboardClientProps) {
                   <option value="pointEstimate">Point estimate, low to high</option>
                 </select>
               </label>
+              <button
+                type="button"
+                onClick={() => {
+                  const nextUrl = buildShareUrl({
+                    pathname,
+                    quantityId: selectedQuantity.quantityId,
+                    methodId: selectedMethod.id,
+                    sortMode,
+                    inspectorOpen,
+                    modelName: inspectedModelName,
+                    runIndex: selectedRunIndex,
+                  });
+
+                  void navigator.clipboard
+                    .writeText(nextUrl)
+                    .then(() => {
+                      setCopyState("copied");
+                      if (copyTimerRef.current) {
+                        clearTimeout(copyTimerRef.current);
+                      }
+                      copyTimerRef.current = setTimeout(
+                        () => setCopyState("idle"),
+                        1600,
+                      );
+                    })
+                    .catch(() => {
+                      setCopyState("error");
+                      if (copyTimerRef.current) {
+                        clearTimeout(copyTimerRef.current);
+                      }
+                      copyTimerRef.current = setTimeout(
+                        () => setCopyState("idle"),
+                        1600,
+                      );
+                    });
+                }}
+                className="rounded-md border px-3 py-2 font-mono text-[11px] font-medium transition-all hover:border-[color:var(--gold)]"
+                style={{
+                  background: "var(--bg-raised)",
+                  borderColor:
+                    copyState === "copied"
+                      ? "var(--border-active)"
+                      : "var(--border)",
+                  color:
+                    copyState === "copied"
+                      ? "var(--gold)"
+                      : copyState === "error"
+                        ? "#c53030"
+                        : "var(--text-secondary)",
+                }}
+              >
+                {copyState === "copied"
+                  ? "Copied"
+                  : copyState === "error"
+                    ? "Copy failed"
+                    : "Copy link"}
+              </button>
             </div>
           </div>
           <p className="mb-5 text-xs leading-relaxed" style={{ color: "var(--text-tertiary)" }}>
@@ -924,12 +1081,126 @@ function compareModelSummariesByCenter(
   );
 }
 
+function buildAtlasSearchParams({
+  quantityId,
+  methodId,
+  sortMode,
+  inspectorOpen,
+  modelName,
+  runIndex,
+}: {
+  quantityId: string;
+  methodId: IntervalMethodId;
+  sortMode: "model" | "pointEstimate";
+  inspectorOpen: boolean;
+  modelName: string;
+  runIndex: number | null;
+}) {
+  const params = new URLSearchParams();
+
+  if (quantityId) {
+    params.set("quantity", quantityId);
+  }
+  if (methodId !== DEFAULT_METHOD_ID) {
+    params.set("method", methodId);
+  }
+  if (sortMode !== DEFAULT_SORT_MODE) {
+    params.set("sort", sortMode);
+  }
+  if (inspectorOpen && modelName) {
+    params.set("model", modelName);
+    if (runIndex !== null) {
+      params.set("run", String(runIndex));
+    }
+  }
+
+  return params;
+}
+
+function buildShareUrl({
+  pathname,
+  quantityId,
+  methodId,
+  sortMode,
+  inspectorOpen,
+  modelName,
+  runIndex,
+}: {
+  pathname: string;
+  quantityId: string;
+  methodId: IntervalMethodId;
+  sortMode: "model" | "pointEstimate";
+  inspectorOpen: boolean;
+  modelName: string;
+  runIndex: number | null;
+}) {
+  const params = buildAtlasSearchParams({
+    quantityId,
+    methodId,
+    sortMode,
+    inspectorOpen,
+    modelName,
+    runIndex,
+  });
+  const relativeUrl = params.toString() ? `${pathname}?${params}` : pathname;
+  return typeof window === "undefined"
+    ? relativeUrl
+    : new URL(relativeUrl, window.location.origin).toString();
+}
+
+function normalizeQuantityId(
+  value: string | null,
+  data: DashboardSummaryData,
+) {
+  if (
+    value &&
+    data.quantities.some((quantity) => quantity.quantityId === value)
+  ) {
+    return value;
+  }
+  return data.quantities[0]?.quantityId ?? "";
+}
+
+function normalizeMethodId(
+  value: string | null,
+  data: DashboardSummaryData,
+): IntervalMethodId {
+  if (value && data.methods.some((method) => method.id === value)) {
+    return value as IntervalMethodId;
+  }
+  return DEFAULT_METHOD_ID;
+}
+
+function normalizeSortMode(value: string | null): "model" | "pointEstimate" {
+  return value === "pointEstimate" ? "pointEstimate" : DEFAULT_SORT_MODE;
+}
+
+function normalizeModelName(
+  value: string | null,
+  quantity:
+    | DashboardSummaryData["quantities"][number]
+    | null,
+) {
+  if (
+    value &&
+    quantity?.availableModels.includes(value)
+  ) {
+    return value;
+  }
+  return quantity?.availableModels[0] ?? "";
+}
+
+function normalizeRunIndex(value: string | null) {
+  if (!value) {
+    return null;
+  }
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
+}
+
 function getQuantityNote(quantityId: string): string | null {
   if (quantityId === "labor_supply.income_elasticity.prime_age") {
     return "This quantity uses the later sign-clarified rerun. The explicit note that positive values mean people work more when they have more resources eliminated the earlier sign confusion in some models.";
-  }
-  if (quantityId === "labor_supply.policy_response.income_elasticity") {
-    return "Legacy panel entry retained for reference. This quantity has since been merged into the canonical prime-age income elasticity and was not rerun under the latest sign-clarified prompt.";
   }
   return null;
 }
