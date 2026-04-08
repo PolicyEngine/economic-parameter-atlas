@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.marshallian_wage_elasticity.prime_age",
+  "modelName": "gemini-3-flash-preview",
+  "experimentDir": "gemini-3-flash-preview-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:37:17.810Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.15,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.5
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both income and substitution effects.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature consistently finds small intensive-margin responses for prime-age workers, with income and substitution effects often largely offsetting each other. While some micro-data suggests near-zero or slightly negative elasticities (backward-bending), most modern structural and quasi-experimental estimates cluster slightly above zero.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both income and substitution effects.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.5\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature consistently finds small intensive-margin responses for prime-age workers, with income and substitution effects often largely offsetting each other. While some micro-data suggests near-zero or slightly negative elasticities (backward-bending), most modern structural and quasi-experimental estimates cluster slightly above zero.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.45
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Keane (2011)"
+      ],
+      "reasoningSummary": "Empirical evidence suggests that for prime-age workers, especially males, the intensive-margin response to wage changes is small as income and substitution effects largely cancel out. Estimates for women have historically been higher but have converged toward the lower male estimates in recent cohorts.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.45\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Keane (2011)\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence suggests that for prime-age workers, especially males, the intensive-margin response to wage changes is small as income and substitution effects largely cancel out. Estimates for women have historically been higher but have converged toward the lower male estimates in recent cohorts.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature typically finds that intensive-margin responses are small, as substitution and income effects often offset one another. While Marshallian elasticities for men are frequently estimated near zero, those for women have historically been higher, though they are converging toward the lower male estimates in recent decades.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature typically finds that intensive-margin responses are small, as substitution and income effects often offset one another. While Marshallian elasticities for men are frequently estimated near zero, those for women have historically been higher, though they are converging toward the lower male estimates in recent decades.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.15,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.5
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature on intensive-margin labor supply generally finds very small uncompensated elasticities for prime-age workers. Substitution and income effects often nearly offset one another, though most meta-analyses and structural estimates lean slightly positive but close to zero.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.5\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on intensive-margin labor supply generally finds very small uncompensated elasticities for prime-age workers. Substitution and income effects often nearly offset one another, though most meta-analyses and structural estimates lean slightly positive but close to zero.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.5
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical evidence generally suggests that for prime-age workers (particularly men), the intensive margin uncompensated elasticity is small and often close to zero, as substitution and income effects frequently offset one another. While some estimates for women have historically been higher, the trend has moved toward lower values, centering the distribution near 0.1.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.5\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence generally suggests that for prime-age workers (particularly men), the intensive margin uncompensated elasticity is small and often close to zero, as substitution and income effects frequently offset one another. While some estimates for women have historically been higher, the trend has moved toward lower values, centering the distribution near 0.1.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects but excluding participation decisions.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature on the intensive margin for prime-age workers generally finds very small uncompensated elasticities. The positive substitution effect is often largely offset by the negative income effect, particularly for men. While some estimates for women are historically higher, the aggregate prime-age intensive-margin response is concentrated near zero, with a slight positive skew.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects but excluding participation decisions.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on the intensive margin for prime-age workers generally finds very small uncompensated elasticities. The positive substitution effect is often largely offset by the negative income effect, particularly for men. While some estimates for women are historically higher, the aggregate prime-age intensive-margin response is concentrated near zero, with a slight positive skew.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.15,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.5
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including substitution and income effects.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature on the intensive margin for prime-age workers (especially men) typically finds small positive elasticities, though the income effect frequently offsets the substitution effect, leading to results near zero or slightly negative in some specifications. Meta-analyses and structural models suggest values are generally less than 0.5.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including substitution and income effects.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.5\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on the intensive margin for prime-age workers (especially men) typically finds small positive elasticities, though the income effect frequently offsets the substitution effect, leading to results near zero or slightly negative in some specifications. Meta-analyses and structural models suggest values are generally less than 0.5.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.5
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature on intensive-margin responses for prime-age workers consistently finds small values. Income and substitution effects often partially offset each other, leading to a point estimate close to zero, though typically slightly positive. The distribution allows for backward-bending labor supply (negative values) at the low end and modest responsiveness at the high end.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.5\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on intensive-margin responses for prime-age workers consistently finds small values. Income and substitution effects often partially offset each other, leading to a point estimate close to zero, though typically slightly positive. The distribution allows for backward-bending labor supply (negative values) at the low end and modest responsiveness at the high end.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.5
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature on the intensive margin generally finds small positive values, suggesting the substitution effect slightly outweighs the income effect for the average worker. Estimates for men are often near zero, while estimates for women have historically been higher but have converged toward the lower male estimates in recent decades.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.5\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on the intensive margin generally finds small positive values, suggesting the substitution effect slightly outweighs the income effect for the average worker. Estimates for men are often near zero, while estimates for women have historically been higher but have converged toward the lower male estimates in recent decades.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.45
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature on the intensive margin generally finds very small uncompensated elasticities for prime-age men and increasingly smaller values for women. The substitution effect is typically small and often partially offset by the income effect, leading to a point estimate near zero or slightly positive.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.45\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on the intensive margin generally finds very small uncompensated elasticities for prime-age men and increasingly smaller values for women. The substitution effect is typically small and often partially offset by the income effect, leading to a point estimate near zero or slightly positive.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.05,
+      "lowerBound": -0.1,
+      "upperBound": 0.3,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.05,
+        "p75": 0.15,
+        "p95": 0.3
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, representing the total percent change in hours worked for a 1 percent change in net-of-tax wage, incorporating both income and substitution effects.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature typically find that for prime-age workers already in the labor force, the income and substitution effects largely offset each other. While the substitution effect is positive, the negative income effect often results in a near-zero or slightly positive uncompensated elasticity at the intensive margin.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, representing the total percent change in hours worked for a 1 percent change in net-of-tax wage, incorporating both income and substitution effects.\",\n  \"point_estimate\": 0.05,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.05,\n    \"p75\": 0.15,\n    \"p95\": 0.3\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature typically find that for prime-age workers already in the labor force, the income and substitution effects largely offset each other. While the substitution effect is positive, the negative income effect often results in a near-zero or slightly positive uncompensated elasticity at the intensive margin.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.15,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.45
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.",
+      "citations": [
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)",
+        "Keane (2011)"
+      ],
+      "reasoningSummary": "Empirical evidence suggests that for prime-age workers (particularly men), the intensive-margin response to wage changes is small. The substitution and income effects often largely offset each other, leading to a point estimate near zero or slightly positive. Women's intensive-margin elasticity has historically been higher but has converged toward the lower male estimates in recent decades.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.45\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\",\n    \"Keane (2011)\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence suggests that for prime-age workers (particularly men), the intensive-margin response to wage changes is small. The substitution and income effects often largely offset each other, leading to a point estimate near zero or slightly positive. Women's intensive-margin elasticity has historically been higher but has converged toward the lower male estimates in recent decades.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.45
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical literature on the intensive margin for prime-age workers, particularly men, consistently finds small positive or near-zero uncompensated elasticities. This reflects the offsetting nature of substitution and income effects and the presence of institutional constraints on hours flexibility.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.45\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on the intensive margin for prime-age workers, particularly men, consistently finds small positive or near-zero uncompensated elasticities. This reflects the offsetting nature of substitution and income effects and the presence of institutional constraints on hours flexibility.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.25,
+        "p95": 0.45
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Keane (2011)"
+      ],
+      "reasoningSummary": "Empirical literature on intensive-margin labor supply generally finds very small uncompensated elasticities for prime-age workers, often close to zero or slightly positive. This reflects a near-cancellation of substitution and income effects. While some structural models suggest higher values, micro-econometric estimates using panel data typically cluster in the 0.0 to 0.2 range.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age US workers already in the labor force.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.25,\n    \"p95\": 0.45\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Keane (2011)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on intensive-margin labor supply generally finds very small uncompensated elasticities for prime-age workers, often close to zero or slightly positive. This reflects a near-cancellation of substitution and income effects. While some structural models suggest higher values, micro-econometric estimates using panel data typically cluster in the 0.0 to 0.2 range.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": -0.1,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.1,
+        "p25": 0,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects but excluding participation decisions.",
+      "citations": [
+        "MaCurdy (1981)",
+        "Blundell and MaCurdy (1999)",
+        "Chetty (2012)"
+      ],
+      "reasoningSummary": "Empirical evidence generally finds that for prime-age workers (particularly men), the intensive margin uncompensated elasticity is small and often near zero, as the positive substitution effect is largely offset by the negative income effect. Estimates for women have historically been higher but have converged toward the lower male estimates in recent decades.",
+      "rawResponse": "{\n  \"interpretation\": \"Intensive-margin uncompensated annual-hours elasticity for prime-age workers in the United States, including both substitution and income effects but excluding participation decisions.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": -0.1,\n    \"p25\": 0.0,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"MaCurdy (1981)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Chetty (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence generally finds that for prime-age workers (particularly men), the intensive margin uncompensated elasticity is small and often near zero, as the positive substitution effect is largely offset by the negative income effect. Estimates for women have historically been higher but have converged toward the lower male estimates in recent decades.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Uncompensated wage elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, allowing both substitution and income effects and excluding participation responses.\n- Target interpretation: Intensive-margin uncompensated annual-hours elasticity\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

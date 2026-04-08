@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.policy_response.substitution_elasticity.all",
+  "modelName": "claude-opus-4.6",
+  "experimentDir": "claude-opus-4.6-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T05:18:08.834Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.8
+      },
+      "interpretation": "Global labor-supply substitution elasticity parameter used as a uniform override in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/OSPC), representing the percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "Chetty et al. (2011) - meta-analysis of Hicksian labor supply elasticities, central estimate ~0.3-0.5",
+        "Congressional Budget Office (CBO) labor supply elasticity assumptions for tax modeling (~0.25-0.5)",
+        "PSL Tax-Calculator behavioral response parameters documentation (substitution elasticity default around 0.4)"
+      ],
+      "reasoningSummary": "U.S. microsimulation models like Tax-Calculator (Policy Simulation Library / OSPC) typically set a global substitution elasticity of labor supply in the range of 0.2–0.5. The Chetty et al. (2011) meta-analysis and CBO assumptions anchor estimates around 0.25–0.5 for the compensated (substitution) elasticity. The default in Tax-Calculator's behavioral responses module is commonly cited around 0.4. My uncertainty spans from 0.1 (if the modeler chose a conservative estimate) to 0.8 (an upper-bound reflecting extensive-margin-inclusive estimates), with a median of 0.4.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity parameter used as a uniform override in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/OSPC), representing the percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.8}, \"citations\": [\"Chetty et al. (2011) - meta-analysis of Hicksian labor supply elasticities, central estimate ~0.3-0.5\", \"Congressional Budget Office (CBO) labor supply elasticity assumptions for tax modeling (~0.25-0.5)\", \"PSL Tax-Calculator behavioral response parameters documentation (substitution elasticity default around 0.4)\"], \"reasoning_summary\": \"U.S. microsimulation models like Tax-Calculator (Policy Simulation Library / OSPC) typically set a global substitution elasticity of labor supply in the range of 0.2\\u20130.5. The Chetty et al. (2011) meta-analysis and CBO assumptions anchor estimates around 0.25\\u20130.5 for the compensated (substitution) elasticity. The default in Tax-Calculator's behavioral responses module is commonly cited around 0.4. My uncertainty spans from 0.1 (if the modeler chose a conservative estimate) to 0.8 (an upper-bound reflecting extensive-margin-inclusive estimates), with a median of 0.4.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.2,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Global labor-supply substitution elasticity parameter (uniform override) used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "Chetty et al. (2011) meta-analysis of Hicksian labor supply elasticities",
+        "Congressional Budget Office labor supply elasticity assumptions for tax modeling",
+        "Tax-Calculator / OSPC default parameter documentation"
+      ],
+      "reasoningSummary": "U.S. microsimulation models (e.g., Tax-Calculator, CBO's tax model) typically use a compensated (substitution) labor supply elasticity in the range of 0.15–0.40. The Chetty et al. (2011) meta-analysis places the Hicksian elasticity around 0.25–0.33. CBO has historically used values around 0.25 for the overall population. A uniform global override in such a model would likely default to something near 0.25, balancing lower estimates for prime-age men (~0.1–0.2) with higher estimates for secondary earners. My median estimate is 0.25 with moderate uncertainty spanning roughly 0.1 to 0.5.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity parameter (uniform override) used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.2, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty et al. (2011) meta-analysis of Hicksian labor supply elasticities\", \"Congressional Budget Office labor supply elasticity assumptions for tax modeling\", \"Tax-Calculator / OSPC default parameter documentation\"], \"reasoning_summary\": \"U.S. microsimulation models (e.g., Tax-Calculator, CBO's tax model) typically use a compensated (substitution) labor supply elasticity in the range of 0.15\\u20130.40. The Chetty et al. (2011) meta-analysis places the Hicksian elasticity around 0.25\\u20130.33. CBO has historically used values around 0.25 for the overall population. A uniform global override in such a model would likely default to something near 0.25, balancing lower estimates for prime-age men (~0.1\\u20130.2) with higher estimates for secondary earners. My median estimate is 0.25 with moderate uncertainty spanning roughly 0.1 to 0.5.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.6,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.6
+      },
+      "interpretation": "Global substitution elasticity of labor supply used as a uniform override in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "Chetty et al. (2011) - meta-analysis of Hicksian labor supply elasticities, central estimate ~0.25-0.33",
+        "CBO labor supply elasticity assumptions used in tax scoring (~0.25 substitution elasticity)",
+        "Tax-Calculator / OSPC default parameterization discussions referencing substitution elasticity around 0.25"
+      ],
+      "reasoningSummary": "U.S. microsimulation models like Tax-Calculator (OSPC/PSL) typically set a global substitution elasticity of labor supply in the range of 0.2–0.4. The Chetty et al. (2011) meta-analysis of Hicksian elasticities suggests a central value around 0.25–0.33 for the overall population. CBO and other policy-scoring bodies use similar values. A default of 0.25 is a common choice for a uniform parameter across all adults, balancing the low elasticities found for prime-age men with higher elasticities for secondary earners and women. My uncertainty spans from near-zero (if the model intentionally dampens behavioral response) to around 0.6 (if calibrated to capture extensive-margin responses as well).",
+      "rawResponse": "{\"interpretation\": \"Global substitution elasticity of labor supply used as a uniform override in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.4, \"p95\": 0.6}, \"citations\": [\"Chetty et al. (2011) - meta-analysis of Hicksian labor supply elasticities, central estimate ~0.25-0.33\", \"CBO labor supply elasticity assumptions used in tax scoring (~0.25 substitution elasticity)\", \"Tax-Calculator / OSPC default parameterization discussions referencing substitution elasticity around 0.25\"], \"reasoning_summary\": \"U.S. microsimulation models like Tax-Calculator (OSPC/PSL) typically set a global substitution elasticity of labor supply in the range of 0.2\\u20130.4. The Chetty et al. (2011) meta-analysis of Hicksian elasticities suggests a central value around 0.25\\u20130.33 for the overall population. CBO and other policy-scoring bodies use similar values. A default of 0.25 is a common choice for a uniform parameter across all adults, balancing the low elasticities found for prime-age men with higher elasticities for secondary earners and women. My uncertainty spans from near-zero (if the model intentionally dampens behavioral response) to around 0.6 (if calibrated to capture extensive-margin responses as well).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.8
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the uniform percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "Chetty et al. (2011) - Meta-analysis of Hicksian labor supply elasticities, central estimate ~0.33 on the intensive margin",
+        "Congressional Budget Office (CBO) - substitution elasticity of labor supply used in scoring, typically in range 0.25-0.5",
+        "Tax-Calculator / OSPC default parameterization - substitution elasticity parameter often defaulting near 0.4"
+      ],
+      "reasoningSummary": "U.S. microsimulation models like Tax-Calculator (OSPC/PSL) typically parameterize a global substitution elasticity of labor supply that reflects compensated (Hicksian) wage responses. The empirical literature on intensive-margin Hicksian elasticities clusters around 0.25–0.5, with CBO and similar policy models often using values in this range. A default of 0.4 is a common central choice. Uncertainty spans from quite low values (~0.1, reflecting skepticism about behavioral responses) to higher values (~0.8) that incorporate extensive-margin responses or secondary earners.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the uniform percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.8}, \"citations\": [\"Chetty et al. (2011) - Meta-analysis of Hicksian labor supply elasticities, central estimate ~0.33 on the intensive margin\", \"Congressional Budget Office (CBO) - substitution elasticity of labor supply used in scoring, typically in range 0.25-0.5\", \"Tax-Calculator / OSPC default parameterization - substitution elasticity parameter often defaulting near 0.4\"], \"reasoning_summary\": \"U.S. microsimulation models like Tax-Calculator (OSPC/PSL) typically parameterize a global substitution elasticity of labor supply that reflects compensated (Hicksian) wage responses. The empirical literature on intensive-margin Hicksian elasticities clusters around 0.25\\u20130.5, with CBO and similar policy models often using values in this range. A default of 0.4 is a common central choice. Uncertainty spans from quite low values (~0.1, reflecting skepticism about behavioral responses) to higher values (~0.8) that incorporate extensive-margin responses or secondary earners.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.8
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage, applied uniformly across individuals.",
+      "citations": [
+        "Chetty et al. (2011) - Meta-analysis of Hicksian labor supply elasticities, central estimate ~0.33 on the intensive margin",
+        "Congressional Budget Office (CBO) labor supply elasticity assumptions used in tax scoring, typically 0.25-0.5",
+        "Tax-Policy-Center / TAXSIM default substitution elasticity parameters, often set around 0.3-0.4"
+      ],
+      "reasoningSummary": "U.S. microsimulation models (e.g., CBO, Tax Policy Center, TAXSIM-style models) typically use a compensated (substitution) labor supply elasticity in the range of 0.25 to 0.5 as a default uniform parameter. The meta-analytic literature (Chetty 2012, Keane 2011) suggests Hicksian elasticities around 0.3-0.4 for the broad adult population, combining intensive and some extensive margin responses. A uniform override in a simulation model would likely be set at a moderate consensus value. I center my belief at 0.4, with most of the probability mass between 0.25 and 0.5, allowing for some chance the modeler chose a lower (~0.1) or higher (~0.8) value.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage, applied uniformly across individuals.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.8}, \"citations\": [\"Chetty et al. (2011) - Meta-analysis of Hicksian labor supply elasticities, central estimate ~0.33 on the intensive margin\", \"Congressional Budget Office (CBO) labor supply elasticity assumptions used in tax scoring, typically 0.25-0.5\", \"Tax-Policy-Center / TAXSIM default substitution elasticity parameters, often set around 0.3-0.4\"], \"reasoning_summary\": \"U.S. microsimulation models (e.g., CBO, Tax Policy Center, TAXSIM-style models) typically use a compensated (substitution) labor supply elasticity in the range of 0.25 to 0.5 as a default uniform parameter. The meta-analytic literature (Chetty 2012, Keane 2011) suggests Hicksian elasticities around 0.3-0.4 for the broad adult population, combining intensive and some extensive margin responses. A uniform override in a simulation model would likely be set at a moderate consensus value. I center my belief at 0.4, with most of the probability mass between 0.25 and 0.5, allowing for some chance the modeler chose a lower (~0.1) or higher (~0.8) value.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.8
+      },
+      "interpretation": "Global substitution elasticity of labor supply with respect to the effective marginal wage, as a uniform override parameter in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/OSPC-style models).",
+      "citations": [
+        "Chetty et al. (2011) meta-analysis of Hicksian labor supply elasticities",
+        "CBO labor supply elasticity assumptions for tax modeling (~0.25-0.5)",
+        "Tax-Calculator / OSPC default behavioral response parameters documentation"
+      ],
+      "reasoningSummary": "U.S. microsimulation models (e.g., Tax-Calculator from the Open Source Policy Center) typically parameterize a substitution elasticity of labor supply in the range of 0.2 to 0.5. The Chetty et al. (2011) meta-analysis suggests Hicksian elasticities around 0.3-0.5 for the broad population, with CBO using similar ranges. A default value around 0.4 is commonly used as a uniform global override. The distribution reflects uncertainty: values below 0.15 or above 0.7 are unlikely but possible depending on the specific model calibration and population weighting.",
+      "rawResponse": "{\"interpretation\": \"Global substitution elasticity of labor supply with respect to the effective marginal wage, as a uniform override parameter in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/OSPC-style models).\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.8}, \"citations\": [\"Chetty et al. (2011) meta-analysis of Hicksian labor supply elasticities\", \"CBO labor supply elasticity assumptions for tax modeling (~0.25-0.5)\", \"Tax-Calculator / OSPC default behavioral response parameters documentation\"], \"reasoning_summary\": \"U.S. microsimulation models (e.g., Tax-Calculator from the Open Source Policy Center) typically parameterize a substitution elasticity of labor supply in the range of 0.2 to 0.5. The Chetty et al. (2011) meta-analysis suggests Hicksian elasticities around 0.3-0.5 for the broad population, with CBO using similar ranges. A default value around 0.4 is commonly used as a uniform global override. The distribution reflects uncertainty: values below 0.15 or above 0.7 are unlikely but possible depending on the specific model calibration and population weighting.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.7
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "Chetty et al. (2011) - Meta-analysis of Hicksian elasticities of labor supply around 0.3-0.5",
+        "Congressional Budget Office (CBO) labor supply elasticity assumptions used in tax modeling (~0.25-0.5)",
+        "Tax-Calculator / OSPC default substitution elasticity parameter (often set near 0.4)"
+      ],
+      "reasoningSummary": "U.S. microsimulation models like Tax-Calculator (used by the Open Source Policy Center / Policy Simulation Library) typically set a global substitution elasticity for labor supply in the range of 0.2 to 0.5. The empirical literature on compensated (Hicksian) labor supply elasticities centers around 0.3-0.5 for the general adult population, with CBO and similar agencies using values in that range. A uniform override for all adults would likely be set near 0.4, balancing somewhat lower estimates for prime-age men (~0.1-0.3) with higher estimates for secondary earners and women (~0.5-0.7). The default in Tax-Calculator's behavioral response module is 0.4, which serves as my central estimate.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.7}, \"citations\": [\"Chetty et al. (2011) - Meta-analysis of Hicksian elasticities of labor supply around 0.3-0.5\", \"Congressional Budget Office (CBO) labor supply elasticity assumptions used in tax modeling (~0.25-0.5)\", \"Tax-Calculator / OSPC default substitution elasticity parameter (often set near 0.4)\"], \"reasoning_summary\": \"U.S. microsimulation models like Tax-Calculator (used by the Open Source Policy Center / Policy Simulation Library) typically set a global substitution elasticity for labor supply in the range of 0.2 to 0.5. The empirical literature on compensated (Hicksian) labor supply elasticities centers around 0.3-0.5 for the general adult population, with CBO and similar agencies using values in that range. A uniform override for all adults would likely be set near 0.4, balancing somewhat lower estimates for prime-age men (~0.1-0.3) with higher estimates for secondary earners and women (~0.5-0.7). The default in Tax-Calculator's behavioral response module is 0.4, which serves as my central estimate.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.2,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.5
+      },
+      "interpretation": "Global substitution elasticity of labor supply used as a uniform override in a U.S. tax-benefit microsimulation model, representing the percent change in labor supply per percent change in the effective marginal wage.",
+      "citations": [
+        "CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - central substitution elasticity around 0.25",
+        "Chetty et al. (2012) meta-analysis of Hicksian labor supply elasticities, central estimate ~0.25-0.33",
+        "Tax-Calculator / OSPC default parameterization discussions referencing substitution elasticity in range 0.2-0.4"
+      ],
+      "reasoningSummary": "U.S. microsimulation models such as the Tax-Calculator (OSPC/PSL) typically set a global substitution elasticity of labor supply in the range of 0.2 to 0.4. The CBO's 2012 report centers on about 0.25 for the compensated (substitution) elasticity. Chetty et al.'s meta-analysis supports a similar range. A value of 0.25 is the most commonly cited default for a uniform override in such models. Uncertainty spans roughly 0.1 to 0.5, reflecting debate about extensive vs. intensive margins and population heterogeneity.",
+      "rawResponse": "{\"interpretation\": \"Global substitution elasticity of labor supply used as a uniform override in a U.S. tax-benefit microsimulation model, representing the percent change in labor supply per percent change in the effective marginal wage.\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.2, \"p50\": 0.25, \"p75\": 0.4, \"p95\": 0.5}, \"citations\": [\"CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - central substitution elasticity around 0.25\", \"Chetty et al. (2012) meta-analysis of Hicksian labor supply elasticities, central estimate ~0.25-0.33\", \"Tax-Calculator / OSPC default parameterization discussions referencing substitution elasticity in range 0.2-0.4\"], \"reasoning_summary\": \"U.S. microsimulation models such as the Tax-Calculator (OSPC/PSL) typically set a global substitution elasticity of labor supply in the range of 0.2 to 0.4. The CBO's 2012 report centers on about 0.25 for the compensated (substitution) elasticity. Chetty et al.'s meta-analysis supports a similar range. A value of 0.25 is the most commonly cited default for a uniform override in such models. Uncertainty spans roughly 0.1 to 0.5, reflecting debate about extensive vs. intensive margins and population heterogeneity.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.8
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - discusses substitution elasticities around 0.25-0.5",
+        "Chetty et al. (2011) 'Adjustment Costs, Firm Responses, and Micro vs. Macro Labor Supply Elasticities' - Hicksian elasticity estimates around 0.3-0.5",
+        "Tax-Calculator / OSPC microsimulation default parameters - substitution elasticity typically set around 0.4"
+      ],
+      "reasoningSummary": "U.S. tax-benefit microsimulation models (e.g., Tax-Calculator from the Open Source Policy Center / Policy Simulation Library) typically use a uniform substitution elasticity of labor supply in the range of 0.25 to 0.5. The default value in Tax-Calculator is 0.4, which aligns with the middle of the empirical literature on compensated (Hicksian) labor supply elasticities. CBO and academic estimates generally place this parameter between 0.2 and 0.5 for the general adult population, with higher values for secondary earners. A uniform global override in such a model most likely defaults to or is set near 0.4.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.8}, \"citations\": [\"CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - discusses substitution elasticities around 0.25-0.5\", \"Chetty et al. (2011) 'Adjustment Costs, Firm Responses, and Micro vs. Macro Labor Supply Elasticities' - Hicksian elasticity estimates around 0.3-0.5\", \"Tax-Calculator / OSPC microsimulation default parameters - substitution elasticity typically set around 0.4\"], \"reasoning_summary\": \"U.S. tax-benefit microsimulation models (e.g., Tax-Calculator from the Open Source Policy Center / Policy Simulation Library) typically use a uniform substitution elasticity of labor supply in the range of 0.25 to 0.5. The default value in Tax-Calculator is 0.4, which aligns with the middle of the empirical literature on compensated (Hicksian) labor supply elasticities. CBO and academic estimates generally place this parameter between 0.2 and 0.5 for the general adult population, with higher values for secondary earners. A uniform global override in such a model most likely defaults to or is set near 0.4.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.2,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Global labor-supply substitution elasticity parameter used as a uniform override in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/OSPC-style), representing the percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "Chetty et al. (2011) - Meta-analysis of Hicksian labor supply elasticities, central estimate ~0.25-0.33",
+        "Congressional Budget Office (2012) - Effective marginal tax rate and labor supply parameters used in CBO modeling, substitution elasticity ~0.25",
+        "PSL Tax-Calculator behavioral response documentation - default substitution elasticity parameter around 0.25"
+      ],
+      "reasoningSummary": "U.S. microsimulation models like the PSL Tax-Calculator typically default to a substitution elasticity of about 0.25 for the labor supply response to changes in the net-of-tax wage rate. This aligns with the Chetty et al. meta-analysis finding Hicksian elasticities centered around 0.25-0.33, and with CBO's modeling assumptions. The parameter is typically modest because extensive-margin responses are handled separately in many models, and this captures the intensive-margin substitution effect. Values below 0.1 would be unusually low for a combined parameter, while values above 0.5 would exceed most mainstream estimates for a uniform population-wide elasticity.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity parameter used as a uniform override in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/OSPC-style), representing the percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.2, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty et al. (2011) - Meta-analysis of Hicksian labor supply elasticities, central estimate ~0.25-0.33\", \"Congressional Budget Office (2012) - Effective marginal tax rate and labor supply parameters used in CBO modeling, substitution elasticity ~0.25\", \"PSL Tax-Calculator behavioral response documentation - default substitution elasticity parameter around 0.25\"], \"reasoning_summary\": \"U.S. microsimulation models like the PSL Tax-Calculator typically default to a substitution elasticity of about 0.25 for the labor supply response to changes in the net-of-tax wage rate. This aligns with the Chetty et al. meta-analysis finding Hicksian elasticities centered around 0.25-0.33, and with CBO's modeling assumptions. The parameter is typically modest because extensive-margin responses are handled separately in many models, and this captures the intensive-margin substitution effect. Values below 0.1 would be unusually low for a combined parameter, while values above 0.5 would exceed most mainstream estimates for a uniform population-wide elasticity.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.7
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage, applied uniformly across individuals.",
+      "citations": [
+        "CBO (Congressional Budget Office) labor supply elasticity assumptions used in tax modeling",
+        "Chetty et al. (2011) meta-analysis of Hicksian labor supply elasticities",
+        "Tax-Calculator / OSPC default substitution elasticity parameter documentation"
+      ],
+      "reasoningSummary": "U.S. tax-benefit microsimulation models (e.g., Tax-Calculator from the open-source Policy Simulation Library / OSPC) typically set a default global substitution elasticity for labor supply in the range of 0.3–0.5. The CBO uses a compensated (substitution) elasticity around 0.25–0.5 depending on demographic group. Chetty et al. (2011) suggest a Hicksian elasticity around 0.3–0.5 after accounting for optimization frictions. A uniform override parameter in such a model is most likely set at a moderate consensus value near 0.4. Uncertainty spans from ~0.1 (very inelastic assumption) to ~0.7 (more responsive assumption sometimes used for secondary earners or broader behavioral responses).",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage, applied uniformly across individuals.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.7}, \"citations\": [\"CBO (Congressional Budget Office) labor supply elasticity assumptions used in tax modeling\", \"Chetty et al. (2011) meta-analysis of Hicksian labor supply elasticities\", \"Tax-Calculator / OSPC default substitution elasticity parameter documentation\"], \"reasoning_summary\": \"U.S. tax-benefit microsimulation models (e.g., Tax-Calculator from the open-source Policy Simulation Library / OSPC) typically set a default global substitution elasticity for labor supply in the range of 0.3\\u20130.5. The CBO uses a compensated (substitution) elasticity around 0.25\\u20130.5 depending on demographic group. Chetty et al. (2011) suggest a Hicksian elasticity around 0.3\\u20130.5 after accounting for optimization frictions. A uniform override parameter in such a model is most likely set at a moderate consensus value near 0.4. Uncertainty spans from ~0.1 (very inelastic assumption) to ~0.7 (more responsive assumption sometimes used for secondary earners or broader behavioral responses).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.7
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percent change in labor supply per percent change in the effective marginal wage.",
+      "citations": [
+        "CBO labor supply elasticity assumptions (various reports)",
+        "Chetty et al. (2011) 'Are Micro and Macro Labor Supply Elasticities Consistent?'",
+        "Tax-Calculator / OSPC default parameterization documentation"
+      ],
+      "reasoningSummary": "U.S. microsimulation models (e.g., Tax-Calculator, CBO's models) typically use a compensated/substitution elasticity of labor supply in the range of 0.2–0.5 for a uniform global parameter. The CBO has historically used values around 0.25–0.4 for the substitution elasticity. Chetty et al. (2011) reconcile micro estimates (~0.3 Hicksian) with macro evidence. A default global override in a simulation context is likely near 0.4, balancing primary-earner estimates (~0.2–0.3) and secondary-earner estimates (~0.5–0.7). My median estimate is 0.4, with moderate uncertainty spanning 0.1 to 0.7 across the 5th–95th percentile range.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percent change in labor supply per percent change in the effective marginal wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.7}, \"citations\": [\"CBO labor supply elasticity assumptions (various reports)\", \"Chetty et al. (2011) 'Are Micro and Macro Labor Supply Elasticities Consistent?'\", \"Tax-Calculator / OSPC default parameterization documentation\"], \"reasoning_summary\": \"U.S. microsimulation models (e.g., Tax-Calculator, CBO's models) typically use a compensated/substitution elasticity of labor supply in the range of 0.2\\u20130.5 for a uniform global parameter. The CBO has historically used values around 0.25\\u20130.4 for the substitution elasticity. Chetty et al. (2011) reconcile micro estimates (~0.3 Hicksian) with macro evidence. A default global override in a simulation context is likely near 0.4, balancing primary-earner estimates (~0.2\\u20130.3) and secondary-earner estimates (~0.5\\u20130.7). My median estimate is 0.4, with moderate uncertainty spanning 0.1 to 0.7 across the 5th\\u201395th percentile range.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.7
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percent change in labor supply per percent change in the effective marginal wage.",
+      "citations": [
+        "Chetty et al. (2011) - Bounds on Elasticities with Optimization Frictions, finding Hicksian elasticities around 0.33 on the extensive margin",
+        "CBO (2012) - How the Supply of Labor Responds to Changes in Fiscal Policy, substitution elasticity central estimate ~0.25-0.4",
+        "Tax-Calculator / OSPC default parameterization discussions referencing substitution elasticity near 0.4"
+      ],
+      "reasoningSummary": "U.S. microsimulation models (e.g., Tax-Calculator from the Open Source Policy Center) typically use a global substitution elasticity of labor supply in the range of 0.2 to 0.5. The CBO has used central estimates around 0.25-0.4 for the compensated (substitution) wage elasticity. Chetty et al. suggest Hicksian elasticities around 0.3-0.5 when accounting for frictions. A uniform default around 0.4 is a common choice in such models, balancing extensive and intensive margin responses across the adult population. My median estimate is 0.4, with moderate uncertainty reflecting the range of plausible calibrations.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percent change in labor supply per percent change in the effective marginal wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.7}, \"citations\": [\"Chetty et al. (2011) - Bounds on Elasticities with Optimization Frictions, finding Hicksian elasticities around 0.33 on the extensive margin\", \"CBO (2012) - How the Supply of Labor Responds to Changes in Fiscal Policy, substitution elasticity central estimate ~0.25-0.4\", \"Tax-Calculator / OSPC default parameterization discussions referencing substitution elasticity near 0.4\"], \"reasoning_summary\": \"U.S. microsimulation models (e.g., Tax-Calculator from the Open Source Policy Center) typically use a global substitution elasticity of labor supply in the range of 0.2 to 0.5. The CBO has used central estimates around 0.25-0.4 for the compensated (substitution) wage elasticity. Chetty et al. suggest Hicksian elasticities around 0.3-0.5 when accounting for frictions. A uniform default around 0.4 is a common choice in such models, balancing extensive and intensive margin responses across the adult population. My median estimate is 0.4, with moderate uncertainty reflecting the range of plausible calibrations.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.7
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.",
+      "citations": [
+        "CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - central substitution elasticity around 0.25-0.5",
+        "Chetty et al. (2012) meta-analysis of Hicksian labor supply elasticities, central estimate ~0.33 on extensive+intensive margin",
+        "Tax-Calculator / OSPC default parameterization using substitution elasticity in the range 0.3-0.4"
+      ],
+      "reasoningSummary": "U.S. tax-benefit microsimulation models (e.g., Tax-Calculator/OSPC) typically set a global substitution elasticity of labor supply in the range of 0.3 to 0.4. The empirical literature (Chetty et al. 2012 meta-analysis, CBO reports) places Hicksian/compensated elasticities for the broad adult population around 0.25-0.5, combining intensive and extensive margins. A default value of 0.4 is a common choice in such models. Uncertainty spans from about 0.1 (if only intensive margin or prime-age males dominate) to 0.7 (if extensive margin responses for secondary earners are weighted heavily).",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model, representing the percentage change in labor supply per 1 percent change in the effective marginal wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.7}, \"citations\": [\"CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - central substitution elasticity around 0.25-0.5\", \"Chetty et al. (2012) meta-analysis of Hicksian labor supply elasticities, central estimate ~0.33 on extensive+intensive margin\", \"Tax-Calculator / OSPC default parameterization using substitution elasticity in the range 0.3-0.4\"], \"reasoning_summary\": \"U.S. tax-benefit microsimulation models (e.g., Tax-Calculator/OSPC) typically set a global substitution elasticity of labor supply in the range of 0.3 to 0.4. The empirical literature (Chetty et al. 2012 meta-analysis, CBO reports) places Hicksian/compensated elasticities for the broad adult population around 0.25-0.5, combining intensive and extensive margins. A default value of 0.4 is a common choice in such models. Uncertainty spans from about 0.1 (if only intensive margin or prime-age males dominate) to 0.7 (if extensive margin responses for secondary earners are weighted heavily).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.5,
+        "p95": 0.8
+      },
+      "interpretation": "Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/TAXSIM-style), representing the uniform percentage change in labor supply per 1% change in the effective marginal net-of-tax wage.",
+      "citations": [
+        "CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - central substitution elasticity around 0.25-0.5",
+        "Chetty et al. (2012) meta-analysis of Hicksian elasticities, central estimate ~0.33 on intensive margin",
+        "PSL Tax-Calculator default behavioral parameters documentation (substitution elasticity parameter sub_effect ~0.4)"
+      ],
+      "reasoningSummary": "U.S. microsimulation models (such as the PSL Tax-Calculator) typically set a global substitution elasticity of labor supply in the range of 0.2–0.5. The CBO and academic meta-analyses (e.g., Chetty et al. 2012) suggest Hicksian/compensated elasticities on the intensive margin around 0.25–0.5 for the general adult population. A common default in policy simulation tools is around 0.4, balancing evidence for prime-age males (lower, ~0.1–0.3) and secondary earners/women (higher, ~0.5–1.0). Uncertainty spans from very low values (~0.1) if one weights toward prime-age male evidence, to higher values (~0.8) if one incorporates extensive-margin responses or secondary-earner behavior.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply substitution elasticity override used in a U.S. tax-benefit microsimulation model (e.g., Tax-Calculator/TAXSIM-style), representing the uniform percentage change in labor supply per 1% change in the effective marginal net-of-tax wage.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.5, \"p95\": 0.8}, \"citations\": [\"CBO (2012) 'How the Supply of Labor Responds to Changes in Fiscal Policy' - central substitution elasticity around 0.25-0.5\", \"Chetty et al. (2012) meta-analysis of Hicksian elasticities, central estimate ~0.33 on intensive margin\", \"PSL Tax-Calculator default behavioral parameters documentation (substitution elasticity parameter sub_effect ~0.4)\"], \"reasoning_summary\": \"U.S. microsimulation models (such as the PSL Tax-Calculator) typically set a global substitution elasticity of labor supply in the range of 0.2\\u20130.5. The CBO and academic meta-analyses (e.g., Chetty et al. 2012) suggest Hicksian/compensated elasticities on the intensive margin around 0.25\\u20130.5 for the general adult population. A common default in policy simulation tools is around 0.4, balancing evidence for prime-age males (lower, ~0.1\\u20130.3) and secondary earners/women (higher, ~0.5\\u20131.0). Uncertainty spans from very low values (~0.1) if one weights toward prime-age male evidence, to higher values (~0.8) if one incorporates extensive-margin responses or secondary-earner behavior.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

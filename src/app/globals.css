@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@import "@policyengine/ui-kit/styles.css";
+
+:root {
+  --bg-deep: #f4fbfb;
+  --bg-surface: #ffffff;
+  --bg-raised: #eef7f7;
+  --bg-hover: #e5f3f3;
+
+  --border: rgba(15, 23, 42, 0.08);
+  --border-hover: rgba(15, 23, 42, 0.16);
+  --border-active: rgba(49, 151, 149, 0.28);
+
+  --text-primary: #102a43;
+  --text-secondary: #486581;
+  --text-tertiary: #7b8794;
+
+  --gold: #319795;
+  --gold-dim: rgba(49, 151, 149, 0.1);
+  --gold-glow: rgba(49, 151, 149, 0.18);
+  --blue: #2b6cb0;
+  --blue-dim: rgba(43, 108, 176, 0.1);
+  --blue-glow: rgba(43, 108, 176, 0.18);
+  --teal: #319795;
+  --teal-dim: rgba(49, 151, 149, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--bg-deep);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(180deg, #f8ffff 0%, #eef6f6 100%);
+}
+
+body {
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top left, rgba(49, 151, 149, 0.08), transparent 22rem),
+    radial-gradient(circle at bottom right, rgba(43, 108, 176, 0.06), transparent 20rem),
+    linear-gradient(180deg, #f8ffff 0%, #eef6f6 100%);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+summary {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(49, 151, 149, 0.16);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.12);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.reveal {
+  animation: reveal 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-scale {
+  animation: reveal-scale 360ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(226, 232, 240, 0.55) 0%,
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(226, 232, 240, 0.55) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.98) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

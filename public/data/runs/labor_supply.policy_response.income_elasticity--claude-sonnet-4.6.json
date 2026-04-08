@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.policy_response.income_elasticity",
+  "modelName": "claude-sonnet-4.6",
+  "experimentDir": "claude-sonnet-4.6-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T05:16:28.238Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.",
+      "citations": [
+        "Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics — surveys income elasticities typically in the range of -0.1 to -0.3 for prime-age workers.",
+        "Congressional Budget Office (CBO) labor-supply modeling documentation — CBO commonly uses income elasticities around -0.05 to -0.1 for hours worked in their tax microsimulation.",
+        "Chetty (2012), 'Bounds on Elasticities with Optimization Frictions,' AER — meta-analysis suggesting compensated elasticities around 0.5 and income effects around -0.1."
+      ],
+      "reasoningSummary": "The income elasticity of labor supply is theoretically negative (leisure is a normal good), meaning higher disposable income reduces labor supply. Empirical estimates for U.S. adults cluster around -0.1 for the uncompensated income effect, with primary earners showing smaller effects (near 0) and secondary earners somewhat larger negative effects. U.S. microsimulation models (e.g., CBO, Tax Policy Center) typically adopt a moderate global value near -0.1 to reflect this average, with plausible range from about -0.3 (strong backward-bending) to 0 (no income effect). I center at -0.1 and allow modest uncertainty around this consensus.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics \\u2014 surveys income elasticities typically in the range of -0.1 to -0.3 for prime-age workers.\", \"Congressional Budget Office (CBO) labor-supply modeling documentation \\u2014 CBO commonly uses income elasticities around -0.05 to -0.1 for hours worked in their tax microsimulation.\", \"Chetty (2012), 'Bounds on Elasticities with Optimization Frictions,' AER \\u2014 meta-analysis suggesting compensated elasticities around 0.5 and income effects around -0.1.\"], \"reasoning_summary\": \"The income elasticity of labor supply is theoretically negative (leisure is a normal good), meaning higher disposable income reduces labor supply. Empirical estimates for U.S. adults cluster around -0.1 for the uncompensated income effect, with primary earners showing smaller effects (near 0) and secondary earners somewhat larger negative effects. U.S. microsimulation models (e.g., CBO, Tax Policy Center) typically adopt a moderate global value near -0.1 to reflect this average, with plausible range from about -0.3 (strong backward-bending) to 0 (no income effect). I center at -0.1 and allow modest uncertainty around this consensus.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.",
+      "citations": [
+        "Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics — surveys income and substitution elasticities, income elasticities typically small and negative.",
+        "CBO (2012) 'Labor Supply and Taxes' — CBO's central income elasticity assumptions for microsimulation around -0.1 for primary earners.",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey,' Journal of Economic Literature — notes income elasticities near zero to slightly negative in most credible studies."
+      ],
+      "reasoningSummary": "The income elasticity of labor supply is theoretically negative (leisure is a normal good) but empirically small in magnitude. In U.S. tax-benefit microsimulation models, income elasticities are typically set around -0.1 for primary earners, with some models using values closer to zero. Secondary earners (especially married women) have larger magnitudes, but for a global/average parameter across all adults, values in the range of -0.15 to -0.05 are most commonly used. I center my belief at -0.1, with uncertainty spanning roughly -0.3 to 0.0 at the 90% interval.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics \\u2014 surveys income and substitution elasticities, income elasticities typically small and negative.\", \"CBO (2012) 'Labor Supply and Taxes' \\u2014 CBO's central income elasticity assumptions for microsimulation around -0.1 for primary earners.\", \"Keane (2011) 'Labor Supply and Taxes: A Survey,' Journal of Economic Literature \\u2014 notes income elasticities near zero to slightly negative in most credible studies.\"], \"reasoning_summary\": \"The income elasticity of labor supply is theoretically negative (leisure is a normal good) but empirically small in magnitude. In U.S. tax-benefit microsimulation models, income elasticities are typically set around -0.1 for primary earners, with some models using values closer to zero. Secondary earners (especially married women) have larger magnitudes, but for a global/average parameter across all adults, values in the range of -0.15 to -0.05 are most commonly used. I center my belief at -0.1, with uncertainty spanning roughly -0.3 to 0.0 at the 90% interval.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.",
+      "citations": [
+        "Blundell & MaCurdy (1999) – survey of labor supply elasticities, income effects typically small and negative",
+        "CBO labor supply model documentation – uses modest negative income elasticities for tax simulations",
+        "Keane (2011) – review of labor supply models, income elasticities near zero to slightly negative"
+      ],
+      "reasoningSummary": "In standard labor economics, the income effect on labor supply is negative (leisure is a normal good): higher unearned income reduces work. For U.S. tax-benefit microsimulations, practitioners typically use a global income elasticity that is small and negative, often in the range of −0.1 to −0.2 for broad adult populations. Values near zero are also common when averaging across primary and secondary earners, since primary earners show near-zero income effects while secondary earners (especially married women) show somewhat larger negative effects. The central estimate of −0.1 reflects a plausible global average used in policy microsimulation, with uncertainty spanning roughly −0.3 to 0.0.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) \\u2013 survey of labor supply elasticities, income effects typically small and negative\", \"CBO labor supply model documentation \\u2013 uses modest negative income elasticities for tax simulations\", \"Keane (2011) \\u2013 review of labor supply models, income elasticities near zero to slightly negative\"], \"reasoning_summary\": \"In standard labor economics, the income effect on labor supply is negative (leisure is a normal good): higher unearned income reduces work. For U.S. tax-benefit microsimulations, practitioners typically use a global income elasticity that is small and negative, often in the range of \\u22120.1 to \\u22120.2 for broad adult populations. Values near zero are also common when averaging across primary and secondary earners, since primary earners show near-zero income effects while secondary earners (especially married women) show somewhat larger negative effects. The central estimate of \\u22120.1 reflects a plausible global average used in policy microsimulation, with uncertainty spanning roughly \\u22120.3 to 0.0.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.",
+      "citations": [
+        "Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics — surveys income and substitution elasticities, finding income elasticities typically negative and small in magnitude (around -0.1 to -0.3 for women, near zero for men).",
+        "CBO (Congressional Budget Office) microsimulation documentation — CBO's tax-benefit model uses income elasticities in the range of roughly -0.05 to -0.1 for the overall adult population.",
+        "Keane (2011), 'Labor Supply and Taxes: A Survey', Journal of Economic Literature — summarizes a broad range of estimates, with income elasticities clustered near zero to slightly negative."
+      ],
+      "reasoningSummary": "Income elasticity of labor supply is theoretically negative (higher income → less work via income effect) but empirically small in magnitude. For men it is close to zero; for women (especially married) it is more negative, roughly -0.1 to -0.2. A U.S. tax-benefit microsimulation aggregating over all adults typically calibrates a global income elasticity around -0.1, reflecting a small but negative income effect. The 90% credible range I assign is -0.30 to 0.00, acknowledging uncertainty about which model parameterization is being referenced and the possibility that some models set this near zero.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics \\u2014 surveys income and substitution elasticities, finding income elasticities typically negative and small in magnitude (around -0.1 to -0.3 for women, near zero for men).\", \"CBO (Congressional Budget Office) microsimulation documentation \\u2014 CBO's tax-benefit model uses income elasticities in the range of roughly -0.05 to -0.1 for the overall adult population.\", \"Keane (2011), 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2014 summarizes a broad range of estimates, with income elasticities clustered near zero to slightly negative.\"], \"reasoning_summary\": \"Income elasticity of labor supply is theoretically negative (higher income \\u2192 less work via income effect) but empirically small in magnitude. For men it is close to zero; for women (especially married) it is more negative, roughly -0.1 to -0.2. A U.S. tax-benefit microsimulation aggregating over all adults typically calibrates a global income elasticity around -0.1, reflecting a small but negative income effect. The 90% credible range I assign is -0.30 to 0.00, acknowledging uncertainty about which model parameterization is being referenced and the possibility that some models set this near zero.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient by which a 1% change in disposable income changes labor supply.",
+      "citations": [
+        "Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics — surveys income elasticities typically in the range of -0.1 to -0.3 for prime-age workers.",
+        "CBO (2012) 'Labor Supply and Fiscal Policy' — uses income elasticities around -0.05 to -0.1 in microsimulation contexts.",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature — summarizes negative income elasticities, often near -0.1 for adults overall."
+      ],
+      "reasoningSummary": "The income elasticity of labor supply is theoretically negative (leisure is a normal good), meaning higher disposable income reduces labor supply. Empirical estimates for the U.S. adult population center around -0.1, with considerable uncertainty across demographic groups. Women and secondary earners tend to show larger (more negative) income elasticities, while prime-age men show smaller ones (near zero or slightly negative). In aggregate U.S. microsimulation models, a global income elasticity around -0.1 is a common central assumption, with plausible range from about -0.30 to 0.00.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient by which a 1% change in disposable income changes labor supply.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics \\u2014 surveys income elasticities typically in the range of -0.1 to -0.3 for prime-age workers.\", \"CBO (2012) 'Labor Supply and Fiscal Policy' \\u2014 uses income elasticities around -0.05 to -0.1 in microsimulation contexts.\", \"Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2014 summarizes negative income elasticities, often near -0.1 for adults overall.\"], \"reasoning_summary\": \"The income elasticity of labor supply is theoretically negative (leisure is a normal good), meaning higher disposable income reduces labor supply. Empirical estimates for the U.S. adult population center around -0.1, with considerable uncertainty across demographic groups. Women and secondary earners tend to show larger (more negative) income elasticities, while prime-age men show smaller ones (near zero or slightly negative). In aggregate U.S. microsimulation models, a global income elasticity around -0.1 is a common central assumption, with plausible range from about -0.30 to 0.00.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient multiplying the bounded relative change in disposable income to obtain the fractional change in labor supply.",
+      "citations": [
+        "Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature — reviews income elasticity estimates, central tendency near -0.1 for men, somewhat larger in magnitude for married women.",
+        "CBO (2012) 'Labor Supply and Fiscal Policy' technical background — uses income elasticity around -0.05 to -0.1 for aggregate microsimulation calibration.",
+        "Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics — documents range of uncompensated and income elasticities across demographic groups."
+      ],
+      "reasoningSummary": "Income elasticity of labor supply is theoretically expected to be negative (leisure is a normal good). Empirical estimates for men cluster near zero to slightly negative (-0.05 to -0.1), while estimates for married women are more negative (around -0.2 to -0.3), but a U.S. microsimulation model using a single global parameter typically calibrates to a value around -0.1, reflecting a weighted average across the adult population. Values outside the range of -0.3 to 0.0 are uncommon in the literature for aggregate or global parameters used in policy simulation contexts.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient multiplying the bounded relative change in disposable income to obtain the fractional change in labor supply.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2014 reviews income elasticity estimates, central tendency near -0.1 for men, somewhat larger in magnitude for married women.\", \"CBO (2012) 'Labor Supply and Fiscal Policy' technical background \\u2014 uses income elasticity around -0.05 to -0.1 for aggregate microsimulation calibration.\", \"Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics \\u2014 documents range of uncompensated and income elasticities across demographic groups.\"], \"reasoning_summary\": \"Income elasticity of labor supply is theoretically expected to be negative (leisure is a normal good). Empirical estimates for men cluster near zero to slightly negative (-0.05 to -0.1), while estimates for married women are more negative (around -0.2 to -0.3), but a U.S. microsimulation model using a single global parameter typically calibrates to a value around -0.1, reflecting a weighted average across the adult population. Values outside the range of -0.3 to 0.0 are uncommon in the literature for aggregate or global parameters used in policy simulation contexts.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient by which a 1% change in disposable income changes labor supply (hours or participation).",
+      "citations": [
+        "Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics — reviews income and substitution elasticities, finding income elasticities typically small and negative.",
+        "CBO (2012) 'Labor Supply and Fiscal Policy' — uses income elasticities around -0.05 to -0.1 for U.S. microsimulation contexts.",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature — summarizes a range of negative income elasticities, often -0.1 to -0.2 for prime-age workers."
+      ],
+      "reasoningSummary": "Income elasticity of labor supply is theoretically negative (leisure is a normal good): higher income reduces labor supply. In standard U.S. tax-benefit microsimulations, modelers typically adopt a small negative value, often in the range of -0.05 to -0.2, reflecting the consensus from empirical labor economics that income effects are modest. A central value of -0.1 is commonly cited and used. The distribution is centered around -0.1 with uncertainty spanning from roughly -0.3 (more negative, as sometimes found for secondary earners) to 0.0 (near-zero as found in some studies of primary earners).",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient by which a 1% change in disposable income changes labor supply (hours or participation).\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics \\u2014 reviews income and substitution elasticities, finding income elasticities typically small and negative.\", \"CBO (2012) 'Labor Supply and Fiscal Policy' \\u2014 uses income elasticities around -0.05 to -0.1 for U.S. microsimulation contexts.\", \"Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2014 summarizes a range of negative income elasticities, often -0.1 to -0.2 for prime-age workers.\"], \"reasoning_summary\": \"Income elasticity of labor supply is theoretically negative (leisure is a normal good): higher income reduces labor supply. In standard U.S. tax-benefit microsimulations, modelers typically adopt a small negative value, often in the range of -0.05 to -0.2, reflecting the consensus from empirical labor economics that income effects are modest. A central value of -0.1 is commonly cited and used. The distribution is centered around -0.1 with uncertainty spanning from roughly -0.3 (more negative, as sometimes found for secondary earners) to 0.0 (near-zero as found in some studies of primary earners).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.",
+      "citations": [
+        "Blundell & MaCurdy (1999) – survey of labor supply elasticities, income effects typically small and negative",
+        "CBO (2012) – labor supply responses to tax changes, income elasticity for hours around -0.05 to -0.15",
+        "Chetty (2012) – sufficient statistics for welfare analysis, income elasticities bounded near zero to slightly negative"
+      ],
+      "reasoningSummary": "Income elasticity of labor supply is theoretically negative (income effect: higher income → more leisure demanded → less labor). Empirically, studies consistently find it small in magnitude—roughly -0.05 to -0.2 for hours of work across U.S. adults. Tax-benefit microsimulation models (e.g., CBO, Tax Policy Center) typically parameterize this around -0.1 for a global adult population. The distribution is centered near -0.1 with considerable uncertainty across subgroups (primary vs. secondary earners, men vs. women), but the 95th percentile is unlikely to exceed zero in a standard simulation context.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) \\u2013 survey of labor supply elasticities, income effects typically small and negative\", \"CBO (2012) \\u2013 labor supply responses to tax changes, income elasticity for hours around -0.05 to -0.15\", \"Chetty (2012) \\u2013 sufficient statistics for welfare analysis, income elasticities bounded near zero to slightly negative\"], \"reasoning_summary\": \"Income elasticity of labor supply is theoretically negative (income effect: higher income \\u2192 more leisure demanded \\u2192 less labor). Empirically, studies consistently find it small in magnitude\\u2014roughly -0.05 to -0.2 for hours of work across U.S. adults. Tax-benefit microsimulation models (e.g., CBO, Tax Policy Center) typically parameterize this around -0.1 for a global adult population. The distribution is centered near -0.1 with considerable uncertainty across subgroups (primary vs. secondary earners, men vs. women), but the 95th percentile is unlikely to exceed zero in a standard simulation context.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.",
+      "citations": [
+        "Blundell & MaCurdy (1999) – survey of labor supply elasticities; income effects typically negative and small, around -0.1 to -0.2 for prime-age workers.",
+        "CBO microsimulation documentation – uses small negative income elasticities for labor supply, often around -0.05 to -0.15.",
+        "Keane (2011, Journal of Economic Literature) – reviews structural labor supply models, finding income elasticities close to zero or modestly negative."
+      ],
+      "reasoningSummary": "The income elasticity of labor supply is theoretically negative (higher income → more leisure demanded) and empirically small in magnitude. For a U.S. tax-benefit microsimulation applied to the full adult population, standard parameterizations draw on the empirical literature placing the uncompensated income effect near -0.1 (range roughly -0.2 to 0.0). Values at the negative tail reflect studies finding larger income effects for secondary earners; values near zero reflect near-zero findings for primary earners or offsetting substitution. A global (population-average) parameter in policy simulation tools like those used by CBO or Tax Policy Center typically sits around -0.1.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) \\u2013 survey of labor supply elasticities; income effects typically negative and small, around -0.1 to -0.2 for prime-age workers.\", \"CBO microsimulation documentation \\u2013 uses small negative income elasticities for labor supply, often around -0.05 to -0.15.\", \"Keane (2011, Journal of Economic Literature) \\u2013 reviews structural labor supply models, finding income elasticities close to zero or modestly negative.\"], \"reasoning_summary\": \"The income elasticity of labor supply is theoretically negative (higher income \\u2192 more leisure demanded) and empirically small in magnitude. For a U.S. tax-benefit microsimulation applied to the full adult population, standard parameterizations draw on the empirical literature placing the uncompensated income effect near -0.1 (range roughly -0.2 to 0.0). Values at the negative tail reflect studies finding larger income effects for secondary earners; values near zero reflect near-zero findings for primary earners or offsetting substitution. A global (population-average) parameter in policy simulation tools like those used by CBO or Tax Policy Center typically sits around -0.1.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient by which a 1% change in disposable income changes labor supply.",
+      "citations": [
+        "Blundell & MaCurdy (1999) handbook chapter on labor supply elasticities",
+        "CBO (2012) labor supply elasticity assumptions in tax microsimulation",
+        "Keane (2011) review of labor supply elasticity estimates"
+      ],
+      "reasoningSummary": "The income elasticity of labor supply is theoretically negative (leisure is a normal good): higher income leads to reduced work effort. Empirical estimates in the literature for the U.S. typically fall in a small negative range, roughly −0.05 to −0.2 for broad adult populations. In tax-benefit microsimulation contexts (e.g., CBO-style models), a commonly used global income elasticity is around −0.1, reflecting a modest backward-bending labor supply response. The range is tight because both theory and most empirical work agree on the sign and approximate magnitude, though primary earner vs. secondary earner heterogeneity means the population average is modest. Values near zero are plausible if offsetting substitution effects dominate in some parameterizations, but positive values are unlikely for a pure income elasticity.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the coefficient by which a 1% change in disposable income changes labor supply.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) handbook chapter on labor supply elasticities\", \"CBO (2012) labor supply elasticity assumptions in tax microsimulation\", \"Keane (2011) review of labor supply elasticity estimates\"], \"reasoning_summary\": \"The income elasticity of labor supply is theoretically negative (leisure is a normal good): higher income leads to reduced work effort. Empirical estimates in the literature for the U.S. typically fall in a small negative range, roughly \\u22120.05 to \\u22120.2 for broad adult populations. In tax-benefit microsimulation contexts (e.g., CBO-style models), a commonly used global income elasticity is around \\u22120.1, reflecting a modest backward-bending labor supply response. The range is tight because both theory and most empirical work agree on the sign and approximate magnitude, though primary earner vs. secondary earner heterogeneity means the population average is modest. Values near zero are plausible if offsetting substitution effects dominate in some parameterizations, but positive values are unlikely for a pure income elasticity.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.",
+      "citations": [
+        "Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics — surveys income elasticities typically negative and modest, around -0.1 to -0.3 for men, smaller for women.",
+        "CBO (2012), 'Labor Supply and Fiscal Policy' — uses income elasticities in the range of -0.05 to -0.1 in its microsimulation framework.",
+        "Keane (2011), 'Labor Supply and Taxes: A Survey', Journal of Economic Literature — reports income elasticities clustered near zero to slightly negative for prime-age workers."
+      ],
+      "reasoningSummary": "Income elasticity of labor supply is theoretically negative (leisure is a normal good), but empirically small in magnitude. For U.S. tax-benefit microsimulations, practitioners typically use values in the range of -0.05 to -0.2. The most commonly cited central value in simulation models is around -0.1. Values near zero or slightly negative are most defensible for a \"global\" (population-average) parameter, as primary earners show near-zero income effects and secondary earners show modestly negative ones. The distribution is centered around -0.1 with most of the probability mass between -0.3 and 0.0.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: the fraction by which labor supply changes for a 1 percent change in disposable income.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches', Handbook of Labor Economics \\u2014 surveys income elasticities typically negative and modest, around -0.1 to -0.3 for men, smaller for women.\", \"CBO (2012), 'Labor Supply and Fiscal Policy' \\u2014 uses income elasticities in the range of -0.05 to -0.1 in its microsimulation framework.\", \"Keane (2011), 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2014 reports income elasticities clustered near zero to slightly negative for prime-age workers.\"], \"reasoning_summary\": \"Income elasticity of labor supply is theoretically negative (leisure is a normal good), but empirically small in magnitude. For U.S. tax-benefit microsimulations, practitioners typically use values in the range of -0.05 to -0.2. The most commonly cited central value in simulation models is around -0.1. Values near zero or slightly negative are most defensible for a \\\"global\\\" (population-average) parameter, as primary earners show near-zero income effects and secondary earners show modestly negative ones. The distribution is centered around -0.1 with most of the probability mass between -0.3 and 0.0.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.",
+      "citations": [
+        "Blundell & MaCurdy (1999) handbook chapter on labor supply elasticities, which surveys income and substitution elasticities across many studies",
+        "CBO (various) use of behavioral response parameters in tax microsimulation, typically placing income elasticity of labor supply in a small negative range",
+        "Chetty (2012) 'Bounds on Elasticities with Optimization Frictions' synthesizing microeconomic estimates of income effects on labor supply near zero to modestly negative"
+      ],
+      "reasoningSummary": "The income elasticity of labor supply is theoretically negative (more income → less work, normal leisure) but empirically small in magnitude. For the adult U.S. population overall, microsimulation models typically use a value near -0.1 or smaller in absolute value. Primary earners show near-zero income effects; secondary earners (historically married women) show somewhat larger negative values, but the global population-weighted figure tends to be modestly negative. The literature consensus from Blundell-MaCurdy and subsequent work places uncompensated income elasticities in the range of roughly -0.2 to 0.0, with central estimates around -0.1. I center my belief at -0.1 with meaningful uncertainty spanning from about -0.3 to 0.0.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) handbook chapter on labor supply elasticities, which surveys income and substitution elasticities across many studies\", \"CBO (various) use of behavioral response parameters in tax microsimulation, typically placing income elasticity of labor supply in a small negative range\", \"Chetty (2012) 'Bounds on Elasticities with Optimization Frictions' synthesizing microeconomic estimates of income effects on labor supply near zero to modestly negative\"], \"reasoning_summary\": \"The income elasticity of labor supply is theoretically negative (more income \\u2192 less work, normal leisure) but empirically small in magnitude. For the adult U.S. population overall, microsimulation models typically use a value near -0.1 or smaller in absolute value. Primary earners show near-zero income effects; secondary earners (historically married women) show somewhat larger negative values, but the global population-weighted figure tends to be modestly negative. The literature consensus from Blundell-MaCurdy and subsequent work places uncompensated income elasticities in the range of roughly -0.2 to 0.0, with central estimates around -0.1. I center my belief at -0.1 with meaningful uncertainty spanning from about -0.3 to 0.0.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.",
+      "citations": [
+        "Blundell & MaCurdy (1999) handbook chapter on labor supply elasticities",
+        "CBO (2012) labor supply and fiscal policy report citing income elasticities around -0.05 to -0.15 for primary earners",
+        "Keane (2011) review of labor supply elasticities noting income effects are small and negative"
+      ],
+      "reasoningSummary": "Income elasticity of labor supply in standard labor economics is theoretically negative (leisure is a normal good) but small in magnitude. Primary earners in the U.S. typically exhibit income elasticities in the range of -0.05 to -0.20; secondary earners (particularly married women) show somewhat larger magnitudes. For a global parameter applied across all adults in a U.S. tax-benefit microsimulation, the value would be an average, typically set around -0.1 in applied models. Values near zero or slightly negative are common in policy models that aggregate across demographic groups. I center my belief at -0.1 with moderate uncertainty spanning roughly -0.30 to 0.0.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction.\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999) handbook chapter on labor supply elasticities\", \"CBO (2012) labor supply and fiscal policy report citing income elasticities around -0.05 to -0.15 for primary earners\", \"Keane (2011) review of labor supply elasticities noting income effects are small and negative\"], \"reasoning_summary\": \"Income elasticity of labor supply in standard labor economics is theoretically negative (leisure is a normal good) but small in magnitude. Primary earners in the U.S. typically exhibit income elasticities in the range of -0.05 to -0.20; secondary earners (particularly married women) show somewhat larger magnitudes. For a global parameter applied across all adults in a U.S. tax-benefit microsimulation, the value would be an average, typically set around -0.1 in applied models. Values near zero or slightly negative are common in policy models that aggregate across demographic groups. I center my belief at -0.1 with moderate uncertainty spanning roughly -0.30 to 0.0.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction (negative, reflecting the income effect).",
+      "citations": [
+        "Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics — surveys income and substitution elasticities, income effects typically small and negative.",
+        "CBO (2012), 'Labor Supply and Fiscal Policy' — uses income elasticities around -0.05 to -0.15 for tax-benefit microsimulation.",
+        "Keane (2011), 'Labor Supply and Taxes: A Survey,' Journal of Economic Literature — notes income elasticities for prime-age workers are modest and negative, often -0.1 or smaller."
+      ],
+      "reasoningSummary": "Income elasticities of labor supply are theoretically negative (higher income → more leisure demanded) and empirically small in magnitude. For a U.S. tax-benefit microsimulation targeting adults broadly, the standard range in the empirical literature and policy models is roughly -0.05 to -0.20, with a central tendency around -0.10. Values near zero are plausible (especially for primary earners), and slightly larger negative values appear for secondary earners, but a global/average parameter is typically set close to -0.1 in U.S. microsimulation practice.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction (negative, reflecting the income effect).\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics \\u2014 surveys income and substitution elasticities, income effects typically small and negative.\", \"CBO (2012), 'Labor Supply and Fiscal Policy' \\u2014 uses income elasticities around -0.05 to -0.15 for tax-benefit microsimulation.\", \"Keane (2011), 'Labor Supply and Taxes: A Survey,' Journal of Economic Literature \\u2014 notes income elasticities for prime-age workers are modest and negative, often -0.1 or smaller.\"], \"reasoning_summary\": \"Income elasticities of labor supply are theoretically negative (higher income \\u2192 more leisure demanded) and empirically small in magnitude. For a U.S. tax-benefit microsimulation targeting adults broadly, the standard range in the empirical literature and policy models is roughly -0.05 to -0.20, with a central tendency around -0.10. Values near zero are plausible (especially for primary earners), and slightly larger negative values appear for secondary earners, but a global/average parameter is typically set close to -0.1 in U.S. microsimulation practice.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction (percent).",
+      "citations": [
+        "Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics — surveys income elasticities typically in the range of -0.1 to -0.3 for men, smaller for women.",
+        "CBO (2012), 'Labor Supply and Fiscal Policy' — uses income elasticities around -0.05 to -0.1 in tax simulation models.",
+        "Keane (2011), 'Labor Supply and Taxes: A Survey,' Journal of Economic Literature — notes uncompensated income effects are negative and modest, often near -0.1."
+      ],
+      "reasoningSummary": "Income elasticity of labor supply is theoretically negative (leisure is a normal good), reflecting the pure income effect. Mainstream U.S. micro-simulation models (e.g., CBO, Tax Policy Center) typically calibrate this parameter in the range of roughly -0.05 to -0.2. The literature (Blundell & MaCurdy, Keane) places the income effect for prime-age adults at around -0.1 on average, smaller in magnitude than substitution effects. I center my belief at -0.1 with meaningful uncertainty spanning roughly -0.3 to 0.0, with 0.0 representing a model that ignores income effects entirely.",
+      "rawResponse": "{\"interpretation\": \"Global labor-supply income-response elasticity used in a U.S. microsimulation model: a 1 percent change in disposable income changes labor supply by this fraction (percent).\", \"point_estimate\": -0.1, \"quantiles\": {\"p05\": -0.3, \"p25\": -0.15, \"p50\": -0.1, \"p75\": -0.05, \"p95\": 0.0}, \"citations\": [\"Blundell & MaCurdy (1999), 'Labor Supply: A Review of Alternative Approaches,' Handbook of Labor Economics \\u2014 surveys income elasticities typically in the range of -0.1 to -0.3 for men, smaller for women.\", \"CBO (2012), 'Labor Supply and Fiscal Policy' \\u2014 uses income elasticities around -0.05 to -0.1 in tax simulation models.\", \"Keane (2011), 'Labor Supply and Taxes: A Survey,' Journal of Economic Literature \\u2014 notes uncompensated income effects are negative and modest, often near -0.1.\"], \"reasoning_summary\": \"Income elasticity of labor supply is theoretically negative (leisure is a normal good), reflecting the pure income effect. Mainstream U.S. micro-simulation models (e.g., CBO, Tax Policy Center) typically calibrate this parameter in the range of roughly -0.05 to -0.2. The literature (Blundell & MaCurdy, Keane) places the income effect for prime-age adults at around -0.1 on average, smaller in magnitude than substitution effects. I center my belief at -0.1 with meaningful uncertainty spanning roughly -0.3 to 0.0, with 0.0 representing a model that ignores income effects entirely.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

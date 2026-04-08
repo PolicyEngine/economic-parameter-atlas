@@ -1,0 +1,394 @@
+{
+  "quantityId": "household.intertemporal_elasticity_of_substitution",
+  "modelName": "gemini-3.1-pro-preview",
+  "experimentDir": "gemini-3.1-pro-preview-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T05:07:57.745Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration setting, using recursive preferences distinct from risk aversion.",
+      "citations": [
+        "Bansal and Yaron (2004) 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'",
+        "Epstein and Zin (1991) 'Substitution, Risk Aversion, and the Temporal Behavior of Consumption and Asset Returns'",
+        "Hall (1988) 'Intertemporal Substitution in Consumption'"
+      ],
+      "reasoningSummary": "In macro-finance calibrations utilizing recursive (Epstein-Zin) preferences to separate risk aversion from intertemporal substitution, the IES is typically calibrated to be greater than 1 (often 1.5 to 2.0). This ensures that the substitution effect dominates the wealth effect, allowing higher expected consumption growth to raise asset prices, resolving several asset pricing puzzles, despite microeconometric estimates often finding values below 1.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration setting, using recursive preferences distinct from risk aversion.\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'\",\n    \"Epstein and Zin (1991) 'Substitution, Risk Aversion, and the Temporal Behavior of Consumption and Asset Returns'\",\n    \"Hall (1988) 'Intertemporal Substitution in Consumption'\"\n  ],\n  \"reasoning_summary\": \"In macro-finance calibrations utilizing recursive (Epstein-Zin) preferences to separate risk aversion from intertemporal substitution, the IES is typically calibrated to be greater than 1 (often 1.5 to 2.0). This ensures that the substitution effect dominates the wealth effect, allowing higher expected consumption growth to raise asset prices, resolving several asset pricing puzzles, despite microeconometric estimates often finding values below 1.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "IES for nondurable consumption for a representative U.S. household in annual macro calibrations, assuming preferences where it is distinct from risk aversion (e.g., Epstein-Zin).",
+      "citations": [
+        "Bansal and Yaron (2004) 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'",
+        "Vissing-Jorgensen (2002) 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'"
+      ],
+      "reasoningSummary": "In macro-finance calibrations that separate the IES from risk aversion (typically using Epstein-Zin-Weil preferences), the IES is usually calibrated to be greater than 1 (often around 1.5 to 2.0). This ensures that the substitution effect dominates the wealth effect, meaning higher expected growth raises asset prices, which is key to resolving various asset pricing puzzles like the equity premium puzzle in the long-run risks literature.",
+      "rawResponse": "{\n  \"interpretation\": \"IES for nondurable consumption for a representative U.S. household in annual macro calibrations, assuming preferences where it is distinct from risk aversion (e.g., Epstein-Zin).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'\",\n    \"Vissing-Jorgensen (2002) 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'\"\n  ],\n  \"reasoning_summary\": \"In macro-finance calibrations that separate the IES from risk aversion (typically using Epstein-Zin-Weil preferences), the IES is usually calibrated to be greater than 1 (often around 1.5 to 2.0). This ensures that the substitution effect dominates the wealth effect, meaning higher expected growth raises asset prices, which is key to resolving various asset pricing puzzles like the equity premium puzzle in the long-run risks literature.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution (IES) for nondurable consumption for a representative U.S. household in an annual macro calibration, using preferences that separate IES from risk aversion (e.g., Epstein-Zin).",
+      "citations": [
+        "Bansal and Yaron (2004) - Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles",
+        "Vissing-Jorgensen (2002) - Limited Asset Market Participation and the Elasticity of Intertemporal Substitution"
+      ],
+      "reasoningSummary": "When decoupling risk aversion from the IES using Epstein-Zin preferences, macro-finance calibrations typically require an IES greater than 1 (most commonly 1.5) to match the empirical fact that asset prices rise with expected economic growth and to solve asset pricing puzzles. While older microeconomic estimates (e.g., Hall 1988) often found values near zero, subsequent macro calibrations and studies accounting for limited asset market participation strongly favor an IES centered around 1.5.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution (IES) for nondurable consumption for a representative U.S. household in an annual macro calibration, using preferences that separate IES from risk aversion (e.g., Epstein-Zin).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles\",\n    \"Vissing-Jorgensen (2002) - Limited Asset Market Participation and the Elasticity of Intertemporal Substitution\"\n  ],\n  \"reasoning_summary\": \"When decoupling risk aversion from the IES using Epstein-Zin preferences, macro-finance calibrations typically require an IES greater than 1 (most commonly 1.5) to match the empirical fact that asset prices rise with expected economic growth and to solve asset pricing puzzles. While older microeconomic estimates (e.g., Hall 1988) often found values near zero, subsequent macro calibrations and studies accounting for limited asset market participation strongly favor an IES centered around 1.5.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.8,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.8,
+        "p25": 1.2,
+        "p50": 1.5,
+        "p75": 1.8,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in annual macro calibrations, specifically separated from risk aversion (e.g., Epstein-Zin preferences).",
+      "citations": [
+        "Bansal and Yaron (2004)",
+        "Schorfheide, Song, and Yaron (2018)"
+      ],
+      "reasoningSummary": "In macroeconomic and asset pricing models that separate the IES from risk aversion (such as those using Epstein-Zin preferences), the IES is typically calibrated to be strictly greater than 1. A standard value is 1.5, which is necessary in long-run risk models to ensure that higher expected consumption growth leads to higher asset valuations, matching empirical observations.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in annual macro calibrations, specifically separated from risk aversion (e.g., Epstein-Zin preferences).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.8,\n    \"p25\": 1.2,\n    \"p50\": 1.5,\n    \"p75\": 1.8,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004)\",\n    \"Schorfheide, Song, and Yaron (2018)\"\n  ],\n  \"reasoning_summary\": \"In macroeconomic and asset pricing models that separate the IES from risk aversion (such as those using Epstein-Zin preferences), the IES is typically calibrated to be strictly greater than 1. A standard value is 1.5, which is necessary in long-run risk models to ensure that higher expected consumption growth leads to higher asset valuations, matching empirical observations.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.1,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.8,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution (IES) for nondurable consumption in annual macro calibrations, modeled distinctly from risk aversion (e.g., using Epstein-Zin preferences).",
+      "citations": [
+        "Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'",
+        "Hall (1988) - 'Intertemporal Substitution in Consumption'",
+        "Vissing-Jorgensen (2002) - 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'"
+      ],
+      "reasoningSummary": "In macroeconomic and finance calibrations that separate the IES from risk aversion (typically using Epstein-Zin-Weil recursive preferences), the IES is overwhelmingly calibrated to be greater than 1, usually around 1.5. This ensures that the substitution effect dominates the wealth effect, meaning higher expected consumption growth leads to higher asset prices (a key mechanism in Long-Run Risk models). While classic micro estimates (like Hall 1988) argued for an IES close to zero, models targeting asset pricing moments strongly prefer values between 1.5 and 2.0.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution (IES) for nondurable consumption in annual macro calibrations, modeled distinctly from risk aversion (e.g., using Epstein-Zin preferences).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.1,\n    \"p25\": 0.8,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'\",\n    \"Hall (1988) - 'Intertemporal Substitution in Consumption'\",\n    \"Vissing-Jorgensen (2002) - 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'\"\n  ],\n  \"reasoning_summary\": \"In macroeconomic and finance calibrations that separate the IES from risk aversion (typically using Epstein-Zin-Weil recursive preferences), the IES is overwhelmingly calibrated to be greater than 1, usually around 1.5. This ensures that the substitution effect dominates the wealth effect, meaning higher expected consumption growth leads to higher asset prices (a key mechanism in Long-Run Risk models). While classic micro estimates (like Hall 1988) argued for an IES close to zero, models targeting asset pricing moments strongly prefer values between 1.5 and 2.0.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.2,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.8,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration setting, assuming preferences separate IES from risk aversion (e.g., Epstein-Zin preferences).",
+      "citations": [
+        "Bansal and Yaron (2004) - Long-Run Risks framework",
+        "Hall (1988) - Argues for a near-zero IES",
+        "Vissing-Jorgensen (2002) - Micro estimates separating asset holders from non-holders"
+      ],
+      "reasoningSummary": "In macroeconomic calibrations that separate risk aversion from the IES (such as Epstein-Zin preferences), a value strictly greater than 1 is typically required to match asset pricing facts like the equity premium and risk-free rate puzzles. A standard calibration value in the long-run risks literature is 1.5. However, there is significant disagreement, with earlier micro-based estimates (like Hall) arguing for values close to zero, widening the uncertainty bounds.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration setting, assuming preferences separate IES from risk aversion (e.g., Epstein-Zin preferences).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.8,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - Long-Run Risks framework\",\n    \"Hall (1988) - Argues for a near-zero IES\",\n    \"Vissing-Jorgensen (2002) - Micro estimates separating asset holders from non-holders\"\n  ],\n  \"reasoning_summary\": \"In macroeconomic calibrations that separate risk aversion from the IES (such as Epstein-Zin preferences), a value strictly greater than 1 is typically required to match asset pricing facts like the equity premium and risk-free rate puzzles. A standard calibration value in the long-run risks literature is 1.5. However, there is significant disagreement, with earlier micro-based estimates (like Hall) arguing for values close to zero, widening the uncertainty bounds.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption by a representative U.S. household in an annual macro-calibration setting, utilizing recursive (Epstein-Zin) preferences where IES is distinct from risk aversion.",
+      "citations": [
+        "Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'",
+        "Epstein and Zin (1989) - 'Substitution, Risk Aversion, and the Temporal Behavior of Consumption and Asset Returns'",
+        "Vissing-Jorgensen (2002) - 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'"
+      ],
+      "reasoningSummary": "In macro-finance calibrations using Epstein-Zin preferences (separating IES from risk aversion), an IES strictly greater than 1 is typically required for higher expected growth to increase asset prices (the substitution effect dominating the wealth effect). The long-run risks literature, pioneered by Bansal and Yaron (2004), standardly calibrates the IES around 1.5. While microeconomic estimates (like Hall 1988) often find values closer to zero, calibrations focusing on asset pricing puzzles generally favor values between 1.5 and 2.0.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption by a representative U.S. household in an annual macro-calibration setting, utilizing recursive (Epstein-Zin) preferences where IES is distinct from risk aversion.\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'\",\n    \"Epstein and Zin (1989) - 'Substitution, Risk Aversion, and the Temporal Behavior of Consumption and Asset Returns'\",\n    \"Vissing-Jorgensen (2002) - 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'\"\n  ],\n  \"reasoning_summary\": \"In macro-finance calibrations using Epstein-Zin preferences (separating IES from risk aversion), an IES strictly greater than 1 is typically required for higher expected growth to increase asset prices (the substitution effect dominating the wealth effect). The long-run risks literature, pioneered by Bansal and Yaron (2004), standardly calibrates the IES around 1.5. While microeconomic estimates (like Hall 1988) often find values closer to zero, calibrations focusing on asset pricing puzzles generally favor values between 1.5 and 2.0.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration setting, using recursive preferences to separate it from risk aversion.",
+      "citations": [
+        "Bansal and Yaron (2004) - Long-run risks calibration typically requires IES > 1 (e.g., 1.5) to match asset pricing moments.",
+        "Guvenen (2006) - Reconciling low empirical micro estimates with high macro calibration needs.",
+        "Hall (1988) - Found empirical estimates of IES close to zero, highlighting the tension with macro calibrations."
+      ],
+      "reasoningSummary": "In macro-finance calibrations using Epstein-Zin preferences (which separate IES from risk aversion), the IES is typically calibrated to be greater than 1, often around 1.5 to 2.0. This is necessary to generate a low and stable risk-free rate in the presence of economic growth, as seen in the long-run risks literature. However, empirical microeconomic estimates often point to a much lower IES (below 1), creating a wide range of plausible values depending on the exact modeling assumptions.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration setting, using recursive preferences to separate it from risk aversion.\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - Long-run risks calibration typically requires IES > 1 (e.g., 1.5) to match asset pricing moments.\",\n    \"Guvenen (2006) - Reconciling low empirical micro estimates with high macro calibration needs.\",\n    \"Hall (1988) - Found empirical estimates of IES close to zero, highlighting the tension with macro calibrations.\"\n  ],\n  \"reasoning_summary\": \"In macro-finance calibrations using Epstein-Zin preferences (which separate IES from risk aversion), the IES is typically calibrated to be greater than 1, often around 1.5 to 2.0. This is necessary to generate a low and stable risk-free rate in the presence of economic growth, as seen in the long-run risks literature. However, empirical microeconomic estimates often point to a much lower IES (below 1), creating a wide range of plausible values depending on the exact modeling assumptions.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in annual macro calibrations, specifically when separated from risk aversion (e.g., Epstein-Zin preferences).",
+      "citations": [
+        "Bansal and Yaron (2004)",
+        "Havranek et al. (2015)",
+        "Schorfheide, Song, and Yaron (2018)"
+      ],
+      "reasoningSummary": "In macro-finance calibrations using recursive (Epstein-Zin) preferences where the IES is separated from risk aversion, the IES is typically calibrated to be greater than 1, often around 1.5. This ensures that the substitution effect dominates the wealth effect, meaning higher expected growth raises asset prices, which is key to matching long-run risk asset pricing moments.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in annual macro calibrations, specifically when separated from risk aversion (e.g., Epstein-Zin preferences).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004)\",\n    \"Havranek et al. (2015)\",\n    \"Schorfheide, Song, and Yaron (2018)\"\n  ],\n  \"reasoning_summary\": \"In macro-finance calibrations using recursive (Epstein-Zin) preferences where the IES is separated from risk aversion, the IES is typically calibrated to be greater than 1, often around 1.5. This ensures that the substitution effect dominates the wealth effect, meaning higher expected growth raises asset prices, which is key to matching long-run risk asset pricing moments.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.2,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution (IES) for nondurable consumption in annual macro calibration, distinct from risk aversion (e.g., Epstein-Zin preferences).",
+      "citations": [
+        "Bansal and Yaron (2004) 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'",
+        "Hall (1988) 'Intertemporal Substitution in Consumption'",
+        "Vissing-Jorgensen (2002) 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'"
+      ],
+      "reasoningSummary": "In macro calibrations using Epstein-Zin preferences, the IES is typically set above 1 (commonly 1.5 or 2) so that substitution effects dominate wealth effects, which is crucial for long-run risk models. This contrasts with older empirical estimates (like Hall) that often found the IES to be close to zero. The wide quantile range reflects the tension between macro asset-pricing calibrations and micro-empirical estimates.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution (IES) for nondurable consumption in annual macro calibration, distinct from risk aversion (e.g., Epstein-Zin preferences).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'\",\n    \"Hall (1988) 'Intertemporal Substitution in Consumption'\",\n    \"Vissing-Jorgensen (2002) 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'\"\n  ],\n  \"reasoning_summary\": \"In macro calibrations using Epstein-Zin preferences, the IES is typically set above 1 (commonly 1.5 or 2) so that substitution effects dominate wealth effects, which is crucial for long-run risk models. This contrasts with older empirical estimates (like Hall) that often found the IES to be close to zero. The wide quantile range reflects the tension between macro asset-pricing calibrations and micro-empirical estimates.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1.1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting, typically using Epstein-Zin preferences where IES is distinct from risk aversion.",
+      "citations": [
+        "Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'",
+        "Hall (1988) - 'Intertemporal Substitution in Consumption' (provides lower bound/micro contrast)"
+      ],
+      "reasoningSummary": "In macroeconomic and macro-finance calibrations that separate the IES from risk aversion (e.g., using Epstein-Zin preferences), the IES is typically calibrated to be strictly greater than 1. A standard value is 1.5, which is required in long-run risk models to ensure that higher expected economic growth leads to higher asset prices (wealth effect dominates substitution effect). While earlier micro-estimates suggested values close to 0, macro-calibrations typically range between 1.1 and 2.0.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting, typically using Epstein-Zin preferences where IES is distinct from risk aversion.\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.1,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'\",\n    \"Hall (1988) - 'Intertemporal Substitution in Consumption' (provides lower bound/micro contrast)\"\n  ],\n  \"reasoning_summary\": \"In macroeconomic and macro-finance calibrations that separate the IES from risk aversion (e.g., using Epstein-Zin preferences), the IES is typically calibrated to be strictly greater than 1. A standard value is 1.5, which is required in long-run risk models to ensure that higher expected economic growth leads to higher asset prices (wealth effect dominates substitution effect). While earlier micro-estimates suggested values close to 0, macro-calibrations typically range between 1.1 and 2.0.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1,
+      "lowerBound": 0.2,
+      "upperBound": 2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.5,
+        "p50": 1,
+        "p75": 1.5,
+        "p95": 2
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption, distinct from risk aversion, for a representative U.S. household in annual macro-calibrations.",
+      "citations": [
+        "Hall (1988) - Intertemporal Substitution in Consumption",
+        "Bansal and Yaron (2004) - Risks for the Long Run",
+        "Vissing-Jorgensen (2002) - Limited Asset Market Participation and the Elasticity of Intertemporal Substitution"
+      ],
+      "reasoningSummary": "Estimates of the IES vary significantly across the literature. Early macro estimates (like Hall, 1988) found values close to zero, suggesting little response of consumption to interest rates. However, modern asset pricing models using Epstein-Zin preferences (such as the long-run risks literature by Bansal and Yaron, 2004) typically calibrate the IES to be greater than 1 (e.g., 1.5) to ensure that the wealth effect dominates the substitution effect. Empirical estimates addressing limited asset market participation tend to find higher values for stockholders (around 0.3-1.0), leading to a wide uncertainty band centered near 1.0.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption, distinct from risk aversion, for a representative U.S. household in annual macro-calibrations.\",\n  \"point_estimate\": 1.0,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.5,\n    \"p50\": 1.0,\n    \"p75\": 1.5,\n    \"p95\": 2.0\n  },\n  \"citations\": [\n    \"Hall (1988) - Intertemporal Substitution in Consumption\",\n    \"Bansal and Yaron (2004) - Risks for the Long Run\",\n    \"Vissing-Jorgensen (2002) - Limited Asset Market Participation and the Elasticity of Intertemporal Substitution\"\n  ],\n  \"reasoning_summary\": \"Estimates of the IES vary significantly across the literature. Early macro estimates (like Hall, 1988) found values close to zero, suggesting little response of consumption to interest rates. However, modern asset pricing models using Epstein-Zin preferences (such as the long-run risks literature by Bansal and Yaron, 2004) typically calibrate the IES to be greater than 1 (e.g., 1.5) to ensure that the wealth effect dominates the substitution effect. Empirical estimates addressing limited asset market participation tend to find higher values for stockholders (around 0.3-1.0), leading to a wide uncertainty band centered near 1.0.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption of a representative U.S. household, commonly calibrated in macro-finance models with recursive preferences (distinct from risk aversion).",
+      "citations": [
+        "Bansal and Yaron (2004) - Long-Run Risks model, calibrated IES at 1.5",
+        "Epstein and Zin (1991) - Substitution, Risk Aversion, and the Temporal Behavior of Consumption and Asset Returns",
+        "Hall (1988) - Intertemporal Substitution in Consumption (estimated near 0, contrasting with later asset-pricing calibrations)"
+      ],
+      "reasoningSummary": "In modern macro-finance calibrations utilizing Epstein-Zin preferences, the IES is typically calibrated to be greater than 1 (often 1.5 or 2) to resolve asset pricing puzzles, such as ensuring that the wealth-to-consumption ratio rises with expected consumption growth. While early empirical estimates (e.g., Hall) suggested an IES close to zero, the standard asset-pricing calibration consensus centers around 1.5.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption of a representative U.S. household, commonly calibrated in macro-finance models with recursive preferences (distinct from risk aversion).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.0,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - Long-Run Risks model, calibrated IES at 1.5\",\n    \"Epstein and Zin (1991) - Substitution, Risk Aversion, and the Temporal Behavior of Consumption and Asset Returns\",\n    \"Hall (1988) - Intertemporal Substitution in Consumption (estimated near 0, contrasting with later asset-pricing calibrations)\"\n  ],\n  \"reasoning_summary\": \"In modern macro-finance calibrations utilizing Epstein-Zin preferences, the IES is typically calibrated to be greater than 1 (often 1.5 or 2) to resolve asset pricing puzzles, such as ensuring that the wealth-to-consumption ratio rises with expected consumption growth. While early empirical estimates (e.g., Hall) suggested an IES close to zero, the standard asset-pricing calibration consensus centers around 1.5.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.2,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.8,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting, using preferences where IES is distinct from risk aversion (e.g., Epstein-Zin).",
+      "citations": [
+        "Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'",
+        "Hall (1988) - 'Intertemporal Substitution in Consumption'",
+        "Vissing-Jorgensen (2002) - 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'"
+      ],
+      "reasoningSummary": "Macroeconomic calibrations with Epstein-Zin preferences (such as the Long-Run Risks literature) typically require an IES greater than 1 (often 1.5 to 2.0) so that an increase in expected growth raises asset prices. In contrast, microeconomic estimates using aggregate consumption often find the IES to be small (close to 0 or 0.2), though estimates for asset market participants are higher. The quantiles reflect the tension between macro-finance calibrations (centered around 1.5) and micro-econometric estimates.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting, using preferences where IES is distinct from risk aversion (e.g., Epstein-Zin).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.8,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal and Yaron (2004) - 'Risks for the Long Run: A Potential Resolution of Asset Pricing Puzzles'\",\n    \"Hall (1988) - 'Intertemporal Substitution in Consumption'\",\n    \"Vissing-Jorgensen (2002) - 'Limited Asset Market Participation and the Elasticity of Intertemporal Substitution'\"\n  ],\n  \"reasoning_summary\": \"Macroeconomic calibrations with Epstein-Zin preferences (such as the Long-Run Risks literature) typically require an IES greater than 1 (often 1.5 to 2.0) so that an increase in expected growth raises asset prices. In contrast, microeconomic estimates using aggregate consumption often find the IES to be small (close to 0 or 0.2), though estimates for asset market participants are higher. The quantiles reflect the tension between macro-finance calibrations (centered around 1.5) and micro-econometric estimates.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 1.5,
+      "lowerBound": 0.5,
+      "upperBound": 2.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.5,
+        "p25": 1.1,
+        "p50": 1.5,
+        "p75": 2,
+        "p95": 2.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration context, modeled distinctly from risk aversion (e.g., Epstein-Zin preferences).",
+      "citations": [
+        "Bansal, R., & Yaron, A. (2004). Risks for the long run: A potential resolution of asset pricing puzzles. Journal of Finance.",
+        "Hall, R. E. (1988). Intertemporal substitution in consumption. Journal of Political Economy.",
+        "Vissing-Jørgensen, A., & Attanasio, O. P. (2003). Stock-market participation, intertemporal substitution, and risk aversion. American Economic Review."
+      ],
+      "reasoningSummary": "In macroeconomic asset pricing models that separate risk aversion from the IES (like Epstein-Zin preferences), such as the Bansal-Yaron long-run risks model, the IES is typically calibrated strictly greater than 1 (usually around 1.5). This ensures that an increase in expected consumption growth raises the wealth-consumption ratio. While earlier aggregate empirical studies (like Hall 1988) estimated the IES to be near zero, modern macro-finance calibrations strongly favor values between 1.1 and 2.0 to match asset pricing moments.",
+      "rawResponse": "{\n  \"interpretation\": \"Intertemporal elasticity of substitution for nondurable consumption for a representative U.S. household in an annual macro-calibration context, modeled distinctly from risk aversion (e.g., Epstein-Zin preferences).\",\n  \"point_estimate\": 1.5,\n  \"quantiles\": {\n    \"p05\": 0.5,\n    \"p25\": 1.1,\n    \"p50\": 1.5,\n    \"p75\": 2.0,\n    \"p95\": 2.5\n  },\n  \"citations\": [\n    \"Bansal, R., & Yaron, A. (2004). Risks for the long run: A potential resolution of asset pricing puzzles. Journal of Finance.\",\n    \"Hall, R. E. (1988). Intertemporal substitution in consumption. Journal of Political Economy.\",\n    \"Vissing-Jørgensen, A., & Attanasio, O. P. (2003). Stock-market participation, intertemporal substitution, and risk aversion. American Economic Review.\"\n  ],\n  \"reasoning_summary\": \"In macroeconomic asset pricing models that separate risk aversion from the IES (like Epstein-Zin preferences), such as the Bansal-Yaron long-run risks model, the IES is typically calibrated strictly greater than 1 (usually around 1.5). This ensures that an increase in expected consumption growth raises the wealth-consumption ratio. While earlier aggregate empirical studies (like Hall 1988) estimated the IES to be near zero, modern macro-finance calibrations strongly favor values between 1.1 and 2.0 to match asset pricing moments.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

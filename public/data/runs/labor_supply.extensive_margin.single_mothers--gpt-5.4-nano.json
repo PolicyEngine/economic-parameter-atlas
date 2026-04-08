@@ -1,0 +1,394 @@
+{
+  "quantityId": "labor_supply.extensive_margin.single_mothers",
+  "modelName": "gpt-5.4-nano",
+  "experimentDir": "gpt-5.4-nano-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:23:23.231Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.12,
+      "lowerBound": 0.02,
+      "upperBound": 0.27,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.02,
+        "p25": 0.07,
+        "p50": 0.12,
+        "p75": 0.18,
+        "p95": 0.27
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the U.S.: the percent change in employment/labor-force participation from a 1% increase in the net-of-tax wage.",
+      "citations": [
+        "Eissa and Liebman (1996) on labor supply responses of single mothers to tax/earnings incentives",
+        "Moffitt (2002/2003) summaries on welfare reform and labor supply elasticities",
+        "Blundell and MaCurdy (1999) on wage elasticity and labor supply modeling/elasticity magnitudes"
+      ],
+      "reasoningSummary": "I expect a positive but modest medium-run elasticity: higher net-of-tax wages typically increase single mothers’ participation, but frictions (child care, job matching, fixed costs) and already-high baseline participation limit the response, yielding a distribution centered around ~0.1 with plausible tails from near-zero to a few tenths.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers in the U.S.: the percent change in employment/labor-force participation from a 1% increase in the net-of-tax wage.\",\"point_estimate\":0.12,\"quantiles\":{\"p05\":0.02,\"p25\":0.07,\"p50\":0.12,\"p75\":0.18,\"p95\":0.27},\"citations\":[\"Eissa and Liebman (1996) on labor supply responses of single mothers to tax/earnings incentives\",\"Moffitt (2002/2003) summaries on welfare reform and labor supply elasticities\",\"Blundell and MaCurdy (1999) on wage elasticity and labor supply modeling/elasticity magnitudes\"] ,\"reasoning_summary\":\"I expect a positive but modest medium-run elasticity: higher net-of-tax wages typically increase single mothers’ participation, but frictions (child care, job matching, fixed costs) and already-high baseline participation limit the response, yielding a distribution centered around ~0.1 with plausible tails from near-zero to a few tenths.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.1,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 0.9
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers with respect to the net-of-tax wage (percent change in employment or labor-force participation per 1% change in net-of-tax wage).",
+      "citations": [
+        "Meyer & Rosenbaum–style evidence on work incentives and labor supply responses of single parents",
+        "Eissa & Liebman–type findings on how tax credits affect labor supply/participation",
+        "Standard labor supply theory: participation elasticity smaller than hours elasticity, especially for single mothers in the medium run"
+      ],
+      "reasoningSummary": "I expect a positive but modest medium-run participation response to net-of-tax wage changes for single mothers, constrained by nonwage factors (childcare, fixed costs of work, eligibility rules) and typically smaller than intensive-margin hour responses; I center around a moderately positive elasticity with a wide-but-plausible range.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers with respect to the net-of-tax wage (percent change in employment or labor-force participation per 1% change in net-of-tax wage).\",\"point_estimate\":0.45,\"quantiles\":{\"p05\":0.10,\"p25\":0.25,\"p50\":0.45,\"p75\":0.65,\"p95\":0.90},\"citations\":[\"Meyer & Rosenbaum–style evidence on work incentives and labor supply responses of single parents\",\"Eissa & Liebman–type findings on how tax credits affect labor supply/participation\",\"Standard labor supply theory: participation elasticity smaller than hours elasticity, especially for single mothers in the medium run\"] ,\"reasoning_summary\":\"I expect a positive but modest medium-run participation response to net-of-tax wage changes for single mothers, constrained by nonwage factors (childcare, fixed costs of work, eligibility rules) and typically smaller than intensive-margin hour responses; I center around a moderately positive elasticity with a wide-but-plausible range.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.45,
+        "p95": 0.75
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.",
+      "citations": [],
+      "reasoningSummary": "I expect a modest positive elasticity: single mothers’ work incentives respond to wage changes, but participation is constrained by childcare, health, and preferences, limiting the range. I also allow for heterogeneity and institutional factors (tax credits, phaseouts) that can amplify or dampen responses, leading to a wider upper tail.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\",\n  \"point_estimate\": 0.25,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.15,\n    \"p50\": 0.25,\n    \"p75\": 0.45,\n    \"p95\": 0.75\n  },\n  \"citations\": [],\n  \"reasoning_summary\": \"I expect a modest positive elasticity: single mothers’ work incentives respond to wage changes, but participation is constrained by childcare, health, and preferences, limiting the range. I also allow for heterogeneity and institutional factors (tax credits, phaseouts) that can amplify or dampen responses, leading to a wider upper tail.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": -0.05,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.05,
+        "p25": 0.12,
+        "p50": 0.25,
+        "p75": 0.45,
+        "p95": 0.7
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment/labor-force participation from a 1% increase in the net-of-tax wage.",
+      "citations": [
+        "Meyer, Rosenbaum, and others on welfare-to-work and labor supply elasticities",
+        "Blundell and MaCurdy survey background on labor supply elasticities (including participation responses)",
+        "Classic implied elasticity intuition: participation is typically less wage-elastic than hours among ongoing workers"
+      ],
+      "reasoningSummary": "I expect single mothers’ medium-run participation to respond positively to net-of-tax wage incentives, but modestly (smaller than hours elasticities) due to non-wage constraints like child care, job availability, and fixed costs of employment. I allow for small negative values near zero at the lower tail due to heterogeneity and measurement/cause-of-change concerns, while placing most mass in the 0.1–0.5 range and a relatively high upper tail for stronger responders.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment/labor-force participation from a 1% increase in the net-of-tax wage.\",\"point_estimate\":0.25,\"quantiles\":{\"p05\":-0.05,\"p25\":0.12,\"p50\":0.25,\"p75\":0.45,\"p95\":0.7},\"citations\":[\"Meyer, Rosenbaum, and others on welfare-to-work and labor supply elasticities\",\"Blundell and MaCurdy survey background on labor supply elasticities (including participation responses)\",\"Classic implied elasticity intuition: participation is typically less wage-elastic than hours among ongoing workers\"],\"reasoning_summary\":\"I expect single mothers’ medium-run participation to respond positively to net-of-tax wage incentives, but modestly (smaller than hours elasticities) due to non-wage constraints like child care, job availability, and fixed costs of employment. I allow for small negative values near zero at the lower tail due to heterogeneity and measurement/cause-of-change concerns, while placing most mass in the 0.1–0.5 range and a relatively high upper tail for stronger responders.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.05,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.2,
+        "p50": 0.35,
+        "p75": 0.6,
+        "p95": 0.9
+      },
+      "interpretation": "Medium-run employment or labor-force participation elasticity of single mothers with respect to the net-of-tax wage (percent change in participation per 1% change in the net-of-tax wage).",
+      "citations": [
+        "Labor supply and welfare incentive evidence (negative income tax/EITC and tax-induced wage changes)",
+        "Empirical labor supply elasticities for prime-age women and single mothers from micro studies",
+        "Participation margins and childcare/constraints limiting wage responsiveness in the medium run"
+      ],
+      "reasoningSummary": "I expect a modest positive elasticity for single mothers in the medium run: wage changes can shift participation, but childcare and fixed constraints reduce responsiveness, while some studies suggest elasticities are larger than near-zero but well below unity for this group.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment or labor-force participation elasticity of single mothers with respect to the net-of-tax wage (percent change in participation per 1% change in the net-of-tax wage).\",\"point_estimate\":0.35,\"quantiles\":{\"p05\":0.05,\"p25\":0.2,\"p50\":0.35,\"p75\":0.6,\"p95\":0.9},\"citations\":[\"Labor supply and welfare incentive evidence (negative income tax/EITC and tax-induced wage changes)\",\"Empirical labor supply elasticities for prime-age women and single mothers from micro studies\",\"Participation margins and childcare/constraints limiting wage responsiveness in the medium run\"] ,\"reasoning_summary\":\"I expect a modest positive elasticity for single mothers in the medium run: wage changes can shift participation, but childcare and fixed constraints reduce responsiveness, while some studies suggest elasticities are larger than near-zero but well below unity for this group.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.18,
+      "lowerBound": 0.05,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.12,
+        "p50": 0.18,
+        "p75": 0.28,
+        "p95": 0.4
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers with respect to the net-of-tax wage (percent change in employment or labor-force participation for a 1% change in the net-of-tax wage).",
+      "citations": [
+        "Meyer, Holtz-Eakin & Rosen-style welfare-to-work labor supply evidence (net wage/incentive responsiveness)",
+        "Tax credit and benefit phase-out/wage subsidy labor supply elasticities for single parents (general empirical findings)",
+        "EITC and related work-incentive studies for single mothers (directional evidence on participation vs hours)"
+      ],
+      "reasoningSummary": "I expect positive but modest wage-response in the medium run for single mothers: participation tends to rise with higher net wages, but constraints (childcare, job availability, search frictions) and partial focus on hours vs participation keep the elasticity well below unity. I place the median around 0.18 with a wider upper tail reflecting stronger incentive effects in some subgroups/periods.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers with respect to the net-of-tax wage (percent change in employment or labor-force participation for a 1% change in the net-of-tax wage).\",\"point_estimate\":0.18,\"quantiles\":{\"p05\":0.05,\"p25\":0.12,\"p50\":0.18,\"p75\":0.28,\"p95\":0.40},\"citations\":[\"Meyer, Holtz-Eakin & Rosen-style welfare-to-work labor supply evidence (net wage/incentive responsiveness)\",\"Tax credit and benefit phase-out/wage subsidy labor supply elasticities for single parents (general empirical findings)\",\"EITC and related work-incentive studies for single mothers (directional evidence on participation vs hours)\"],\"reasoning_summary\":\"I expect positive but modest wage-response in the medium run for single mothers: participation tends to rise with higher net wages, but constraints (childcare, job availability, search frictions) and partial focus on hours vs participation keep the elasticity well below unity. I place the median around 0.18 with a wider upper tail reflecting stronger incentive effects in some subgroups/periods.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.2,
+      "lowerBound": -0.05,
+      "upperBound": 0.6,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.05,
+        "p25": 0.05,
+        "p50": 0.2,
+        "p75": 0.35,
+        "p95": 0.6
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the U.S.: the percent change in employment or labor-force participation from a 1% change in the net-of-tax wage.",
+      "citations": [
+        "Eissa and Liebman (1996) on welfare reform and labor supply incentives",
+        "Meyer and Rosenbaum (2001) on Earned Income Tax Credit effects and labor supply",
+        "Blundell and MaCurdy (1999) on labor supply elasticities and wage responses"
+      ],
+      "reasoningSummary": "I expect a modest positive medium-run wage participation response for single mothers, with some risk of near-zero or slightly negative estimates depending on measurement, heterogeneity (education/earnings), and welfare/benefit interactions; therefore I center around a small-to-moderate positive elasticity with a wider upper tail.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers in the U.S.: the percent change in employment or labor-force participation from a 1% change in the net-of-tax wage.\",\"point_estimate\":0.2,\"quantiles\":{\"p05\":-0.05,\"p25\":0.05,\"p50\":0.2,\"p75\":0.35,\"p95\":0.6},\"citations\":[\"Eissa and Liebman (1996) on welfare reform and labor supply incentives\",\"Meyer and Rosenbaum (2001) on Earned Income Tax Credit effects and labor supply\",\"Blundell and MaCurdy (1999) on labor supply elasticities and wage responses\"],\"reasoning_summary\":\"I expect a modest positive medium-run wage participation response for single mothers, with some risk of near-zero or slightly negative estimates depending on measurement, heterogeneity (education/earnings), and welfare/benefit interactions; therefore I center around a small-to-moderate positive elasticity with a wider upper tail.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.7
+      },
+      "interpretation": "Medium-run elasticity of single mothers’ employment/labor-force participation with respect to a 1% increase in the net-of-tax wage (percent change in participation per 1% wage change).",
+      "citations": [
+        "Eissa and Liebman (1996) welfare reform and labor supply responses",
+        "Moffitt (2002) labor supply and welfare incentives (review-level anchor)",
+        "Blundell and MaCurdy (1999/2001) labor supply elasticities and wage responses (general anchor)"
+      ],
+      "reasoningSummary": "For single mothers, wage incentives matter but are moderated by non-wage constraints (childcare, job match, search frictions, and program rules). I therefore place the median elasticity modestly positive (~0.25) with a plausible range from small (near-zero) to moderately responsive (upper tail below ~1).",
+      "rawResponse": "{\"interpretation\":\"Medium-run elasticity of single mothers’ employment/labor-force participation with respect to a 1% increase in the net-of-tax wage (percent change in participation per 1% wage change).\",\"point_estimate\":0.25,\"quantiles\":{\"p05\":0.05,\"p25\":0.15,\"p50\":0.25,\"p75\":0.4,\"p95\":0.7},\"citations\":[\"Eissa and Liebman (1996) welfare reform and labor supply responses\",\"Moffitt (2002) labor supply and welfare incentives (review-level anchor)\",\"Blundell and MaCurdy (1999/2001) labor supply elasticities and wage responses (general anchor)\"],\"reasoning_summary\":\"For single mothers, wage incentives matter but are moderated by non-wage constraints (childcare, job match, search frictions, and program rules). I therefore place the median elasticity modestly positive (~0.25) with a plausible range from small (near-zero) to moderately responsive (upper tail below ~1).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.18,
+      "lowerBound": 0.05,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.11,
+        "p50": 0.18,
+        "p75": 0.28,
+        "p95": 0.45
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the US: the percent change in employment or labor-force participation from a 1% change in the net-of-tax wage.",
+      "citations": [
+        "Meyer, et al. evidence on labor supply responses (tax incentives and participation margins)",
+        "Eissa & Liebman (Earned Income Tax Credit) effects on employment/participation",
+        "Manoli & Turner (labor supply and EITC; especially effects on single parents)"
+      ],
+      "reasoningSummary": "I expect a positive but moderate participation response to net-of-tax wage changes over the medium run for single mothers: stronger than near-zero effects for the most constrained margin, but typically not large (limited by childcare, fixed costs of working, and benefit interactions). The median elasticity around 0.18 with a right tail up to ~0.45 reflects plausible heterogeneity and varying strength of wage-driven incentives.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run employment participation elasticity of single mothers in the US: the percent change in employment or labor-force participation from a 1% change in the net-of-tax wage.\",\n  \"point_estimate\": 0.18,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.11,\n    \"p50\": 0.18,\n    \"p75\": 0.28,\n    \"p95\": 0.45\n  },\n  \"citations\": [\n    \"Meyer, et al. evidence on labor supply responses (tax incentives and participation margins)\",\n    \"Eissa & Liebman (Earned Income Tax Credit) effects on employment/participation\",\n    \"Manoli & Turner (labor supply and EITC; especially effects on single parents)\"\n  ],\n  \"reasoning_summary\": \"I expect a positive but moderate participation response to net-of-tax wage changes over the medium run for single mothers: stronger than near-zero effects for the most constrained margin, but typically not large (limited by childcare, fixed costs of working, and benefit interactions). The median elasticity around 0.18 with a right tail up to ~0.45 reflects plausible heterogeneity and varying strength of wage-driven incentives.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.05,
+      "upperBound": 0.85,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.2,
+        "p50": 0.35,
+        "p75": 0.55,
+        "p95": 0.85
+      },
+      "interpretation": "Medium-run employment participation elasticity with respect to the net-of-tax wage among single mothers in the United States (percent change in employment or labor-force participation per 1% change in the net-of-tax wage).",
+      "citations": [
+        "Eissa & Liebman (TANF/earned-income incentives and labor supply)",
+        "Meyer & Rosenbaum (EITC and labor supply responses)",
+        "Tax and transfer policy evidence on the earned-income tax credit and female/mother employment margins"
+      ],
+      "reasoningSummary": "I expect a positive but moderate elasticity in the medium run: single mothers’ participation responds to net-of-tax incentives, but constraints (childcare, fixed costs, partial participation) and program design typically limit the response size relative to full labor-force participation of prime-age workers. The median reflects a moderate incentive effect with substantial uncertainty in the upper tail.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity with respect to the net-of-tax wage among single mothers in the United States (percent change in employment or labor-force participation per 1% change in the net-of-tax wage).\",\"point_estimate\":0.35,\"quantiles\":{\"p05\":0.05,\"p25\":0.20,\"p50\":0.35,\"p75\":0.55,\"p95\":0.85},\"citations\":[\"Eissa & Liebman (TANF/earned-income incentives and labor supply)\",\"Meyer & Rosenbaum (EITC and labor supply responses)\",\"Tax and transfer policy evidence on the earned-income tax credit and female/mother employment margins\"] ,\"reasoning_summary\":\"I expect a positive but moderate elasticity in the medium run: single mothers’ participation responds to net-of-tax incentives, but constraints (childcare, fixed costs, partial participation) and program design typically limit the response size relative to full labor-force participation of prime-age workers. The median reflects a moderate incentive effect with substantial uncertainty in the upper tail.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.2,
+      "lowerBound": 0.05,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.12,
+        "p50": 0.2,
+        "p75": 0.3,
+        "p95": 0.45
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment or labor-force participation from a 1% increase in the net-of-tax wage.",
+      "citations": [
+        "Standard labor supply findings: net-of-wage increases raise labor-force participation/employment for women with elasticities typically modest but positive",
+        "Single-mother labor supply evidence from US quasi-experimental work (tax credits/earnings exemptions) often implying small-to-moderate participation responses",
+        "Broader household labor supply models suggesting participation elasticities for secondary earners are larger than intensive-margin elasticities but still well below one in many settings"
+      ],
+      "reasoningSummary": "I expect a positive but relatively moderate medium-run elasticity: higher net wages increase participation, though constraints (childcare, imperfect job matching, and non-wage factors) likely limit the responsiveness. Hence the median around 0.2 with a plausible range from small effects to moderately larger effects.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment or labor-force participation from a 1% increase in the net-of-tax wage.\",\"point_estimate\":0.2,\"quantiles\":{\"p05\":0.05,\"p25\":0.12,\"p50\":0.2,\"p75\":0.3,\"p95\":0.45},\"citations\":[\"Standard labor supply findings: net-of-wage increases raise labor-force participation/employment for women with elasticities typically modest but positive\",\"Single-mother labor supply evidence from US quasi-experimental work (tax credits/earnings exemptions) often implying small-to-moderate participation responses\",\"Broader household labor supply models suggesting participation elasticities for secondary earners are larger than intensive-margin elasticities but still well below one in many settings\"],\"reasoning_summary\":\"I expect a positive but relatively moderate medium-run elasticity: higher net wages increase participation, though constraints (childcare, imperfect job matching, and non-wage factors) likely limit the responsiveness. Hence the median around 0.2 with a plausible range from small effects to moderately larger effects.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.08,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.08,
+        "p25": 0.2,
+        "p50": 0.35,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Medium-run employment/labor-force participation elasticity of single mothers in the U.S. with respect to the net-of-tax wage (percent change in participation per 1% change in the net-of-tax wage).",
+      "citations": [
+        "Moffitt and Veracierto / participation and labor supply models for single mothers",
+        "MaCurdy-style labor supply elasticity concepts and empirical wage responsiveness",
+        "Nativity/childcare and welfare reform evidence on participation margins for single mothers"
+      ],
+      "reasoningSummary": "I expect a positive but modest medium-run wage elasticity for single mothers: the wage affects participation through incentives on the extensive margin, but constraints like childcare needs, preferences, and observed limited responsiveness tend to cap the effect. The distribution reflects uncertainty from heterogeneity across policies, baseline employment rates, and measurement of the net-of-tax wage.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment/labor-force participation elasticity of single mothers in the U.S. with respect to the net-of-tax wage (percent change in participation per 1% change in the net-of-tax wage).\",\"point_estimate\":0.35,\"quantiles\":{\"p05\":0.08,\"p25\":0.2,\"p50\":0.35,\"p75\":0.5,\"p95\":0.75},\"citations\":[\"Moffitt and Veracierto / participation and labor supply models for single mothers\",\"MaCurdy-style labor supply elasticity concepts and empirical wage responsiveness\",\"Nativity/childcare and welfare reform evidence on participation margins for single mothers\"],\"reasoning_summary\":\"I expect a positive but modest medium-run wage elasticity for single mothers: the wage affects participation through incentives on the extensive margin, but constraints like childcare needs, preferences, and observed limited responsiveness tend to cap the effect. The distribution reflects uncertainty from heterogeneity across policies, baseline employment rates, and measurement of the net-of-tax wage.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.2,
+      "lowerBound": 0.05,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.12,
+        "p50": 0.2,
+        "p75": 0.32,
+        "p95": 0.45
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the US: the percent change in employment or labor-force participation from a 1% change in the net-of-tax wage.",
+      "citations": [
+        "Moffitt-style labor supply and participation evidence on women with children",
+        "Findings from labor supply/discrete choice models on participation responses to net wages for single mothers",
+        "U.S. welfare program/earnings responses and elasticity magnitudes reported in classic policy-relevant labor supply work"
+      ],
+      "reasoningSummary": "I expect a positive but modest medium-run participation response: net wage incentives can move the labor supply margin for single mothers, but constraints (childcare, job matching, heterogeneous preferences, and benefit interactions) limit the elasticity. I therefore place the median around 0.20 with plausible range roughly 0.05–0.45.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers in the US: the percent change in employment or labor-force participation from a 1% change in the net-of-tax wage.\",\"point_estimate\":0.20,\"quantiles\":{\"p05\":0.05,\"p25\":0.12,\"p50\":0.20,\"p75\":0.32,\"p95\":0.45},\"citations\":[\"Moffitt-style labor supply and participation evidence on women with children\",\"Findings from labor supply/discrete choice models on participation responses to net wages for single mothers\",\"U.S. welfare program/earnings responses and elasticity magnitudes reported in classic policy-relevant labor supply work\"] ,\"reasoning_summary\":\"I expect a positive but modest medium-run participation response: net wage incentives can move the labor supply margin for single mothers, but constraints (childcare, job matching, heterogeneous preferences, and benefit interactions) limit the elasticity. I therefore place the median around 0.20 with plausible range roughly 0.05–0.45.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.18,
+      "lowerBound": 0.02,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.02,
+        "p25": 0.1,
+        "p50": 0.18,
+        "p75": 0.28,
+        "p95": 0.45
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment or labor-force participation from a 1% increase in the net-of-tax wage.",
+      "citations": [
+        "Moffitt and related work on labor supply of single mothers and welfare incentives",
+        "Manoli and coauthors’ empirical studies on how welfare and taxes affect labor market behavior",
+        "The general labor-supply finding that participation elasticities are positive but modest for constrained low-income groups"
+      ],
+      "reasoningSummary": "I expect a positive but moderate medium-run participation response for single mothers: stronger incentives generally increase work and participation, but constraints (childcare, health, job availability) limit the elasticity. I center on ~0.18 with a wider spread reflecting uncertainty about net-of-tax wage measurement and heterogeneous constraints.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment or labor-force participation from a 1% increase in the net-of-tax wage.\",\"point_estimate\":0.18,\"quantiles\":{\"p05\":0.02,\"p25\":0.10,\"p50\":0.18,\"p75\":0.28,\"p95\":0.45},\"citations\":[\"Moffitt and related work on labor supply of single mothers and welfare incentives\",\"Manoli and coauthors’ empirical studies on how welfare and taxes affect labor market behavior\",\"The general labor-supply finding that participation elasticities are positive but modest for constrained low-income groups\"],\"reasoning_summary\":\"I expect a positive but moderate medium-run participation response for single mothers: stronger incentives generally increase work and participation, but constraints (childcare, health, job availability) limit the elasticity. I center on ~0.18 with a wider spread reflecting uncertainty about net-of-tax wage measurement and heterogeneous constraints.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.6,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.6
+      },
+      "interpretation": "Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment/labor-force participation from a 1% change in the net-of-tax wage.",
+      "citations": [
+        "Standard labor supply/policy-evaluation framing for net-of-tax wage elasticities",
+        "Empirical wage-elasticity patterns for single mothers/low-income women (moderate participation responses)",
+        "General expectations from welfare reform and EITC-style net wage incentives on labor-force participation"
+      ],
+      "reasoningSummary": "I endorse a modest positive medium-run elasticity: participation responses are typically nontrivial but constrained by caregiving, health, job matching, and existing labor supply behavior, leading to a median around 0.25 with limited mass near zero and a tail toward somewhat larger effects.",
+      "rawResponse": "{\"interpretation\":\"Medium-run employment participation elasticity of single mothers in the United States: the percent change in employment/labor-force participation from a 1% change in the net-of-tax wage.\",\"point_estimate\":0.25,\"quantiles\":{\"p05\":0.05,\"p25\":0.15,\"p50\":0.25,\"p75\":0.4,\"p95\":0.6},\"citations\":[\"Standard labor supply/policy-evaluation framing for net-of-tax wage elasticities\",\"Empirical wage-elasticity patterns for single mothers/low-income women (moderate participation responses)\",\"General expectations from welfare reform and EITC-style net wage incentives on labor-force participation\"] ,\"reasoning_summary\":\"I endorse a modest positive medium-run elasticity: participation responses are typically nontrivial but constrained by caregiving, health, job matching, and existing labor supply behavior, leading to a median around 0.25 with limited mass near zero and a tail toward somewhat larger effects.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

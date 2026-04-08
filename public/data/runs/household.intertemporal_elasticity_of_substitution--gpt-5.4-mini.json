@@ -1,0 +1,398 @@
+{
+  "quantityId": "household.intertemporal_elasticity_of_substitution",
+  "modelName": "gpt-5.4-mini",
+  "experimentDir": "gpt-5.4-mini-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:23:17.505Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.6,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.6,
+        "p75": 1,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1978) Euler equation / consumption growth benchmark",
+        "Attanasio & Weber (1995) consumption Euler equation estimates",
+        "Macro calibration convention around IES below 1"
+      ],
+      "reasoningSummary": "My prior is that annual nondurable-consumption IES for a representative U.S. household is usually calibrated below 1, with substantial uncertainty but a central value around 0.5-0.7.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.6,\"quantiles\":{\"p05\":0.1,\"p25\":0.3,\"p50\":0.6,\"p75\":1,\"p95\":1.5},\"citations\":[\"Hall (1978) Euler equation / consumption growth benchmark\",\"Attanasio & Weber (1995) consumption Euler equation estimates\",\"Macro calibration convention around IES below 1\"],\"reasoning_summary\":\"My prior is that annual nondurable-consumption IES for a representative U.S. household is usually calibrated below 1, with substantial uncertainty but a central value around 0.5-0.7.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) random-walk consumption framework",
+        "Campbell and Mankiw (1989) rule-of-thumb vs forward-looking consumption debates",
+        "Muellbauer and Murphy (1997) UK/U.S. consumption calibration discussions"
+      ],
+      "reasoningSummary": "My current belief is that annual macro calibrations for U.S. nondurable consumption usually place IES below one, with a central value around one-half and substantial uncertainty. I allow a wide upper tail because empirical estimates vary a lot across identification strategies and sample periods.",
+      "rawResponse": "{\"interpretation\":\"Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) random-walk consumption framework\",\"Campbell and Mankiw (1989) rule-of-thumb vs forward-looking consumption debates\",\"Muellbauer and Murphy (1997) UK/U.S. consumption calibration discussions\"],\"reasoning_summary\":\"My current belief is that annual macro calibrations for U.S. nondurable consumption usually place IES below one, with a central value around one-half and substantial uncertainty. I allow a wide upper tail because empirical estimates vary a lot across identification strategies and sample periods.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.6,
+      "lowerBound": 0.1,
+      "upperBound": 2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.6,
+        "p75": 1,
+        "p95": 2
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) Euler equation/log utility benchmark",
+        "Campbell and Mankiw (1989) consumption growth evidence",
+        "Standard RBC/New Keynesian calibration practice"
+      ],
+      "reasoningSummary": "My prior is that the annual nondurable-consumption IES for a representative U.S. household is below 1, with a central value around 0.6. I allow substantial uncertainty because estimates vary with identification, measurement, and the distinction between micro and macro calibration contexts.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.6,\"quantiles\":{\"p05\":0.1,\"p25\":0.3,\"p50\":0.6,\"p75\":1,\"p95\":2},\"citations\":[\"Hall (1988) Euler equation/log utility benchmark\",\"Campbell and Mankiw (1989) consumption growth evidence\",\"Standard RBC/New Keynesian calibration practice\"],\"reasoning_summary\":\"My prior is that the annual nondurable-consumption IES for a representative U.S. household is below 1, with a central value around 0.6. I allow substantial uncertainty because estimates vary with identification, measurement, and the distinction between micro and macro calibration contexts.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) consumption Euler equation / random walk framing",
+        "Campbell and Mankiw (1989) limited intertemporal substitution discussion",
+        "Macro calibration convention using low-to-moderate IES values in representative-agent models"
+      ],
+      "reasoningSummary": "I think the representative-household annual IES for nondurable consumption is below 1 and centered around 0.5, with meaningful uncertainty because estimates vary widely and are sensitive to identification and specification.",
+      "rawResponse": "{\"interpretation\":\"Intertemporal elasticity of substitution for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) consumption Euler equation / random walk framing\",\"Campbell and Mankiw (1989) limited intertemporal substitution discussion\",\"Macro calibration convention using low-to-moderate IES values in representative-agent models\"],\"reasoning_summary\":\"I think the representative-household annual IES for nondurable consumption is below 1 and centered around 0.5, with meaningful uncertainty because estimates vary widely and are sensitive to identification and specification.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) consumption Euler-equation framework",
+        "Attanasio and Weber (1993) consumption growth/interest rate evidence",
+        "Mankiw, Rotemberg, and Summers (1985) macro consumption calibration discussions"
+      ],
+      "reasoningSummary": "My prior is that annual macro calibrations for U.S. nondurable consumption usually place IES below 1, often around one-half, with substantial uncertainty because estimates vary widely across methods and identification assumptions.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) consumption Euler-equation framework\",\"Attanasio and Weber (1993) consumption growth/interest rate evidence\",\"Mankiw, Rotemberg, and Summers (1985) macro consumption calibration discussions\"],\"reasoning_summary\":\"My prior is that annual macro calibrations for U.S. nondurable consumption usually place IES below 1, often around one-half, with substantial uncertainty because estimates vary widely across methods and identification assumptions.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.25,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.25
+      },
+      "interpretation": "Intertemporal elasticity of substitution for nondurable consumption in an annual U.S. representative-household macro-calibration setting.",
+      "citations": [
+        "Hall (1988) consumption Euler equation / near-random-walk intuition",
+        "Campbell and Mankiw (1989) rule-of-thumb vs optimizing consumption discussion",
+        "Mankiw, Rotemberg, and Summers macro calibration discussions of low EIS"
+      ],
+      "reasoningSummary": "I think the relevant annual macro-calibration EIS for nondurable consumption is modest and likely below 1, with a central value around 0.5. My uncertainty is substantial because estimates vary by identification strategy, but I would not put most mass near zero or above 1.",
+      "rawResponse": "{\"interpretation\":\"Intertemporal elasticity of substitution for nondurable consumption in an annual U.S. representative-household macro-calibration setting.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.75,\"p95\":1.25},\"citations\":[\"Hall (1988) consumption Euler equation / near-random-walk intuition\",\"Campbell and Mankiw (1989) rule-of-thumb vs optimizing consumption discussion\",\"Mankiw, Rotemberg, and Summers macro calibration discussions of low EIS\"],\"reasoning_summary\":\"I think the relevant annual macro-calibration EIS for nondurable consumption is modest and likely below 1, with a central value around 0.5. My uncertainty is substantial because estimates vary by identification strategy, but I would not put most mass near zero or above 1.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) random walk consumption implication of low/unstable IES estimates",
+        "Campbell and Mankiw (1989) aggregate consumption evidence",
+        "Attanasio and Weber (1993) consumption/asset-market calibration discussions"
+      ],
+      "reasoningSummary": "My prior is that the macro-relevant IES for nondurable consumption is below one and often close to one-half in calibrations, with substantial uncertainty because estimates vary a lot by specification, horizon, and identification. I keep the distribution right-skewed to reflect occasional higher macro-calibration values.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) random walk consumption implication of low/unstable IES estimates\",\"Campbell and Mankiw (1989) aggregate consumption evidence\",\"Attanasio and Weber (1993) consumption/asset-market calibration discussions\"],\"reasoning_summary\":\"My prior is that the macro-relevant IES for nondurable consumption is below one and often close to one-half in calibrations, with substantial uncertainty because estimates vary a lot by specification, horizon, and identification. I keep the distribution right-skewed to reflect occasional higher macro-calibration values.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) consumption Euler equation / random walk framing",
+        "Campbell and Mankiw (1989) hand-to-mouth vs optimizing consumption literature",
+        "Macro calibration convention treating IES as well below 1 for nondurables"
+      ],
+      "reasoningSummary": "My prior is that annual nondurable-consumption IES for a representative U.S. household is modest, centered around one-half, with substantial uncertainty but most mass below 1. This reflects the common macro calibration view that intertemporal substitution in consumption is limited, while still allowing values near 1 in some specifications.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) consumption Euler equation / random walk framing\",\"Campbell and Mankiw (1989) hand-to-mouth vs optimizing consumption literature\",\"Macro calibration convention treating IES as well below 1 for nondurables\"],\"reasoning_summary\":\"My prior is that annual nondurable-consumption IES for a representative U.S. household is modest, centered around one-half, with substantial uncertainty but most mass below 1. This reflects the common macro calibration view that intertemporal substitution in consumption is limited, while still allowing values near 1 in some specifications.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.6,
+      "lowerBound": 0.1,
+      "upperBound": 2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.6,
+        "p75": 1,
+        "p95": 2
+      },
+      "interpretation": "IES for nondurable consumption in an annual U.S. representative-household macro calibration, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) consumption Euler equation intuition",
+        "Kydland and Prescott (1982) calibration practice",
+        "Rogerson, Wallenius, and Wright macro calibration discussions"
+      ],
+      "reasoningSummary": "My current prior is that annual macro calibrations for aggregate nondurable consumption typically center on an IES below one but not extremely small, with substantial uncertainty because estimates are sensitive to identification, measurement, and whether one maps from annual data to structural preference curvature.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual U.S. representative-household macro calibration, distinct from risk aversion.\",\"point_estimate\":0.6,\"quantiles\":{\"p05\":0.1,\"p25\":0.3,\"p50\":0.6,\"p75\":1,\"p95\":2},\"citations\":[\"Hall (1988) consumption Euler equation intuition\",\"Kydland and Prescott (1982) calibration practice\",\"Rogerson, Wallenius, and Wright macro calibration discussions\"],\"reasoning_summary\":\"My current prior is that annual macro calibrations for aggregate nondurable consumption typically center on an IES below one but not extremely small, with substantial uncertainty because estimates are sensitive to identification, measurement, and whether one maps from annual data to structural preference curvature.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) random-walk consumption with near-log utility as a benchmark",
+        "Romer-style macro calibration conventions using low IES values",
+        "Kydland and Prescott-style RBC calibration discussions where IES is often taken below 1"
+      ],
+      "reasoningSummary": "My prior is that annual U.S. macro calibrations usually place the consumption IES below one, often around one-half, with substantial uncertainty because estimates are sensitive to identification and the distinction from risk aversion. I allow a fairly wide upper tail up to around 1.5 and a lower tail near 0.1.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) random-walk consumption with near-log utility as a benchmark\",\"Romer-style macro calibration conventions using low IES values\",\"Kydland and Prescott-style RBC calibration discussions where IES is often taken below 1\"],\"reasoning_summary\":\"My prior is that annual U.S. macro calibrations usually place the consumption IES below one, often around one-half, with substantial uncertainty because estimates are sensitive to identification and the distinction from risk aversion. I allow a fairly wide upper tail up to around 1.5 and a lower tail near 0.1.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.2
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) permanent income / Euler equation tradition",
+        "Campbell and Mankiw (1989) rule-of-thumb vs. optimizing consumption context",
+        "Standard RBC/DSGE calibration practice treating IES around 0.5"
+      ],
+      "reasoningSummary": "I lean toward an elasticity below 1 for annual nondurable consumption, with 0.5 as a central calibration value. I allow substantial uncertainty because empirical estimates vary widely and are sensitive to identification, but I would not put much mass near zero or above one for a representative-agent macro setting.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.75,\"p95\":1.2},\"citations\":[\"Hall (1988) permanent income / Euler equation tradition\",\"Campbell and Mankiw (1989) rule-of-thumb vs. optimizing consumption context\",\"Standard RBC/DSGE calibration practice treating IES around 0.5\"],\"reasoning_summary\":\"I lean toward an elasticity below 1 for annual nondurable consumption, with 0.5 as a central calibration value. I allow substantial uncertainty because empirical estimates vary widely and are sensitive to identification, but I would not put much mass near zero or above one for a representative-agent macro setting.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) permanent income / Euler equation tradition",
+        "Campbell and Mankiw (1989) rule-of-thumb vs forward-looking consumption",
+        "standard DSGE calibration practice using low IES for nondurables"
+      ],
+      "reasoningSummary": "My prior is that annual macro models usually calibrate IES below 1, often around one-half, with substantial uncertainty because empirical estimates vary widely and are sensitive to identification. I place most mass between 0.25 and 0.8 but allow a meaningful right tail above 1.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) permanent income / Euler equation tradition\",\"Campbell and Mankiw (1989) rule-of-thumb vs forward-looking consumption\",\"standard DSGE calibration practice using low IES for nondurables\"],\"reasoning_summary\":\"My prior is that annual macro models usually calibrate IES below 1, often around one-half, with substantial uncertainty because empirical estimates vary widely and are sensitive to identification. I place most mass between 0.25 and 0.8 but allow a meaningful right tail above 1.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.5,
+        "p75": 0.8,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) consumption Euler-equation intuition",
+        "Campbell and Mankiw (1989) / standard macro calibration discussions",
+        "Rogerson, Shimer, and Wright macro labor/consumption calibration conventions"
+      ],
+      "reasoningSummary": "My prior is that annual macro calibrations for U.S. nondurable consumption usually put IES below 1, often around one-half, with substantial uncertainty because estimates vary widely by method and identification. I assign moderate probability to values near 1 and some mass well below 0.5.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.5,\"p75\":0.8,\"p95\":1.5},\"citations\":[\"Hall (1988) consumption Euler-equation intuition\",\"Campbell and Mankiw (1989) / standard macro calibration discussions\",\"Rogerson, Shimer, and Wright macro labor/consumption calibration conventions\"],\"reasoning_summary\":\"My prior is that annual macro calibrations for U.S. nondurable consumption usually put IES below 1, often around one-half, with substantial uncertainty because estimates vary widely by method and identification. I assign moderate probability to values near 1 and some mass well below 0.5.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.6,
+      "lowerBound": 0.15,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.35,
+        "p50": 0.6,
+        "p75": 0.9,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Kydland and Prescott (1982) RBC calibration tradition",
+        "Hall (1988) consumption Euler equation intuition",
+        "Campbell and Mankiw (1989) rule-of-thumb vs optimizing consumption discussion"
+      ],
+      "reasoningSummary": "For annual macro calibration, I think the relevant IES for nondurable consumption is below 1 and often around one-half, with substantial uncertainty because estimates depend on specification, persistence, and measurement. I place most mass between roughly 0.35 and 0.9, but allow a tail toward 1.5.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.6,\"quantiles\":{\"p05\":0.15,\"p25\":0.35,\"p50\":0.6,\"p75\":0.9,\"p95\":1.5},\"citations\":[\"Kydland and Prescott (1982) RBC calibration tradition\",\"Hall (1988) consumption Euler equation intuition\",\"Campbell and Mankiw (1989) rule-of-thumb vs optimizing consumption discussion\"],\"reasoning_summary\":\"For annual macro calibration, I think the relevant IES for nondurable consumption is below 1 and often around one-half, with substantial uncertainty because estimates depend on specification, persistence, and measurement. I place most mass between roughly 0.35 and 0.9, but allow a tail toward 1.5.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.8,
+      "lowerBound": 0.2,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.5,
+        "p50": 0.8,
+        "p75": 1,
+        "p95": 1.5
+      },
+      "interpretation": "IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.",
+      "citations": [
+        "Hall (1988) consumption Euler equation / excess smoothness discussions",
+        "Campbell & Mankiw (1989) hand-to-mouth vs. forward-looking consumption",
+        "Survey calibration conventions in macro models using IES below 1"
+      ],
+      "reasoningSummary": "My prior is that annual macro calibrations for U.S. nondurable consumption typically place IES below one, often around 0.5 to 1, with substantial uncertainty because estimates vary with identification and elasticity definitions.",
+      "rawResponse": "{\"interpretation\":\"IES for nondurable consumption in an annual macro-calibration setting for a representative U.S. household, distinct from risk aversion.\",\"point_estimate\":0.8,\"quantiles\":{\"p05\":0.2,\"p25\":0.5,\"p50\":0.8,\"p75\":1.0,\"p95\":1.5},\"citations\":[\"Hall (1988) consumption Euler equation / excess smoothness discussions\",\"Campbell & Mankiw (1989) hand-to-mouth vs. forward-looking consumption\",\"Survey calibration conventions in macro models using IES below 1\"],\"reasoning_summary\":\"My prior is that annual macro calibrations for U.S. nondurable consumption typically place IES below one, often around 0.5 to 1, with substantial uncertainty because estimates vary with identification and elasticity definitions.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Intertemporal elasticity of substitution\n- Definition: Percent change in the growth rate of nondurable consumption from a 1 percent change in the intertemporal price of consumption.\n- Target interpretation: IES for nondurable consumption in annual macro calibration, distinct from risk aversion\n- Population/context: Representative U.S. household in an annual macro-calibration setting\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

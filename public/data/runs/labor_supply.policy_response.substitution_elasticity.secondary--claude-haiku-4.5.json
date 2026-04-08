@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.policy_response.substitution_elasticity.secondary",
+  "modelName": "claude-haiku-4.5",
+  "experimentDir": "claude-haiku-4.5-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:43:52.385Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.15,
+      "upperBound": 0.85,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.28,
+        "p50": 0.4,
+        "p75": 0.55,
+        "p95": 0.85
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Heim (2007) on secondary earner labor supply elasticities",
+        "Keane and Rogerson (2012) labor supply survey",
+        "Blundell and MaCurdy (1999) on wage elasticity of labor supply"
+      ],
+      "reasoningSummary": "Secondary earners (typically secondary earners in couples) exhibit higher labor supply elasticity than primary earners due to greater flexibility in work decisions. Empirical evidence suggests elasticities typically range 0.2-0.6, with secondary earners clustering toward the higher end. Tax-benefit simulations often use elasticities in the 0.3-0.5 range. I estimate p50 at 0.40 as a reasonable central estimate reflecting moderate responsiveness to wage changes, with considerable uncertainty reflected in the 0.15-0.85 range spanning both conservative and higher estimates found in the literature.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.28, \"p50\": 0.4, \"p75\": 0.55, \"p95\": 0.85}, \"citations\": [\"Heim (2007) on secondary earner labor supply elasticities\", \"Keane and Rogerson (2012) labor supply survey\", \"Blundell and MaCurdy (1999) on wage elasticity of labor supply\"], \"reasoning_summary\": \"Secondary earners (typically secondary earners in couples) exhibit higher labor supply elasticity than primary earners due to greater flexibility in work decisions. Empirical evidence suggests elasticities typically range 0.2-0.6, with secondary earners clustering toward the higher end. Tax-benefit simulations often use elasticities in the 0.3-0.5 range. I estimate p50 at 0.40 as a reasonable central estimate reflecting moderate responsiveness to wage changes, with considerable uncertainty reflected in the 0.15-0.85 range spanning both conservative and higher estimates found in the literature.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.15,
+      "upperBound": 0.95,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.6,
+        "p95": 0.95
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Heim and Meyer (2004) - labor supply elasticities for married women",
+        "Eissa and Hoynes (2004) - tax policy and female labor supply",
+        "IRS/Treasury microsimulation models using behavioral parameters"
+      ],
+      "reasoningSummary": "Secondary-earner labor supply (predominantly women in couples) is typically estimated to be more elastic than primary earners, with substitution elasticities commonly in the 0.3–0.6 range based on empirical literature. The distribution reflects uncertainty between lower estimates (~0.2) emphasizing constraints and higher estimates (~0.9) from policy-variation studies, with a central tendency around 0.4 reflecting moderate responsiveness to effective wage changes.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.6, \"p95\": 0.95}, \"citations\": [\"Heim and Meyer (2004) - labor supply elasticities for married women\", \"Eissa and Hoynes (2004) - tax policy and female labor supply\", \"IRS/Treasury microsimulation models using behavioral parameters\"], \"reasoning_summary\": \"Secondary-earner labor supply (predominantly women in couples) is typically estimated to be more elastic than primary earners, with substitution elasticities commonly in the 0.3\\u20130.6 range based on empirical literature. The distribution reflects uncertainty between lower estimates (~0.2) emphasizing constraints and higher estimates (~0.9) from policy-variation studies, with a central tendency around 0.4 reflecting moderate responsiveness to effective wage changes.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.15,
+      "upperBound": 1.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.35,
+        "p50": 0.5,
+        "p75": 0.7,
+        "p95": 1.1
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Eissa & Hoynes (1998) on tax reform and female labor supply elasticity",
+        "Meghir & Phillips (2010) labor supply microsimulation review",
+        "CBO (Congressional Budget Office) microsimulation model documentation"
+      ],
+      "reasoningSummary": "Secondary earners (typically wives/partners) show moderate to higher wage elasticity of labor supply compared to primary earners, with estimates typically in the 0.3–0.8 range in U.S. tax-benefit research. The median of 0.5 reflects central estimates from behavioral microsimulation studies, with uncertainty reflecting heterogeneity across populations and model specifications. The distribution is right-skewed given plausible upside elasticity in secondary-earner responses to tax changes.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.5, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.35, \"p50\": 0.5, \"p75\": 0.7, \"p95\": 1.1}, \"citations\": [\"Eissa & Hoynes (1998) on tax reform and female labor supply elasticity\", \"Meghir & Phillips (2010) labor supply microsimulation review\", \"CBO (Congressional Budget Office) microsimulation model documentation\"], \"reasoning_summary\": \"Secondary earners (typically wives/partners) show moderate to higher wage elasticity of labor supply compared to primary earners, with estimates typically in the 0.3\\u20130.8 range in U.S. tax-benefit research. The median of 0.5 reflects central estimates from behavioral microsimulation studies, with uncertainty reflecting heterogeneity across populations and model specifications. The distribution is right-skewed given plausible upside elasticity in secondary-earner responses to tax changes.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.2
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Blundell and MaCurdy (1999) labor supply survey",
+        "Eissa and Hoynes (2004) tax reform analysis",
+        "Saez, Slemrod, and Giertz (2012) elasticity of taxable income review"
+      ],
+      "reasoningSummary": "Secondary earners—predominantly women—are found empirically to have higher labor supply elasticities than primary earners. The literature suggests substitution elasticities for secondary earners typically range from 0.3 to 0.9, with many structural estimates around 0.5–0.6. I center my belief at 0.50 as a conservative mid-point estimate, acknowledging heterogeneity in responses to wage changes and uncertainties in microsimulation specifications. The range reflects uncertainty about model assumptions and population composition.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.5, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.3, \"p50\": 0.5, \"p75\": 0.75, \"p95\": 1.2}, \"citations\": [\"Blundell and MaCurdy (1999) labor supply survey\", \"Eissa and Hoynes (2004) tax reform analysis\", \"Saez, Slemrod, and Giertz (2012) elasticity of taxable income review\"], \"reasoning_summary\": \"Secondary earners\\u2014predominantly women\\u2014are found empirically to have higher labor supply elasticities than primary earners. The literature suggests substitution elasticities for secondary earners typically range from 0.3 to 0.9, with many structural estimates around 0.5\\u20130.6. I center my belief at 0.50 as a conservative mid-point estimate, acknowledging heterogeneity in responses to wage changes and uncertainties in microsimulation specifications. The range reflects uncertainty about model assumptions and population composition.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.15,
+      "upperBound": 1.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.3,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.2
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Eissa & Hoynes (1998) on secondary earner labor supply response to tax changes",
+        "Pencavel (1998) on female labor supply elasticities",
+        "IRS and Census microsimulation model documentation on behavioral assumptions"
+      ],
+      "reasoningSummary": "Secondary earners (typically women in couples) exhibit moderate wage-responsive labor supply. Empirical literature suggests elasticities ranging from 0.2 to 1.0+, with substantial heterogeneity. My central estimate of 0.5 reflects a medium-range response accounting for: (1) secondary earners' greater labor supply flexibility than primary earners, (2) household constraints and fixed costs, and (3) policy simulation contexts often employing conservative behavioral responses. The wide interquantile range (0.3 to 0.75) captures genuine uncertainty about the true elasticity across different populations and policy scenarios.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.5, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.3, \"p50\": 0.5, \"p75\": 0.75, \"p95\": 1.2}, \"citations\": [\"Eissa & Hoynes (1998) on secondary earner labor supply response to tax changes\", \"Pencavel (1998) on female labor supply elasticities\", \"IRS and Census microsimulation model documentation on behavioral assumptions\"], \"reasoning_summary\": \"Secondary earners (typically women in couples) exhibit moderate wage-responsive labor supply. Empirical literature suggests elasticities ranging from 0.2 to 1.0+, with substantial heterogeneity. My central estimate of 0.5 reflects a medium-range response accounting for: (1) secondary earners' greater labor supply flexibility than primary earners, (2) household constraints and fixed costs, and (3) policy simulation contexts often employing conservative behavioral responses. The wide interquantile range (0.3 to 0.75) captures genuine uncertainty about the true elasticity across different populations and policy scenarios.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.08,
+      "upperBound": 0.85,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.08,
+        "p25": 0.2,
+        "p50": 0.35,
+        "p75": 0.55,
+        "p95": 0.85
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Eissa & Hoynes (1998) - Taxing earnings of married women",
+        "Heim (2007) - The Incredible Shrinking Elasticities",
+        "Bargain & Kwenda (2014) - The formal-informal employment divide and labor supply"
+      ],
+      "reasoningSummary": "Secondary earners (predominantly married women in U.S. data) exhibit lower substitution elasticities than primary earners, typically estimated in the 0.2–0.6 range in labor supply literature. The central estimate of 0.35 reflects consensus from microsimulation-oriented studies that secondary earners are more responsive to tax-benefit changes than primary earners but less elastic than typically assumed for single workers. The relatively wide distribution (p05–p95: 0.08–0.85) accounts for uncertainty across different methodologies, time periods, and demographic specifications.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.35, \"quantiles\": {\"p05\": 0.08, \"p25\": 0.2, \"p50\": 0.35, \"p75\": 0.55, \"p95\": 0.85}, \"citations\": [\"Eissa & Hoynes (1998) - Taxing earnings of married women\", \"Heim (2007) - The Incredible Shrinking Elasticities\", \"Bargain & Kwenda (2014) - The formal-informal employment divide and labor supply\"], \"reasoning_summary\": \"Secondary earners (predominantly married women in U.S. data) exhibit lower substitution elasticities than primary earners, typically estimated in the 0.2\\u20130.6 range in labor supply literature. The central estimate of 0.35 reflects consensus from microsimulation-oriented studies that secondary earners are more responsive to tax-benefit changes than primary earners but less elastic than typically assumed for single workers. The relatively wide distribution (p05\\u2013p95: 0.08\\u20130.85) accounts for uncertainty across different methodologies, time periods, and demographic specifications.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.15,
+      "upperBound": 1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 1
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Blundell and MaCurdy (1999) Labor supply response surveys",
+        "Bargain and Orsini (2006) Secondary earner labor supply elasticity estimates",
+        "CBO and JCT microsimulation model documentation on behavioral parameters"
+      ],
+      "reasoningSummary": "Secondary earners (typically women in U.S. tax-benefit context) exhibit higher wage elasticity of labor supply than primary earners due to greater flexibility in hours/participation decisions. Empirical estimates from labor supply literature generally center around 0.3-0.6, with uncertainty reflecting variation across estimation methodologies, data periods, and demographic groups. Microsimulation models typically adopt mid-range estimates. I estimate the median at 0.45 with plausible range from 0.15 to 1.00 to reflect methodological and behavioral heterogeneity.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.45, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.3, \"p50\": 0.45, \"p75\": 0.65, \"p95\": 1.0}, \"citations\": [\"Blundell and MaCurdy (1999) Labor supply response surveys\", \"Bargain and Orsini (2006) Secondary earner labor supply elasticity estimates\", \"CBO and JCT microsimulation model documentation on behavioral parameters\"], \"reasoning_summary\": \"Secondary earners (typically women in U.S. tax-benefit context) exhibit higher wage elasticity of labor supply than primary earners due to greater flexibility in hours/participation decisions. Empirical estimates from labor supply literature generally center around 0.3-0.6, with uncertainty reflecting variation across estimation methodologies, data periods, and demographic groups. Microsimulation models typically adopt mid-range estimates. I estimate the median at 0.45 with plausible range from 0.15 to 1.00 to reflect methodological and behavioral heterogeneity.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.1,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.22,
+        "p50": 0.35,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Eissa and Hoynes (1996) - labor supply response of married women to tax changes",
+        "Saez, Slemrod, and Giertz (2012) - elasticity of taxable income",
+        "CBO microsimulation literature on secondary earner responses to EITC expansions"
+      ],
+      "reasoningSummary": "Secondary earners, predominantly women in married households, typically exhibit higher labor supply elasticities than primary earners due to weaker labor force attachment and dual-earner household dynamics. Empirical evidence suggests substitution elasticities in the 0.2-0.5 range for this population. Tax-benefit simulations typically parameterize these responses as substitution elasticities in response to wage changes. My point estimate of 0.35 reflects moderate but non-trivial sensitivity to effective wage changes, consistent with literature emphasizing secondary earners' more elastic labor supply. The 0.10-0.75 range captures considerable uncertainty about the true response magnitude across different demographic and policy contexts.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.35, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.22, \"p50\": 0.35, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"Eissa and Hoynes (1996) - labor supply response of married women to tax changes\", \"Saez, Slemrod, and Giertz (2012) - elasticity of taxable income\", \"CBO microsimulation literature on secondary earner responses to EITC expansions\"], \"reasoning_summary\": \"Secondary earners, predominantly women in married households, typically exhibit higher labor supply elasticities than primary earners due to weaker labor force attachment and dual-earner household dynamics. Empirical evidence suggests substitution elasticities in the 0.2-0.5 range for this population. Tax-benefit simulations typically parameterize these responses as substitution elasticities in response to wage changes. My point estimate of 0.35 reflects moderate but non-trivial sensitivity to effective wage changes, consistent with literature emphasizing secondary earners' more elastic labor supply. The 0.10-0.75 range captures considerable uncertainty about the true response magnitude across different demographic and policy contexts.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.15,
+      "upperBound": 0.95,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 0.95
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Keane and Moffitt (1998) on female labor supply elasticities",
+        "Eissa and Hoynes (2004) on EITC and secondary earner responses",
+        "Saez, Slemrod, and Giertz (2012) on income and substitution elasticities"
+      ],
+      "reasoningSummary": "Secondary earners (typically women in married households) exhibit labor supply elasticities substantially higher than primary earners due to greater flexibility in work decisions and more elastic participation margins. The empirical literature suggests secondary-earner labor supply elasticities in the range of 0.3-0.8, with many estimates clustering around 0.4-0.6. Tax-benefit microsimulations typically implement substitution elasticities somewhat conservatively relative to some structural estimates. I center on 0.45 as a reasonable midpoint reflecting moderate substitution responsiveness consistent with quasi-experimental evidence on EITC and tax policy changes.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.45, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.3, \"p50\": 0.45, \"p75\": 0.65, \"p95\": 0.95}, \"citations\": [\"Keane and Moffitt (1998) on female labor supply elasticities\", \"Eissa and Hoynes (2004) on EITC and secondary earner responses\", \"Saez, Slemrod, and Giertz (2012) on income and substitution elasticities\"], \"reasoning_summary\": \"Secondary earners (typically women in married households) exhibit labor supply elasticities substantially higher than primary earners due to greater flexibility in work decisions and more elastic participation margins. The empirical literature suggests secondary-earner labor supply elasticities in the range of 0.3-0.8, with many estimates clustering around 0.4-0.6. Tax-benefit microsimulations typically implement substitution elasticities somewhat conservatively relative to some structural estimates. I center on 0.45 as a reasonable midpoint reflecting moderate substitution responsiveness consistent with quasi-experimental evidence on EITC and tax policy changes.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.15,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.25,
+        "p50": 0.35,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Nada Eissa and Jeffrey B. Liebman (1996) on labor supply elasticities for married women",
+        "Congressional Budget Office (CBO) tax policy microsimulation studies",
+        "Raj Chetty et al. work on behavioral responses to tax policy"
+      ],
+      "reasoningSummary": "Secondary earners (predominantly women in married couples) exhibit stronger labor supply responses to wage/tax changes than primary earners due to lower labor force attachment. Empirical evidence from tax reforms and natural experiments suggests elasticities in the 0.2–0.5 range. I estimate a central tendency around 0.35, reflecting moderate sensitivity to effective marginal wage changes in microsimulation contexts, with substantial uncertainty (0.15–0.75 credible interval).",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.35, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.25, \"p50\": 0.35, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"Nada Eissa and Jeffrey B. Liebman (1996) on labor supply elasticities for married women\", \"Congressional Budget Office (CBO) tax policy microsimulation studies\", \"Raj Chetty et al. work on behavioral responses to tax policy\"], \"reasoning_summary\": \"Secondary earners (predominantly women in married couples) exhibit stronger labor supply responses to wage/tax changes than primary earners due to lower labor force attachment. Empirical evidence from tax reforms and natural experiments suggests elasticities in the 0.2\\u20130.5 range. I estimate a central tendency around 0.35, reflecting moderate sensitivity to effective marginal wage changes in microsimulation contexts, with substantial uncertainty (0.15\\u20130.75 credible interval).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.15,
+      "upperBound": 1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 1
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Meghir and Phillips (2010) on female labor supply elasticities",
+        "Keane and Rogerson (2012) on structural models of labor supply",
+        "CBO estimates of secondary earner wage elasticities"
+      ],
+      "reasoningSummary": "Secondary earners (predominantly secondary spouses) are typically more responsive to wage changes than primary earners. Empirical literature suggests substitution elasticities in the range of 0.2-0.8, with most structural estimates clustering around 0.4-0.6. The target population in U.S. tax-benefit simulations is likely wives/secondary spouses. I center my estimate on 0.45 with substantial uncertainty reflecting methodological variation and responsiveness heterogeneity across income levels.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.45, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.3, \"p50\": 0.45, \"p75\": 0.65, \"p95\": 1.0}, \"citations\": [\"Meghir and Phillips (2010) on female labor supply elasticities\", \"Keane and Rogerson (2012) on structural models of labor supply\", \"CBO estimates of secondary earner wage elasticities\"], \"reasoning_summary\": \"Secondary earners (predominantly secondary spouses) are typically more responsive to wage changes than primary earners. Empirical literature suggests substitution elasticities in the range of 0.2-0.8, with most structural estimates clustering around 0.4-0.6. The target population in U.S. tax-benefit simulations is likely wives/secondary spouses. I center my estimate on 0.45 with substantial uncertainty reflecting methodological variation and responsiveness heterogeneity across income levels.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.15,
+      "upperBound": 1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 1
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Eissa & Hoynes (2004) on secondary earner labor supply responsiveness",
+        "Heim (2007) on elasticity of taxable income for married secondary workers",
+        "CBO tax policy microsimulation literature"
+      ],
+      "reasoningSummary": "Secondary earners—typically spouses—show larger wage elasticities than primary earners due to greater flexibility and weaker labor force attachment. Empirical literature suggests elasticities in the 0.3–0.7 range; some estimates exceed 1.0 but are less common. I center around 0.45 reflecting mid-range estimates, with reasonable uncertainty from 0.15 to 1.0 given heterogeneity across samples and specifications.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.45, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.3, \"p50\": 0.45, \"p75\": 0.65, \"p95\": 1.0}, \"citations\": [\"Eissa & Hoynes (2004) on secondary earner labor supply responsiveness\", \"Heim (2007) on elasticity of taxable income for married secondary workers\", \"CBO tax policy microsimulation literature\"], \"reasoning_summary\": \"Secondary earners\\u2014typically spouses\\u2014show larger wage elasticities than primary earners due to greater flexibility and weaker labor force attachment. Empirical literature suggests elasticities in the 0.3\\u20130.7 range; some estimates exceed 1.0 but are less common. I center around 0.45 reflecting mid-range estimates, with reasonable uncertainty from 0.15 to 1.0 given heterogeneity across samples and specifications.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.15,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.28,
+        "p50": 0.4,
+        "p75": 0.55,
+        "p95": 0.8
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Eissa and Hoynes (1998) on labor supply responses to tax reform",
+        "Mroz (1987) on female labor supply elasticities",
+        "CBO estimates of secondary-earner behavioral responses"
+      ],
+      "reasoningSummary": "Secondary earners (typically wives in dual-earner couples) exhibit relatively higher labor-supply elasticity than primary earners due to greater flexibility in work decisions. Empirical literature suggests elasticities in the 0.3–0.6 range for substitution responses. The median estimate of 0.40 reflects moderate responsiveness; the wide dispersion (p05=0.15 to p95=0.80) reflects uncertainty across estimation methods, populations, and policy contexts in microsimulation applications.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.15, \"p25\": 0.28, \"p50\": 0.4, \"p75\": 0.55, \"p95\": 0.8}, \"citations\": [\"Eissa and Hoynes (1998) on labor supply responses to tax reform\", \"Mroz (1987) on female labor supply elasticities\", \"CBO estimates of secondary-earner behavioral responses\"], \"reasoning_summary\": \"Secondary earners (typically wives in dual-earner couples) exhibit relatively higher labor-supply elasticity than primary earners due to greater flexibility in work decisions. Empirical literature suggests elasticities in the 0.3\\u20130.6 range for substitution responses. The median estimate of 0.40 reflects moderate responsiveness; the wide dispersion (p05=0.15 to p95=0.80) reflects uncertainty across estimation methods, populations, and policy contexts in microsimulation applications.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.1,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.22,
+        "p50": 0.35,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Keane and Rogerson (2012) on labor supply elasticities",
+        "Eissa and Hoynes on tax reform and secondary earner response",
+        "CBO estimates of behavioral responses to tax changes"
+      ],
+      "reasoningSummary": "Secondary earners, predominantly women, exhibit higher wage elasticities of labor supply than primary earners due to greater flexibility and lower labor force attachment. Empirical evidence from tax reforms suggests elasticity ranges from 0.2 to 0.5, with central estimates around 0.3-0.4. The bounded nature of microsimulation constraints (labor supply limits, childcare feasibility) may attenuate very large elasticities. Uncertainty reflects variation across methods, populations, and tax-benefit design specifics.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.35, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.22, \"p50\": 0.35, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"Keane and Rogerson (2012) on labor supply elasticities\", \"Eissa and Hoynes on tax reform and secondary earner response\", \"CBO estimates of behavioral responses to tax changes\"], \"reasoning_summary\": \"Secondary earners, predominantly women, exhibit higher wage elasticities of labor supply than primary earners due to greater flexibility and lower labor force attachment. Empirical evidence from tax reforms suggests elasticity ranges from 0.2 to 0.5, with central estimates around 0.3-0.4. The bounded nature of microsimulation constraints (labor supply limits, childcare feasibility) may attenuate very large elasticities. Uncertainty reflects variation across methods, populations, and tax-benefit design specifics.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.1,
+      "upperBound": 0.85,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.2,
+        "p50": 0.35,
+        "p75": 0.55,
+        "p95": 0.85
+      },
+      "interpretation": "Secondary-earner substitution-response elasticity used in a U.S. microsimulation model",
+      "citations": [
+        "Killingsworth & Heckman (1986) labor supply survey showing secondary earners have higher wage elasticity",
+        "Blundell & MaCurdy (1999) structural labor supply models with secondary earner estimates typically 0.3-0.6",
+        "IRS/Treasury microsimulation literature on tax-benefit responses"
+      ],
+      "reasoningSummary": "Secondary earners in the U.S. typically exhibit higher labor supply elasticity than primary earners due to greater flexibility in work decisions and weaker attachment to labor force. Empirical estimates from structural labor supply models generally place secondary-earner wage elasticity in the 0.2–0.6 range, with central tendency around 0.3–0.4. Tax-benefit microsimulations commonly use values in this range. Uncertainty reflects methodological variation (intensive vs. extensive margin, specification choices) and heterogeneity across income/education groups.",
+      "rawResponse": "{\"interpretation\": \"Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\", \"point_estimate\": 0.35, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.2, \"p50\": 0.35, \"p75\": 0.55, \"p95\": 0.85}, \"citations\": [\"Killingsworth & Heckman (1986) labor supply survey showing secondary earners have higher wage elasticity\", \"Blundell & MaCurdy (1999) structural labor supply models with secondary earner estimates typically 0.3-0.6\", \"IRS/Treasury microsimulation literature on tax-benefit responses\"], \"reasoning_summary\": \"Secondary earners in the U.S. typically exhibit higher labor supply elasticity than primary earners due to greater flexibility in work decisions and weaker attachment to labor force. Empirical estimates from structural labor supply models generally place secondary-earner wage elasticity in the 0.2\\u20130.6 range, with central tendency around 0.3\\u20130.4. Tax-benefit microsimulations commonly use values in this range. Uncertainty reflects methodological variation (intensive vs. extensive margin, specification choices) and heterogeneity across income/education groups.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Secondary-earner substitution elasticity in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for secondary earners in a U.S. tax-benefit simulation.\n- Target interpretation: Secondary-earner substitution-response elasticity used in a U.S. microsimulation model\n- Population/context: Secondary earners in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

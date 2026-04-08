@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.policy_response.income_elasticity",
+  "modelName": "gpt-5.4-mini",
+  "experimentDir": "gpt-5.4-mini-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:23:17.505Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0.02,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.03,
+        "p95": 0.02
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.",
+      "citations": [
+        "Moffitt tax-and-transfer labor supply review",
+        "Blundell & MaCurdy labor supply elasticity survey",
+        "CBO-style microsimulation labor supply assumptions"
+      ],
+      "reasoningSummary": "For prime-age adults in U.S. microsimulation settings, I expect a small negative income effect on labor supply, with many models effectively near zero and some allowing slight heterogeneity by earnings status. I center the distribution modestly below zero, but keep a narrow positive tail to reflect uncertainty and weak income effects.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.03,\"p95\":0.02},\"citations\":[\"Moffitt tax-and-transfer labor supply review\",\"Blundell & MaCurdy labor supply elasticity survey\",\"CBO-style microsimulation labor supply assumptions\"],\"reasoning_summary\":\"For prime-age adults in U.S. microsimulation settings, I expect a small negative income effect on labor supply, with many models effectively near zero and some allowing slight heterogeneity by earnings status. I center the distribution modestly below zero, but keep a narrow positive tail to reflect uncertainty and weak income effects.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.03,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the U.S. under a current-law tax-benefit microsimulation.",
+      "citations": [
+        "Blundell & MaCurdy labor supply review",
+        "Moffitt tax-benefit microsimulation work",
+        "Cogan-style labor supply income effects"
+      ],
+      "reasoningSummary": "I expect a small negative income effect on labor supply for prime-age adults, with considerable heterogeneity and lots of mass near zero in policy simulation settings. A bounded global elasticity in a microsimulation model should be modest in magnitude rather than large, because many adults have limited extensive-margin response and the income effect is typically weaker than substitution effects.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the U.S. under a current-law tax-benefit microsimulation.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.03,\"p95\":0},\"citations\":[\"Blundell & MaCurdy labor supply review\",\"Moffitt tax-benefit microsimulation work\",\"Cogan-style labor supply income effects\"],\"reasoning_summary\":\"I expect a small negative income effect on labor supply for prime-age adults, with considerable heterogeneity and lots of mass near zero in policy simulation settings. A bounded global elasticity in a microsimulation model should be modest in magnitude rather than large, because many adults have limited extensive-margin response and the income effect is typically weaker than substitution effects.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.25,
+      "upperBound": 0.02,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.25,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.03,
+        "p95": 0.02
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the United States in a current-law tax-benefit microsimulation.",
+      "citations": [
+        "Blundell & Macurdy (1999) labor supply survey",
+        "Hausman (1981) labor supply model",
+        "CBO-style microsimulation behavioral response conventions"
+      ],
+      "reasoningSummary": "I think the income effect on labor supply for adults in broad U.S. microsimulation settings is usually small in magnitude and often negative, with substantial heterogeneity across groups. For a global elasticity used in policy simulation, I center slightly below zero with most mass near zero and modest tails on either side.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the United States in a current-law tax-benefit microsimulation.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.25,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.03,\"p95\":0.02},\"citations\":[\"Blundell & Macurdy (1999) labor supply survey\",\"Hausman (1981) labor supply model\",\"CBO-style microsimulation behavioral response conventions\"],\"reasoning_summary\":\"I think the income effect on labor supply for adults in broad U.S. microsimulation settings is usually small in magnitude and often negative, with substantial heterogeneity across groups. For a global elasticity used in policy simulation, I center slightly below zero with most mass near zero and modest tails on either side.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0.02,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.03,
+        "p95": 0.02
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.",
+      "citations": [
+        "Moffitt (income effects in labor supply)",
+        "Keane & Rogerson (micro labor supply calibration)",
+        "CBO microsimulation-style labor supply assumptions"
+      ],
+      "reasoningSummary": "I expect a small negative income effect on labor supply for prime-age adults, with substantial heterogeneity and many models effectively near zero. For a global microsimulation elasticity, I place the center slightly below zero and allow modest positive values in the upper tail.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.03,\"p95\":0.02},\"citations\":[\"Moffitt (income effects in labor supply)\",\"Keane & Rogerson (micro labor supply calibration)\",\"CBO microsimulation-style labor supply assumptions\"],\"reasoning_summary\":\"I expect a small negative income effect on labor supply for prime-age adults, with substantial heterogeneity and many models effectively near zero. For a global microsimulation elasticity, I place the center slightly below zero and allow modest positive values in the upper tail.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.12,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.18,
+        "p50": -0.12,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the United States in a current-law tax-benefit microsimulation model.",
+      "citations": [
+        "Blundell, Pashardes, and Weber (1993) labor supply income effects",
+        "Keane (2011) survey of labor supply elasticities",
+        "Moffitt (2002) welfare labor supply literature"
+      ],
+      "reasoningSummary": "I expect a small negative income effect on labor supply in a U.S. microsimulation context: most adults reduce hours modestly when disposable income rises, but many are near zero, so the distribution is centered slightly below zero with a right tail toward no response.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the United States in a current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.12,\"quantiles\":{\"p05\":-0.3,\"p25\":-0.18,\"p50\":-0.12,\"p75\":-0.05,\"p95\":0},\"citations\":[\"Blundell, Pashardes, and Weber (1993) labor supply income effects\",\"Keane (2011) survey of labor supply elasticities\",\"Moffitt (2002) welfare labor supply literature\"],\"reasoning_summary\":\"I expect a small negative income effect on labor supply in a U.S. microsimulation context: most adults reduce hours modestly when disposable income rises, but many are near zero, so the distribution is centered slightly below zero with a right tail toward no response.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.05,
+      "lowerBound": -0.2,
+      "upperBound": 0.05,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.1,
+        "p50": -0.05,
+        "p75": 0,
+        "p95": 0.05
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the United States under a current-law tax-benefit microsimulation.",
+      "citations": [
+        "Congressional Budget Office labor supply elasticities in tax-benefit analysis",
+        "Saez, Slemrod, and Giertz (2012) on taxable income and labor supply responses",
+        "Moffitt labor supply literature on income effects"
+      ],
+      "reasoningSummary": "For a broad adult population in a microsimulation context, I expect income effects on labor supply to be small and usually slightly negative, with substantial mass near zero because many adults have limited extensive-margin response and because the model aggregates across heterogeneous groups.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the United States under a current-law tax-benefit microsimulation.\",\"point_estimate\":-0.05,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.1,\"p50\":-0.05,\"p75\":0.0,\"p95\":0.05},\"citations\":[\"Congressional Budget Office labor supply elasticities in tax-benefit analysis\",\"Saez, Slemrod, and Giertz (2012) on taxable income and labor supply responses\",\"Moffitt labor supply literature on income effects\"],\"reasoning_summary\":\"For a broad adult population in a microsimulation context, I expect income effects on labor supply to be small and usually slightly negative, with substantial mass near zero because many adults have limited extensive-margin response and because the model aggregates across heterogeneous groups.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.05,
+      "lowerBound": -0.2,
+      "upperBound": 0.05,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.1,
+        "p50": -0.05,
+        "p75": 0,
+        "p95": 0.05
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the United States under a current-law tax-benefit microsimulation.",
+      "citations": [
+        "Mroz 1987 labor supply elasticity discussions",
+        "Blundell and MaCurdy survey of labor supply elasticities",
+        "CBO/JCT-style microsimulation assumptions on income effects"
+      ],
+      "reasoningSummary": "I expect a small negative income effect on labor supply in aggregate, with most mass near zero because many adults have limited extensive-margin response and the income effect is typically modest in U.S. microsimulation settings.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the United States under a current-law tax-benefit microsimulation.\",\"point_estimate\":-0.05,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.1,\"p50\":-0.05,\"p75\":0,\"p95\":0.05},\"citations\":[\"Mroz 1987 labor supply elasticity discussions\",\"Blundell and MaCurdy survey of labor supply elasticities\",\"CBO/JCT-style microsimulation assumptions on income effects\"],\"reasoning_summary\":\"I expect a small negative income effect on labor supply in aggregate, with most mass near zero because many adults have limited extensive-margin response and the income effect is typically modest in U.S. microsimulation settings.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.04,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.",
+      "citations": [
+        "CBO labor supply responses in microsimulation contexts",
+        "Blundell & MaCurdy labor supply elasticity framing",
+        "Saez, Slemrod & Giertz taxable income / labor response discussions"
+      ],
+      "reasoningSummary": "For prime-age/adult labor supply in a tax-benefit simulation, I expect a modestly negative income effect: higher disposable income slightly reduces labor supply. The central value is small in magnitude, with substantial uncertainty around near-zero responses and some possibility of no effect.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.04,\"p95\":0},\"citations\":[\"CBO labor supply responses in microsimulation contexts\",\"Blundell & MaCurdy labor supply elasticity framing\",\"Saez, Slemrod & Giertz taxable income / labor response discussions\"],\"reasoning_summary\":\"For prime-age/adult labor supply in a tax-benefit simulation, I expect a modestly negative income effect: higher disposable income slightly reduces labor supply. The central value is small in magnitude, with substantial uncertainty around near-zero responses and some possibility of no effect.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": 0,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0,
+        "p25": 0.05,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the United States under a current-law tax-benefit microsimulation model.",
+      "citations": [
+        "CBO labor supply responsiveness discussions",
+        "Saez, Slemrod, and Giertz on income effects and taxable income responses",
+        "AFDC/EITC labor supply literature"
+      ],
+      "reasoningSummary": "For a broad adult population in a U.S. microsimulation, I expect income effects on labor supply to be small and positive for a bounded disposable-income change, with much of the mass near zero but some heterogeneity across secondary earners and extensive-margin responses. I therefore center the distribution around 0.1 and allow a right tail to 0.4.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the United States under a current-law tax-benefit microsimulation model.\",\"point_estimate\":0.1,\"quantiles\":{\"p05\":0.0,\"p25\":0.05,\"p50\":0.1,\"p75\":0.2,\"p95\":0.4},\"citations\":[\"CBO labor supply responsiveness discussions\",\"Saez, Slemrod, and Giertz on income effects and taxable income responses\",\"AFDC/EITC labor supply literature\"],\"reasoning_summary\":\"For a broad adult population in a U.S. microsimulation, I expect income effects on labor supply to be small and positive for a bounded disposable-income change, with much of the mass near zero but some heterogeneity across secondary earners and extensive-margin responses. I therefore center the distribution around 0.1 and allow a right tail to 0.4.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.03,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model",
+      "citations": [
+        "Moffitt (1984) labor supply income effects",
+        "Blundell and MaCurdy survey of labor supply elasticities",
+        "CBO/JCT microsimulation labor supply assumptions (general recall)"
+      ],
+      "reasoningSummary": "I expect a small negative income effect on labor supply in adult U.S. microsimulation contexts, with many models effectively near zero or modestly negative. The distribution is tight because income elasticities are typically assumed small in applied tax-benefit simulations.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.03,\"p95\":0.0},\"citations\":[\"Moffitt (1984) labor supply income effects\",\"Blundell and MaCurdy survey of labor supply elasticities\",\"CBO/JCT microsimulation labor supply assumptions (general recall)\"],\"reasoning_summary\":\"I expect a small negative income effect on labor supply in adult U.S. microsimulation contexts, with many models effectively near zero or modestly negative. The distribution is tight because income elasticities are typically assumed small in applied tax-benefit simulations.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.03,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.",
+      "citations": [
+        "Blundell & MaCurdy labor supply elasticities",
+        "Moffitt on labor supply in tax-benefit models",
+        "CBO microsimulation labor supply assumptions"
+      ],
+      "reasoningSummary": "I think the relevant income effect is small and usually negative in adult labor supply, especially in policy microsimulation settings where extensive-margin responses are modest. My central belief is near -0.1, with substantial probability mass close to zero.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.03,\"p95\":0},\"citations\":[\"Blundell & MaCurdy labor supply elasticities\",\"Moffitt on labor supply in tax-benefit models\",\"CBO microsimulation labor supply assumptions\"],\"reasoning_summary\":\"I think the relevant income effect is small and usually negative in adult labor supply, especially in policy microsimulation settings where extensive-margin responses are modest. My central belief is near -0.1, with substantial probability mass close to zero.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0.02,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.03,
+        "p95": 0.02
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the U.S. under a current-law tax-benefit microsimulation model.",
+      "citations": [
+        "standard labor supply literature on income effects in microsimulation models",
+        "CBO/Tax-Calculator style behavioral labor-supply assumptions",
+        "Moffitt's labor supply surveys and textbook treatment"
+      ],
+      "reasoningSummary": "I expect a small negative income elasticity for adult labor supply in a current-law U.S. microsimulation, with substantial heterogeneity and many models using near-zero to modest negative income effects. My central belief is mildly negative, with a plausible range that includes very small positive values.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the U.S. under a current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.03,\"p95\":0.02},\"citations\":[\"standard labor supply literature on income effects in microsimulation models\",\"CBO/Tax-Calculator style behavioral labor-supply assumptions\",\"Moffitt's labor supply surveys and textbook treatment\"],\"reasoning_summary\":\"I expect a small negative income elasticity for adult labor supply in a current-law U.S. microsimulation, with substantial heterogeneity and many models using near-zero to modest negative income effects. My central belief is mildly negative, with a plausible range that includes very small positive values.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.05,
+      "lowerBound": -0.15,
+      "upperBound": 0.02,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": -0.08,
+        "p50": -0.05,
+        "p75": -0.02,
+        "p95": 0.02
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.",
+      "citations": [
+        "Keane 2011 labor supply review",
+        "Burtless and Hausman-style labor supply microeconomics",
+        "CBO tax and labor supply modeling discussions"
+      ],
+      "reasoningSummary": "For prime-age/adult U.S. labor supply, the income effect is usually small and slightly negative in microsimulation contexts; extensive margin responses are limited but not zero, so I center near -0.05 with modest left tail and near-zero upper tail.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.05,\"quantiles\":{\"p05\":-0.15,\"p25\":-0.08,\"p50\":-0.05,\"p75\":-0.02,\"p95\":0.02},\"citations\":[\"Keane 2011 labor supply review\",\"Burtless and Hausman-style labor supply microeconomics\",\"CBO tax and labor supply modeling discussions\"],\"reasoning_summary\":\"For prime-age/adult U.S. labor supply, the income effect is usually small and slightly negative in microsimulation contexts; extensive margin responses are limited but not zero, so I center near -0.05 with modest left tail and near-zero upper tail.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.08,
+      "lowerBound": -0.2,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.2,
+        "p25": -0.12,
+        "p50": -0.08,
+        "p75": -0.04,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in the U.S. under a current-law tax-benefit microsimulation model.",
+      "citations": [
+        "Blundell & MaCurdy labor supply review",
+        "CBO tax/benefit labor supply microsimulation conventions",
+        "Eissa & Hoynes earnings response estimates"
+      ],
+      "reasoningSummary": "My prior is that the income effect on labor supply for prime-age adults is small and usually negative, and in aggregate microsimulation settings it is often modeled as close to zero but slightly below it. I place most mass between about -0.12 and -0.04, with a modest chance of no effect.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in the U.S. under a current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.08,\"quantiles\":{\"p05\":-0.2,\"p25\":-0.12,\"p50\":-0.08,\"p75\":-0.04,\"p95\":0},\"citations\":[\"Blundell & MaCurdy labor supply review\",\"CBO tax/benefit labor supply microsimulation conventions\",\"Eissa & Hoynes earnings response estimates\"],\"reasoning_summary\":\"My prior is that the income effect on labor supply for prime-age adults is small and usually negative, and in aggregate microsimulation settings it is often modeled as close to zero but slightly below it. I place most mass between about -0.12 and -0.04, with a modest chance of no effect.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.",
+      "citations": [
+        "Moffitt labor supply survey work (income effects typically small and negative)",
+        "CBO/JCT-style microsimulation labor supply assumptions",
+        "PSID/CPS labor supply reduced-form elasticities (income effect near zero to modestly negative)"
+      ],
+      "reasoningSummary": "I expect the income effect on labor supply for U.S. adults in tax-benefit microsimulation to be small and negative, with substantial uncertainty and many settings close to zero. My central belief is around -0.1, with most plausible values between about -0.15 and 0.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply income-response elasticity for adults in a U.S. current-law tax-benefit microsimulation model.\",\"point_estimate\":-0.1,\"quantiles\":{\"p05\":-0.3,\"p25\":-0.15,\"p50\":-0.1,\"p75\":-0.05,\"p95\":0},\"citations\":[\"Moffitt labor supply survey work (income effects typically small and negative)\",\"CBO/JCT-style microsimulation labor supply assumptions\",\"PSID/CPS labor supply reduced-form elasticities (income effect near zero to modestly negative)\"],\"reasoning_summary\":\"I expect the income effect on labor supply for U.S. adults in tax-benefit microsimulation to be small and negative, with substantial uncertainty and many settings close to zero. My central belief is around -0.1, with most plausible values between about -0.15 and 0.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in disposable income in a U.S. tax-benefit simulation. A 1 percent change in disposable income changes labor supply by this fraction.\n- Target interpretation: Global labor-supply income-response elasticity used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

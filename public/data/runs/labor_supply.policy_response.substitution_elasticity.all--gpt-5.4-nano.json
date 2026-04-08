@@ -1,0 +1,385 @@
+{
+  "quantityId": "labor_supply.policy_response.substitution_elasticity.all",
+  "modelName": "gpt-5.4-nano",
+  "experimentDir": "gpt-5.4-nano-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:23:23.231Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.55,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.55
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model, applying uniformly across individuals in a tax-benefit simulation (a 1% change in the effective marginal wage changes labor supply by this fraction).",
+      "citations": [
+        "Imbens & Rubin / standard microsimulation treatment of labor supply responses as reduced-form elasticities",
+        "OECD tax-benefit and labor supply elasticity practice (order-of-magnitude labor supply elasticity for adults)",
+        "General labor supply elasticity ranges used in U.S. microsimulation modeling (often modest, heterogeneous but commonly parameterized around a few tenths)"
+      ],
+      "reasoningSummary": "I endorse a modest positive substitution-response elasticity for adults in current-law U.S. tax-benefit microsimulations, with substantial uncertainty; I center the median around 0.25 and allow plausible bounds from near zero to roughly one-half depending on margin and behavioral response under the effective marginal wage concept.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model, applying uniformly across individuals in a tax-benefit simulation (a 1% change in the effective marginal wage changes labor supply by this fraction).\",\"point_estimate\":0.25,\"quantiles\":{\"p05\":0.05,\"p25\":0.15,\"p50\":0.25,\"p75\":0.35,\"p95\":0.55},\"citations\":[\"Imbens & Rubin / standard microsimulation treatment of labor supply responses as reduced-form elasticities\",\"OECD tax-benefit and labor supply elasticity practice (order-of-magnitude labor supply elasticity for adults)\",\"General labor supply elasticity ranges used in U.S. microsimulation modeling (often modest, heterogeneous but commonly parameterized around a few tenths)\"],\"reasoning_summary\":\"I endorse a modest positive substitution-response elasticity for adults in current-law U.S. tax-benefit microsimulations, with substantial uncertainty; I center the median around 0.25 and allow plausible bounds from near zero to roughly one-half depending on margin and behavioral response under the effective marginal wage concept.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.2,
+      "lowerBound": 0.05,
+      "upperBound": 0.6,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.1,
+        "p50": 0.2,
+        "p75": 0.35,
+        "p95": 0.6
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model (a 1% change in the effective marginal wage changes labor supply by this fraction, uniformly across individuals).",
+      "citations": [
+        "Imbens & Rubin-style intuition about calibration priors/uncertainty (general Bayesian thinking)",
+        "Macro/labor supply elasticity ranges used in policy microsimulations (e.g., labor supply responsiveness to net-of-tax/marginal wage)",
+        "Classic labor supply substitution-/marginal-wage responsiveness heuristics from public finance labor supply models"
+      ],
+      "reasoningSummary": "I place the median around a moderate labor-supply responsiveness (0.2) for adult labor supply in current-law tax-benefit microsimulations, with plausible lower tails near small behavioral responses and upper tails reflecting heterogeneity/stronger responses in some model forms.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model (a 1% change in the effective marginal wage changes labor supply by this fraction, uniformly across individuals).\",\"point_estimate\":0.2,\"quantiles\":{\"p05\":0.05,\"p25\":0.1,\"p50\":0.2,\"p75\":0.35,\"p95\":0.6},\"citations\":[\"Imbens & Rubin-style intuition about calibration priors/uncertainty (general Bayesian thinking)\",\"Macro/labor supply elasticity ranges used in policy microsimulations (e.g., labor supply responsiveness to net-of-tax/marginal wage)\",\"Classic labor supply substitution-/marginal-wage responsiveness heuristics from public finance labor supply models\"] ,\"reasoning_summary\":\"I place the median around a moderate labor-supply responsiveness (0.2) for adult labor supply in current-law tax-benefit microsimulations, with plausible lower tails near small behavioral responses and upper tails reflecting heterogeneity/stronger responses in some model forms.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.6,
+        "p95": 0.9
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction response coefficient multiplying the bounded relative change in the effective marginal wage, so a 1% change in the effective marginal wage changes labor supply by this fraction (uniform across individuals).",
+      "citations": [],
+      "reasoningSummary": "I default to a modest positive uniform compensated labor-supply elasticity for microsimulation overrides, reflecting typical calibrations that find limited but nontrivial labor-supply responsiveness to changes in the effective marginal wage; uncertainty is wide because estimates vary substantially by group, income effects, and modeling details.",
+      "rawResponse": "{\n  \"interpretation\": \"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction response coefficient multiplying the bounded relative change in the effective marginal wage, so a 1% change in the effective marginal wage changes labor supply by this fraction (uniform across individuals).\",\n  \"point_estimate\": 0.4,\n  \"quantiles\": {\n    \"p05\": 0.1,\n    \"p25\": 0.25,\n    \"p50\": 0.4,\n    \"p75\": 0.6,\n    \"p95\": 0.9\n  },\n  \"citations\": [],\n  \"reasoning_summary\": \"I default to a modest positive uniform compensated labor-supply elasticity for microsimulation overrides, reflecting typical calibrations that find limited but nontrivial labor-supply responsiveness to changes in the effective marginal wage; uncertainty is wide because estimates vary substantially by group, income effects, and modeling details.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.55,
+        "p95": 0.8
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model; a 1% change in the effective marginal wage changes labor supply by this fraction, uniformly across individuals.",
+      "citations": [
+        "Card (labor supply / elasticity background; wage elasticities widely used in microsimulations)",
+        "Saez, Slemrod, and Giertz (tax policy elasticities; labor-supply response in policy evaluation)",
+        "Blundell & MaCurdy (labor supply modeling and empirical elasticity ranges)"
+      ],
+      "reasoningSummary": "For a substitution-response elasticity in a tax-benefit microsimulation (uniform across adults), I place the median around 0.4, with substantial uncertainty; values could plausibly be low (~0.1–0.25) for less responsive groups or high (~0.55–0.8) depending on specification and the effective marginal wage concept.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model; a 1% change in the effective marginal wage changes labor supply by this fraction, uniformly across individuals.\",\"point_estimate\":0.4,\"quantiles\":{\"p05\":0.1,\"p25\":0.25,\"p50\":0.4,\"p75\":0.55,\"p95\":0.8},\"citations\":[\"Card (labor supply / elasticity background; wage elasticities widely used in microsimulations)\",\"Saez, Slemrod, and Giertz (tax policy elasticities; labor-supply response in policy evaluation)\",\"Blundell & MaCurdy (labor supply modeling and empirical elasticity ranges)\"],\"reasoning_summary\":\"For a substitution-response elasticity in a tax-benefit microsimulation (uniform across adults), I place the median around 0.4, with substantial uncertainty; values could plausibly be low (~0.1–0.25) for less responsive groups or high (~0.55–0.8) depending on specification and the effective marginal wage concept.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.1,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.2,
+        "p50": 0.3,
+        "p75": 0.45,
+        "p95": 0.7
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override: in a U.S. tax-benefit microsimulation for adults under current law, it is the fraction by which labor supply changes in response to a 1% change in the effective marginal wage (uniform across individuals in this version).",
+      "citations": [
+        "Moffitt-style labor supply elasticity calibration for microsimulation tax reforms",
+        "Estimates from discrete-choice / structural labor supply models implying moderate wage elasticities",
+        "Norms in U.S. microsimulation settings that treat labor-supply substitution effects as relatively small to moderate"
+      ],
+      "reasoningSummary": "I expect a moderate substitution response of labor supply to changes in the effective marginal wage in adult U.S. data, with substantial uncertainty; values near 0.2–0.45 seem most plausible, and I allow a lower tail around 0.1 and an upper tail approaching ~0.7.",
+      "rawResponse": "{\n  \"interpretation\": \"Global labor-supply substitution-response elasticity override: in a U.S. tax-benefit microsimulation for adults under current law, it is the fraction by which labor supply changes in response to a 1% change in the effective marginal wage (uniform across individuals in this version).\",\n  \"point_estimate\": 0.3,\n  \"quantiles\": {\n    \"p05\": 0.1,\n    \"p25\": 0.2,\n    \"p50\": 0.3,\n    \"p75\": 0.45,\n    \"p95\": 0.7\n  },\n  \"citations\": [\n    \"Moffitt-style labor supply elasticity calibration for microsimulation tax reforms\",\n    \"Estimates from discrete-choice / structural labor supply models implying moderate wage elasticities\",\n    \"Norms in U.S. microsimulation settings that treat labor-supply substitution effects as relatively small to moderate\"\n  ],\n  \"reasoning_summary\": \"I expect a moderate substitution response of labor supply to changes in the effective marginal wage in adult U.S. data, with substantial uncertainty; values near 0.2–0.45 seem most plausible, and I allow a lower tail around 0.1 and an upper tail approaching ~0.7.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.15,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.25,
+        "p50": 0.35,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction by which adults’ labor supply changes for a 1% change in the effective marginal wage under current-law tax-benefits, applied uniformly across individuals.",
+      "citations": [
+        "Killingsworth & Heckman (labor supply elasticities; range considerations)",
+        "Chetty et al. (labor supply responses to incentives; magnitude context)",
+        "Blundell & MaCurdy (structural labor supply and behavioral elasticities)"
+      ],
+      "reasoningSummary": "I’m placing the median somewhat above zero but well below 1, reflecting that labor-supply responses to marginal incentives in microsimulation are usually modest on average (with substantial heterogeneity), while still allowing for stronger reactions in some groups or specifications.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction by which adults’ labor supply changes for a 1% change in the effective marginal wage under current-law tax-benefits, applied uniformly across individuals.\",\"point_estimate\":0.35,\"quantiles\":{\"p05\":0.15,\"p25\":0.25,\"p50\":0.35,\"p75\":0.50,\"p95\":0.75},\"citations\":[\"Killingsworth & Heckman (labor supply elasticities; range considerations)\",\"Chetty et al. (labor supply responses to incentives; magnitude context)\",\"Blundell & MaCurdy (structural labor supply and behavioral elasticities)\"],\"reasoning_summary\":\"I’m placing the median somewhat above zero but well below 1, reflecting that labor-supply responses to marginal incentives in microsimulation are usually modest on average (with substantial heterogeneity), while still allowing for stronger reactions in some groups or specifications.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.8,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.8
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model, i.e., the coefficient (in elasticity units) multiplying the bounded relative change in the effective marginal wage to scale adults’ labor supply responses (a 1% change in effective marginal wage changes labor supply by this fraction).",
+      "citations": [
+        "Standard labor-supply microeconometric evidence often implies modest compensated elasticities for prime-age adults",
+        "Household labor supply response parameters used in major U.S. tax-benefit microsimulations typically place substitution elasticities in a low-to-moderate range",
+        "Theoretical mapping from wage elasticities into microsimulation substitution-response parameters (bounded wage changes)"
+      ],
+      "reasoningSummary": "I endorse a modest global substitution-response elasticity for U.S. adults in tax-benefit simulations, reflecting that wage-induced labor supply effects are typically positive but not extremely large on average; I allow a wide spread to cover heterogeneity and alternative calibration choices.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model, i.e., the coefficient (in elasticity units) multiplying the bounded relative change in the effective marginal wage to scale adults’ labor supply responses (a 1% change in effective marginal wage changes labor supply by this fraction).\",\"point_estimate\":0.3,\"quantiles\":{\"p05\":0.05,\"p25\":0.15,\"p50\":0.3,\"p75\":0.5,\"p95\":0.8},\"citations\":[\"Standard labor-supply microeconometric evidence often implies modest compensated elasticities for prime-age adults\",\"Household labor supply response parameters used in major U.S. tax-benefit microsimulations typically place substitution elasticities in a low-to-moderate range\",\"Theoretical mapping from wage elasticities into microsimulation substitution-response parameters (bounded wage changes)\"] ,\"reasoning_summary\":\"I endorse a modest global substitution-response elasticity for U.S. adults in tax-benefit simulations, reflecting that wage-induced labor supply effects are typically positive but not extremely large on average; I allow a wide spread to cover heterogeneity and alternative calibration choices.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.2,
+      "lowerBound": 0.05,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.12,
+        "p50": 0.2,
+        "p75": 0.3,
+        "p95": 0.45
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: a uniform response coefficient that multiplies the bounded relative change in the effective marginal wage, so a 1% change in the effective marginal wage changes labor supply by this fraction.",
+      "citations": [
+        "Standard labor-supply elasticity calibration in tax microsimulation models (often small-to-moderate substitution elasticities for participation/intensive margin)",
+        "Empirical findings that uncompensated labor-supply responses to net-of-tax/ marginal wage changes are typically modest in magnitude for broad populations"
+      ],
+      "reasoningSummary": "I currently place this uniform substitution-response elasticity at a relatively modest level (center around 0.2), with a plausible lower tail near near-zero (around 0.05) and an upper tail below 0.5, reflecting the tendency of microsimulation wage-to-labor responses to be moderate when applied globally across U.S. adults.",
+      "rawResponse": "{\n  \"interpretation\": \"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: a uniform response coefficient that multiplies the bounded relative change in the effective marginal wage, so a 1% change in the effective marginal wage changes labor supply by this fraction.\",\n  \"point_estimate\": 0.2,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.12,\n    \"p50\": 0.2,\n    \"p75\": 0.3,\n    \"p95\": 0.45\n  },\n  \"citations\": [\n    \"Standard labor-supply elasticity calibration in tax microsimulation models (often small-to-moderate substitution elasticities for participation/intensive margin)\",\n    \"Empirical findings that uncompensated labor-supply responses to net-of-tax/ marginal wage changes are typically modest in magnitude for broad populations\"\n  ],\n  \"reasoning_summary\": \"I currently place this uniform substitution-response elasticity at a relatively modest level (center around 0.2), with a plausible lower tail near near-zero (around 0.05) and an upper tail below 0.5, reflecting the tendency of microsimulation wage-to-labor responses to be moderate when applied globally across U.S. adults.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.1,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.2,
+        "p50": 0.3,
+        "p75": 0.45,
+        "p95": 0.7
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: a 1% change in the effective marginal wage changes labor supply by this fraction uniformly across adults under current-law tax-benefit rules.",
+      "citations": [
+        "Blundell-MaCurdy-style labor supply elasticity concepts (memory anchor)",
+        "Saez/Imbens/Blomquist labor supply and tax response parameterizations (memory anchor)",
+        "General range of labor supply elasticities in microsimulation calibrations (memory anchor)"
+      ],
+      "reasoningSummary": "I endorse a moderate, positive labor-supply elasticity for the effective marginal wage in a tax-benefit microsimulation, reflecting that substitution responses are typically smaller than some headline elasticities but not near zero, with a heavier upper tail for stronger responsiveness in certain subgroups even though this version is uniform.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: a 1% change in the effective marginal wage changes labor supply by this fraction uniformly across adults under current-law tax-benefit rules.\",\"point_estimate\":0.3,\"quantiles\":{\"p05\":0.1,\"p25\":0.2,\"p50\":0.3,\"p75\":0.45,\"p95\":0.7},\"citations\":[\"Blundell-MaCurdy-style labor supply elasticity concepts (memory anchor)\",\"Saez/Imbens/Blomquist labor supply and tax response parameterizations (memory anchor)\",\"General range of labor supply elasticities in microsimulation calibrations (memory anchor)\"],\"reasoning_summary\":\"I endorse a moderate, positive labor-supply elasticity for the effective marginal wage in a tax-benefit microsimulation, reflecting that substitution responses are typically smaller than some headline elasticities but not near zero, with a heavier upper tail for stronger responsiveness in certain subgroups even though this version is uniform.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.12,
+      "lowerBound": 0.05,
+      "upperBound": 0.28,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.08,
+        "p50": 0.12,
+        "p75": 0.18,
+        "p95": 0.28
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override in a U.S. microsimulation: the uniform response coefficient that multiplies the bounded relative change in the effective marginal wage, so a 1% effective marginal-wage change changes labor supply by this fraction.",
+      "citations": [
+        "Standard labor-supply elasticities used in U.S. tax-benefit microsimulation (e.g., targeting modest intensive-margin responses)",
+        "Empirical findings that labor-supply responses to net/gross-of-tax wage changes are generally larger for extensive margins than for intensive margins but remain modest overall in many calibrations",
+        "Modeling practice of using a bounded, uniform elasticity override rather than heterogeneous or age-specific elasticities"
+      ],
+      "reasoningSummary": "I expect a relatively modest but non-trivial substitution-response to effective marginal wage changes in a typical U.S. microsimulation with a uniform override, with plausible lower values near near-zero and upper tail reflecting stronger responsiveness under some margin/behavioral assumptions.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override in a U.S. microsimulation: the uniform response coefficient that multiplies the bounded relative change in the effective marginal wage, so a 1% effective marginal-wage change changes labor supply by this fraction.\",\"point_estimate\":0.12,\"quantiles\":{\"p05\":0.05,\"p25\":0.08,\"p50\":0.12,\"p75\":0.18,\"p95\":0.28},\"citations\":[\"Standard labor-supply elasticities used in U.S. tax-benefit microsimulation (e.g., targeting modest intensive-margin responses)\",\"Empirical findings that labor-supply responses to net/gross-of-tax wage changes are generally larger for extensive margins than for intensive margins but remain modest overall in many calibrations\",\"Modeling practice of using a bounded, uniform elasticity override rather than heterogeneous or age-specific elasticities\"] ,\"reasoning_summary\":\"I expect a relatively modest but non-trivial substitution-response to effective marginal wage changes in a typical U.S. microsimulation with a uniform override, with plausible lower values near near-zero and upper tail reflecting stronger responsiveness under some margin/behavioral assumptions.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.2,
+      "lowerBound": 0.05,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.12,
+        "p50": 0.2,
+        "p75": 0.3,
+        "p95": 0.45
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction by which labor supply changes in response to a 1% bounded change in the effective marginal wage, applied uniformly across adults.",
+      "citations": [
+        "Common microsimulation practice using labor-supply elasticities in the ~0.1–0.3 range for substitution responses to net-of-tax wage changes",
+        "Textbook labor-supply elasticities and Frisch-type substitution framing used in tax policy microsimulation",
+        "Empirical labor-supply estimates often implying moderate wage substitution responses rather than very large elasticities"
+      ],
+      "reasoningSummary": "I assume a moderate substitution elasticity consistent with typical tax-benefit microsimulation calibration: lower values in the 0.05–0.15 range for relatively inelastic labor supply and an upper tail around 0.4–0.5 for faster responses, with a central tendency near 0.2.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction by which labor supply changes in response to a 1% bounded change in the effective marginal wage, applied uniformly across adults.\",\"point_estimate\":0.2,\"quantiles\":{\"p05\":0.05,\"p25\":0.12,\"p50\":0.2,\"p75\":0.3,\"p95\":0.45},\"citations\":[\"Common microsimulation practice using labor-supply elasticities in the ~0.1–0.3 range for substitution responses to net-of-tax wage changes\",\"Textbook labor-supply elasticities and Frisch-type substitution framing used in tax policy microsimulation\",\"Empirical labor-supply estimates often implying moderate wage substitution responses rather than very large elasticities\"],\"reasoning_summary\":\"I assume a moderate substitution elasticity consistent with typical tax-benefit microsimulation calibration: lower values in the 0.05–0.15 range for relatively inelastic labor supply and an upper tail around 0.4–0.5 for faster responses, with a central tendency near 0.2.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.15,
+      "lowerBound": 0.05,
+      "upperBound": 0.35,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.1,
+        "p50": 0.15,
+        "p75": 0.25,
+        "p95": 0.35
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: a 1% change in the effective marginal wage changes labor supply by this fraction (uniform across individuals).",
+      "citations": [],
+      "reasoningSummary": "I place this override in a low-to-moderate range reflecting typical labor-supply response magnitudes used in tax-benefit microsimulations (often modest elasticities for adults), with uncertainty spanning from small positive effects to somewhat larger responses under plausible variation in behavior and policy incidence.",
+      "rawResponse": "{\n  \"interpretation\": \"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: a 1% change in the effective marginal wage changes labor supply by this fraction (uniform across individuals).\",\n  \"point_estimate\": 0.15,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.1,\n    \"p50\": 0.15,\n    \"p75\": 0.25,\n    \"p95\": 0.35\n  },\n  \"citations\": [],\n  \"reasoning_summary\": \"I place this override in a low-to-moderate range reflecting typical labor-supply response magnitudes used in tax-benefit microsimulations (often modest elasticities for adults), with uncertainty spanning from small positive effects to somewhat larger responses under plausible variation in behavior and policy incidence.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.2,
+      "upperBound": 1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.35,
+        "p50": 0.5,
+        "p75": 0.7,
+        "p95": 1
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the response coefficient multiplying the bounded relative change in the effective marginal wage, so a 1% change in the effective marginal wage changes labor supply by this fraction (uniform across individuals).",
+      "citations": [
+        "Implied Frisch/compensated labor-supply elasticity ranges used in policy microsimulation calibrations",
+        "Behavioral labor supply estimates from U.S. tax reform / marginal tax rate responsiveness literature (qualitative memory)",
+        "Typical calibration practice in U.S. microsimulations to use moderate substitution elasticities (order 0.3–0.8)"
+      ],
+      "reasoningSummary": "Given the quantity is a uniform substitution elasticity parameter for microsimulation (often calibrated to generate plausible participation/hours responses to marginal tax changes), I place the median around 0.5, with a lower tail near 0.2 and an upper tail reaching about 1.0 to reflect stronger responsiveness consistent with some participation- and hours-related responses.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the response coefficient multiplying the bounded relative change in the effective marginal wage, so a 1% change in the effective marginal wage changes labor supply by this fraction (uniform across individuals).\",\"point_estimate\":0.5,\"quantiles\":{\"p05\":0.2,\"p25\":0.35,\"p50\":0.5,\"p75\":0.7,\"p95\":1.0},\"citations\":[\"Implied Frisch/compensated labor-supply elasticity ranges used in policy microsimulation calibrations\",\"Behavioral labor supply estimates from U.S. tax reform / marginal tax rate responsiveness literature (qualitative memory)\",\"Typical calibration practice in U.S. microsimulations to use moderate substitution elasticities (order 0.3–0.8)\"] ,\"reasoning_summary\":\"Given the quantity is a uniform substitution elasticity parameter for microsimulation (often calibrated to generate plausible participation/hours responses to marginal tax changes), I place the median around 0.5, with a lower tail near 0.2 and an upper tail reaching about 1.0 to reflect stronger responsiveness consistent with some participation- and hours-related responses.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.35,
+      "lowerBound": 0.15,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.25,
+        "p50": 0.35,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model, i.e., the fraction by which labor supply responds to a 1% bounded change in the effective marginal wage (uniform across individuals).",
+      "citations": [],
+      "reasoningSummary": "I endorse a moderate, positive elasticity: tax-induced marginal wage changes typically yield partial labor-supply responses with substantial heterogeneity, so I place the median around 0.35 and allow a plausible range from relatively low (≈0.15) to moderately higher (≈0.75) elasticities in a uniform, bounded setting.",
+      "rawResponse": "{\n  \"interpretation\": \"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model, i.e., the fraction by which labor supply responds to a 1% bounded change in the effective marginal wage (uniform across individuals).\",\n  \"point_estimate\": 0.35,\n  \"quantiles\": {\n    \"p05\": 0.15,\n    \"p25\": 0.25,\n    \"p50\": 0.35,\n    \"p75\": 0.5,\n    \"p95\": 0.75\n  },\n  \"citations\": [],\n  \"reasoning_summary\": \"I endorse a moderate, positive elasticity: tax-induced marginal wage changes typically yield partial labor-supply responses with substantial heterogeneity, so I place the median around 0.35 and allow a plausible range from relatively low (≈0.15) to moderately higher (≈0.75) elasticities in a uniform, bounded setting.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.15,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.6,
+        "p95": 0.9
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction by which adults’ labor supply changes in response to a 1% change in the effective marginal wage in the simulation (uniform across individuals).",
+      "citations": [
+        "Chetty et al. (elasticities in labor supply and earnings responses)",
+        "Eissa & Liebman / classic labor supply tax response evidence (micro evidence on marginal tax-rate effects)",
+        "Blundell & MaCurdy / labor supply substitution and income effects (structural and reduced-form labor supply elasticity framing)"
+      ],
+      "reasoningSummary": "I endorse a moderate compensated/labor-supply substitution elasticity for adults in current-law U.S. tax-benefit microsimulation, reflecting that empirical labor-supply responses to marginal incentives are positive but typically well below unity in aggregate, with substantial heterogeneity and model dependence.",
+      "rawResponse": "{\"interpretation\":\"Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model: the fraction by which adults’ labor supply changes in response to a 1% change in the effective marginal wage in the simulation (uniform across individuals).\",\"point_estimate\":0.4,\"quantiles\":{\"p05\":0.15,\"p25\":0.25,\"p50\":0.4,\"p75\":0.6,\"p95\":0.9},\"citations\":[\"Chetty et al. (elasticities in labor supply and earnings responses)\",\"Eissa & Liebman / classic labor supply tax response evidence (micro evidence on marginal tax-rate effects)\",\"Blundell & MaCurdy / labor supply substitution and income effects (structural and reduced-form labor supply elasticity framing)\"],\"reasoning_summary\":\"I endorse a moderate compensated/labor-supply substitution elasticity for adults in current-law U.S. tax-benefit microsimulation, reflecting that empirical labor-supply responses to marginal incentives are positive but typically well below unity in aggregate, with substantial heterogeneity and model dependence.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

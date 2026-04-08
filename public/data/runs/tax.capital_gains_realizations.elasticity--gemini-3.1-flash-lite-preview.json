@@ -1,0 +1,398 @@
+{
+  "quantityId": "tax.capital_gains_realizations.elasticity",
+  "modelName": "gemini-3.1-flash-lite-preview",
+  "experimentDir": "gemini-3.1-flash-lite-preview-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:42:04.301Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.8,
+      "lowerBound": -1.5,
+      "upperBound": -0.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1.1,
+        "p50": -0.8,
+        "p75": -0.5,
+        "p95": -0.2
+      },
+      "interpretation": "The medium-run percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal capital gains tax rate for U.S. taxpayers.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)",
+        "Gravelle (2010)"
+      ],
+      "reasoningSummary": "Empirical estimates of capital gains realization elasticity vary significantly depending on the time horizon and model specification. Short-term elasticities are often higher due to transaction timing, while long-term elasticities are smaller as taxpayers have fewer 'locked-in' gains to time. The consensus in the public finance literature often centers around a value closer to -0.8 for the medium run, acknowledging that while some studies suggest near-zero responses and others suggest high responsiveness, -0.8 represents a reasonable middle-ground expectation for a policy model.",
+      "rawResponse": "{\n  \"interpretation\": \"The medium-run percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal capital gains tax rate for U.S. taxpayers.\",\n  \"point_estimate\": -0.8,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.1,\n    \"p50\": -0.8,\n    \"p75\": -0.5,\n    \"p95\": -0.2\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\",\n    \"Gravelle (2010)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of capital gains realization elasticity vary significantly depending on the time horizon and model specification. Short-term elasticities are often higher due to transaction timing, while long-term elasticities are smaller as taxpayers have fewer 'locked-in' gains to time. The consensus in the public finance literature often centers around a value closer to -0.8 for the medium run, acknowledging that while some studies suggest near-zero responses and others suggest high responsiveness, -0.8 represents a reasonable middle-ground expectation for a policy model.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.7,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1,
+        "p50": -0.7,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "The percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal tax rate on those gains, capturing medium-run behavioral responses.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auerbach (1988)",
+        "Joint Committee on Taxation (standard models)"
+      ],
+      "reasoningSummary": "The literature on capital gains elasticity is characterized by high variance depending on the time horizon and econometric specification. Short-run elasticities are often high (locking-in/out effects), while permanent (medium-to-long run) elasticities are typically estimated to be smaller in magnitude, often clustered between -0.4 and -1.0. I favor a point estimate near -0.7, reflecting a consensus that while realizations are responsive, they are not perfectly elastic.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal tax rate on those gains, capturing medium-run behavioral responses.\",\n  \"point_estimate\": -0.7,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.0,\n    \"p50\": -0.7,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auerbach (1988)\",\n    \"Joint Committee on Taxation (standard models)\"\n  ],\n  \"reasoning_summary\": \"The literature on capital gains elasticity is characterized by high variance depending on the time horizon and econometric specification. Short-run elasticities are often high (locking-in/out effects), while permanent (medium-to-long run) elasticities are typically estimated to be smaller in magnitude, often clustered between -0.4 and -1.0. I favor a point estimate near -0.7, reflecting a consensus that while realizations are responsive, they are not perfectly elastic.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.7,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1,
+        "p50": -0.7,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the marginal capital gains tax rate in the U.S.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auerbach (1988)",
+        "Auten and Clotfelter (1982)"
+      ],
+      "reasoningSummary": "Evidence on capital gains elasticity varies widely based on methodology (time series vs. cross-section) and time horizon. Long-run/medium-run estimates typically capture behavioral responses involving the timing of realizations (the 'lock-in' effect). While some early estimates were very large (elasticities around -1.0 or higher in absolute terms), more recent consensus suggests a somewhat more muted, though still significant, response, often centering in the -0.5 to -0.8 range.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the marginal capital gains tax rate in the U.S.\",\n  \"point_estimate\": -0.7,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.0,\n    \"p50\": -0.7,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auerbach (1988)\",\n    \"Auten and Clotfelter (1982)\"\n  ],\n  \"reasoning_summary\": \"Evidence on capital gains elasticity varies widely based on methodology (time series vs. cross-section) and time horizon. Long-run/medium-run estimates typically capture behavioral responses involving the timing of realizations (the 'lock-in' effect). While some early estimates were very large (elasticities around -1.0 or higher in absolute terms), more recent consensus suggests a somewhat more muted, though still significant, response, often centering in the -0.5 to -0.8 range.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.6,
+      "lowerBound": -1.2,
+      "upperBound": -0.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.2,
+        "p25": -0.8,
+        "p50": -0.6,
+        "p75": -0.4,
+        "p95": -0.2
+      },
+      "interpretation": "The medium-run percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal tax rate on capital gains.",
+      "citations": [
+        "Auerbach and Siegel (2000)",
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)"
+      ],
+      "reasoningSummary": "Empirical estimates of capital gains elasticity vary widely based on the time horizon and control variables. While early time-series estimates often suggested high elasticities (exceeding 1.0 in absolute value), more robust panel data studies controlling for fixed effects typically yield lower estimates. A consensus in contemporary public finance literature often centers between -0.4 and -0.8, reflecting the 'lock-in' effect where investors defer realization to avoid taxes.",
+      "rawResponse": "{\n  \"interpretation\": \"The medium-run percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal tax rate on capital gains.\",\n  \"point_estimate\": -0.6,\n  \"quantiles\": {\n    \"p05\": -1.2,\n    \"p25\": -0.8,\n    \"p50\": -0.6,\n    \"p75\": -0.4,\n    \"p95\": -0.2\n  },\n  \"citations\": [\n    \"Auerbach and Siegel (2000)\",\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of capital gains elasticity vary widely based on the time horizon and control variables. While early time-series estimates often suggested high elasticities (exceeding 1.0 in absolute value), more robust panel data studies controlling for fixed effects typically yield lower estimates. A consensus in contemporary public finance literature often centers between -0.4 and -0.8, reflecting the 'lock-in' effect where investors defer realization to avoid taxes.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.7,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1,
+        "p50": -0.7,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "The percentage change in the volume of long-term capital gains realizations in response to a one percent change in the marginal capital gains tax rate in the U.S., measured over a medium-run horizon.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)",
+        "Gravelle (2004)"
+      ],
+      "reasoningSummary": "Empirical estimates for the elasticity of capital gains realizations have varied widely historically, often depending on whether short-term or long-term responses are measured. Very short-term elasticity is often high due to timing/transitory responses (people waiting to sell), while long-term or permanent elasticity is generally lower. A consensus often hovers around -0.5 to -0.8 for the medium-run response, though some literature suggests it could be near zero or significantly larger in absolute value depending on the sample period and methodology.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the volume of long-term capital gains realizations in response to a one percent change in the marginal capital gains tax rate in the U.S., measured over a medium-run horizon.\",\n  \"point_estimate\": -0.7,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.0,\n    \"p50\": -0.7,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\",\n    \"Gravelle (2004)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for the elasticity of capital gains realizations have varied widely historically, often depending on whether short-term or long-term responses are measured. Very short-term elasticity is often high due to timing/transitory responses (people waiting to sell), while long-term or permanent elasticity is generally lower. A consensus often hovers around -0.5 to -0.8 for the medium-run response, though some literature suggests it could be near zero or significantly larger in absolute value depending on the sample period and methodology.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.8,
+      "lowerBound": -1.5,
+      "upperBound": -0.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1.1,
+        "p50": -0.8,
+        "p75": -0.5,
+        "p95": -0.2
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the marginal capital gains tax rate in the U.S.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auerbach and Siegel (2000)",
+        "Auten and Clotfelter (1982)"
+      ],
+      "reasoningSummary": "Empirical estimates of the elasticity of capital gains realizations are notoriously sensitive to the time horizon and the specific methodology used to account for transitory vs. permanent behavioral responses. Older studies often found larger, transitory responses, while more recent panel data studies suggest that once accounting for long-run behavioral shifts, the medium-run elasticity is closer to unity or slightly below, typically ranging between -0.5 and -1.0.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the marginal capital gains tax rate in the U.S.\",\n  \"point_estimate\": -0.8,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.1,\n    \"p50\": -0.8,\n    \"p75\": -0.5,\n    \"p95\": -0.2\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auerbach and Siegel (2000)\",\n    \"Auten and Clotfelter (1982)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of the elasticity of capital gains realizations are notoriously sensitive to the time horizon and the specific methodology used to account for transitory vs. permanent behavioral responses. Older studies often found larger, transitory responses, while more recent panel data studies suggest that once accounting for long-run behavioral shifts, the medium-run elasticity is closer to unity or slightly below, typically ranging between -0.5 and -1.0.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.8,
+      "lowerBound": -1.5,
+      "upperBound": -0.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1.1,
+        "p50": -0.8,
+        "p75": -0.5,
+        "p95": -0.2
+      },
+      "interpretation": "Medium-run percentage change in long-term capital gains realizations in response to a 1 percent increase in the capital-gains marginal tax rate.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)",
+        "Saez, Slemrod, and Giertz (2012)"
+      ],
+      "reasoningSummary": "The literature consistently finds a significant negative elasticity, reflecting the 'lock-in' effect where investors defer selling assets when tax rates rise. Estimates vary widely based on whether they control for transitory versus permanent rate changes. Early studies often found larger elasticities (approaching -1.0 or higher), while more recent consensus tends to place the medium-run response closer to -0.7 to -0.9, acknowledging that timing effects may be larger in the short run than in the long run.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run percentage change in long-term capital gains realizations in response to a 1 percent increase in the capital-gains marginal tax rate.\",\n  \"point_estimate\": -0.8,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.1,\n    \"p50\": -0.8,\n    \"p75\": -0.5,\n    \"p95\": -0.2\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\",\n    \"Saez, Slemrod, and Giertz (2012)\"\n  ],\n  \"reasoning_summary\": \"The literature consistently finds a significant negative elasticity, reflecting the 'lock-in' effect where investors defer selling assets when tax rates rise. Estimates vary widely based on whether they control for transitory versus permanent rate changes. Early studies often found larger elasticities (approaching -1.0 or higher), while more recent consensus tends to place the medium-run response closer to -0.7 to -0.9, acknowledging that timing effects may be larger in the short run than in the long run.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.65,
+      "lowerBound": -1.2,
+      "upperBound": -0.15,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.2,
+        "p25": -0.9,
+        "p50": -0.65,
+        "p75": -0.4,
+        "p95": -0.15
+      },
+      "interpretation": "Medium-run elasticity of U.S. long-term capital gains realizations with respect to the marginal tax rate on those gains.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)",
+        "Congressional Budget Office (2007)"
+      ],
+      "reasoningSummary": "The literature on capital gains elasticity is highly varied due to differences in data, time horizons, and whether realizations are treated as temporary or permanent. Short-run elasticities are often estimated to be much higher (in absolute terms) due to 'lock-in' effects and timing shifts, while long-run elasticities tend to be smaller. I have centered the estimate on -0.65, reflecting a consensus that while realizations are responsive to tax rate changes, the elasticity is likely less than unity in the medium run, with significant uncertainty regarding taxpayer behavioral response.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of U.S. long-term capital gains realizations with respect to the marginal tax rate on those gains.\",\n  \"point_estimate\": -0.65,\n  \"quantiles\": {\n    \"p05\": -1.2,\n    \"p25\": -0.9,\n    \"p50\": -0.65,\n    \"p75\": -0.4,\n    \"p95\": -0.15\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\",\n    \"Congressional Budget Office (2007)\"\n  ],\n  \"reasoning_summary\": \"The literature on capital gains elasticity is highly varied due to differences in data, time horizons, and whether realizations are treated as temporary or permanent. Short-run elasticities are often estimated to be much higher (in absolute terms) due to 'lock-in' effects and timing shifts, while long-run elasticities tend to be smaller. I have centered the estimate on -0.65, reflecting a consensus that while realizations are responsive to tax rate changes, the elasticity is likely less than unity in the medium run, with significant uncertainty regarding taxpayer behavioral response.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.75,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1,
+        "p50": -0.75,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the marginal capital gains tax rate in the U.S.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auerbach (1988)",
+        "Saez, Slemrod, and Giertz (2012)"
+      ],
+      "reasoningSummary": "Empirical estimates of capital gains elasticity are notoriously volatile, heavily dependent on the time horizon and whether the model accounts for the distinction between transitory 'timing' responses and permanent behavioral changes. Early literature often found very high elasticities (approaching -1.0 or higher), while more recent panel data studies suggest more modest medium-run responses. The chosen values reflect a consensus that while realizations are highly sensitive to tax rate changes due to the ability to time sales, the long-run elasticity is lower, centering around -0.75.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the marginal capital gains tax rate in the U.S.\",\n  \"point_estimate\": -0.75,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.0,\n    \"p50\": -0.75,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auerbach (1988)\",\n    \"Saez, Slemrod, and Giertz (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of capital gains elasticity are notoriously volatile, heavily dependent on the time horizon and whether the model accounts for the distinction between transitory 'timing' responses and permanent behavioral changes. Early literature often found very high elasticities (approaching -1.0 or higher), while more recent panel data studies suggest more modest medium-run responses. The chosen values reflect a consensus that while realizations are highly sensitive to tax rate changes due to the ability to time sales, the long-run elasticity is lower, centering around -0.75.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.6,
+      "lowerBound": -1.2,
+      "upperBound": -0.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.2,
+        "p25": -0.8,
+        "p50": -0.6,
+        "p75": -0.4,
+        "p95": -0.2
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate for U.S. taxpayers.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auerbach (1988)",
+        "Auten and Clotfelter (1982)"
+      ],
+      "reasoningSummary": "The literature on capital gains realization elasticity is notoriously difficult to reconcile due to distinguishing between temporary timing effects and permanent behavioral shifts. While early estimates often suggested elasticities closer to -1.0 or greater (in absolute value), more recent empirical work distinguishing long-run vs. short-run responses generally points to a more moderate negative elasticity, typically residing between -0.4 and -0.8.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate for U.S. taxpayers.\",\n  \"point_estimate\": -0.6,\n  \"quantiles\": {\n    \"p05\": -1.2,\n    \"p25\": -0.8,\n    \"p50\": -0.6,\n    \"p75\": -0.4,\n    \"p95\": -0.2\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auerbach (1988)\",\n    \"Auten and Clotfelter (1982)\"\n  ],\n  \"reasoning_summary\": \"The literature on capital gains realization elasticity is notoriously difficult to reconcile due to distinguishing between temporary timing effects and permanent behavioral shifts. While early estimates often suggested elasticities closer to -1.0 or greater (in absolute value), more recent empirical work distinguishing long-run vs. short-run responses generally points to a more moderate negative elasticity, typically residing between -0.4 and -0.8.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.8,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1.1,
+        "p50": -0.8,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "The percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal tax rate on those gains, measured over a medium-run horizon (typically 2-5 years).",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)",
+        "Saez, Slemrod, and Giertz (2012)"
+      ],
+      "reasoningSummary": "Empirical estimates of capital gains elasticity are famously sensitive to time horizon, sample selection, and control variables. Transitory responses (timing effects) are often much larger than medium-run responses. The consensus range for medium-run responsiveness generally centers between -0.5 and -1.0, as taxpayers balance the desire to defer taxes (lock-in effect) against the realization of assets for consumption or portfolio rebalancing over time.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in long-term capital gains realizations in response to a 1 percent change in the marginal tax rate on those gains, measured over a medium-run horizon (typically 2-5 years).\",\n  \"point_estimate\": -0.8,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.1,\n    \"p50\": -0.8,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\",\n    \"Saez, Slemrod, and Giertz (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of capital gains elasticity are famously sensitive to time horizon, sample selection, and control variables. Transitory responses (timing effects) are often much larger than medium-run responses. The consensus range for medium-run responsiveness generally centers between -0.5 and -1.0, as taxpayers balance the desire to defer taxes (lock-in effect) against the realization of assets for consumption or portfolio rebalancing over time.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.7,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1,
+        "p50": -0.7,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate in the U.S.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)",
+        "Joint Committee on Taxation (standard modeling assumptions)"
+      ],
+      "reasoningSummary": "Empirical estimates of capital gains realization elasticity vary significantly based on the time horizon and model specification. Short-run elasticities are often high due to temporary lock-in effects, while long-run elasticities are generally smaller but still negative. A value around -0.7 is a widely accepted middle-ground estimate for medium-run behavioral responses, though credible estimates range from near-zero to significantly negative values like -1.5.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate in the U.S.\",\n  \"point_estimate\": -0.7,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.0,\n    \"p50\": -0.7,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\",\n    \"Joint Committee on Taxation (standard modeling assumptions)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of capital gains realization elasticity vary significantly based on the time horizon and model specification. Short-run elasticities are often high due to temporary lock-in effects, while long-run elasticities are generally smaller but still negative. A value around -0.7 is a widely accepted middle-ground estimate for medium-run behavioral responses, though credible estimates range from near-zero to significantly negative values like -1.5.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.7,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1,
+        "p50": -0.7,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate for U.S. individual taxpayers.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auten and Clotfelter (1982)",
+        "Saez, Slemrod, and Giertz (2012)"
+      ],
+      "reasoningSummary": "The literature exhibits significant variance depending on the time horizon and treatment of 'transitory' versus 'permanent' tax changes. Short-run elasticities are often high (as investors time realizations around rate changes), while long-run elasticities are generally estimated to be more modest. -0.7 is a central estimate often used in policy modeling to reflect a behavioral response that is significant but not infinite.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate for U.S. individual taxpayers.\",\n  \"point_estimate\": -0.7,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.0,\n    \"p50\": -0.7,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auten and Clotfelter (1982)\",\n    \"Saez, Slemrod, and Giertz (2012)\"\n  ],\n  \"reasoning_summary\": \"The literature exhibits significant variance depending on the time horizon and treatment of 'transitory' versus 'permanent' tax changes. Short-run elasticities are often high (as investors time realizations around rate changes), while long-run elasticities are generally estimated to be more modest. -0.7 is a central estimate often used in policy modeling to reflect a behavioral response that is significant but not infinite.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.75,
+      "lowerBound": -1.5,
+      "upperBound": -0.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.5,
+        "p25": -1,
+        "p50": -0.75,
+        "p75": -0.4,
+        "p95": -0.1
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate in the United States.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auerbach (1988)",
+        "Joint Committee on Taxation (various)"
+      ],
+      "reasoningSummary": "The literature on capital gains elasticity is characterized by substantial heterogeneity, largely due to differences in data frequency, treatment of transitory versus permanent tax changes, and the distinction between short-term locking-in versus long-term behavioral responses. Estimates in the range of -0.5 to -1.0 are common for medium-run responses, reflecting significant 'lock-in' effects where investors defer sales when rates are high, though estimates closer to zero are often cited for permanent, broad-based rate changes.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate in the United States.\",\n  \"point_estimate\": -0.75,\n  \"quantiles\": {\n    \"p05\": -1.5,\n    \"p25\": -1.0,\n    \"p50\": -0.75,\n    \"p75\": -0.4,\n    \"p95\": -0.1\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auerbach (1988)\",\n    \"Joint Committee on Taxation (various)\"\n  ],\n  \"reasoning_summary\": \"The literature on capital gains elasticity is characterized by substantial heterogeneity, largely due to differences in data frequency, treatment of transitory versus permanent tax changes, and the distinction between short-term locking-in versus long-term behavioral responses. Estimates in the range of -0.5 to -1.0 are common for medium-run responses, reflecting significant 'lock-in' effects where investors defer sales when rates are high, though estimates closer to zero are often cited for permanent, broad-based rate changes.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": -0.65,
+      "lowerBound": -1.2,
+      "upperBound": -0.15,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -1.2,
+        "p25": -0.8,
+        "p50": -0.65,
+        "p75": -0.4,
+        "p95": -0.15
+      },
+      "interpretation": "Medium-run elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in the United States.",
+      "citations": [
+        "Burman and Randolph (1994)",
+        "Auerbach (1988)",
+        "Saez, Slemrod, and Giertz (2012)"
+      ],
+      "reasoningSummary": "Empirical estimates of the elasticity of capital gains realizations are sensitive to the time horizon and model specification. While short-term responses (timing) can be quite large, the medium-run response—which accounts for the realization of accrued gains—is typically estimated to be in the -0.5 to -0.8 range. I lean toward -0.65 as a central estimate, reflecting that while the behavioral response is significant, very high elasticities found in some time-series data often conflate temporary timing effects with the broader medium-run elasticity.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in the United States.\",\n  \"point_estimate\": -0.65,\n  \"quantiles\": {\n    \"p05\": -1.2,\n    \"p25\": -0.8,\n    \"p50\": -0.65,\n    \"p75\": -0.4,\n    \"p95\": -0.15\n  },\n  \"citations\": [\n    \"Burman and Randolph (1994)\",\n    \"Auerbach (1988)\",\n    \"Saez, Slemrod, and Giertz (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of the elasticity of capital gains realizations are sensitive to the time horizon and model specification. While short-term responses (timing) can be quite large, the medium-run response—which accounts for the realization of accrued gains—is typically estimated to be in the -0.5 to -0.8 range. I lean toward -0.65 as a central estimate, reflecting that while the behavioral response is significant, very high elasticities found in some time-series data often conflate temporary timing effects with the broader medium-run elasticity.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Capital gains realizations elasticity\n- Definition: Elasticity of long-term capital gains realizations with respect to the capital gains marginal tax rate in a U.S. tax model. A 1 percent increase in the capital-gains marginal tax rate changes realizations by this elasticity.\n- Target interpretation: Medium-run elasticity of long-term capital gains realizations with respect to the capital-gains marginal tax rate\n- Population/context: Individuals with long-term capital gains in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.policy_response.substitution_elasticity.primary.decile_5",
+  "modelName": "claude-sonnet-4.6",
+  "experimentDir": "claude-sonnet-4.6-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T05:16:28.238Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012) 'Bounds on Elasticities With Optimization Frictions' - surveys compensated labor supply elasticities, finding typical values around 0.2–0.5 for prime-age workers",
+        "CBO (2012) 'Labor Supply and Fiscal Policy' - uses substitution elasticities around 0.25 for primary earners in microsimulation",
+        "Saez, Slemrod, Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates' - reviews ETI literature with implications for labor supply elasticities"
+      ],
+      "reasoningSummary": "Primary earners in decile 5 (near-median earners) are typically prime-age, full-time workers with relatively inelastic labor supply. The empirical literature (Chetty 2012, CBO microsimulation models) generally places compensated substitution elasticities for primary earners around 0.1–0.4, with a central tendency near 0.2–0.3. Decile 5 workers are not at the extremes where elasticities tend to be higher (e.g., very low earners near program phase-outs or very high earners). I center my belief at 0.25, reflecting the mainstream empirical consensus for middle-income primary earners, with moderate uncertainty given variation across studies and model specifications.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012) 'Bounds on Elasticities With Optimization Frictions' - surveys compensated labor supply elasticities, finding typical values around 0.2\\u20130.5 for prime-age workers\", \"CBO (2012) 'Labor Supply and Fiscal Policy' - uses substitution elasticities around 0.25 for primary earners in microsimulation\", \"Saez, Slemrod, Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates' - reviews ETI literature with implications for labor supply elasticities\"], \"reasoning_summary\": \"Primary earners in decile 5 (near-median earners) are typically prime-age, full-time workers with relatively inelastic labor supply. The empirical literature (Chetty 2012, CBO microsimulation models) generally places compensated substitution elasticities for primary earners around 0.1\\u20130.4, with a central tendency near 0.2\\u20130.3. Decile 5 workers are not at the extremes where elasticities tend to be higher (e.g., very low earners near program phase-outs or very high earners). I center my belief at 0.25, reflecting the mainstream empirical consensus for middle-income primary earners, with moderate uncertainty given variation across studies and model specifications.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012, Annual Review of Economics) — survey of intensive-margin labor supply elasticities, central estimates ~0.33 for compensated elasticity",
+        "CBO (2012) labor supply model parameters — primary earner compensated elasticities in the 0.15–0.30 range for middle earners",
+        "Keane (2011, Journal of Economic Literature) — review of male labor supply elasticities, compensated estimates often 0.1–0.3"
+      ],
+      "reasoningSummary": "Primary earners in decile 5 (near-median earners) are typically full-time workers with moderate responsiveness to net wages. The literature on compensated (substitution) elasticities for primary earners—especially men near the median—clusters in the 0.1–0.4 range. Microsimulation models (e.g., CBO's) tend to use values around 0.2–0.3 for primary earners in middle deciles. Secondary earners have much higher elasticities; primary earners lower. Decile 5 earners face moderate effective marginal tax rates under current law. I center my belief at 0.25, with meaningful uncertainty spanning roughly 0.05–0.50.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012, Annual Review of Economics) \\u2014 survey of intensive-margin labor supply elasticities, central estimates ~0.33 for compensated elasticity\", \"CBO (2012) labor supply model parameters \\u2014 primary earner compensated elasticities in the 0.15\\u20130.30 range for middle earners\", \"Keane (2011, Journal of Economic Literature) \\u2014 review of male labor supply elasticities, compensated estimates often 0.1\\u20130.3\"], \"reasoning_summary\": \"Primary earners in decile 5 (near-median earners) are typically full-time workers with moderate responsiveness to net wages. The literature on compensated (substitution) elasticities for primary earners\\u2014especially men near the median\\u2014clusters in the 0.1\\u20130.4 range. Microsimulation models (e.g., CBO's) tend to use values around 0.2\\u20130.3 for primary earners in middle deciles. Secondary earners have much higher elasticities; primary earners lower. Decile 5 earners face moderate effective marginal tax rates under current law. I center my belief at 0.25, with meaningful uncertainty spanning roughly 0.05\\u20130.50.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.1,
+      "upperBound": 0.45,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.18,
+        "p50": 0.25,
+        "p75": 0.33,
+        "p95": 0.45
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012) 'Bounds on Elasticities with Optimization Frictions', Econometrica – surveys compensated labor supply elasticities centering around 0.25–0.5 for primary earners",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature – reports primary earner elasticities typically 0.1–0.3",
+        "CBO (2012) 'Effective Marginal Tax Rates for Low- and Moderate-Income Workers' – documents effective marginal rates by decile relevant to microsimulation contexts"
+      ],
+      "reasoningSummary": "Primary earners (typically male household heads or the higher-earning spouse) are generally found to have relatively inelastic labor supply compared to secondary earners. The literature consensus for compensated (substitution) elasticities for primary earners clusters between 0.1 and 0.5, with many estimates near 0.2–0.3. Decile 5 represents middle-income workers facing moderate effective marginal tax rates under U.S. current law. In microsimulation models (e.g., Tax-Calculator, TAXSIM-based models), the assigned substitution elasticity for primary earners in the middle deciles is commonly set around 0.25, consistent with mainstream empirical estimates. Uncertainty is moderate: the true value could plausibly range from ~0.10 (very inelastic, consistent with newer quasi-experimental estimates) to ~0.45 (higher end from older structural estimates).",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.18, \"p50\": 0.25, \"p75\": 0.33, \"p95\": 0.45}, \"citations\": [\"Chetty (2012) 'Bounds on Elasticities with Optimization Frictions', Econometrica \\u2013 surveys compensated labor supply elasticities centering around 0.25\\u20130.5 for primary earners\", \"Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2013 reports primary earner elasticities typically 0.1\\u20130.3\", \"CBO (2012) 'Effective Marginal Tax Rates for Low- and Moderate-Income Workers' \\u2013 documents effective marginal rates by decile relevant to microsimulation contexts\"], \"reasoning_summary\": \"Primary earners (typically male household heads or the higher-earning spouse) are generally found to have relatively inelastic labor supply compared to secondary earners. The literature consensus for compensated (substitution) elasticities for primary earners clusters between 0.1 and 0.5, with many estimates near 0.2\\u20130.3. Decile 5 represents middle-income workers facing moderate effective marginal tax rates under U.S. current law. In microsimulation models (e.g., Tax-Calculator, TAXSIM-based models), the assigned substitution elasticity for primary earners in the middle deciles is commonly set around 0.25, consistent with mainstream empirical estimates. Uncertainty is moderate: the true value could plausibly range from ~0.10 (very inelastic, consistent with newer quasi-experimental estimates) to ~0.45 (higher end from older structural estimates).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.18,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012, Annual Review of Economics) - survey of labor supply elasticities, compensated elasticities for prime-age workers typically 0.1–0.5",
+        "CBO (2012) - labor supply elasticity assumptions for primary earners around 0.25 substitution elasticity",
+        "Keane (2011, Journal of Economic Literature) - review noting primary-earner compensated elasticities in the 0.1–0.3 range for middle-income workers"
+      ],
+      "reasoningSummary": "Primary earners in the middle of the earnings distribution (decile 5) are typically modeled with compensated (substitution) labor supply elasticities in the range of 0.1–0.4 in U.S. microsimulation contexts. CBO and standard tax-benefit simulation models commonly use values around 0.25 for primary earners, with somewhat lower values at the middle deciles compared to lower deciles. The literature consensus (Chetty 2012, Keane 2011) supports a central estimate near 0.25, with meaningful uncertainty spanning roughly 0.1 to 0.5 at the 90% interval.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.18, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012, Annual Review of Economics) - survey of labor supply elasticities, compensated elasticities for prime-age workers typically 0.1\\u20130.5\", \"CBO (2012) - labor supply elasticity assumptions for primary earners around 0.25 substitution elasticity\", \"Keane (2011, Journal of Economic Literature) - review noting primary-earner compensated elasticities in the 0.1\\u20130.3 range for middle-income workers\"], \"reasoning_summary\": \"Primary earners in the middle of the earnings distribution (decile 5) are typically modeled with compensated (substitution) labor supply elasticities in the range of 0.1\\u20130.4 in U.S. microsimulation contexts. CBO and standard tax-benefit simulation models commonly use values around 0.25 for primary earners, with somewhat lower values at the middle deciles compared to lower deciles. The literature consensus (Chetty 2012, Keane 2011) supports a central estimate near 0.25, with meaningful uncertainty spanning roughly 0.1 to 0.5 at the 90% interval.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions. Econometrica.",
+        "CBO (2012). Labor Supply and Fiscal Policy. Congressional Budget Office.",
+        "Saez, E., Slemrod, J., & Giertz, S. (2012). The Elasticity of Taxable Income with Respect to Marginal Tax Rates. Journal of Economic Literature."
+      ],
+      "reasoningSummary": "Primary earners (typically heads of household with significant labor market attachment) exhibit lower labor supply elasticities than secondary earners. The literature consensus places compensated wage elasticities for primary earners in the range of roughly 0.1–0.4, with most point estimates near 0.2–0.3. For decile 5 (median earnings range), these workers face moderate effective marginal tax rates and are in the middle of the labor supply responsiveness distribution—neither the very low earners (who may face high implicit marginal rates via phase-outs) nor high earners. In standard U.S. microsimulation models (e.g., those using CBO or Tax Policy Center assumptions), the substitution elasticity for primary earners in the middle deciles is typically calibrated around 0.25. Uncertainty remains about the exact value used in any specific model, so I assign a moderately wide credible interval of 0.05–0.50.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions. Econometrica.\", \"CBO (2012). Labor Supply and Fiscal Policy. Congressional Budget Office.\", \"Saez, E., Slemrod, J., & Giertz, S. (2012). The Elasticity of Taxable Income with Respect to Marginal Tax Rates. Journal of Economic Literature.\"], \"reasoning_summary\": \"Primary earners (typically heads of household with significant labor market attachment) exhibit lower labor supply elasticities than secondary earners. The literature consensus places compensated wage elasticities for primary earners in the range of roughly 0.1\\u20130.4, with most point estimates near 0.2\\u20130.3. For decile 5 (median earnings range), these workers face moderate effective marginal tax rates and are in the middle of the labor supply responsiveness distribution\\u2014neither the very low earners (who may face high implicit marginal rates via phase-outs) nor high earners. In standard U.S. microsimulation models (e.g., those using CBO or Tax Policy Center assumptions), the substitution elasticity for primary earners in the middle deciles is typically calibrated around 0.25. Uncertainty remains about the exact value used in any specific model, so I assign a moderately wide credible interval of 0.05\\u20130.50.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions. Econometrica.",
+        "CBO (2012). Labor Supply and Taxes. Congressional Budget Office.",
+        "Keane, M. (2011). Labor Supply and Taxes: A Survey. Journal of Economic Literature."
+      ],
+      "reasoningSummary": "Primary earners (typically household heads) exhibit lower labor supply elasticities than secondary earners. The literature generally finds compensated (substitution) elasticities for primary earners in the range of 0.1–0.5, with middle-decile workers (decile 5, roughly median earnings) often estimated around 0.2–0.3. Microsimulation models calibrated to U.S. data (e.g., CBO-style models) typically use values near 0.25 for this group. Decile 5 earners are not at the extremes of the income distribution where frictions or corner solutions are more prominent, so I center my estimate at 0.25 with moderate uncertainty.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions. Econometrica.\", \"CBO (2012). Labor Supply and Taxes. Congressional Budget Office.\", \"Keane, M. (2011). Labor Supply and Taxes: A Survey. Journal of Economic Literature.\"], \"reasoning_summary\": \"Primary earners (typically household heads) exhibit lower labor supply elasticities than secondary earners. The literature generally finds compensated (substitution) elasticities for primary earners in the range of 0.1\\u20130.5, with middle-decile workers (decile 5, roughly median earnings) often estimated around 0.2\\u20130.3. Microsimulation models calibrated to U.S. data (e.g., CBO-style models) typically use values near 0.25 for this group. Decile 5 earners are not at the extremes of the income distribution where frictions or corner solutions are more prominent, so I center my estimate at 0.25 with moderate uncertainty.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012, Annual Review of Economics) – survey of intensive-margin labor supply elasticities for prime-age workers, suggesting compensated elasticities roughly 0.1–0.5",
+        "CBO (2012) labor supply modeling documentation – uses elasticities near 0.25 for primary earners at middle income ranges",
+        "Saez, Slemrod & Giertz (2012, JEL) – review of ETI literature noting modest elasticities for middle-income primary earners"
+      ],
+      "reasoningSummary": "Primary earners in decile 5 (roughly median earners) are in the middle of the income distribution. The literature on compensated wage elasticities for primary (typically male) earners consistently finds modest responses, generally in the range of 0.1–0.4, with central estimates around 0.2–0.3. U.S. microsimulation models (e.g., CBO) typically assign substitution elasticities near 0.25 for this group. I center my belief at 0.25 with moderate uncertainty, allowing for values as low as 0.05 (near-zero response) to as high as 0.50 (upper bound from some ETI studies), reflecting model-specific variation and parameter heterogeneity.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012, Annual Review of Economics) \\u2013 survey of intensive-margin labor supply elasticities for prime-age workers, suggesting compensated elasticities roughly 0.1\\u20130.5\", \"CBO (2012) labor supply modeling documentation \\u2013 uses elasticities near 0.25 for primary earners at middle income ranges\", \"Saez, Slemrod & Giertz (2012, JEL) \\u2013 review of ETI literature noting modest elasticities for middle-income primary earners\"], \"reasoning_summary\": \"Primary earners in decile 5 (roughly median earners) are in the middle of the income distribution. The literature on compensated wage elasticities for primary (typically male) earners consistently finds modest responses, generally in the range of 0.1\\u20130.4, with central estimates around 0.2\\u20130.3. U.S. microsimulation models (e.g., CBO) typically assign substitution elasticities near 0.25 for this group. I center my belief at 0.25 with moderate uncertainty, allowing for values as low as 0.05 (near-zero response) to as high as 0.50 (upper bound from some ETI studies), reflecting model-specific variation and parameter heterogeneity.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012), 'Bounds on Elasticities with Optimization Frictions', Econometrica — surveys compensated wage elasticities for primary earners around 0.25–0.33",
+        "CBO (2012), 'Labor Supply and Fiscal Policy' — uses compensated elasticities near 0.25 for middle-income primary earners",
+        "Keane (2011), 'Labor Supply and Taxes: A Survey', Journal of Economic Literature — reviews male primary-earner elasticities typically 0.1–0.4"
+      ],
+      "reasoningSummary": "Primary earners in the middle of the earnings distribution (decile 5) are generally found to have moderate compensated (substitution) elasticities. The mainstream labor-supply literature places compensated wage elasticities for prime-age male and mixed primary earners in the range of roughly 0.1 to 0.4, with a central tendency near 0.2–0.3. Tax-benefit microsimulation models (e.g., those used by CBO or Urban-Brookings) typically calibrate primary-earner substitution elasticities around 0.25 for middle-income workers. Decile 5 sits at median earnings where income effects are modest and labor supply is relatively inelastic compared to secondary earners, supporting a central estimate of 0.25 with meaningful uncertainty on both sides.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012), 'Bounds on Elasticities with Optimization Frictions', Econometrica \\u2014 surveys compensated wage elasticities for primary earners around 0.25\\u20130.33\", \"CBO (2012), 'Labor Supply and Fiscal Policy' \\u2014 uses compensated elasticities near 0.25 for middle-income primary earners\", \"Keane (2011), 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2014 reviews male primary-earner elasticities typically 0.1\\u20130.4\"], \"reasoning_summary\": \"Primary earners in the middle of the earnings distribution (decile 5) are generally found to have moderate compensated (substitution) elasticities. The mainstream labor-supply literature places compensated wage elasticities for prime-age male and mixed primary earners in the range of roughly 0.1 to 0.4, with a central tendency near 0.2\\u20130.3. Tax-benefit microsimulation models (e.g., those used by CBO or Urban-Brookings) typically calibrate primary-earner substitution elasticities around 0.25 for middle-income workers. Decile 5 sits at median earnings where income effects are modest and labor supply is relatively inelastic compared to secondary earners, supporting a central estimate of 0.25 with meaningful uncertainty on both sides.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012) - Bounds on elasticities using optimization frictions, Journal of Political Economy",
+        "CBO (2012) - Labor Supply and Fiscal Policy, Congressional Budget Office report on labor supply elasticities by income group",
+        "Keane (2011) - Labor Supply and Taxes: A Survey, Journal of Economic Literature"
+      ],
+      "reasoningSummary": "Primary earners (typically male household heads in the traditional framing) are generally found to have lower labor supply elasticities than secondary earners. For middle-income earners around decile 5, the compensated (substitution) elasticity in U.S. microsimulation contexts is typically parameterized in the range of 0.1–0.4. The consensus from empirical literature (e.g., Chetty 2012, Keane 2011) suggests compensated elasticities for prime-age male primary earners cluster around 0.1–0.3, with some models using slightly higher values for middle-income groups to capture more policy responsiveness. A central estimate of 0.25 reflects moderate responsiveness consistent with the mid-range of microsimulation parameterizations for this decile, with meaningful uncertainty around it.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012) - Bounds on elasticities using optimization frictions, Journal of Political Economy\", \"CBO (2012) - Labor Supply and Fiscal Policy, Congressional Budget Office report on labor supply elasticities by income group\", \"Keane (2011) - Labor Supply and Taxes: A Survey, Journal of Economic Literature\"], \"reasoning_summary\": \"Primary earners (typically male household heads in the traditional framing) are generally found to have lower labor supply elasticities than secondary earners. For middle-income earners around decile 5, the compensated (substitution) elasticity in U.S. microsimulation contexts is typically parameterized in the range of 0.1\\u20130.4. The consensus from empirical literature (e.g., Chetty 2012, Keane 2011) suggests compensated elasticities for prime-age male primary earners cluster around 0.1\\u20130.3, with some models using slightly higher values for middle-income groups to capture more policy responsiveness. A central estimate of 0.25 reflects moderate responsiveness consistent with the mid-range of microsimulation parameterizations for this decile, with meaningful uncertainty around it.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012) 'Bounds on Elasticities With Optimization Frictions' – synthesizes compensated wage elasticities for primary earners around 0.33 with substantial heterogeneity",
+        "CBO (2012) 'Labor Supply and Fiscal Policy' – uses substitution elasticities near 0.25 for middle-income primary earners in tax microsimulations",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey' – reviews structural estimates suggesting compensated elasticities for prime-age men near 0.1–0.3 and broader range for women"
+      ],
+      "reasoningSummary": "Primary earners in decile 5 (near the median of the earnings distribution) are typically prime-age workers, often male household heads, for whom the empirical labor-supply literature finds relatively modest compensated (substitution) elasticities. Reduced-form and structural estimates for this group cluster between 0.1 and 0.4, with a central tendency around 0.2–0.3. U.S. tax microsimulation models (e.g., CBO, Tax Policy Center) commonly parameterize primary-earner substitution elasticities in the 0.25–0.33 range for middle-income deciles. Uncertainty arises from variation in estimation method, definition of the bounded wage change, and whether the model uses Hicksian or marshallian concepts; hence I set a moderately wide 90% interval of roughly 0.05–0.50.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012) 'Bounds on Elasticities With Optimization Frictions' \\u2013 synthesizes compensated wage elasticities for primary earners around 0.33 with substantial heterogeneity\", \"CBO (2012) 'Labor Supply and Fiscal Policy' \\u2013 uses substitution elasticities near 0.25 for middle-income primary earners in tax microsimulations\", \"Keane (2011) 'Labor Supply and Taxes: A Survey' \\u2013 reviews structural estimates suggesting compensated elasticities for prime-age men near 0.1\\u20130.3 and broader range for women\"], \"reasoning_summary\": \"Primary earners in decile 5 (near the median of the earnings distribution) are typically prime-age workers, often male household heads, for whom the empirical labor-supply literature finds relatively modest compensated (substitution) elasticities. Reduced-form and structural estimates for this group cluster between 0.1 and 0.4, with a central tendency around 0.2\\u20130.3. U.S. tax microsimulation models (e.g., CBO, Tax Policy Center) commonly parameterize primary-earner substitution elasticities in the 0.25\\u20130.33 range for middle-income deciles. Uncertainty arises from variation in estimation method, definition of the bounded wage change, and whether the model uses Hicksian or marshallian concepts; hence I set a moderately wide 90% interval of roughly 0.05\\u20130.50.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012, Annual Review of Economics) – meta-analysis of labor supply elasticities suggesting compensated elasticities for primary earners around 0.25–0.35",
+        "CBO (2012) – 'The Effect of Tax Changes on Labor Supply in CBO's Microsimulation Tax Model' uses substitution elasticities for primary earners near 0.25 at middle income levels",
+        "Keane (2011, Journal of Economic Literature) – survey finding compensated wage elasticities for males (primary earners) typically 0.1–0.3"
+      ],
+      "reasoningSummary": "Primary earners (historically modeled as male heads of household) exhibit relatively inelastic labor supply. Mainstream microsimulation models (e.g., CBO's tax model) typically assign compensated (substitution) elasticities for primary earners in the range of 0.1–0.4, with a central value around 0.25. Decile 5 represents middle-income workers, where there is no strong reason to deviate from the central tendency. The literature (Chetty 2012, Keane 2011) supports a compensated elasticity near 0.25 for this group. Uncertainty spans roughly 0.05–0.50, reflecting variation across model specifications and time periods.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012, Annual Review of Economics) \\u2013 meta-analysis of labor supply elasticities suggesting compensated elasticities for primary earners around 0.25\\u20130.35\", \"CBO (2012) \\u2013 'The Effect of Tax Changes on Labor Supply in CBO's Microsimulation Tax Model' uses substitution elasticities for primary earners near 0.25 at middle income levels\", \"Keane (2011, Journal of Economic Literature) \\u2013 survey finding compensated wage elasticities for males (primary earners) typically 0.1\\u20130.3\"], \"reasoning_summary\": \"Primary earners (historically modeled as male heads of household) exhibit relatively inelastic labor supply. Mainstream microsimulation models (e.g., CBO's tax model) typically assign compensated (substitution) elasticities for primary earners in the range of 0.1\\u20130.4, with a central value around 0.25. Decile 5 represents middle-income workers, where there is no strong reason to deviate from the central tendency. The literature (Chetty 2012, Keane 2011) supports a compensated elasticity near 0.25 for this group. Uncertainty spans roughly 0.05\\u20130.50, reflecting variation across model specifications and time periods.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty, R. (2012). Bounds on Elasticities With Optimization Frictions. Econometrica.",
+        "CBO (2012). Labor Supply and Fiscal Policy.",
+        "Blundell, R. & MaCurdy, T. (1999). Labor Supply: A Review of Alternative Approaches. Handbook of Labor Economics."
+      ],
+      "reasoningSummary": "Primary earners (typically male household heads or main earners) are generally found to have relatively low labor-supply elasticities compared to secondary earners. The compensated (substitution) elasticity for prime-age primary earners in the middle of the earnings distribution tends to be estimated in the range of 0.1–0.4 in the U.S. empirical literature. Decile 5 represents a middle-income worker, where frictions and full-time norms tend to suppress the elasticity somewhat relative to lower deciles. Microsimulation models (e.g., Tax Policy Center, CBO) often parameterize substitution elasticities for primary earners around 0.25–0.35. I center my belief at 0.25 with moderate uncertainty, acknowledging that different models and studies produce a range roughly between 0.1 and 0.5.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty, R. (2012). Bounds on Elasticities With Optimization Frictions. Econometrica.\", \"CBO (2012). Labor Supply and Fiscal Policy.\", \"Blundell, R. & MaCurdy, T. (1999). Labor Supply: A Review of Alternative Approaches. Handbook of Labor Economics.\"], \"reasoning_summary\": \"Primary earners (typically male household heads or main earners) are generally found to have relatively low labor-supply elasticities compared to secondary earners. The compensated (substitution) elasticity for prime-age primary earners in the middle of the earnings distribution tends to be estimated in the range of 0.1\\u20130.4 in the U.S. empirical literature. Decile 5 represents a middle-income worker, where frictions and full-time norms tend to suppress the elasticity somewhat relative to lower deciles. Microsimulation models (e.g., Tax Policy Center, CBO) often parameterize substitution elasticities for primary earners around 0.25\\u20130.35. I center my belief at 0.25 with moderate uncertainty, acknowledging that different models and studies produce a range roughly between 0.1 and 0.5.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012) 'Bounds on Elasticities With Optimization Frictions', Econometrica — synthesizes compensated labor supply elasticities around 0.33 for extensive/intensive margins",
+        "CBO (2012) 'The Effect of Tax Changes on Labor Supply in CBO's Microsimulation Tax Model' — uses substitution elasticities roughly 0.15–0.30 for primary earners in middle deciles",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature — reviews range of compensated wage elasticities for prime-age workers"
+      ],
+      "reasoningSummary": "Primary earners (typically married men or household heads) in earnings decile 5 represent middle-income workers. The empirical literature on compensated (substitution) labor supply elasticities for primary earners consistently finds relatively inelastic responses compared to secondary earners. CBO-style microsimulation models typically assign substitution elasticities in the 0.15–0.30 range for primary earners in middle deciles. The median literature estimate for prime-age workers hovers around 0.25, with uncertainty reflecting variation across studies, specifications, and time periods. I center my belief at 0.25 with moderate spread reflecting genuine uncertainty about which specific parameterization a given simulation uses.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012) 'Bounds on Elasticities With Optimization Frictions', Econometrica \\u2014 synthesizes compensated labor supply elasticities around 0.33 for extensive/intensive margins\", \"CBO (2012) 'The Effect of Tax Changes on Labor Supply in CBO's Microsimulation Tax Model' \\u2014 uses substitution elasticities roughly 0.15\\u20130.30 for primary earners in middle deciles\", \"Keane (2011) 'Labor Supply and Taxes: A Survey', Journal of Economic Literature \\u2014 reviews range of compensated wage elasticities for prime-age workers\"], \"reasoning_summary\": \"Primary earners (typically married men or household heads) in earnings decile 5 represent middle-income workers. The empirical literature on compensated (substitution) labor supply elasticities for primary earners consistently finds relatively inelastic responses compared to secondary earners. CBO-style microsimulation models typically assign substitution elasticities in the 0.15\\u20130.30 range for primary earners in middle deciles. The median literature estimate for prime-age workers hovers around 0.25, with uncertainty reflecting variation across studies, specifications, and time periods. I center my belief at 0.25 with moderate spread reflecting genuine uncertainty about which specific parameterization a given simulation uses.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.1,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.18,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Keane, M. P. (2011). Labor supply and taxes: A survey. Journal of Economic Literature, 49(4), 961–1075.",
+        "CBO (2012). Labor Supply and Tax Rates: A Review of the Evidence. Congressional Budget Office Working Paper.",
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions. Econometrica, 80(3), 969–1018."
+      ],
+      "reasoningSummary": "Primary earners (typically male household heads) are generally found to have modest labor-supply substitution elasticities. The consensus from the empirical literature places compensated wage elasticities for primary earners in the range of roughly 0.1–0.5, with central estimates around 0.2–0.3. Decile 5 represents median earners, who face moderate effective marginal tax rates and are not at the extensive margin extremes. In U.S. microsimulation contexts (e.g., Tax Policy Center or CBO models), calibrated substitution elasticities for primary earners near the median are typically set around 0.25, consistent with the broader labor-supply literature on compensated elasticities. Uncertainty is moderate given variation across studies and model specifications.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.18, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Keane, M. P. (2011). Labor supply and taxes: A survey. Journal of Economic Literature, 49(4), 961\\u20131075.\", \"CBO (2012). Labor Supply and Tax Rates: A Review of the Evidence. Congressional Budget Office Working Paper.\", \"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions. Econometrica, 80(3), 969\\u20131018.\"], \"reasoning_summary\": \"Primary earners (typically male household heads) are generally found to have modest labor-supply substitution elasticities. The consensus from the empirical literature places compensated wage elasticities for primary earners in the range of roughly 0.1\\u20130.5, with central estimates around 0.2\\u20130.3. Decile 5 represents median earners, who face moderate effective marginal tax rates and are not at the extensive margin extremes. In U.S. microsimulation contexts (e.g., Tax Policy Center or CBO models), calibrated substitution elasticities for primary earners near the median are typically set around 0.25, consistent with the broader labor-supply literature on compensated elasticities. Uncertainty is moderate given variation across studies and model specifications.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model",
+      "citations": [
+        "Chetty (2012) 'Bounds on Elasticities With Optimization Frictions' – surveys compensated wage elasticities for primary earners, typically 0.1–0.3",
+        "CBO (2012) 'Labor Supply and Taxes' – uses compensated elasticities around 0.15–0.25 for prime-age workers in microsimulations",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey' – finds a range of compensated elasticities for primary earners broadly 0.1–0.5 depending on method"
+      ],
+      "reasoningSummary": "For primary earners (typically prime-age adults, often male-dominated in the middle of the earnings distribution), the labor economics literature consistently finds relatively modest compensated (substitution) wage elasticities, generally in the range of 0.1 to 0.4. Decile 5 represents middle-income workers who face typical effective marginal tax rates and are less likely to be at extensive-margin kinks. Tax-benefit microsimulation models (e.g., those used by CBO or Tax Policy Center) tend to calibrate primary-earner substitution elasticities near 0.2–0.3. I center my estimate at 0.25 with meaningful uncertainty reflecting both model variation and empirical heterogeneity.",
+      "rawResponse": "{\"interpretation\": \"Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.35, \"p95\": 0.5}, \"citations\": [\"Chetty (2012) 'Bounds on Elasticities With Optimization Frictions' \\u2013 surveys compensated wage elasticities for primary earners, typically 0.1\\u20130.3\", \"CBO (2012) 'Labor Supply and Taxes' \\u2013 uses compensated elasticities around 0.15\\u20130.25 for prime-age workers in microsimulations\", \"Keane (2011) 'Labor Supply and Taxes: A Survey' \\u2013 finds a range of compensated elasticities for primary earners broadly 0.1\\u20130.5 depending on method\"], \"reasoning_summary\": \"For primary earners (typically prime-age adults, often male-dominated in the middle of the earnings distribution), the labor economics literature consistently finds relatively modest compensated (substitution) wage elasticities, generally in the range of 0.1 to 0.4. Decile 5 represents middle-income workers who face typical effective marginal tax rates and are less likely to be at extensive-margin kinks. Tax-benefit microsimulation models (e.g., those used by CBO or Tax Policy Center) tend to calibrate primary-earner substitution elasticities near 0.2\\u20130.3. I center my estimate at 0.25 with meaningful uncertainty reflecting both model variation and empirical heterogeneity.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Primary-earner substitution elasticity in a tax-benefit simulation, decile 5\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage for primary earners in earnings decile 5 in a U.S. tax-benefit simulation.\n- Target interpretation: Primary-earner substitution-response elasticity for earnings decile 5 in a U.S. microsimulation model\n- Population/context: Primary earners in earnings decile 5 in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

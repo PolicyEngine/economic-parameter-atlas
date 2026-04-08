@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.extensive_margin.single_mothers",
+  "modelName": "gemini-3.1-flash-lite-preview",
+  "experimentDir": "gemini-3.1-flash-lite-preview-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:42:04.301Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.1,
+      "upperBound": 1.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.7,
+        "p95": 1.2
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the U.S. in response to a 1 percent change in their net-of-tax wage, over a medium-run horizon.",
+      "citations": [
+        "Meyer, B. D., & Rosenbaum, D. T. (2001)",
+        "Eissa, N., & Liebman, J. B. (1996)",
+        "Chetty, R. (2012)"
+      ],
+      "reasoningSummary": "Empirical estimates for single mothers consistently show higher elasticities than those for prime-age men or married women, primarily due to the high sensitivity of this demographic to welfare-to-work policy shifts (like EITC expansions). While early studies suggested quite large responses (often > 0.7), more recent work, accounting for selection and complex budget constraints, tends to find more moderate values, though still significantly positive.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the U.S. in response to a 1 percent change in their net-of-tax wage, over a medium-run horizon.\",\n  \"point_estimate\": 0.45,\n  \"quantiles\": {\n    \"p05\": 0.1,\n    \"p25\": 0.3,\n    \"p50\": 0.45,\n    \"p75\": 0.7,\n    \"p95\": 1.2\n  },\n  \"citations\": [\n    \"Meyer, B. D., & Rosenbaum, D. T. (2001)\",\n    \"Eissa, N., & Liebman, J. B. (1996)\",\n    \"Chetty, R. (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for single mothers consistently show higher elasticities than those for prime-age men or married women, primarily due to the high sensitivity of this demographic to welfare-to-work policy shifts (like EITC expansions). While early studies suggested quite large responses (often > 0.7), more recent work, accounting for selection and complex budget constraints, tends to find more moderate values, though still significantly positive.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.65,
+      "lowerBound": 0.2,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.45,
+        "p50": 0.65,
+        "p75": 0.9,
+        "p95": 1.5
+      },
+      "interpretation": "The percentage change in the probability of labor force participation for US single mothers resulting from a 1 percent increase in the net-of-tax wage.",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Eissa and Liebman (1996)",
+        "Chetty et al. (2011)"
+      ],
+      "reasoningSummary": "Single mothers exhibit higher labor supply elasticities than the general population, particularly at the extensive margin. Historical evidence from EITC expansions (like Eissa/Liebman) suggests significant responsiveness, though some estimates are tempered by welfare reform contexts. The consensus generally places this elasticity in the 0.5 to 0.8 range for participation, higher than intensive margin elasticities.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the probability of labor force participation for US single mothers resulting from a 1 percent increase in the net-of-tax wage.\",\n  \"point_estimate\": 0.65,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.45,\n    \"p50\": 0.65,\n    \"p75\": 0.9,\n    \"p95\": 1.5\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Eissa and Liebman (1996)\",\n    \"Chetty et al. (2011)\"\n  ],\n  \"reasoning_summary\": \"Single mothers exhibit higher labor supply elasticities than the general population, particularly at the extensive margin. Historical evidence from EITC expansions (like Eissa/Liebman) suggests significant responsiveness, though some estimates are tempered by welfare reform contexts. The consensus generally places this elasticity in the 0.5 to 0.8 range for participation, higher than intensive margin elasticities.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.7,
+      "lowerBound": 0.2,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.5,
+        "p50": 0.7,
+        "p75": 1,
+        "p95": 1.5
+      },
+      "interpretation": "The percentage change in the probability of labor force participation for US single mothers resulting from a 1 percent increase in the net-of-tax wage.",
+      "citations": [
+        "Eissa and Liebman (1996)",
+        "Meyer and Rosenbaum (2001)",
+        "Chetty et al. (2011)"
+      ],
+      "reasoningSummary": "Single mothers exhibit relatively high responsiveness to wage changes (and tax credit changes) compared to other demographics. Most influential empirical studies on welfare reform and EITC expansions suggest elasticities in the 0.5 to 1.0 range, capturing the decision to enter the labor force rather than hours worked.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the probability of labor force participation for US single mothers resulting from a 1 percent increase in the net-of-tax wage.\",\n  \"point_estimate\": 0.7,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.5,\n    \"p50\": 0.7,\n    \"p75\": 1.0,\n    \"p95\": 1.5\n  },\n  \"citations\": [\n    \"Eissa and Liebman (1996)\",\n    \"Meyer and Rosenbaum (2001)\",\n    \"Chetty et al. (2011)\"\n  ],\n  \"reasoning_summary\": \"Single mothers exhibit relatively high responsiveness to wage changes (and tax credit changes) compared to other demographics. Most influential empirical studies on welfare reform and EITC expansions suggest elasticities in the 0.5 to 1.0 range, capturing the decision to enter the labor force rather than hours worked.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.1,
+      "upperBound": 1.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 1.1
+      },
+      "interpretation": "Medium-run percentage change in the labor-force participation rate of single mothers in the U.S. resulting from a 1 percent increase in the net-of-tax wage.",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Eissa and Liebman (1996)",
+        "Chetty et al. (2011)"
+      ],
+      "reasoningSummary": "Empirical evidence from welfare reform periods (notably EITC expansions) consistently shows that single mothers exhibit higher participation elasticities than prime-age men or married women. Estimates are generally positive and significant, typically clustering between 0.3 and 0.7, as the participation margin is highly sensitive to the net wage for this demographic due to childcare costs and benefit phase-outs.",
+      "rawResponse": "{\n  \"interpretation\": \"Medium-run percentage change in the labor-force participation rate of single mothers in the U.S. resulting from a 1 percent increase in the net-of-tax wage.\",\n  \"point_estimate\": 0.45,\n  \"quantiles\": {\n    \"p05\": 0.1,\n    \"p25\": 0.3,\n    \"p50\": 0.45,\n    \"p75\": 0.65,\n    \"p95\": 1.1\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Eissa and Liebman (1996)\",\n    \"Chetty et al. (2011)\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence from welfare reform periods (notably EITC expansions) consistently shows that single mothers exhibit higher participation elasticities than prime-age men or married women. Estimates are generally positive and significant, typically clustering between 0.3 and 0.7, as the participation margin is highly sensitive to the net wage for this demographic due to childcare costs and benefit phase-outs.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.65,
+      "lowerBound": 0.2,
+      "upperBound": 1.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.45,
+        "p50": 0.65,
+        "p75": 0.9,
+        "p95": 1.4
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the United States resulting from a 1 percent change in their net-of-tax wage rate over the medium run.",
+      "citations": [
+        "Eissa and Liebman (1996)",
+        "Meyer and Rosenbaum (2001)",
+        "Chetty, Guren, Manoli, and Weber (2011)"
+      ],
+      "reasoningSummary": "The literature on single mothers consistently shows higher participation elasticities than the general population due to responsiveness to EITC expansions and welfare reform. While initial studies suggested high values (sometimes exceeding 1.0), more recent estimates integrating tax reforms and transfer responses tend to cluster in the 0.4 to 0.9 range for the medium run.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the United States resulting from a 1 percent change in their net-of-tax wage rate over the medium run.\",\n  \"point_estimate\": 0.65,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.45,\n    \"p50\": 0.65,\n    \"p75\": 0.9,\n    \"p95\": 1.4\n  },\n  \"citations\": [\n    \"Eissa and Liebman (1996)\",\n    \"Meyer and Rosenbaum (2001)\",\n    \"Chetty, Guren, Manoli, and Weber (2011)\"\n  ],\n  \"reasoning_summary\": \"The literature on single mothers consistently shows higher participation elasticities than the general population due to responsiveness to EITC expansions and welfare reform. While initial studies suggested high values (sometimes exceeding 1.0), more recent estimates integrating tax reforms and transfer responses tend to cluster in the 0.4 to 0.9 range for the medium run.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.35,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.2
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the US in response to a 1 percent change in their net-of-tax wage (medium-run).",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Blundell and MaCurdy (1999)",
+        "Eissa and Liebman (1996)"
+      ],
+      "reasoningSummary": "Single mothers exhibit higher labor supply elasticities than other demographic groups, primarily driven by participation margins (extensive margin) rather than hours worked (intensive margin). Estimates for this group are typically positive and significant, reflecting responsiveness to tax-credit policies like the EITC and welfare reform, which heavily targeted this population.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the US in response to a 1 percent change in their net-of-tax wage (medium-run).\",\n  \"point_estimate\": 0.5,\n  \"quantiles\": {\n    \"p05\": 0.1,\n    \"p25\": 0.35,\n    \"p50\": 0.5,\n    \"p75\": 0.75,\n    \"p95\": 1.2\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Eissa and Liebman (1996)\"\n  ],\n  \"reasoning_summary\": \"Single mothers exhibit higher labor supply elasticities than other demographic groups, primarily driven by participation margins (extensive margin) rather than hours worked (intensive margin). Estimates for this group are typically positive and significant, reflecting responsiveness to tax-credit policies like the EITC and welfare reform, which heavily targeted this population.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.15,
+      "upperBound": 1.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 1.1
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the U.S. resulting from a 1 percent change in their net-of-tax wage, over a medium-term horizon.",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Chetty et al. (2011)",
+        "Saez (2010)"
+      ],
+      "reasoningSummary": "Empirical studies, particularly those analyzing the EITC and welfare reform in the 1990s, suggest single mothers are highly responsive to net wage changes at the extensive margin. While earlier estimates sometimes suggested higher elasticities (near 0.7-1.0), more recent consensus on net-of-tax wage responses places the participation elasticity in a moderate range, though it remains significantly higher than the intensive margin elasticity for other demographics.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the U.S. resulting from a 1 percent change in their net-of-tax wage, over a medium-term horizon.\",\n  \"point_estimate\": 0.45,\n  \"quantiles\": {\n    \"p05\": 0.15,\n    \"p25\": 0.30,\n    \"p50\": 0.45,\n    \"p75\": 0.65,\n    \"p95\": 1.1\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Chetty et al. (2011)\",\n    \"Saez (2010)\"\n  ],\n  \"reasoning_summary\": \"Empirical studies, particularly those analyzing the EITC and welfare reform in the 1990s, suggest single mothers are highly responsive to net wage changes at the extensive margin. While earlier estimates sometimes suggested higher elasticities (near 0.7-1.0), more recent consensus on net-of-tax wage responses places the participation elasticity in a moderate range, though it remains significantly higher than the intensive margin elasticity for other demographics.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.65,
+      "lowerBound": 0.15,
+      "upperBound": 1.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.4,
+        "p50": 0.65,
+        "p75": 0.9,
+        "p95": 1.4
+      },
+      "interpretation": "The percentage change in the probability of labor force participation for US single mothers resulting from a 1 percent increase in the net-of-tax wage, evaluated over the medium term.",
+      "citations": [
+        "Meyer, B. D., & Rosenbaum, D. T. (2001). Welfare, the Earned Income Tax Credit, and the Labor Supply of Single Mothers.",
+        "Saez, E., Slemrod, J., & Giertz, S. H. (2012). The Elasticity of Taxable Income with Respect to Marginal Tax Rates: A Critical Review.",
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions."
+      ],
+      "reasoningSummary": "Empirical estimates for single mothers show significant sensitivity to net-of-tax wages, primarily driven by EITC expansions and welfare reform (e.g., PRWORA). While extensive margin responses are much larger than intensive margin responses, a central tendency of around 0.65 aligns with the consensus that participation elasticities for this demographic are substantial, generally falling between 0.4 and 0.9, though estimates vary widely based on the specific policy intervention analyzed.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the probability of labor force participation for US single mothers resulting from a 1 percent increase in the net-of-tax wage, evaluated over the medium term.\",\n  \"point_estimate\": 0.65,\n  \"quantiles\": {\n    \"p05\": 0.15,\n    \"p25\": 0.40,\n    \"p50\": 0.65,\n    \"p75\": 0.90,\n    \"p95\": 1.40\n  },\n  \"citations\": [\n    \"Meyer, B. D., & Rosenbaum, D. T. (2001). Welfare, the Earned Income Tax Credit, and the Labor Supply of Single Mothers.\",\n    \"Saez, E., Slemrod, J., & Giertz, S. H. (2012). The Elasticity of Taxable Income with Respect to Marginal Tax Rates: A Critical Review.\",\n    \"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions.\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for single mothers show significant sensitivity to net-of-tax wages, primarily driven by EITC expansions and welfare reform (e.g., PRWORA). While extensive margin responses are much larger than intensive margin responses, a central tendency of around 0.65 aligns with the consensus that participation elasticities for this demographic are substantial, generally falling between 0.4 and 0.9, though estimates vary widely based on the specific policy intervention analyzed.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.65,
+      "lowerBound": 0.2,
+      "upperBound": 1.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.45,
+        "p50": 0.65,
+        "p75": 0.9,
+        "p95": 1.4
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the United States in response to a 1 percent change in their net-of-tax wage.",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Blundell and MaCurdy (1999)",
+        "Saez, Slemrod, and Giertz (2012)"
+      ],
+      "reasoningSummary": "Empirical evidence, particularly from the 1990s welfare reform era in the U.S., suggests that single mothers are more responsive to tax/transfer changes than the general population. While intensive margin elasticities (hours worked) are generally low, participation elasticities are significantly higher. Estimates vary widely based on the specific policy intervention (e.g., EITC expansions vs. welfare benefit cuts), but a consensus range often places the elasticity between 0.4 and 1.0.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the United States in response to a 1 percent change in their net-of-tax wage.\",\n  \"point_estimate\": 0.65,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.45,\n    \"p50\": 0.65,\n    \"p75\": 0.9,\n    \"p95\": 1.4\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Saez, Slemrod, and Giertz (2012)\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence, particularly from the 1990s welfare reform era in the U.S., suggests that single mothers are more responsive to tax/transfer changes than the general population. While intensive margin elasticities (hours worked) are generally low, participation elasticities are significantly higher. Estimates vary widely based on the specific policy intervention (e.g., EITC expansions vs. welfare benefit cuts), but a consensus range often places the elasticity between 0.4 and 1.0.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.6,
+      "lowerBound": 0.2,
+      "upperBound": 1.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.4,
+        "p50": 0.6,
+        "p75": 0.9,
+        "p95": 1.5
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the U.S. resulting from a 1 percent increase in the net-of-tax wage.",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Eissa and Liebman (1996)",
+        "Chetty et al. (2011)"
+      ],
+      "reasoningSummary": "Empirical literature on single mothers, particularly in the context of the EITC and welfare reform in the 1990s, generally identifies a strong positive extensive margin response to net wage increases. Estimates for this demographic are higher than for the general population because of the high fixed costs of working (childcare, etc.) and the sensitivity to welfare benefit cliffs. The consensus range often clusters between 0.4 and 0.8.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the U.S. resulting from a 1 percent increase in the net-of-tax wage.\",\n  \"point_estimate\": 0.6,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.4,\n    \"p50\": 0.6,\n    \"p75\": 0.9,\n    \"p95\": 1.5\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Eissa and Liebman (1996)\",\n    \"Chetty et al. (2011)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on single mothers, particularly in the context of the EITC and welfare reform in the 1990s, generally identifies a strong positive extensive margin response to net wage increases. Estimates for this demographic are higher than for the general population because of the high fixed costs of working (childcare, etc.) and the sensitivity to welfare benefit cliffs. The consensus range often clusters between 0.4 and 0.8.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.15,
+      "upperBound": 1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 1
+      },
+      "interpretation": "The percentage change in the probability of labor force participation among US single mothers resulting from a 1 percent increase in the net-of-tax wage, over a medium-run horizon.",
+      "citations": [
+        "Meyer, B. D., & Rosenbaum, D. T. (2001). Welfare, the Earned Income Tax Credit, and the Labor Supply of Single Mothers.",
+        "Chetty, R., Guren, A., Manoli, D., & Weber, A. (2011). Are Micro and Macro Labor Supply Elasticities Consistent? A Review of Evidence on the Intensive and Extensive Margins.",
+        "Saez, E. (2002). Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses."
+      ],
+      "reasoningSummary": "Single mothers exhibit some of the highest participation elasticities among demographic groups in the US, primarily due to the 'extensive margin' (deciding to work vs. not work) being highly sensitive to financial incentives like the EITC and welfare reform. The literature consistently suggests these elasticities are significantly higher than for prime-age males, typically ranging between 0.3 and 0.7. The distribution reflects the uncertainty regarding how much of the observed historical response to tax changes reflects long-term structural shifts versus short-term behavioral adjustments.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the probability of labor force participation among US single mothers resulting from a 1 percent increase in the net-of-tax wage, over a medium-run horizon.\",\n  \"point_estimate\": 0.45,\n  \"quantiles\": {\n    \"p05\": 0.15,\n    \"p25\": 0.30,\n    \"p50\": 0.45,\n    \"p75\": 0.65,\n    \"p95\": 1.0\n  },\n  \"citations\": [\n    \"Meyer, B. D., & Rosenbaum, D. T. (2001). Welfare, the Earned Income Tax Credit, and the Labor Supply of Single Mothers.\",\n    \"Chetty, R., Guren, A., Manoli, D., & Weber, A. (2011). Are Micro and Macro Labor Supply Elasticities Consistent? A Review of Evidence on the Intensive and Extensive Margins.\",\n    \"Saez, E. (2002). Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.\"\n  ],\n  \"reasoning_summary\": \"Single mothers exhibit some of the highest participation elasticities among demographic groups in the US, primarily due to the 'extensive margin' (deciding to work vs. not work) being highly sensitive to financial incentives like the EITC and welfare reform. The literature consistently suggests these elasticities are significantly higher than for prime-age males, typically ranging between 0.3 and 0.7. The distribution reflects the uncertainty regarding how much of the observed historical response to tax changes reflects long-term structural shifts versus short-term behavioral adjustments.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.45,
+      "lowerBound": 0.1,
+      "upperBound": 1.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.45,
+        "p75": 0.65,
+        "p95": 1.1
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the U.S. resulting from a 1 percent change in the net-of-tax wage.",
+      "citations": [
+        "Eissa and Liebman (1996)",
+        "Meyer and Rosenbaum (2001)",
+        "Saez (2002)"
+      ],
+      "reasoningSummary": "Empirical studies, particularly those analyzing the EITC expansions in the 1990s, consistently find that single mothers exhibit significant responsiveness to tax incentives at the extensive margin. While earlier work suggested very high elasticities (above 1.0), more recent consensus and nuanced analyses of participation (as opposed to hours worked) suggest a moderate elasticity, typically ranging between 0.3 and 0.7, as frictions and childcare constraints temper the response.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the U.S. resulting from a 1 percent change in the net-of-tax wage.\",\n  \"point_estimate\": 0.45,\n  \"quantiles\": {\n    \"p05\": 0.1,\n    \"p25\": 0.3,\n    \"p50\": 0.45,\n    \"p75\": 0.65,\n    \"p95\": 1.1\n  },\n  \"citations\": [\n    \"Eissa and Liebman (1996)\",\n    \"Meyer and Rosenbaum (2001)\",\n    \"Saez (2002)\"\n  ],\n  \"reasoning_summary\": \"Empirical studies, particularly those analyzing the EITC expansions in the 1990s, consistently find that single mothers exhibit significant responsiveness to tax incentives at the extensive margin. While earlier work suggested very high elasticities (above 1.0), more recent consensus and nuanced analyses of participation (as opposed to hours worked) suggest a moderate elasticity, typically ranging between 0.3 and 0.7, as frictions and childcare constraints temper the response.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.15,
+      "upperBound": 1.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.15,
+        "p25": 0.35,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.2
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the United States resulting from a 1 percent increase in the net-of-tax wage, over a medium-run horizon.",
+      "citations": [
+        "Eissa and Liebman (1996)",
+        "Meyer and Rosenbaum (2001)",
+        "Saez (2010)"
+      ],
+      "reasoningSummary": "Single mothers are widely considered to have a highly elastic labor supply compared to other demographic groups, particularly due to the responsiveness of participation to tax credits like the EITC. Estimates vary widely depending on the time period and policy variation analyzed, but the consensus typically falls well above 0.3, with many studies suggesting a range between 0.4 and 0.8.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the United States resulting from a 1 percent increase in the net-of-tax wage, over a medium-run horizon.\",\n  \"point_estimate\": 0.5,\n  \"quantiles\": {\n    \"p05\": 0.15,\n    \"p25\": 0.35,\n    \"p50\": 0.5,\n    \"p75\": 0.75,\n    \"p95\": 1.2\n  },\n  \"citations\": [\n    \"Eissa and Liebman (1996)\",\n    \"Meyer and Rosenbaum (2001)\",\n    \"Saez (2010)\"\n  ],\n  \"reasoning_summary\": \"Single mothers are widely considered to have a highly elastic labor supply compared to other demographic groups, particularly due to the responsiveness of participation to tax credits like the EITC. Estimates vary widely depending on the time period and policy variation analyzed, but the consensus typically falls well above 0.3, with many studies suggesting a range between 0.4 and 0.8.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.65,
+      "lowerBound": 0.2,
+      "upperBound": 1.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.45,
+        "p50": 0.65,
+        "p75": 0.9,
+        "p95": 1.4
+      },
+      "interpretation": "The percentage change in the labor force participation rate of US single mothers resulting from a 1 percent increase in the net-of-tax wage.",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Saez (2002)",
+        "Chetty et al. (2011)"
+      ],
+      "reasoningSummary": "Studies on EITC expansions and welfare reform in the 1990s consistently found large participation responses among single mothers, contrasting with small intensive-margin elasticities for primary earners. While estimates vary by policy context and time period, the literature generally places the participation elasticity for this group in the 0.5–1.0 range.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of US single mothers resulting from a 1 percent increase in the net-of-tax wage.\",\n  \"point_estimate\": 0.65,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.45,\n    \"p50\": 0.65,\n    \"p75\": 0.9,\n    \"p95\": 1.4\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Saez (2002)\",\n    \"Chetty et al. (2011)\"\n  ],\n  \"reasoning_summary\": \"Studies on EITC expansions and welfare reform in the 1990s consistently found large participation responses among single mothers, contrasting with small intensive-margin elasticities for primary earners. While estimates vary by policy context and time period, the literature generally places the participation elasticity for this group in the 0.5–1.0 range.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.6,
+      "lowerBound": 0.2,
+      "upperBound": 1.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.2,
+        "p25": 0.4,
+        "p50": 0.6,
+        "p75": 0.9,
+        "p95": 1.4
+      },
+      "interpretation": "The percentage change in the labor force participation rate of single mothers in the US given a 1 percent change in their net-of-tax wage (the extensive margin elasticity).",
+      "citations": [
+        "Meyer and Rosenbaum (2001)",
+        "Blundell and MaCurdy (1999)",
+        "Eissa and Liebman (1996)"
+      ],
+      "reasoningSummary": "Empirical literature consistently finds that single mothers exhibit significant responsiveness at the extensive margin, largely due to fixed costs of work (like childcare) and the structure of welfare benefits (e.g., EITC). Estimates vary, but a central range of 0.4 to 0.9 is common for this demographic, as they are often more elastic than other labor market groups.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in the labor force participation rate of single mothers in the US given a 1 percent change in their net-of-tax wage (the extensive margin elasticity).\",\n  \"point_estimate\": 0.6,\n  \"quantiles\": {\n    \"p05\": 0.2,\n    \"p25\": 0.4,\n    \"p50\": 0.6,\n    \"p75\": 0.9,\n    \"p95\": 1.4\n  },\n  \"citations\": [\n    \"Meyer and Rosenbaum (2001)\",\n    \"Blundell and MaCurdy (1999)\",\n    \"Eissa and Liebman (1996)\"\n  ],\n  \"reasoning_summary\": \"Empirical literature consistently finds that single mothers exhibit significant responsiveness at the extensive margin, largely due to fixed costs of work (like childcare) and the structure of welfare benefits (e.g., EITC). Estimates vary, but a central range of 0.4 to 0.9 is common for this demographic, as they are often more elastic than other labor market groups.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Employment participation elasticity of single mothers\n- Definition: Percent change in employment or labor-force participation from a 1 percent change in the net-of-tax wage.\n- Target interpretation: Medium-run employment participation elasticity with respect to the net-of-tax wage\n- Population/context: Single mothers in the United States\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

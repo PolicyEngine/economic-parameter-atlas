@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.policy_response.substitution_elasticity.all",
+  "modelName": "gemini-3.1-flash-lite-preview",
+  "experimentDir": "gemini-3.1-flash-lite-preview-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T04:42:04.301Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.15,
+      "lowerBound": 0.05,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.1,
+        "p50": 0.15,
+        "p75": 0.25,
+        "p95": 0.4
+      },
+      "interpretation": "Global compensated (Hicksian) substitution elasticity of labor supply applied uniformly to hours of work in a U.S. microsimulation model.",
+      "citations": [
+        "Chetty et al. (2011) 'Adjustments to Taxes and Transfers'",
+        "Saez (2002) 'The Optimal Taxation of Low-Income Families'",
+        "Blundell and MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches'"
+      ],
+      "reasoningSummary": "Empirical consensus suggests that for the aggregate population, intensive margin labor supply elasticities (hours) are relatively small. While early literature estimated wider ranges, more recent studies focusing on tax-benefit sensitivity suggest values clustered in the 0.1 to 0.2 range. Higher values (approaching 0.4) are typically reserved for specific subpopulations (e.g., secondary earners or low-wage workers), but as a uniform global parameter, 0.15 is a standard conservative choice used in policy simulations.",
+      "rawResponse": "{\n  \"interpretation\": \"Global compensated (Hicksian) substitution elasticity of labor supply applied uniformly to hours of work in a U.S. microsimulation model.\",\n  \"point_estimate\": 0.15,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.1,\n    \"p50\": 0.15,\n    \"p75\": 0.25,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Chetty et al. (2011) 'Adjustments to Taxes and Transfers'\",\n    \"Saez (2002) 'The Optimal Taxation of Low-Income Families'\",\n    \"Blundell and MaCurdy (1999) 'Labor Supply: A Review of Alternative Approaches'\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus suggests that for the aggregate population, intensive margin labor supply elasticities (hours) are relatively small. While early literature estimated wider ranges, more recent studies focusing on tax-benefit sensitivity suggest values clustered in the 0.1 to 0.2 range. Higher values (approaching 0.4) are typically reserved for specific subpopulations (e.g., secondary earners or low-wage workers), but as a uniform global parameter, 0.15 is a standard conservative choice used in policy simulations.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": 0,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0,
+        "p25": 0.05,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "Global compensated substitution elasticity of labor supply applied as a uniform parameter in a U.S. microsimulation model.",
+      "citations": [
+        "Saez, E., Slemrod, J., & Giertz, S. H. (2012). The elasticity of taxable income with respect to marginal tax rates: A critical review.",
+        "Chetty, R. (2012). Bounds on elasticities with optimization frictions.",
+        "Heckman, J. J. (1993). What has been learned about labor supply in the past twenty years?"
+      ],
+      "reasoningSummary": "Empirical estimates of the substitution elasticity of labor supply, particularly for the intensive margin (hours worked), are generally found to be small and positive. While aggregate labor supply is often estimated to be near zero, tax-benefit microsimulations typically require a positive parameter to avoid zero-response results. A value of 0.1 is a standard, conservative central estimate used in many policy simulations, reflecting the consensus that responses are positive but inelastic.",
+      "rawResponse": "{\n  \"interpretation\": \"Global compensated substitution elasticity of labor supply applied as a uniform parameter in a U.S. microsimulation model.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": 0.0,\n    \"p25\": 0.05,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Saez, E., Slemrod, J., & Giertz, S. H. (2012). The elasticity of taxable income with respect to marginal tax rates: A critical review.\",\n    \"Chetty, R. (2012). Bounds on elasticities with optimization frictions.\",\n    \"Heckman, J. J. (1993). What has been learned about labor supply in the past twenty years?\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of the substitution elasticity of labor supply, particularly for the intensive margin (hours worked), are generally found to be small and positive. While aggregate labor supply is often estimated to be near zero, tax-benefit microsimulations typically require a positive parameter to avoid zero-response results. A value of 0.1 is a standard, conservative central estimate used in many policy simulations, reflecting the consensus that responses are positive but inelastic.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.15,
+      "lowerBound": 0.05,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.1,
+        "p50": 0.15,
+        "p75": 0.25,
+        "p95": 0.4
+      },
+      "interpretation": "The global uniform substitution elasticity parameter used to adjust labor supply in response to changes in the effective marginal wage rate within a U.S. microsimulation.",
+      "citations": [
+        "Saez, E. (2002). Optimal income transfer programs: intensive versus extensive labor supply responses.",
+        "Chetty, R. (2012). Bounds on elasticities with optimization frictions.",
+        "Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches."
+      ],
+      "reasoningSummary": "Empirical consensus on the compensated (substitution) elasticity of labor supply for the broad population—particularly when averaged across intensive and extensive margins—tends to be small but positive. While some micro-studies suggest near-zero values, simulation models often employ a slightly higher parameter to account for potential behavioral responses to tax reforms, typically centering in the 0.1 to 0.2 range.",
+      "rawResponse": "{\n  \"interpretation\": \"The global uniform substitution elasticity parameter used to adjust labor supply in response to changes in the effective marginal wage rate within a U.S. microsimulation.\",\n  \"point_estimate\": 0.15,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.1,\n    \"p50\": 0.15,\n    \"p75\": 0.25,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Saez, E. (2002). Optimal income transfer programs: intensive versus extensive labor supply responses.\",\n    \"Chetty, R. (2012). Bounds on elasticities with optimization frictions.\",\n    \"Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches.\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus on the compensated (substitution) elasticity of labor supply for the broad population—particularly when averaged across intensive and extensive margins—tends to be small but positive. While some micro-studies suggest near-zero values, simulation models often employ a slightly higher parameter to account for potential behavioral responses to tax reforms, typically centering in the 0.1 to 0.2 range.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": 0,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0,
+        "p25": 0.05,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "The global Hicksian (compensated) labor supply substitution elasticity parameter used to model behavioral responses in a U.S. tax-benefit microsimulation.",
+      "citations": [
+        "Saez, E. (2002). Optimal income transfer programs: Intensive versus extensive labor supply responses.",
+        "Chetty, R. (2012). Bounds on elasticities with optimization frictions: A synthesis of micro and macro evidence on labor supply.",
+        "Congressional Budget Office (CBO) technical documentation on microsimulation modeling."
+      ],
+      "reasoningSummary": "Empirical literature on intensive margin labor supply (hours worked) generally finds small, often near-zero elasticities for the primary earner population. Values above 0.3 are increasingly viewed as inconsistent with standard lifecycle labor supply models, while values near zero are often used in conservative policy baselines. A point estimate of 0.1 reflects a standard consensus middle-ground, allowing for modest responses while acknowledging that significant labor supply shifts are constrained by fixed costs and institutional rigidities.",
+      "rawResponse": "{\n  \"interpretation\": \"The global Hicksian (compensated) labor supply substitution elasticity parameter used to model behavioral responses in a U.S. tax-benefit microsimulation.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": 0.0,\n    \"p25\": 0.05,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Saez, E. (2002). Optimal income transfer programs: Intensive versus extensive labor supply responses.\",\n    \"Chetty, R. (2012). Bounds on elasticities with optimization frictions: A synthesis of micro and macro evidence on labor supply.\",\n    \"Congressional Budget Office (CBO) technical documentation on microsimulation modeling.\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on intensive margin labor supply (hours worked) generally finds small, often near-zero elasticities for the primary earner population. Values above 0.3 are increasingly viewed as inconsistent with standard lifecycle labor supply models, while values near zero are often used in conservative policy baselines. A point estimate of 0.1 reflects a standard consensus middle-ground, allowing for modest responses while acknowledging that significant labor supply shifts are constrained by fixed costs and institutional rigidities.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.15,
+      "lowerBound": 0.05,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.1,
+        "p50": 0.15,
+        "p75": 0.25,
+        "p95": 0.4
+      },
+      "interpretation": "A global compensated (Hicksian) labor-supply elasticity parameter applied uniformly in a U.S. tax-benefit microsimulation to estimate hours-of-work responses to changes in the net-of-tax wage.",
+      "citations": [
+        "Saez, E. (2002). Optimal income transfer programs: intensive versus extensive labor supply responses.",
+        "Chetty, R. (2012). Bounds on elasticities with optimization frictions: A synthesis of micro and macro evidence on labor supply.",
+        "Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches."
+      ],
+      "reasoningSummary": "Empirical consensus on intensive-margin labor supply elasticities for the U.S. population is generally low. While estimates vary by demographic group (e.g., higher for secondary earners), a uniform model parameter typically centers around 0.1 to 0.2. Setting the parameter higher would conflict with aggregate evidence suggesting that macro-elasticities are constrained, though there is significant uncertainty regarding how much optimization friction dampens individual responses.",
+      "rawResponse": "{\n  \"interpretation\": \"A global compensated (Hicksian) labor-supply elasticity parameter applied uniformly in a U.S. tax-benefit microsimulation to estimate hours-of-work responses to changes in the net-of-tax wage.\",\n  \"point_estimate\": 0.15,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.10,\n    \"p50\": 0.15,\n    \"p75\": 0.25,\n    \"p95\": 0.40\n  },\n  \"citations\": [\n    \"Saez, E. (2002). Optimal income transfer programs: intensive versus extensive labor supply responses.\",\n    \"Chetty, R. (2012). Bounds on elasticities with optimization frictions: A synthesis of micro and macro evidence on labor supply.\",\n    \"Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches.\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus on intensive-margin labor supply elasticities for the U.S. population is generally low. While estimates vary by demographic group (e.g., higher for secondary earners), a uniform model parameter typically centers around 0.1 to 0.2. Setting the parameter higher would conflict with aggregate evidence suggesting that macro-elasticities are constrained, though there is significant uncertainty regarding how much optimization friction dampens individual responses.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": 0,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0,
+        "p25": 0.05,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "Global compensated (substitution) labor-supply elasticity used as a uniform parameter in US tax-benefit microsimulation models.",
+      "citations": [
+        "Saez, E. (2002) 'Optimal Income Transfer Programs'",
+        "Chetty, R. (2012) 'Bounds on Elasticities with Optimization Frictions'",
+        "Keane, M. P. (2011) 'Labor Supply and Taxes: A Survey'"
+      ],
+      "reasoningSummary": "Empirical evidence, particularly after adjusting for optimization frictions, suggests that aggregate labor supply responsiveness to net-of-tax wage changes is quite small for the extensive and intensive margins combined. While individual studies vary widely (some finding near-zero, others higher), tax-benefit models often calibrate to values in the 0.05 to 0.2 range to remain conservative and consistent with observed small aggregate responses to tax reforms.",
+      "rawResponse": "{\n  \"interpretation\": \"Global compensated (substitution) labor-supply elasticity used as a uniform parameter in US tax-benefit microsimulation models.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": 0.0,\n    \"p25\": 0.05,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Saez, E. (2002) 'Optimal Income Transfer Programs'\",\n    \"Chetty, R. (2012) 'Bounds on Elasticities with Optimization Frictions'\",\n    \"Keane, M. P. (2011) 'Labor Supply and Taxes: A Survey'\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence, particularly after adjusting for optimization frictions, suggests that aggregate labor supply responsiveness to net-of-tax wage changes is quite small for the extensive and intensive margins combined. While individual studies vary widely (some finding near-zero, others higher), tax-benefit models often calibrate to values in the 0.05 to 0.2 range to remain conservative and consistent with observed small aggregate responses to tax reforms.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.5,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.35,
+        "p95": 0.5
+      },
+      "interpretation": "Global compensated labor supply substitution elasticity (Hicksian) parameter used as a uniform scaling factor for behavioral responses in U.S. microsimulation models.",
+      "citations": [
+        "Saez, E. (2002). Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.",
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions.",
+        "Gruber, J., & Saez, E. (2002). The elasticity of taxable income: evidence and implications."
+      ],
+      "reasoningSummary": "Empirical consensus on the intensive margin elasticity of labor supply is relatively low, typically ranging between 0 and 0.5. While earlier literature (e.g., MaCurdy 1981) suggested higher values, more recent work emphasizing optimization frictions and the distinction between extensive and intensive margins has pushed the preferred value for simulation exercises downward, often centering around 0.2-0.3 for a aggregate, economy-wide parameter.",
+      "rawResponse": "{\n  \"interpretation\": \"Global compensated labor supply substitution elasticity (Hicksian) parameter used as a uniform scaling factor for behavioral responses in U.S. microsimulation models.\",\n  \"point_estimate\": 0.25,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.15,\n    \"p50\": 0.25,\n    \"p75\": 0.35,\n    \"p95\": 0.5\n  },\n  \"citations\": [\n    \"Saez, E. (2002). Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.\",\n    \"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions.\",\n    \"Gruber, J., & Saez, E. (2002). The elasticity of taxable income: evidence and implications.\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus on the intensive margin elasticity of labor supply is relatively low, typically ranging between 0 and 0.5. While earlier literature (e.g., MaCurdy 1981) suggested higher values, more recent work emphasizing optimization frictions and the distinction between extensive and intensive margins has pushed the preferred value for simulation exercises downward, often centering around 0.2-0.3 for a aggregate, economy-wide parameter.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.7,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.7
+      },
+      "interpretation": "The global constant elasticity of substitution (Frisch elasticity) applied uniformly to labor supply responsiveness in a U.S. tax-benefit microsimulation model.",
+      "citations": [
+        "Saez, E. (2002). 'Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.'",
+        "Chetty, R. (2012). 'Bounds on Elasticities with Optimization Frictions.'",
+        "Blundell, R., & MaCurdy, T. (1999). 'Labor Supply: A Review of Alternative Approaches.'"
+      ],
+      "reasoningSummary": "Empirical consensus suggests that while aggregate intensive margin elasticities (hours worked) are generally small, they are rarely zero. Most tax-benefit microsimulation models (like TAXSIM or models used by the CBO/JCT) utilize conservative parameters to avoid overstating behavioral responses. A central value of 0.25 aligns with a broad consensus that intensive margin responsiveness is positive but inelastic, with higher values (near 0.5-0.7) typically reserved for specific subpopulations or long-run scenarios.",
+      "rawResponse": "{\n  \"interpretation\": \"The global constant elasticity of substitution (Frisch elasticity) applied uniformly to labor supply responsiveness in a U.S. tax-benefit microsimulation model.\",\n  \"point_estimate\": 0.25,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.15,\n    \"p50\": 0.25,\n    \"p75\": 0.4,\n    \"p95\": 0.7\n  },\n  \"citations\": [\n    \"Saez, E. (2002). 'Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.'\",\n    \"Chetty, R. (2012). 'Bounds on Elasticities with Optimization Frictions.'\",\n    \"Blundell, R., & MaCurdy, T. (1999). 'Labor Supply: A Review of Alternative Approaches.'\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus suggests that while aggregate intensive margin elasticities (hours worked) are generally small, they are rarely zero. Most tax-benefit microsimulation models (like TAXSIM or models used by the CBO/JCT) utilize conservative parameters to avoid overstating behavioral responses. A central value of 0.25 aligns with a broad consensus that intensive margin responsiveness is positive but inelastic, with higher values (near 0.5-0.7) typically reserved for specific subpopulations or long-run scenarios.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": 0,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0,
+        "p25": 0.05,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "Global labor-supply substitution-response elasticity (Hicksian) applied as a uniform parameter in U.S. tax-benefit microsimulations to estimate responsiveness to changes in net marginal wages.",
+      "citations": [
+        "Saez, E. (2002). Optimal income transfer programs: intensive versus extensive labor supply responses.",
+        "Chetty, R. (2012). Bounds on elasticities with optimization frictions: A synthesis of micro and macro evidence on labor supply.",
+        "Congressional Budget Office (CBO) technical reports on microsimulation model parameters."
+      ],
+      "reasoningSummary": "Empirical consensus on the intensive margin (hours worked) elasticity for adults is generally low. While some earlier literature suggested higher values, modern estimates utilizing optimization frictions and quasi-experimental methods tend to cluster near zero or slightly positive (often 0.05 to 0.15). Values above 0.3-0.4 are widely viewed as implausibly high for the aggregate population, given the constraints of the U.S. labor market.",
+      "rawResponse": "{\n  \"interpretation\": \"Global labor-supply substitution-response elasticity (Hicksian) applied as a uniform parameter in U.S. tax-benefit microsimulations to estimate responsiveness to changes in net marginal wages.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": 0.0,\n    \"p25\": 0.05,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Saez, E. (2002). Optimal income transfer programs: intensive versus extensive labor supply responses.\",\n    \"Chetty, R. (2012). Bounds on elasticities with optimization frictions: A synthesis of micro and macro evidence on labor supply.\",\n    \"Congressional Budget Office (CBO) technical reports on microsimulation model parameters.\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus on the intensive margin (hours worked) elasticity for adults is generally low. While some earlier literature suggested higher values, modern estimates utilizing optimization frictions and quasi-experimental methods tend to cluster near zero or slightly positive (often 0.05 to 0.15). Values above 0.3-0.4 are widely viewed as implausibly high for the aggregate population, given the constraints of the U.S. labor market.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": 0,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0,
+        "p25": 0.05,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.4
+      },
+      "interpretation": "A global compensated (Hicksian) labor supply elasticity parameter representing the percentage change in labor hours supplied by U.S. adults for a 1 percent change in the effective marginal wage within a tax-benefit microsimulation.",
+      "citations": [
+        "Saez, E. (2002). Optimal Income Transfer Programs: Intensive Versus Extensive Labor Supply Responses.",
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.",
+        "Congressional Budget Office (CBO) standard parameterizations for tax modeling."
+      ],
+      "reasoningSummary": "Empirical literature on intensive margin labor supply elasticity for primary earners in the U.S. consistently finds small values, typically ranging from 0.0 to 0.2. While broader studies incorporating frictions or extensive margin responses (participation) suggest higher values, standard tax-benefit simulations often rely on conservative, smaller elasticities for intensive margin adjustments to avoid overestimating deadweight loss or behavioral responses to tax changes.",
+      "rawResponse": "{\n  \"interpretation\": \"A global compensated (Hicksian) labor supply elasticity parameter representing the percentage change in labor hours supplied by U.S. adults for a 1 percent change in the effective marginal wage within a tax-benefit microsimulation.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": 0.0,\n    \"p25\": 0.05,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Saez, E. (2002). Optimal Income Transfer Programs: Intensive Versus Extensive Labor Supply Responses.\",\n    \"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.\",\n    \"Congressional Budget Office (CBO) standard parameterizations for tax modeling.\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on intensive margin labor supply elasticity for primary earners in the U.S. consistently finds small values, typically ranging from 0.0 to 0.2. While broader studies incorporating frictions or extensive margin responses (participation) suggest higher values, standard tax-benefit simulations often rely on conservative, smaller elasticities for intensive margin adjustments to avoid overestimating deadweight loss or behavioral responses to tax changes.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.6,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.6
+      },
+      "interpretation": "A uniform parameter representing the compensated labor supply elasticity (Hicksian) used to calibrate behavioral responses in a U.S. static tax-benefit microsimulation model.",
+      "citations": [
+        "Saez, E. (2002). Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.",
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.",
+        "Congressional Budget Office (CBO) Technical Papers on Microsimulation Modeling"
+      ],
+      "reasoningSummary": "Empirical labor economics literature generally finds that the intensive margin elasticity (substitution effect) for the primary earner population is quite small, often clustering between 0.1 and 0.3. While higher elasticities are sometimes debated for secondary earners, tax-benefit simulation models typically use a conservative, uniform 'global' parameter to avoid overestimating behavioral responses to policy changes. 0.25 represents a standard middle-ground parameter used in many applied policy models (like those influenced by CBO or JCT methodologies) to capture modest responsiveness.",
+      "rawResponse": "{\n  \"interpretation\": \"A uniform parameter representing the compensated labor supply elasticity (Hicksian) used to calibrate behavioral responses in a U.S. static tax-benefit microsimulation model.\",\n  \"point_estimate\": 0.25,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.15,\n    \"p50\": 0.25,\n    \"p75\": 0.4,\n    \"p95\": 0.6\n  },\n  \"citations\": [\n    \"Saez, E. (2002). Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.\",\n    \"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.\",\n    \"Congressional Budget Office (CBO) Technical Papers on Microsimulation Modeling\"\n  ],\n  \"reasoning_summary\": \"Empirical labor economics literature generally finds that the intensive margin elasticity (substitution effect) for the primary earner population is quite small, often clustering between 0.1 and 0.3. While higher elasticities are sometimes debated for secondary earners, tax-benefit simulation models typically use a conservative, uniform 'global' parameter to avoid overestimating behavioral responses to policy changes. 0.25 represents a standard middle-ground parameter used in many applied policy models (like those influenced by CBO or JCT methodologies) to capture modest responsiveness.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.1,
+      "lowerBound": 0,
+      "upperBound": 0.35,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0,
+        "p25": 0.05,
+        "p50": 0.1,
+        "p75": 0.2,
+        "p95": 0.35
+      },
+      "interpretation": "The global Hicksian (compensated) labor supply substitution elasticity used as a uniform parameter in U.S. microsimulation models to estimate intensive margin response to marginal net wage changes.",
+      "citations": [
+        "Saez, E., Slemrod, J., & Giertz, S. H. (2012). The Elasticity of Taxable Income with Respect to Marginal Tax Rates: A Critical Review.",
+        "Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.",
+        "Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches."
+      ],
+      "reasoningSummary": "Empirical consensus on the intensive margin labor supply elasticity for the aggregate U.S. population is consistently low. While primary earners often show near-zero responsiveness, secondary earners exhibit higher elasticities. A value of 0.1 is a standard, conservative choice for a global parameter in policy simulation models, balancing the higher estimates for secondary earners with the very low estimates for the bulk of the workforce.",
+      "rawResponse": "{\n  \"interpretation\": \"The global Hicksian (compensated) labor supply substitution elasticity used as a uniform parameter in U.S. microsimulation models to estimate intensive margin response to marginal net wage changes.\",\n  \"point_estimate\": 0.1,\n  \"quantiles\": {\n    \"p05\": 0.0,\n    \"p25\": 0.05,\n    \"p50\": 0.1,\n    \"p75\": 0.2,\n    \"p95\": 0.35\n  },\n  \"citations\": [\n    \"Saez, E., Slemrod, J., & Giertz, S. H. (2012). The Elasticity of Taxable Income with Respect to Marginal Tax Rates: A Critical Review.\",\n    \"Chetty, R. (2012). Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.\",\n    \"Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches.\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus on the intensive margin labor supply elasticity for the aggregate U.S. population is consistently low. While primary earners often show near-zero responsiveness, secondary earners exhibit higher elasticities. A value of 0.1 is a standard, conservative choice for a global parameter in policy simulation models, balancing the higher estimates for secondary earners with the very low estimates for the bulk of the workforce.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.6,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.6
+      },
+      "interpretation": "A global parameter representing the constant Hicksian (substitution) elasticity of labor supply used in a static microsimulation model to estimate behavioral responses to tax-benefit changes.",
+      "citations": [
+        "Saez, Slemrod, and Giertz (2012) review on the elasticity of taxable income",
+        "Chetty (2012) on bounds on labor supply elasticities",
+        "Standard TAXSIM/microsimulation default parameter documentation"
+      ],
+      "reasoningSummary": "Empirical consensus on the compensated (substitution) elasticity of labor supply for the broad population of U.S. adults generally clusters in the 0.1 to 0.4 range. Most static tax microsimulation models use a relatively conservative, low-positive value to avoid overestimating behavioral responses, with 0.25 serving as a standard representative mid-point in many policy evaluation contexts.",
+      "rawResponse": "{\n  \"interpretation\": \"A global parameter representing the constant Hicksian (substitution) elasticity of labor supply used in a static microsimulation model to estimate behavioral responses to tax-benefit changes.\",\n  \"point_estimate\": 0.25,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.15,\n    \"p50\": 0.25,\n    \"p75\": 0.40,\n    \"p95\": 0.60\n  },\n  \"citations\": [\n    \"Saez, Slemrod, and Giertz (2012) review on the elasticity of taxable income\",\n    \"Chetty (2012) on bounds on labor supply elasticities\",\n    \"Standard TAXSIM/microsimulation default parameter documentation\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus on the compensated (substitution) elasticity of labor supply for the broad population of U.S. adults generally clusters in the 0.1 to 0.4 range. Most static tax microsimulation models use a relatively conservative, low-positive value to avoid overestimating behavioral responses, with 0.25 serving as a standard representative mid-point in many policy evaluation contexts.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.15,
+      "lowerBound": 0.05,
+      "upperBound": 0.4,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.1,
+        "p50": 0.15,
+        "p75": 0.25,
+        "p95": 0.4
+      },
+      "interpretation": "A uniform Hicksian (substitution) elasticity parameter applied to labor supply in a U.S. tax-benefit microsimulation model.",
+      "citations": [
+        "Saez, E. (2002). 'Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.'",
+        "Chetty, R. (2012). 'Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.'",
+        "Blundell, R., & MaCurdy, T. (1999). 'Labor Supply: A Review of Alternative Approaches'."
+      ],
+      "reasoningSummary": "Empirical consensus on extensive margin elasticities is often higher, but for the intensive margin (hours worked) in the context of tax-benefit simulations, values are typically constrained to be small. 0.15 is a standard conservative estimate often used in policy models to reflect the dampened response observed when accounting for labor market frictions and optimization costs.",
+      "rawResponse": "{\n  \"interpretation\": \"A uniform Hicksian (substitution) elasticity parameter applied to labor supply in a U.S. tax-benefit microsimulation model.\",\n  \"point_estimate\": 0.15,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.1,\n    \"p50\": 0.15,\n    \"p75\": 0.25,\n    \"p95\": 0.4\n  },\n  \"citations\": [\n    \"Saez, E. (2002). 'Optimal Income Transfer Programs: Intensive versus Extensive Labor Supply Responses.'\",\n    \"Chetty, R. (2012). 'Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply.'\",\n    \"Blundell, R., & MaCurdy, T. (1999). 'Labor Supply: A Review of Alternative Approaches'.\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus on extensive margin elasticities is often higher, but for the intensive margin (hours worked) in the context of tax-benefit simulations, values are typically constrained to be small. 0.15 is a standard conservative estimate often used in policy models to reflect the dampened response observed when accounting for labor market frictions and optimization costs.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.6,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.6
+      },
+      "interpretation": "The global Hicksian or Frisch labor-supply substitution elasticity parameter applied uniformly in a U.S. tax-benefit microsimulation to model responsiveness to changes in net marginal wages.",
+      "citations": [
+        "Chetty et al. (2011) - Adjustments based on observed elasticity bounds",
+        "Saez (2002) - Optimal income taxation models",
+        "Blundell and MaCurdy (1999) - Labor supply literature review"
+      ],
+      "reasoningSummary": "Most consensus estimates for aggregate labor supply substitution elasticity, particularly when adjusted for participation and hours, are relatively small. While micro-estimates often vary significantly by gender and skill, a standard simulation parameter is typically calibrated in the 0.1 to 0.4 range, with 0.25 serving as a central, robust figure often used in policy analysis to avoid overestimating behavioral responses.",
+      "rawResponse": "{\n  \"interpretation\": \"The global Hicksian or Frisch labor-supply substitution elasticity parameter applied uniformly in a U.S. tax-benefit microsimulation to model responsiveness to changes in net marginal wages.\",\n  \"point_estimate\": 0.25,\n  \"quantiles\": {\n    \"p05\": 0.05,\n    \"p25\": 0.15,\n    \"p50\": 0.25,\n    \"p75\": 0.40,\n    \"p95\": 0.60\n  },\n  \"citations\": [\n    \"Chetty et al. (2011) - Adjustments based on observed elasticity bounds\",\n    \"Saez (2002) - Optimal income taxation models\",\n    \"Blundell and MaCurdy (1999) - Labor supply literature review\"\n  ],\n  \"reasoning_summary\": \"Most consensus estimates for aggregate labor supply substitution elasticity, particularly when adjusted for participation and hours, are relatively small. While micro-estimates often vary significantly by gender and skill, a standard simulation parameter is typically calibrated in the 0.1 to 0.4 range, with 0.25 serving as a central, robust figure often used in policy analysis to avoid overestimating behavioral responses.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Substitution elasticity of labor supply in a tax-benefit simulation\n- Definition: Response coefficient multiplying the bounded relative change in the effective marginal wage in a U.S. tax-benefit simulation. A 1 percent change in the effective marginal wage changes labor supply by this fraction. If set, this version applies uniformly across individuals.\n- Target interpretation: Global labor-supply substitution-response elasticity override used in a U.S. microsimulation model\n- Population/context: Adults in the United States under a current-law tax-benefit simulation\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "quantityId": "labor_supply.frisch_elasticity.prime_age",
+  "modelName": "claude-sonnet-4.6",
+  "experimentDir": "claude-sonnet-4.6-elasticities-batch15",
+  "experimentUpdatedAt": "2026-04-06T05:16:28.238Z",
+  "runs": [
+    {
+      "runIndex": 1,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.6,
+        "p95": 0.9
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding extensive-margin (participation) responses, used in lifecycle or macro calibration.",
+      "citations": [
+        "MaCurdy (1981) – early lifecycle estimate placing intensive-margin Frisch elasticity around 0.1–0.45 for prime-age men",
+        "Chetty (2012, AER) – reconciliation paper arguing micro Frisch elasticities of ~0.5 are consistent with macro moments once optimization frictions are accounted for",
+        "Keane & Rogerson (2012, JEL) – survey noting wide range of estimates but a central tendency near 0.3–0.5 for intensive margin"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for employed prime-age U.S. workers is one of the most studied parameters in labor economics. Micro studies (e.g., MaCurdy 1981, Altonji 1986) typically find estimates in the 0.1–0.5 range for men. Macro-calibration papers (e.g., Chetty 2012) suggest values closer to 0.5 remain defensible once frictions are incorporated. Surveys (Keane & Rogerson 2012) document a central tendency around 0.3–0.5. My median is 0.4, reflecting the bulk of credible micro evidence. I assign a fairly wide spread (p05=0.1, p95=0.9) because estimates vary considerably across identification strategies, samples, and time periods, and debate about the \"true\" structural parameter is ongoing.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding extensive-margin (participation) responses, used in lifecycle or macro calibration.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.6, \"p95\": 0.9}, \"citations\": [\"MaCurdy (1981) \\u2013 early lifecycle estimate placing intensive-margin Frisch elasticity around 0.1\\u20130.45 for prime-age men\", \"Chetty (2012, AER) \\u2013 reconciliation paper arguing micro Frisch elasticities of ~0.5 are consistent with macro moments once optimization frictions are accounted for\", \"Keane & Rogerson (2012, JEL) \\u2013 survey noting wide range of estimates but a central tendency near 0.3\\u20130.5 for intensive margin\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for employed prime-age U.S. workers is one of the most studied parameters in labor economics. Micro studies (e.g., MaCurdy 1981, Altonji 1986) typically find estimates in the 0.1\\u20130.5 range for men. Macro-calibration papers (e.g., Chetty 2012) suggest values closer to 0.5 remain defensible once frictions are incorporated. Surveys (Keane & Rogerson 2012) document a central tendency around 0.3\\u20130.5. My median is 0.4, reflecting the bulk of credible micro evidence. I assign a fairly wide spread (p05=0.1, p95=0.9) because estimates vary considerably across identification strategies, samples, and time periods, and debate about the \\\"true\\\" structural parameter is ongoing.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 2,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.6,
+        "p95": 0.9
+      },
+      "interpretation": "Intensive-margin Frisch elasticity of labor supply: percent change in annual hours worked for prime-age employed U.S. workers from a 1% change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding extensive-margin (participation) responses, as used in lifecycle or macro calibration.",
+      "citations": [
+        "MaCurdy (1981, JPE) — structural lifecycle estimate of intensive-margin Frisch elasticity around 0.1–0.45 for prime-age men",
+        "Chetty (2012, AEJ:Macro) — meta-analysis reconciling micro and macro estimates; preferred intensive-margin Frisch around 0.5 after adjustment",
+        "Keane & Rogerson (2012, JEL) — review arguing macro-consistent Frisch elasticity is higher (~0.5–1.0) once human capital and extensive margins are accounted for"
+      ],
+      "reasoningSummary": "Micro-econometric studies of prime-age men's hours (e.g., MaCurdy 1981) typically yield intensive-margin Frisch elasticities in the 0.1–0.45 range. Chetty's (2012) reconciliation, correcting for optimization frictions and measurement error, pushes preferred estimates toward 0.5. Macro-calibration literature (e.g., Keane & Rogerson) often uses values of 0.5–1.0, but much of that reflects extensive-margin or human-capital channels excluded here. Restricting to intensive-margin hours for already-employed prime-age workers, I center at 0.4, with meaningful uncertainty spanning roughly 0.1 to 0.9 at the 5th–95th percentile range.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin Frisch elasticity of labor supply: percent change in annual hours worked for prime-age employed U.S. workers from a 1% change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding extensive-margin (participation) responses, as used in lifecycle or macro calibration.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.6, \"p95\": 0.9}, \"citations\": [\"MaCurdy (1981, JPE) \\u2014 structural lifecycle estimate of intensive-margin Frisch elasticity around 0.1\\u20130.45 for prime-age men\", \"Chetty (2012, AEJ:Macro) \\u2014 meta-analysis reconciling micro and macro estimates; preferred intensive-margin Frisch around 0.5 after adjustment\", \"Keane & Rogerson (2012, JEL) \\u2014 review arguing macro-consistent Frisch elasticity is higher (~0.5\\u20131.0) once human capital and extensive margins are accounted for\"], \"reasoning_summary\": \"Micro-econometric studies of prime-age men's hours (e.g., MaCurdy 1981) typically yield intensive-margin Frisch elasticities in the 0.1\\u20130.45 range. Chetty's (2012) reconciliation, correcting for optimization frictions and measurement error, pushes preferred estimates toward 0.5. Macro-calibration literature (e.g., Keane & Rogerson) often uses values of 0.5\\u20131.0, but much of that reflects extensive-margin or human-capital channels excluded here. Restricting to intensive-margin hours for already-employed prime-age workers, I center at 0.4, with meaningful uncertainty spanning roughly 0.1 to 0.9 at the 5th\\u201395th percentile range.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.1,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.1
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding extensive-margin (participation) responses.",
+      "citations": [
+        "MaCurdy (1981) – seminal lifecycle labor supply paper estimating intensive-margin Frisch elasticities around 0.1–0.45 for men using PSID data.",
+        "Domeij & Flodén (2006) – correcting for borrowing constraints raises male Frisch elasticity estimates toward 0.5–0.7.",
+        "Chetty (2012, JPE) – meta-analysis reconciling micro and macro estimates, argues a Frisch elasticity of ~0.5 on the intensive margin is consistent with micro evidence after accounting for optimization frictions."
+      ],
+      "reasoningSummary": "The micro labor-supply literature (MaCurdy 1981 and successors) typically finds intensive-margin Frisch elasticities for prime-age men in the range 0.1–0.5, with some estimates for women higher. Corrections for measurement error and borrowing constraints (Domeij & Flodén 2006) push estimates upward. Chetty (2012) argues the micro-consistent intensive-margin value is around 0.5. Macro calibrations often use 0.5–1.0. Given the definition excludes participation and focuses on prime-age workers, I center my belief around 0.5, with meaningful uncertainty spanning roughly 0.1–1.1 across the 5th–95th percentile range.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding extensive-margin (participation) responses.\", \"point_estimate\": 0.5, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.3, \"p50\": 0.5, \"p75\": 0.75, \"p95\": 1.1}, \"citations\": [\"MaCurdy (1981) \\u2013 seminal lifecycle labor supply paper estimating intensive-margin Frisch elasticities around 0.1\\u20130.45 for men using PSID data.\", \"Domeij & Flod\\u00e9n (2006) \\u2013 correcting for borrowing constraints raises male Frisch elasticity estimates toward 0.5\\u20130.7.\", \"Chetty (2012, JPE) \\u2013 meta-analysis reconciling micro and macro estimates, argues a Frisch elasticity of ~0.5 on the intensive margin is consistent with micro evidence after accounting for optimization frictions.\"], \"reasoning_summary\": \"The micro labor-supply literature (MaCurdy 1981 and successors) typically finds intensive-margin Frisch elasticities for prime-age men in the range 0.1\\u20130.5, with some estimates for women higher. Corrections for measurement error and borrowing constraints (Domeij & Flod\\u00e9n 2006) push estimates upward. Chetty (2012) argues the micro-consistent intensive-margin value is around 0.5. Macro calibrations often use 0.5\\u20131.0. Given the definition excludes participation and focuses on prime-age workers, I center my belief around 0.5, with meaningful uncertainty spanning roughly 0.1\\u20131.1 across the 5th\\u201395th percentile range.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 4,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.6,
+        "p95": 0.9
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant, excluding extensive-margin (participation) responses, as used in lifecycle or macro calibration.",
+      "citations": [
+        "MaCurdy (1981, JPE) — seminal lifecycle estimate of Frisch elasticity around 0.1–0.45 for males",
+        "Chetty (2012, AEJ: Macro) — meta-analysis reconciling micro and macro estimates, preferred intensive-margin value ~0.5",
+        "Keane & Rogerson (2012, JEL) — survey arguing macro-consistent Frisch elasticity on intensive margin around 0.5–1.0 when aggregation issues addressed"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for prime-age U.S. workers is a well-studied but contested parameter. Micro-econometric studies (e.g., MaCurdy 1981) tend to yield estimates in the 0.1–0.45 range for men. Chetty's (2012) meta-analysis places a preferred intensive-margin value near 0.5 after correcting for optimization frictions. Keane and Rogerson (2012) argue that properly accounting for aggregation and heterogeneity pushes estimates somewhat higher. The consensus for macro calibration of the intensive margin (excluding participation) typically lands in the 0.3–0.6 range, with significant uncertainty on both sides. I set p50 = 0.4, reflecting the central tendency of micro-to-medium estimates, with a right-skewed distribution since macro modelers sometimes use values up to ~1.0.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant, excluding extensive-margin (participation) responses, as used in lifecycle or macro calibration.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.6, \"p95\": 0.9}, \"citations\": [\"MaCurdy (1981, JPE) \\u2014 seminal lifecycle estimate of Frisch elasticity around 0.1\\u20130.45 for males\", \"Chetty (2012, AEJ: Macro) \\u2014 meta-analysis reconciling micro and macro estimates, preferred intensive-margin value ~0.5\", \"Keane & Rogerson (2012, JEL) \\u2014 survey arguing macro-consistent Frisch elasticity on intensive margin around 0.5\\u20131.0 when aggregation issues addressed\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for prime-age U.S. workers is a well-studied but contested parameter. Micro-econometric studies (e.g., MaCurdy 1981) tend to yield estimates in the 0.1\\u20130.45 range for men. Chetty's (2012) meta-analysis places a preferred intensive-margin value near 0.5 after correcting for optimization frictions. Keane and Rogerson (2012) argue that properly accounting for aggregation and heterogeneity pushes estimates somewhat higher. The consensus for macro calibration of the intensive margin (excluding participation) typically lands in the 0.3\\u20130.6 range, with significant uncertainty on both sides. I set p50 = 0.4, reflecting the central tendency of micro-to-medium estimates, with a right-skewed distribution since macro modelers sometimes use values up to ~1.0.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity: percent change in annual hours worked by already-employed prime-age U.S. workers from a 1% change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation (extensive-margin) responses; used in lifecycle or macro calibration.",
+      "citations": [
+        "MaCurdy (1981) – structural lifecycle estimate of the Frisch elasticity for male workers, often cited around 0.1–0.45",
+        "Chetty (2012, AER) – meta-analysis reconciling micro and macro estimates; argues intensive-margin Frisch elasticity around 0.5 with optimization frictions",
+        "Keane (2011, JEL) – survey arguing true Frisch elasticity is higher (~0.5–1.0) once human capital and other margins are accounted for"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for prime-age employed U.S. workers is the subject of longstanding debate. Structural micro estimates (MaCurdy-style lifecycle models) typically yield values of 0.1–0.45 for men, with some studies near zero. Chetty (2012) argues that adjustment costs in micro data compress observed elasticities and that the corrected intensive-margin value is around 0.5. Macro/calibration practice often uses values in the 0.25–0.5 range. Excluding participation and focusing strictly on hours conditional on employment pushes estimates toward the lower end relative to broader measures. I center my belief near 0.3, with meaningful uncertainty spanning roughly 0.05 to 0.75 at the 5th–95th percentile range.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity: percent change in annual hours worked by already-employed prime-age U.S. workers from a 1% change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation (extensive-margin) responses; used in lifecycle or macro calibration.\", \"point_estimate\": 0.3, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.3, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981) \\u2013 structural lifecycle estimate of the Frisch elasticity for male workers, often cited around 0.1\\u20130.45\", \"Chetty (2012, AER) \\u2013 meta-analysis reconciling micro and macro estimates; argues intensive-margin Frisch elasticity around 0.5 with optimization frictions\", \"Keane (2011, JEL) \\u2013 survey arguing true Frisch elasticity is higher (~0.5\\u20131.0) once human capital and other margins are accounted for\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for prime-age employed U.S. workers is the subject of longstanding debate. Structural micro estimates (MaCurdy-style lifecycle models) typically yield values of 0.1\\u20130.45 for men, with some studies near zero. Chetty (2012) argues that adjustment costs in micro data compress observed elasticities and that the corrected intensive-margin value is around 0.5. Macro/calibration practice often uses values in the 0.25\\u20130.5 range. Excluding participation and focusing strictly on hours conditional on employment pushes estimates toward the lower end relative to broader measures. I center my belief near 0.3, with meaningful uncertainty spanning roughly 0.05 to 0.75 at the 5th\\u201395th percentile range.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding participation (extensive-margin) responses.",
+      "citations": [
+        "MaCurdy (1981) – structural lifecycle estimate of intensive-margin Frisch elasticity around 0.1–0.45 for male workers",
+        "Chetty (2012, AER) – meta-analysis reconciling micro and macro Frisch elasticity estimates; preferred micro intensive-margin value ~0.33",
+        "Keane & Rogerson (2012, JEL) – review arguing micro intensive elasticities cluster around 0.5 once accounting for measurement issues"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for already-employed prime-age U.S. workers is the subject of long debate. Structural lifecycle estimates from MaCurdy-type studies typically range from 0.1 to 0.5. Chetty's (2012) meta-analysis finds a micro-consistent central estimate near 0.3–0.4. Keane and Rogerson argue values up to 0.5 are defensible once measurement error and non-linear budget sets are addressed. Most calibrated macro models use values in the 0.2–0.5 range for this margin alone (separate from extensive). I center at 0.3 reflecting the consensus of careful microeconometric studies, with meaningful uncertainty spanning roughly 0.05 to 0.75.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding participation (extensive-margin) responses.\", \"point_estimate\": 0.3, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.3, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981) \\u2013 structural lifecycle estimate of intensive-margin Frisch elasticity around 0.1\\u20130.45 for male workers\", \"Chetty (2012, AER) \\u2013 meta-analysis reconciling micro and macro Frisch elasticity estimates; preferred micro intensive-margin value ~0.33\", \"Keane & Rogerson (2012, JEL) \\u2013 review arguing micro intensive elasticities cluster around 0.5 once accounting for measurement issues\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for already-employed prime-age U.S. workers is the subject of long debate. Structural lifecycle estimates from MaCurdy-type studies typically range from 0.1 to 0.5. Chetty's (2012) meta-analysis finds a micro-consistent central estimate near 0.3\\u20130.4. Keane and Rogerson argue values up to 0.5 are defensible once measurement error and non-linear budget sets are addressed. Most calibrated macro models use values in the 0.2\\u20130.5 range for this margin alone (separate from extensive). I center at 0.3 reflecting the consensus of careful microeconometric studies, with meaningful uncertainty spanning roughly 0.05 to 0.75.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 7,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.25,
+      "lowerBound": 0.05,
+      "upperBound": 0.65,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.25,
+        "p75": 0.4,
+        "p95": 0.65
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already working, holding marginal utility of wealth constant and excluding participation responses.",
+      "citations": [
+        "MaCurdy (1981, JPE) – seminal lifecycle estimate of Frisch elasticity around 0.15–0.45 for prime-age men",
+        "Chetty (2012, AEJ:Macro) – meta-analysis reconciling micro and macro estimates; intensive-margin Frisch ~0.33 after correcting for optimization frictions",
+        "Keane & Rogerson (2012, JEL) – survey noting micro intensive-margin estimates cluster around 0.1–0.5, with macro calibrations often higher"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for prime-age U.S. workers is a well-studied parameter. Micro-econometric estimates from lifecycle models (MaCurdy 1981 and successors) tend to cluster in the 0.1–0.5 range for men, often lower for women on the intensive margin. Chetty's (2012) reconciliation suggests that once optimization frictions are accounted for, the structural intensive-margin Frisch is around 0.33. Macro calibrations sometimes use higher values, but for the strictly defined intensive-margin, evidence centers around 0.2–0.35. I place the median at 0.25, acknowledging meaningful uncertainty both below (some estimates near 0.05–0.10) and above (some structural estimates reaching 0.5+).",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already working, holding marginal utility of wealth constant and excluding participation responses.\", \"point_estimate\": 0.25, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.25, \"p75\": 0.4, \"p95\": 0.65}, \"citations\": [\"MaCurdy (1981, JPE) \\u2013 seminal lifecycle estimate of Frisch elasticity around 0.15\\u20130.45 for prime-age men\", \"Chetty (2012, AEJ:Macro) \\u2013 meta-analysis reconciling micro and macro estimates; intensive-margin Frisch ~0.33 after correcting for optimization frictions\", \"Keane & Rogerson (2012, JEL) \\u2013 survey noting micro intensive-margin estimates cluster around 0.1\\u20130.5, with macro calibrations often higher\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for prime-age U.S. workers is a well-studied parameter. Micro-econometric estimates from lifecycle models (MaCurdy 1981 and successors) tend to cluster in the 0.1\\u20130.5 range for men, often lower for women on the intensive margin. Chetty's (2012) reconciliation suggests that once optimization frictions are accounted for, the structural intensive-margin Frisch is around 0.33. Macro calibrations sometimes use higher values, but for the strictly defined intensive-margin, evidence centers around 0.2\\u20130.35. I place the median at 0.25, acknowledging meaningful uncertainty both below (some estimates near 0.05\\u20130.10) and above (some structural estimates reaching 0.5+).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 8,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding participation responses.",
+      "citations": [
+        "MaCurdy (1981, JPE) – lifecycle labor supply, estimated Frisch elasticity ~0.1–0.3 for men",
+        "Chetty (2012, AER) – meta-analysis suggests intensive-margin Frisch ~0.54 after correcting for optimization frictions, though micro estimates cluster lower",
+        "Keane & Rogerson (2012, JEL) – review reconciling micro and macro estimates, macro calibrations often use 0.5–1.0 but intensive-margin micro estimates are lower"
+      ],
+      "reasoningSummary": "Micro-econometric studies of prime-age workers (mostly men) typically find intensive-margin Frisch elasticities in the range of 0.1–0.5. MaCurdy's lifecycle estimates and subsequent replications tend to yield values around 0.1–0.3. Chetty's corrected estimate is around 0.5. Macro calibrations often impose higher values (0.5–1.0) but these partially reflect extensive-margin responses. For the strictly defined intensive-margin hours response among already-employed prime-age U.S. workers, I center my belief around 0.3, with considerable uncertainty spanning roughly 0.05 to 0.75 at the 5th–95th percentile range.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding participation responses.\", \"point_estimate\": 0.3, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.3, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981, JPE) \\u2013 lifecycle labor supply, estimated Frisch elasticity ~0.1\\u20130.3 for men\", \"Chetty (2012, AER) \\u2013 meta-analysis suggests intensive-margin Frisch ~0.54 after correcting for optimization frictions, though micro estimates cluster lower\", \"Keane & Rogerson (2012, JEL) \\u2013 review reconciling micro and macro estimates, macro calibrations often use 0.5\\u20131.0 but intensive-margin micro estimates are lower\"], \"reasoning_summary\": \"Micro-econometric studies of prime-age workers (mostly men) typically find intensive-margin Frisch elasticities in the range of 0.1\\u20130.5. MaCurdy's lifecycle estimates and subsequent replications tend to yield values around 0.1\\u20130.3. Chetty's corrected estimate is around 0.5. Macro calibrations often impose higher values (0.5\\u20131.0) but these partially reflect extensive-margin responses. For the strictly defined intensive-margin hours response among already-employed prime-age U.S. workers, I center my belief around 0.3, with considerable uncertainty spanning roughly 0.05 to 0.75 at the 5th\\u201395th percentile range.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 9,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding participation (extensive-margin) responses, used in lifecycle or macro calibration.",
+      "citations": [
+        "MaCurdy (1981, JPE) – early structural lifecycle estimate, roughly 0.1–0.45 for male workers",
+        "Chetty (2012, AER) – meta-analysis reconciling micro and macro estimates; preferred intensive-margin Frisch ~0.33 after accounting for optimization frictions",
+        "Keane & Rogerson (2012, JEL) – survey arguing macro-consistent Frisch on intensive margin around 0.5 when properly accounting for lifecycle dynamics"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for prime-age employed U.S. workers is a long-debated parameter. Pure microeconometric studies (e.g., MaCurdy 1981) tend to yield estimates in the 0.1–0.45 range for men. Chetty's (2012) reconciliation of micro and macro evidence places a corrected intensive-margin estimate around 0.33. Some macro-oriented researchers (Keane, Rogerson) favor values closer to 0.5. Estimates below 0.1 or above 0.7 are quite rare for the intensive margin alone. My median sits at 0.3, reflecting the central tendency of the careful microeconometric and structural lifecycle literature, with meaningful uncertainty around it.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding participation (extensive-margin) responses, used in lifecycle or macro calibration.\", \"point_estimate\": 0.3, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.3, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981, JPE) \\u2013 early structural lifecycle estimate, roughly 0.1\\u20130.45 for male workers\", \"Chetty (2012, AER) \\u2013 meta-analysis reconciling micro and macro estimates; preferred intensive-margin Frisch ~0.33 after accounting for optimization frictions\", \"Keane & Rogerson (2012, JEL) \\u2013 survey arguing macro-consistent Frisch on intensive margin around 0.5 when properly accounting for lifecycle dynamics\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for prime-age employed U.S. workers is a long-debated parameter. Pure microeconometric studies (e.g., MaCurdy 1981) tend to yield estimates in the 0.1\\u20130.45 range for men. Chetty's (2012) reconciliation of micro and macro evidence places a corrected intensive-margin estimate around 0.33. Some macro-oriented researchers (Keane, Rogerson) favor values closer to 0.5. Estimates below 0.1 or above 0.7 are quite rare for the intensive margin alone. My median sits at 0.3, reflecting the central tendency of the careful microeconometric and structural lifecycle literature, with meaningful uncertainty around it.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.9,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.6,
+        "p95": 0.9
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding extensive-margin (participation) responses, used in lifecycle or macro calibration.",
+      "citations": [
+        "MaCurdy (1981) - estimated Frisch elasticity around 0.2–0.45 using lifecycle male labor supply",
+        "Chetty (2012, AEJ: Macro) - reconciles micro and macro estimates; argues corrected micro Frisch ~0.54",
+        "Keane & Rogerson (2012, JEL) - surveys literature noting macro-calibrated values often 0.5–1.0 but intensive-margin micro estimates cluster 0.2–0.5"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for prime-age employed U.S. workers is a well-studied but disputed parameter. Micro labor-supply studies (MaCurdy 1981 and followers) typically find values in the 0.1–0.5 range for men. Chetty (2012) argues that after correcting for optimization frictions, the micro estimate rises to ~0.54. Macro/lifecycle calibrations often use values of 0.5–1.0, but those partly reflect extensive margin or broader definitions. Restricting to the intensive margin for prime-age workers already employed, the bulk of the credible empirical distribution sits between roughly 0.2 and 0.6, with a median near 0.4. The upper tail extends to ~0.9 to capture higher macro-calibration values and measurement uncertainty.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding extensive-margin (participation) responses, used in lifecycle or macro calibration.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.6, \"p95\": 0.9}, \"citations\": [\"MaCurdy (1981) - estimated Frisch elasticity around 0.2\\u20130.45 using lifecycle male labor supply\", \"Chetty (2012, AEJ: Macro) - reconciles micro and macro estimates; argues corrected micro Frisch ~0.54\", \"Keane & Rogerson (2012, JEL) - surveys literature noting macro-calibrated values often 0.5\\u20131.0 but intensive-margin micro estimates cluster 0.2\\u20130.5\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for prime-age employed U.S. workers is a well-studied but disputed parameter. Micro labor-supply studies (MaCurdy 1981 and followers) typically find values in the 0.1\\u20130.5 range for men. Chetty (2012) argues that after correcting for optimization frictions, the micro estimate rises to ~0.54. Macro/lifecycle calibrations often use values of 0.5\\u20131.0, but those partly reflect extensive margin or broader definitions. Restricting to the intensive margin for prime-age workers already employed, the bulk of the credible empirical distribution sits between roughly 0.2 and 0.6, with a median near 0.4. The upper tail extends to ~0.9 to capture higher macro-calibration values and measurement uncertainty.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.4,
+      "lowerBound": 0.1,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.25,
+        "p50": 0.4,
+        "p75": 0.55,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, used in lifecycle or macro calibration: percent change in hours worked per year for a 1% change in net-of-tax wage, holding marginal utility of wealth constant, excluding extensive-margin (participation) responses.",
+      "citations": [
+        "MaCurdy (1981, JPE) – seminal lifecycle labor supply estimation, intensive-margin Frisch elasticity estimates roughly 0.1–0.45 for men",
+        "Chetty (2012, AEJ:Macro) – meta-analysis reconciling micro and macro elasticities; concludes intensive-margin Frisch ~0.5 after accounting for adjustment frictions",
+        "Keane (2011, JEL) – survey argues macro-consistent Frisch elasticity is 0.3–0.7 for intensive margin"
+      ],
+      "reasoningSummary": "Micro-labor studies (e.g., MaCurdy 1981) tend to find intensive-margin Frisch elasticities for men in the range 0.1–0.45. Chetty's (2012) reconciliation with macro evidence suggests values closer to 0.5 once optimization frictions are accounted for. Keane's (2011) survey of the literature points to 0.3–0.7 as consistent with lifecycle models used in macro. For prime-age employed U.S. workers, the preponderance of evidence centers around 0.3–0.5 for the intensive margin alone. I set the median at 0.4, with meaningful uncertainty spanning roughly 0.1 to 0.75 across the 5th–95th percentile range.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, used in lifecycle or macro calibration: percent change in hours worked per year for a 1% change in net-of-tax wage, holding marginal utility of wealth constant, excluding extensive-margin (participation) responses.\", \"point_estimate\": 0.4, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.25, \"p50\": 0.4, \"p75\": 0.55, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981, JPE) \\u2013 seminal lifecycle labor supply estimation, intensive-margin Frisch elasticity estimates roughly 0.1\\u20130.45 for men\", \"Chetty (2012, AEJ:Macro) \\u2013 meta-analysis reconciling micro and macro elasticities; concludes intensive-margin Frisch ~0.5 after accounting for adjustment frictions\", \"Keane (2011, JEL) \\u2013 survey argues macro-consistent Frisch elasticity is 0.3\\u20130.7 for intensive margin\"], \"reasoning_summary\": \"Micro-labor studies (e.g., MaCurdy 1981) tend to find intensive-margin Frisch elasticities for men in the range 0.1\\u20130.45. Chetty's (2012) reconciliation with macro evidence suggests values closer to 0.5 once optimization frictions are accounted for. Keane's (2011) survey of the literature points to 0.3\\u20130.7 as consistent with lifecycle models used in macro. For prime-age employed U.S. workers, the preponderance of evidence centers around 0.3\\u20130.5 for the intensive margin alone. I set the median at 0.4, with meaningful uncertainty spanning roughly 0.1 to 0.75 across the 5th\\u201395th percentile range.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 12,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, used in lifecycle or macro calibration: percent change in annual hours worked per 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.",
+      "citations": [
+        "MaCurdy (1981, JPE) — structural lifecycle estimate of the intensive-margin Frisch elasticity, often cited around 0.1–0.45",
+        "Imai & Keane (2004, Econometrica) — finds substantially larger Frisch elasticities (~0.7) when human capital accumulation is modeled",
+        "Chetty (2012, AEJ Policy) — meta-analysis reconciling micro and macro estimates; concludes intensive-margin Frisch elasticity is roughly 0.33 after correcting for optimization frictions"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for prime-age U.S. workers has been debated for decades. Structural micro studies (MaCurdy 1981, Altonji 1986) tend to find low values, often 0.1–0.45. Imai & Keane (2004) find much larger values once human capital is modeled (~0.7). Macro calibrations (Hansen 1985, Rogerson & Wallenius) often use higher values but those include participation. Chetty's (2012) reconciliation suggests ~0.33 as a defensible intensive-margin estimate. The consensus range for prime-age intensive-margin Frisch is roughly 0.1–0.5, with 0.3 as a reasonable central value. I place modest probability mass below 0.1 (very low micro estimates) and above 0.6 (high structural estimates), yielding p05=0.05, p25=0.15, p50=0.30, p75=0.50, p95=0.75.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, used in lifecycle or macro calibration: percent change in annual hours worked per 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\", \"point_estimate\": 0.3, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.3, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981, JPE) \\u2014 structural lifecycle estimate of the intensive-margin Frisch elasticity, often cited around 0.1\\u20130.45\", \"Imai & Keane (2004, Econometrica) \\u2014 finds substantially larger Frisch elasticities (~0.7) when human capital accumulation is modeled\", \"Chetty (2012, AEJ Policy) \\u2014 meta-analysis reconciling micro and macro estimates; concludes intensive-margin Frisch elasticity is roughly 0.33 after correcting for optimization frictions\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for prime-age U.S. workers has been debated for decades. Structural micro studies (MaCurdy 1981, Altonji 1986) tend to find low values, often 0.1\\u20130.45. Imai & Keane (2004) find much larger values once human capital is modeled (~0.7). Macro calibrations (Hansen 1985, Rogerson & Wallenius) often use higher values but those include participation. Chetty's (2012) reconciliation suggests ~0.33 as a defensible intensive-margin estimate. The consensus range for prime-age intensive-margin Frisch is roughly 0.1\\u20130.5, with 0.3 as a reasonable central value. I place modest probability mass below 0.1 (very low micro estimates) and above 0.6 (high structural estimates), yielding p05=0.05, p25=0.15, p50=0.30, p75=0.50, p95=0.75.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding participation (extensive-margin) responses.",
+      "citations": [
+        "MaCurdy (1981, JPE) – estimated Frisch elasticity ~0.15–0.45 using lifecycle panel methods for prime-age men",
+        "Imai & Keane (2004, Econometrica) – argued for higher Frisch elasticity ~0.7–1.0 once human capital and preferences are modeled",
+        "Chetty (2012, AEJ:Macro) – meta-analysis synthesizing micro and macro estimates, concludes intensive-margin Frisch ~0.5 after accounting for optimization frictions"
+      ],
+      "reasoningSummary": "The literature on intensive-margin Frisch elasticity for employed prime-age U.S. workers spans a wide range. Early lifecycle studies (MaCurdy 1981) found values around 0.15–0.45. Macro calibrations often use 0.5–1.0 to match aggregate fluctuations, but micro panel estimates for employed workers tend to cluster lower, around 0.1–0.5. Chetty's (2012) reconciliation suggests a corrected micro estimate near 0.5. I place my median at 0.3, reflecting the bulk of careful micro estimates for the intensive margin only, with substantial uncertainty captured by the wide spread between p05 (0.05) and p95 (0.75).",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already employed, holding marginal utility of wealth constant and excluding participation (extensive-margin) responses.\", \"point_estimate\": 0.3, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.3, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981, JPE) \\u2013 estimated Frisch elasticity ~0.15\\u20130.45 using lifecycle panel methods for prime-age men\", \"Imai & Keane (2004, Econometrica) \\u2013 argued for higher Frisch elasticity ~0.7\\u20131.0 once human capital and preferences are modeled\", \"Chetty (2012, AEJ:Macro) \\u2013 meta-analysis synthesizing micro and macro estimates, concludes intensive-margin Frisch ~0.5 after accounting for optimization frictions\"], \"reasoning_summary\": \"The literature on intensive-margin Frisch elasticity for employed prime-age U.S. workers spans a wide range. Early lifecycle studies (MaCurdy 1981) found values around 0.15\\u20130.45. Macro calibrations often use 0.5\\u20131.0 to match aggregate fluctuations, but micro panel estimates for employed workers tend to cluster lower, around 0.1\\u20130.5. Chetty's (2012) reconciliation suggests a corrected micro estimate near 0.5. I place my median at 0.3, reflecting the bulk of careful micro estimates for the intensive margin only, with substantial uncertainty captured by the wide spread between p05 (0.05) and p95 (0.75).\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 14,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.3,
+      "lowerBound": 0.05,
+      "upperBound": 0.75,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.05,
+        "p25": 0.15,
+        "p50": 0.3,
+        "p75": 0.5,
+        "p95": 0.75
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding participation responses.",
+      "citations": [
+        "MaCurdy (1981, JPE) – pioneering lifecycle estimate of Frisch elasticity around 0.1–0.45 for prime-age men",
+        "Chetty (2012, AER) – meta-analysis reconciling micro and macro estimates; preferred intensive-margin Frisch around 0.5 after correcting for optimization frictions",
+        "Keane & Rogerson (2012, JEL) – review arguing micro Frisch estimates are downward biased; macro-consistent values often 0.5–1.0, but intensive-margin component is smaller"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for prime-age U.S. workers is one of the most studied parameters in labor economics. Direct lifecycle estimates (MaCurdy 1981 and replication studies) typically yield values of 0.1–0.45 for men. Chetty's (2012) reconciliation suggests a corrected intensive-margin value near 0.5. Female estimates tend to be higher but the target population is prime-age workers broadly. Macro calibrations sometimes use larger values (0.5–1.0), but those often blend in extensive-margin responses. Restricting to intensive margin only (hours conditional on working), the bulk of evidence clusters between 0.1 and 0.5. I center my median at 0.3, reflecting the midpoint of credible microeconometric estimates, with modest upward skew to accommodate macro-consistent corrections.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers who are already employed, holding marginal utility of wealth constant and excluding participation responses.\", \"point_estimate\": 0.3, \"quantiles\": {\"p05\": 0.05, \"p25\": 0.15, \"p50\": 0.3, \"p75\": 0.5, \"p95\": 0.75}, \"citations\": [\"MaCurdy (1981, JPE) \\u2013 pioneering lifecycle estimate of Frisch elasticity around 0.1\\u20130.45 for prime-age men\", \"Chetty (2012, AER) \\u2013 meta-analysis reconciling micro and macro estimates; preferred intensive-margin Frisch around 0.5 after correcting for optimization frictions\", \"Keane & Rogerson (2012, JEL) \\u2013 review arguing micro Frisch estimates are downward biased; macro-consistent values often 0.5\\u20131.0, but intensive-margin component is smaller\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for prime-age U.S. workers is one of the most studied parameters in labor economics. Direct lifecycle estimates (MaCurdy 1981 and replication studies) typically yield values of 0.1\\u20130.45 for men. Chetty's (2012) reconciliation suggests a corrected intensive-margin value near 0.5. Female estimates tend to be higher but the target population is prime-age workers broadly. Macro calibrations sometimes use larger values (0.5\\u20131.0), but those often blend in extensive-margin responses. Restricting to intensive margin only (hours conditional on working), the bulk of evidence clusters between 0.1 and 0.5. I center my median at 0.3, reflecting the midpoint of credible microeconometric estimates, with modest upward skew to accommodate macro-consistent corrections.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 15,
+      "promptVersion": "v3",
+      "parsedOk": true,
+      "pointEstimate": 0.5,
+      "lowerBound": 0.1,
+      "upperBound": 1.2,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": 0.1,
+        "p25": 0.3,
+        "p50": 0.5,
+        "p75": 0.75,
+        "p95": 1.2
+      },
+      "interpretation": "Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already in employment, holding marginal utility of wealth constant and excluding participation responses, used in lifecycle or macro calibration.",
+      "citations": [
+        "MaCurdy (1981) – estimated Frisch elasticity around 0.1–0.45 using lifecycle panel methods for prime-age men",
+        "Pencavel (1986) – survey of male labor supply estimates suggesting intensive-margin elasticities in the 0.1–0.5 range",
+        "Chetty (2012, AEJ: Macroeconomics) – reconciliation paper arguing that micro estimates around 0.5 are consistent with macro evidence once adjustment costs and optimization frictions are accounted for"
+      ],
+      "reasoningSummary": "The intensive-margin Frisch elasticity for employed prime-age U.S. workers is a well-studied parameter. Micro-econometric estimates (MaCurdy 1981, Pencavel 1986) tend to cluster in the 0.1–0.5 range for men, with some studies finding up to ~0.75. Macro/lifecycle calibrations often use values of 0.5–1.0 to match business-cycle fluctuations. Chetty (2012) argues that a Frisch elasticity around 0.5 is a reasonable reconciliation. My median is 0.5, reflecting the midpoint between tight micro estimates and the higher values used in macro models, with the distribution skewed slightly rightward given macro-calibration usage.",
+      "rawResponse": "{\"interpretation\": \"Intensive-margin annual-hours Frisch elasticity for prime-age U.S. workers already in employment, holding marginal utility of wealth constant and excluding participation responses, used in lifecycle or macro calibration.\", \"point_estimate\": 0.5, \"quantiles\": {\"p05\": 0.1, \"p25\": 0.3, \"p50\": 0.5, \"p75\": 0.75, \"p95\": 1.2}, \"citations\": [\"MaCurdy (1981) \\u2013 estimated Frisch elasticity around 0.1\\u20130.45 using lifecycle panel methods for prime-age men\", \"Pencavel (1986) \\u2013 survey of male labor supply estimates suggesting intensive-margin elasticities in the 0.1\\u20130.5 range\", \"Chetty (2012, AEJ: Macroeconomics) \\u2013 reconciliation paper arguing that micro estimates around 0.5 are consistent with macro evidence once adjustment costs and optimization frictions are accounted for\"], \"reasoning_summary\": \"The intensive-margin Frisch elasticity for employed prime-age U.S. workers is a well-studied parameter. Micro-econometric estimates (MaCurdy 1981, Pencavel 1986) tend to cluster in the 0.1\\u20130.5 range for men, with some studies finding up to ~0.75. Macro/lifecycle calibrations often use values of 0.5\\u20131.0 to match business-cycle fluctuations. Chetty (2012) argues that a Frisch elasticity around 0.5 is a reasonable reconciliation. My median is 0.5, reflecting the midpoint between tight micro estimates and the higher values used in macro models, with the distribution skewed slightly rightward given macro-calibration usage.\"}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Frisch elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent change in the net-of-tax wage, holding the marginal utility of wealth constant and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours Frisch elasticity used in lifecycle or macro calibration\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    }
+  ]
+}
