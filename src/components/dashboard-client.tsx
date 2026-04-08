@@ -37,22 +37,40 @@ export function DashboardClient({ data }: DashboardClientProps) {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const initialQuantityId = normalizeQuantityId(
+    searchParams.get("quantity"),
+    data,
+  );
+  const initialQuantity =
+    data.quantities.find((quantity) => quantity.quantityId === initialQuantityId) ??
+    data.quantities[0] ??
+    null;
+  const initialMethodId = normalizeMethodId(searchParams.get("method"), data);
+  const initialSortMode = normalizeSortMode(searchParams.get("sort"));
+  const initialModelName = normalizeModelName(
+    searchParams.get("model"),
+    initialQuantity,
+  );
+  const initialRunIndex = normalizeRunIndex(searchParams.get("run"));
+  const initialInspectorOpen = Boolean(
+    initialModelName &&
+      initialQuantity?.availableModels.includes(initialModelName),
+  );
   const [search, setSearch] = useState("");
   const deferredSearch = useDeferredValue(search);
-  const [selectedQuantityId, setSelectedQuantityId] = useState(
-    data.quantities[0]?.quantityId ?? "",
-  );
+  const [selectedQuantityId, setSelectedQuantityId] =
+    useState(initialQuantityId);
   const [selectedMethodId, setSelectedMethodId] =
-    useState<IntervalMethodId>(DEFAULT_METHOD_ID);
+    useState<IntervalMethodId>(initialMethodId);
   const [sortMode, setSortMode] =
-    useState<"model" | "pointEstimate">(DEFAULT_SORT_MODE);
+    useState<"model" | "pointEstimate">(initialSortMode);
 
   /* Inspector drawer state */
-  const [inspectorOpen, setInspectorOpen] = useState(false);
-  const [inspectedModelName, setInspectedModelName] = useState(
-    data.quantities[0]?.availableModels[0] ?? "",
-  );
-  const [selectedRunIndex, setSelectedRunIndex] = useState<number | null>(null);
+  const [inspectorOpen, setInspectorOpen] = useState(initialInspectorOpen);
+  const [inspectedModelName, setInspectedModelName] =
+    useState(initialModelName);
+  const [selectedRunIndex, setSelectedRunIndex] =
+    useState<number | null>(initialRunIndex);
   const [runCache, setRunCache] = useState<Record<string, ModelRunPayload>>({});
   const [copyState, setCopyState] = useState<"idle" | "copied" | "error">(
     "idle",
@@ -190,6 +208,10 @@ export function DashboardClient({ data }: DashboardClientProps) {
   );
 
   useEffect(() => {
+    hydratedFromUrlRef.current = true;
+  }, []);
+
+  useEffect(() => {
     const urlQuantityId = normalizeQuantityId(
       searchParams.get("quantity"),
       data,
@@ -230,8 +252,6 @@ export function DashboardClient({ data }: DashboardClientProps) {
         current === nextInspectorOpen ? current : nextInspectorOpen,
       );
     });
-
-    hydratedFromUrlRef.current = true;
   }, [data, searchParams]);
 
   useEffect(() => {
