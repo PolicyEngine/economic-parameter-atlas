@@ -1,38 +1,64 @@
 {
   "quantityId": "labor_supply.income_elasticity.prime_age",
   "modelName": "gemini-3.1-flash-lite-preview",
-  "experimentDir": "gemini-3.1-flash-lite-preview-elasticities-batch15",
-  "experimentUpdatedAt": "2026-04-06T04:42:04.301Z",
+  "experimentDir": "gemini-3.1-flash-lite-preview-income-elasticity-batch15",
+  "experimentUpdatedAt": "2026-04-06T18:27:33.566Z",
   "runs": [
     {
       "runIndex": 1,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
       "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
       "upperBound": 0,
       "confidenceLevel": 0.9,
       "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
-        "p50": -0.05,
-        "p75": -0.02,
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
         "p95": 0
       },
-      "interpretation": "The percentage change in annual hours worked among employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages constant.",
+      "interpretation": "The percentage change in annual hours worked by prime-age US employees given a 1 percent increase in non-labor income, holding the wage rate constant.",
       "citations": [
         "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Chetty et al. (2011) AER",
-        "Heckman (1993) JEL"
+        "Chetty et al. (2011) AER, 'Adjustments to Taxes on Capital Income'",
+        "Saez (2002) JPubE"
       ],
-      "reasoningSummary": "Most empirical literature suggests that the income effect on the intensive margin for prime-age workers is small and negative (consistent with leisure being a normal good). Estimates rarely show strong responses, with consensus centering on a small negative value, often indistinguishable from zero in many micro-studies, though usually signed negative due to theory.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked among employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.00\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) AER\",\n    \"Heckman (1993) JEL\"\n  ],\n  \"reasoning_summary\": \"Most empirical literature suggests that the income effect on the intensive margin for prime-age workers is small and negative (consistent with leisure being a normal good). Estimates rarely show strong responses, with consensus centering on a small negative value, often indistinguishable from zero in many micro-studies, though usually signed negative due to theory.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Empirical evidence generally suggests that the income effect on labor supply is small and negative. While some early studies suggested larger effects, recent consensus—especially for the intensive margin among prime-age workers—indicates the response is quite inelastic, often near zero or slightly negative. The distribution is skewed slightly negative because leisure is theoretically a normal good, and significant positive estimates are rare.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by prime-age US employees given a 1 percent increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.1,\n  \"quantiles\": {\n    \"p05\": -0.3,\n    \"p25\": -0.15,\n    \"p50\": -0.1,\n    \"p75\": -0.05,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) AER, 'Adjustments to Taxes on Capital Income'\",\n    \"Saez (2002) JPubE\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence generally suggests that the income effect on labor supply is small and negative. While some early studies suggested larger effects, recent consensus—especially for the intensive margin among prime-age workers—indicates the response is quite inelastic, often near zero or slightly negative. The distribution is skewed slightly negative because leisure is theoretically a normal good, and significant positive estimates are rare.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
       "runIndex": 2,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.25,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.25,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "The percentage change in annual hours worked among prime-age, already-employed US workers resulting from a one percent increase in exogenous non-labor income, holding wages constant.",
+      "citations": [
+        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
+        "Heckman (1993) The Margin and Lifecycle Labor Supply",
+        "Saez, Slemrod, and Giertz (2012) Journal of Economic Literature"
+      ],
+      "reasoningSummary": "Empirical estimates for the intensive-margin income elasticity of labor supply for prime-age workers are consistently small and negative, reflecting that leisure is a normal good. Most consensus estimates derived from structural models and quasi-experimental tax variations suggest the effect is quite close to zero, typically falling in the range of -0.05 to -0.15. Larger negative values are less common for the intensive margin specifically, while positive values are theoretically inconsistent with standard models where leisure is a normal good, though small measurement errors or transitory effects can occasionally produce near-zero or slightly positive estimates.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked among prime-age, already-employed US workers resulting from a one percent increase in exogenous non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.1,\n  \"quantiles\": {\n    \"p05\": -0.25,\n    \"p25\": -0.15,\n    \"p50\": -0.1,\n    \"p75\": -0.05,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Heckman (1993) The Margin and Lifecycle Labor Supply\",\n    \"Saez, Slemrod, and Giertz (2012) Journal of Economic Literature\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for the intensive-margin income elasticity of labor supply for prime-age workers are consistently small and negative, reflecting that leisure is a normal good. Most consensus estimates derived from structural models and quasi-experimental tax variations suggest the effect is quite close to zero, typically falling in the range of -0.05 to -0.15. Larger negative values are less common for the intensive margin specifically, while positive values are theoretically inconsistent with standard models where leisure is a normal good, though small measurement errors or transitory effects can occasionally produce near-zero or slightly positive estimates.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 3,
+      "promptVersion": "income-signfix",
       "parsedOk": true,
       "pointEstimate": -0.05,
       "lowerBound": -0.15,
@@ -45,150 +71,124 @@
         "p75": -0.02,
         "p95": 0
       },
-      "interpretation": "Percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages constant.",
+      "interpretation": "The percentage change in annual hours worked by currently employed, prime-age U.S. workers in response to a 1% increase in non-labor income, holding the wage rate constant.",
       "citations": [
-        "Heckman (1993) 'What has been learned about labor supply in the past twenty years?'",
-        "Blundell and MaCurdy (1999) 'Labor supply: A review of alternative approaches'",
-        "Chetty et al. (2011) 'Adjustment costs and the elasticity of labor supply'"
+        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
+        "Chetty et al. (2011) AER",
+        "Saez, Slemrod, and Giertz (2012) JEL"
       ],
-      "reasoningSummary": "Empirical consensus in labor economics, particularly for prime-age males, consistently finds the income effect on the intensive margin to be small, negative, and often statistically indistinguishable from zero, reflecting that hours worked are relatively insensitive to exogenous changes in non-labor income among those already participating in the labor market.",
-      "rawResponse": "{\n  \"interpretation\": \"Percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Heckman (1993) 'What has been learned about labor supply in the past twenty years?'\",\n    \"Blundell and MaCurdy (1999) 'Labor supply: A review of alternative approaches'\",\n    \"Chetty et al. (2011) 'Adjustment costs and the elasticity of labor supply'\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus in labor economics, particularly for prime-age males, consistently finds the income effect on the intensive margin to be small, negative, and often statistically indistinguishable from zero, reflecting that hours worked are relatively insensitive to exogenous changes in non-labor income among those already participating in the labor market.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Empirical estimates for the intensive-margin income elasticity of labor supply are generally found to be small and negative. This reflects the standard assumption that leisure is a normal good. Most studies focusing on prime-age workers suggest the response is close to zero, typically ranging between -0.1 and 0.0, as changes in non-labor income have limited impact on the hours decisions of those already committed to the labor market.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed, prime-age U.S. workers in response to a 1% increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) AER\",\n    \"Saez, Slemrod, and Giertz (2012) JEL\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for the intensive-margin income elasticity of labor supply are generally found to be small and negative. This reflects the standard assumption that leisure is a normal good. Most studies focusing on prime-age workers suggest the response is close to zero, typically ranging between -0.1 and 0.0, as changes in non-labor income have limited impact on the hours decisions of those already committed to the labor market.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
-      "runIndex": 3,
-      "promptVersion": "v3",
+      "runIndex": 4,
+      "promptVersion": "income-signfix",
       "parsedOk": true,
       "pointEstimate": -0.05,
       "lowerBound": -0.15,
       "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": -0.08,
+        "p50": -0.05,
+        "p75": -0.02,
+        "p95": 0
+      },
+      "interpretation": "The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the wage rate constant.",
+      "citations": [
+        "Heckman (1993) - Life-cycle labor supply",
+        "Blundell and MaCurdy (1999) - Handbook of Labor Economics",
+        "Saez (2002) - Optimal income transfer programs"
+      ],
+      "reasoningSummary": "Economic theory posits that leisure is a normal good, implying a negative income effect. Empirical estimates for prime-age males are typically small and negative (often between -0.1 and 0). Estimates for females are often larger in magnitude but tend to converge toward small negative values when conditioning strictly on the intensive margin for prime-age workers. The distribution reflects a consensus that the intensive-margin income effect is negative but quite close to zero.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Heckman (1993) - Life-cycle labor supply\",\n    \"Blundell and MaCurdy (1999) - Handbook of Labor Economics\",\n    \"Saez (2002) - Optimal income transfer programs\"\n  ],\n  \"reasoning_summary\": \"Economic theory posits that leisure is a normal good, implying a negative income effect. Empirical estimates for prime-age males are typically small and negative (often between -0.1 and 0). Estimates for females are often larger in magnitude but tend to converge toward small negative values when conditioning strictly on the intensive margin for prime-age workers. The distribution reflects a consensus that the intensive-margin income effect is negative but quite close to zero.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 5,
+      "promptVersion": "income-signfix",
+      "parsedOk": true,
+      "pointEstimate": -0.05,
+      "lowerBound": -0.15,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": -0.08,
+        "p50": -0.05,
+        "p75": -0.02,
+        "p95": 0
+      },
+      "interpretation": "The percentage change in annual hours worked by currently employed, prime-age US workers in response to a 1 percent increase in non-labor income, holding wages constant.",
+      "citations": [
+        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
+        "Chetty et al. (2011) 'Adjustment Costs and Rigidity in Labor Supply'",
+        "Saez, Slemrod, and Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates'"
+      ],
+      "reasoningSummary": "Empirical consensus suggests that for the intensive margin among prime-age workers, the income effect is generally small and negative. Estimates are often centered near zero or slightly negative, reflecting a standard leisure-consumption trade-off where additional unearned income leads to a modest reduction in hours. Significant heterogeneity exists, but most rigorous studies filter out participation effects, resulting in relatively inelastic responses.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed, prime-age US workers in response to a 1 percent increase in non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) 'Adjustment Costs and Rigidity in Labor Supply'\",\n    \"Saez, Slemrod, and Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates'\"\n  ],\n  \"reasoning_summary\": \"Empirical consensus suggests that for the intensive margin among prime-age workers, the income effect is generally small and negative. Estimates are often centered near zero or slightly negative, reflecting a standard leisure-consumption trade-off where additional unearned income leads to a modest reduction in hours. Significant heterogeneity exists, but most rigorous studies filter out participation effects, resulting in relatively inelastic responses.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 6,
+      "promptVersion": "income-signfix",
+      "parsedOk": true,
+      "pointEstimate": -0.05,
+      "lowerBound": -0.15,
+      "upperBound": 0.01,
       "confidenceLevel": 0.9,
       "quantiles": {
         "p05": -0.15,
         "p25": -0.09,
         "p50": -0.05,
         "p75": -0.02,
-        "p95": 0
+        "p95": 0.01
       },
-      "interpretation": "The percentage change in annual hours worked by an already-employed prime-age worker resulting from a one percent increase in non-labor income, holding the wage rate constant.",
+      "interpretation": "The percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding the wage rate constant.",
       "citations": [
-        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Chetty et al. (2011) QJE",
-        "Pencavel (1986) Handbook of Labor Economics"
+        "Blundell and MaCurdy (1999), Labor Supply: A Review of Alternative Approaches",
+        "Heckman (1993), What Has Been Learned About Labor Supply in the Past Twenty Years?",
+        "Chetty et al. (2011), Adjustments to Taxes and Changes in Hours Worked"
       ],
-      "reasoningSummary": "The income effect for labor supply is theoretically negative (leisure is a normal good) but empirical evidence consistently shows it is very small at the intensive margin for prime-age workers. Estimates often hover near zero or slightly negative, as workers' labor supply is relatively inelastic with respect to wealth shocks once the participation decision is already fixed.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by an already-employed prime-age worker resulting from a one percent increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.09,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) QJE\",\n    \"Pencavel (1986) Handbook of Labor Economics\"\n  ],\n  \"reasoning_summary\": \"The income effect for labor supply is theoretically negative (leisure is a normal good) but empirical evidence consistently shows it is very small at the intensive margin for prime-age workers. Estimates often hover near zero or slightly negative, as workers' labor supply is relatively inelastic with respect to wealth shocks once the participation decision is already fixed.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
-      "error": null
-    },
-    {
-      "runIndex": 4,
-      "promptVersion": "v3",
-      "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
-      "upperBound": 0,
-      "confidenceLevel": 0.9,
-      "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
-        "p50": -0.05,
-        "p75": -0.02,
-        "p95": 0
-      },
-      "interpretation": "The percentage change in annual hours worked for currently employed prime-age US workers in response to a 1 percent increase in non-labor income, excluding participation effects.",
-      "citations": [
-        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Chetty et al. (2011) QJE",
-        "Pencavel (1986) Handbook of Labor Economics"
-      ],
-      "reasoningSummary": "Empirical estimates of the intensive-margin income effect for prime-age males are typically small and negative, often centered slightly below zero. While some studies suggest zero or negligible effects, the consensus in structural labor supply models generally points to a small disincentive to work as unearned income increases, consistent with normal-good leisure preferences.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked for currently employed prime-age US workers in response to a 1 percent increase in non-labor income, excluding participation effects.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.00\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) QJE\",\n    \"Pencavel (1986) Handbook of Labor Economics\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of the intensive-margin income effect for prime-age males are typically small and negative, often centered slightly below zero. While some studies suggest zero or negligible effects, the consensus in structural labor supply models generally points to a small disincentive to work as unearned income increases, consistent with normal-good leisure preferences.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
-      "error": null
-    },
-    {
-      "runIndex": 5,
-      "promptVersion": "v3",
-      "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
-      "upperBound": 0,
-      "confidenceLevel": 0.9,
-      "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
-        "p50": -0.05,
-        "p75": -0.02,
-        "p95": 0
-      },
-      "interpretation": "The percentage change in annual hours worked for a 1% increase in non-labor income, holding the net-of-tax wage constant, restricted to the intensive margin (prime-age workers already in employment).",
-      "citations": [
-        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Heckman (1993) 'What Has Been Learned About Labor Supply in the Past Twenty Years?'",
-        "Saez, Slemrod, and Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates'"
-      ],
-      "reasoningSummary": "Empirical evidence from labor economics generally suggests that the income effect on labor supply for prime-age workers is small and negative. Because leisure is a normal good, an increase in non-labor income typically leads to a slight reduction in hours worked. Most estimates cluster near zero or slightly negative values, reflecting a high degree of inelasticity in hours once a person has decided to participate in the labor market.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked for a 1% increase in non-labor income, holding the net-of-tax wage constant, restricted to the intensive margin (prime-age workers already in employment).\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Heckman (1993) 'What Has Been Learned About Labor Supply in the Past Twenty Years?'\",\n    \"Saez, Slemrod, and Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates'\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence from labor economics generally suggests that the income effect on labor supply for prime-age workers is small and negative. Because leisure is a normal good, an increase in non-labor income typically leads to a slight reduction in hours worked. Most estimates cluster near zero or slightly negative values, reflecting a high degree of inelasticity in hours once a person has decided to participate in the labor market.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
-      "error": null
-    },
-    {
-      "runIndex": 6,
-      "promptVersion": "v3",
-      "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
-      "upperBound": 0,
-      "confidenceLevel": 0.9,
-      "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
-        "p50": -0.05,
-        "p75": -0.02,
-        "p95": 0
-      },
-      "interpretation": "The percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages constant.",
-      "citations": [
-        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Chetty et al. (2011) Journal of Political Economy",
-        "Pencavel (1986) Handbook of Labor Economics"
-      ],
-      "reasoningSummary": "Empirical estimates for the intensive margin income elasticity of labor supply for prime-age workers are consistently small and negative, reflecting a mild income effect where higher non-labor income leads to a slight reduction in hours worked. Most estimates cluster near zero, with very few studies finding significant magnitudes for this specific parameter.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.00\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) Journal of Political Economy\",\n    \"Pencavel (1986) Handbook of Labor Economics\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for the intensive margin income elasticity of labor supply for prime-age workers are consistently small and negative, reflecting a mild income effect where higher non-labor income leads to a slight reduction in hours worked. Most estimates cluster near zero, with very few studies finding significant magnitudes for this specific parameter.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Standard neoclassical labor supply theory predicts that leisure is a normal good, implying that non-labor income increases should reduce hours worked (a negative income effect). Empirical estimates for the intensive margin among prime-age workers are generally small and negative, often centered near zero, as individual labor supply is relatively inelastic on the intensive margin for this demographic.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.09,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.01\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999), Labor Supply: A Review of Alternative Approaches\",\n    \"Heckman (1993), What Has Been Learned About Labor Supply in the Past Twenty Years?\",\n    \"Chetty et al. (2011), Adjustments to Taxes and Changes in Hours Worked\"\n  ],\n  \"reasoning_summary\": \"Standard neoclassical labor supply theory predicts that leisure is a normal good, implying that non-labor income increases should reduce hours worked (a negative income effect). Empirical estimates for the intensive margin among prime-age workers are generally small and negative, often centered near zero, as individual labor supply is relatively inelastic on the intensive margin for this demographic.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
       "runIndex": 7,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
       "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
-      "upperBound": 0.01,
+      "pointEstimate": -0.15,
+      "lowerBound": -0.4,
+      "upperBound": 0.05,
       "confidenceLevel": 0.9,
       "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
-        "p50": -0.05,
-        "p75": -0.02,
-        "p95": 0.01
+        "p05": -0.4,
+        "p25": -0.25,
+        "p50": -0.15,
+        "p75": -0.05,
+        "p95": 0.05
       },
-      "interpretation": "The percentage change in annual hours worked by an employed prime-age worker resulting from a 1% increase in non-labor income, holding wages and employment status constant (the pure income effect).",
+      "interpretation": "The percentage change in annual hours worked for prime-age US workers already employed, given a 1 percent increase in non-labor income, holding the net-of-tax wage constant.",
       "citations": [
-        "Heckman, 1993, 'What Has Been Learned About Labor Supply in the Past Twenty Years?'",
-        "Blundell and MaCurdy, 1999, 'Labor Supply: A Review of Alternative Approaches'",
-        "Chetty et al., 2011, 'Adjustment Costs and Rigidity in Labor Supply'"
+        "Blundell and MaCurdy (1999) 'Labor supply: A review of alternative approaches'",
+        "Keane (2011) 'Labor supply and taxes: A survey'",
+        "Chetty et al. (2011) 'Adjustment costs and optimal tax policy'"
       ],
-      "reasoningSummary": "Empirical evidence from labor economics generally suggests that the income effect on the intensive margin for prime-age workers is small and negative. While some early studies suggested larger effects, more modern estimates using quasi-experimental variation or accounting for adjustment costs often find that income effects are quite muted for prime-age males, though potentially slightly larger for females, leading to a consensus centered near zero or slightly negative.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by an employed prime-age worker resulting from a 1% increase in non-labor income, holding wages and employment status constant (the pure income effect).\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.01\n  },\n  \"citations\": [\n    \"Heckman, 1993, 'What Has Been Learned About Labor Supply in the Past Twenty Years?'\",\n    \"Blundell and MaCurdy, 1999, 'Labor Supply: A Review of Alternative Approaches'\",\n    \"Chetty et al., 2011, 'Adjustment Costs and Rigidity in Labor Supply'\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence from labor economics generally suggests that the income effect on the intensive margin for prime-age workers is small and negative. While some early studies suggested larger effects, more modern estimates using quasi-experimental variation or accounting for adjustment costs often find that income effects are quite muted for prime-age males, though potentially slightly larger for females, leading to a consensus centered near zero or slightly negative.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Standard labor supply models treat leisure as a normal good, implying a negative income effect. Empirical estimates for the intensive margin (conditional on employment) for prime-age workers are generally small and negative. Estimates near zero are common, as most labor supply adjustments occur via participation (extensive margin) rather than hours changes for prime-age workers.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked for prime-age US workers already employed, given a 1 percent increase in non-labor income, holding the net-of-tax wage constant.\",\n  \"point_estimate\": -0.15,\n  \"quantiles\": {\n    \"p05\": -0.4,\n    \"p25\": -0.25,\n    \"p50\": -0.15,\n    \"p75\": -0.05,\n    \"p95\": 0.05\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) 'Labor supply: A review of alternative approaches'\",\n    \"Keane (2011) 'Labor supply and taxes: A survey'\",\n    \"Chetty et al. (2011) 'Adjustment costs and optimal tax policy'\"\n  ],\n  \"reasoning_summary\": \"Standard labor supply models treat leisure as a normal good, implying a negative income effect. Empirical estimates for the intensive margin (conditional on employment) for prime-age workers are generally small and negative. Estimates near zero are common, as most labor supply adjustments occur via participation (extensive margin) rather than hours changes for prime-age workers.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
       "runIndex": 8,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
       "parsedOk": true,
       "pointEstimate": -0.05,
       "lowerBound": -0.15,
@@ -201,98 +201,98 @@
         "p75": -0.02,
         "p95": 0
       },
-      "interpretation": "The percentage change in annual hours worked by an already-employed prime-age worker in response to a 1 percent increase in non-labor income, holding the wage rate constant.",
+      "interpretation": "The percentage change in annual hours worked by prime-age, currently employed US workers in response to a 1 percent increase in non-labor income, holding the net-of-tax wage constant (pure income effect).",
       "citations": [
-        "Pencavel, John (1986). Labor Supply of Men: A Survey.",
-        "Blundell, Richard and Thomas MaCurdy (1999). Labor Supply: A Review of Alternative Approaches.",
-        "Chetty, Raj et al. (2011). Adjustment Costs and Rigidities in Labor Supply."
+        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
+        "Chetty et al. (2011) AER, 'Adjustment Costs and Rigidity in Labor Supply'",
+        "Eissa and Liebman (1996) QJE"
       ],
-      "reasoningSummary": "Empirical literature on prime-age males generally finds a small negative income effect, indicating that leisure is a normal good. Estimates for prime-age workers are typically near-zero or slightly negative, as the intensive margin (hours worked) tends to be inelastic with respect to non-labor income changes, especially compared to the extensive margin (participation) or wage elasticities.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by an already-employed prime-age worker in response to a 1 percent increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Pencavel, John (1986). Labor Supply of Men: A Survey.\",\n    \"Blundell, Richard and Thomas MaCurdy (1999). Labor Supply: A Review of Alternative Approaches.\",\n    \"Chetty, Raj et al. (2011). Adjustment Costs and Rigidities in Labor Supply.\"\n  ],\n  \"reasoning_summary\": \"Empirical literature on prime-age males generally finds a small negative income effect, indicating that leisure is a normal good. Estimates for prime-age workers are typically near-zero or slightly negative, as the intensive margin (hours worked) tends to be inelastic with respect to non-labor income changes, especially compared to the extensive margin (participation) or wage elasticities.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Empirical evidence consistently suggests that the income effect on the intensive margin (hours of work conditional on employment) for prime-age workers is small and negative. While some studies find estimates closer to zero, most structural and reduced-form estimates fall in the -0.02 to -0.10 range, reflecting a mild preference for leisure as wealth increases.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by prime-age, currently employed US workers in response to a 1 percent increase in non-labor income, holding the net-of-tax wage constant (pure income effect).\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.00\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) AER, 'Adjustment Costs and Rigidity in Labor Supply'\",\n    \"Eissa and Liebman (1996) QJE\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence consistently suggests that the income effect on the intensive margin (hours of work conditional on employment) for prime-age workers is small and negative. While some studies find estimates closer to zero, most structural and reduced-form estimates fall in the -0.02 to -0.10 range, reflecting a mild preference for leisure as wealth increases.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
       "runIndex": 9,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
       "parsedOk": true,
-      "pointEstimate": -0.06,
+      "pointEstimate": -0.05,
+      "lowerBound": -0.15,
+      "upperBound": 0.02,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": -0.08,
+        "p50": -0.05,
+        "p75": -0.02,
+        "p95": 0.02
+      },
+      "interpretation": "The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the net-of-tax wage constant.",
+      "citations": [
+        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
+        "Chetty et al. (2011) AER",
+        "Eissa and Liebman (1996) QJE"
+      ],
+      "reasoningSummary": "Empirical evidence generally suggests that the income effect on the intensive margin for prime-age workers is small and negative. While theory predicts leisure is a normal good (implying negative elasticity), most micro-econometric studies find the magnitude to be close to zero, often clustered in the range of -0.01 to -0.10. Estimates slightly positive or essentially zero are not uncommon due to measurement error and identification difficulties separating pure income effects from wage effects.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the net-of-tax wage constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.02\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) AER\",\n    \"Eissa and Liebman (1996) QJE\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence generally suggests that the income effect on the intensive margin for prime-age workers is small and negative. While theory predicts leisure is a normal good (implying negative elasticity), most micro-econometric studies find the magnitude to be close to zero, often clustered in the range of -0.01 to -0.10. Estimates slightly positive or essentially zero are not uncommon due to measurement error and identification difficulties separating pure income effects from wage effects.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 10,
+      "promptVersion": "income-signfix",
+      "parsedOk": true,
+      "pointEstimate": -0.1,
+      "lowerBound": -0.3,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.3,
+        "p25": -0.15,
+        "p50": -0.1,
+        "p75": -0.05,
+        "p95": 0
+      },
+      "interpretation": "The percentage change in annual hours worked by prime-age US workers conditional on being employed, resulting from a 1 percent increase in exogenous non-labor income, holding wages constant.",
+      "citations": [
+        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
+        "Chetty et al. (2011) 'Adjustment Costs and the Elasticity of Labor Supply'",
+        "Eissa and Liebman (1996) 'Labor Supply Response to the Earned Income Tax Credit'"
+      ],
+      "reasoningSummary": "Empirical estimates of the income effect on the intensive margin for prime-age adults are generally small and negative. While some studies find negligible effects (near zero), the prevailing consensus in neoclassical labor economics suggests a slight reduction in hours worked as non-labor wealth increases due to the income effect.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by prime-age US workers conditional on being employed, resulting from a 1 percent increase in exogenous non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.1,\n  \"quantiles\": {\n    \"p05\": -0.3,\n    \"p25\": -0.15,\n    \"p50\": -0.1,\n    \"p75\": -0.05,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) 'Adjustment Costs and the Elasticity of Labor Supply'\",\n    \"Eissa and Liebman (1996) 'Labor Supply Response to the Earned Income Tax Credit'\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of the income effect on the intensive margin for prime-age adults are generally small and negative. While some studies find negligible effects (near zero), the prevailing consensus in neoclassical labor economics suggests a slight reduction in hours worked as non-labor wealth increases due to the income effect.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 11,
+      "promptVersion": "income-signfix",
+      "parsedOk": true,
+      "pointEstimate": -0.05,
       "lowerBound": -0.15,
       "upperBound": 0.01,
       "confidenceLevel": 0.9,
       "quantiles": {
         "p05": -0.15,
-        "p25": -0.1,
-        "p50": -0.06,
+        "p25": -0.09,
+        "p50": -0.05,
         "p75": -0.02,
         "p95": 0.01
       },
-      "interpretation": "The percentage change in annual hours worked for a prime-age, currently employed worker in the U.S. resulting from a 1% increase in non-labor income, holding the wage rate constant.",
+      "interpretation": "The percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages and labor force participation constant.",
       "citations": [
-        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Saez, Slemrod, and Giertz (2012) Journal of Economic Literature",
-        "Chetty et al. (2011) Quarterly Journal of Economics"
+        "Pencavel, J. (1986). Labor supply of men: A survey.",
+        "Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches.",
+        "Chetty, R., Guren, A., Manoli, D., & Weber, A. (2011). Are micro and macro labor supply elasticities consistent?"
       ],
-      "reasoningSummary": "The income elasticity of labor supply for prime-age workers is widely understood to be small and negative, consistent with leisure being a normal good. Empirical estimates derived from natural experiments (like lottery winnings or tax changes) generally find small intensive-margin responses, typically clustered between -0.02 and -0.10. While some studies suggest zero, a slight negative effect is the standard theoretical expectation and empirical consensus.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked for a prime-age, currently employed worker in the U.S. resulting from a 1% increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.06,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.10,\n    \"p50\": -0.06,\n    \"p75\": -0.02,\n    \"p95\": 0.01\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Saez, Slemrod, and Giertz (2012) Journal of Economic Literature\",\n    \"Chetty et al. (2011) Quarterly Journal of Economics\"\n  ],\n  \"reasoning_summary\": \"The income elasticity of labor supply for prime-age workers is widely understood to be small and negative, consistent with leisure being a normal good. Empirical estimates derived from natural experiments (like lottery winnings or tax changes) generally find small intensive-margin responses, typically clustered between -0.02 and -0.10. While some studies suggest zero, a slight negative effect is the standard theoretical expectation and empirical consensus.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
-      "error": null
-    },
-    {
-      "runIndex": 10,
-      "promptVersion": "v3",
-      "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
-      "upperBound": 0,
-      "confidenceLevel": 0.9,
-      "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
-        "p50": -0.05,
-        "p75": -0.02,
-        "p95": 0
-      },
-      "interpretation": "The percentage change in annual hours worked by prime-age US workers already employed, in response to a 1 percent increase in non-labor income, holding wages constant.",
-      "citations": [
-        "Pencavel (1986), Labor Supply of Men: A Survey",
-        "Blundell and MaCurdy (1999), Labor Supply: A Review Alternative Approaches",
-        "Chetty et al. (2011), Adjustment Costs and Labor Supply"
-      ],
-      "reasoningSummary": "The literature consistently suggests that the intensive-margin income elasticity (the pure income effect) for prime-age workers is negative but small in magnitude. While estimates vary slightly by demographic, the consensus in standard labor economics literature is that while non-labor income reduces labor supply due to the preference for leisure, the response is generally quite inelastic.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by prime-age US workers already employed, in response to a 1 percent increase in non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Pencavel (1986), Labor Supply of Men: A Survey\",\n    \"Blundell and MaCurdy (1999), Labor Supply: A Review Alternative Approaches\",\n    \"Chetty et al. (2011), Adjustment Costs and Labor Supply\"\n  ],\n  \"reasoning_summary\": \"The literature consistently suggests that the intensive-margin income elasticity (the pure income effect) for prime-age workers is negative but small in magnitude. While estimates vary slightly by demographic, the consensus in standard labor economics literature is that while non-labor income reduces labor supply due to the preference for leisure, the response is generally quite inelastic.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
-      "error": null
-    },
-    {
-      "runIndex": 11,
-      "promptVersion": "v3",
-      "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
-      "upperBound": 0,
-      "confidenceLevel": 0.9,
-      "quantiles": {
-        "p05": -0.15,
-        "p25": -0.1,
-        "p50": -0.05,
-        "p75": -0.02,
-        "p95": 0
-      },
-      "interpretation": "The percentage change in hours worked for prime-age employed individuals resulting from a 1 percent increase in non-labor income, excluding participation decisions.",
-      "citations": [
-        "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Heckman (1993) 'What Has Been Learned About Labor Supply in the Past Twenty Years?'",
-        "Saez, Slemrod, and Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates'"
-      ],
-      "reasoningSummary": "Empirical estimates for the intensive-margin income effect are generally small and negative, reflecting that leisure is a normal good. Most literature suggests the income effect for prime-age workers is very close to zero, typically ranging from -0.1 to 0, as substitution effects usually dominate labor supply responses in the aggregate.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in hours worked for prime-age employed individuals resulting from a 1 percent increase in non-labor income, excluding participation decisions.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.1,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Heckman (1993) 'What Has Been Learned About Labor Supply in the Past Twenty Years?'\",\n    \"Saez, Slemrod, and Giertz (2012) 'The Elasticity of Taxable Income with Respect to Marginal Tax Rates'\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for the intensive-margin income effect are generally small and negative, reflecting that leisure is a normal good. Most literature suggests the income effect for prime-age workers is very close to zero, typically ranging from -0.1 to 0, as substitution effects usually dominate labor supply responses in the aggregate.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Empirical evidence consistently suggests that the income effect on the intensive margin is small but negative, as leisure is a normal good. Estimates for prime-age workers are typically close to zero, reflecting that hours worked are relatively unresponsive to changes in non-labor wealth or unearned income, unlike the more significant substitution effects. Values near zero are widely accepted, with a slight tilt toward negative values.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age US workers resulting from a 1 percent increase in non-labor income, holding wages and labor force participation constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.09,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.01\n  },\n  \"citations\": [\n    \"Pencavel, J. (1986). Labor supply of men: A survey.\",\n    \"Blundell, R., & MaCurdy, T. (1999). Labor supply: A review of alternative approaches.\",\n    \"Chetty, R., Guren, A., Manoli, D., & Weber, A. (2011). Are micro and macro labor supply elasticities consistent?\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence consistently suggests that the income effect on the intensive margin is small but negative, as leisure is a normal good. Estimates for prime-age workers are typically close to zero, reflecting that hours worked are relatively unresponsive to changes in non-labor wealth or unearned income, unlike the more significant substitution effects. Values near zero are widely accepted, with a slight tilt toward negative values.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
       "runIndex": 12,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
       "parsedOk": true,
       "pointEstimate": -0.05,
       "lowerBound": -0.15,
@@ -305,93 +305,93 @@
         "p75": -0.02,
         "p95": 0
       },
-      "interpretation": "The percentage change in annual hours worked among prime-age US workers already employed, resulting from a 1 percent increase in non-labor income, holding the wage rate constant (income effect only).",
+      "interpretation": "Percentage change in annual hours worked by prime-age US workers in response to a 1% increase in non-labor income, holding wages constant and excluding labor force entry/exit.",
+      "citations": [
+        "Blundell and MaCurdy (1999) - Handbook of Labor Economics",
+        "Chetty et al. (2011) - Adjustments to Taxes and Transfers",
+        "Killingsworth (1983) - Labor Supply"
+      ],
+      "reasoningSummary": "Empirical evidence from labor economics consistently suggests that the income effect on the intensive margin (hours worked) is negative but small in magnitude for prime-age workers. Estimates often hover near zero, reflecting the fact that prime-age labor supply is relatively inelastic with respect to wealth shocks once participation decisions are removed from the analysis.",
+      "rawResponse": "{\n  \"interpretation\": \"Percentage change in annual hours worked by prime-age US workers in response to a 1% increase in non-labor income, holding wages constant and excluding labor force entry/exit.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) - Handbook of Labor Economics\",\n    \"Chetty et al. (2011) - Adjustments to Taxes and Transfers\",\n    \"Killingsworth (1983) - Labor Supply\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence from labor economics consistently suggests that the income effect on the intensive margin (hours worked) is negative but small in magnitude for prime-age workers. Estimates often hover near zero, reflecting the fact that prime-age labor supply is relatively inelastic with respect to wealth shocks once participation decisions are removed from the analysis.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "error": null
+    },
+    {
+      "runIndex": 13,
+      "promptVersion": "income-signfix",
+      "parsedOk": true,
+      "pointEstimate": -0.05,
+      "lowerBound": -0.15,
+      "upperBound": 0,
+      "confidenceLevel": 0.9,
+      "quantiles": {
+        "p05": -0.15,
+        "p25": -0.08,
+        "p50": -0.05,
+        "p75": -0.02,
+        "p95": 0
+      },
+      "interpretation": "The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the wage rate constant.",
       "citations": [
         "Blundell and MaCurdy (1999) Handbook of Labor Economics",
         "Chetty et al. (2011) AER",
         "Saez, Slemrod, and Giertz (2012) JEL"
       ],
-      "reasoningSummary": "The income effect for labor supply is theoretically negative but empirically small for prime-age workers. Estimates clustered around the zero to -0.10 range are most robust; higher absolute values are often found in older literature or specific subgroups, but the consensus for prime-age workers conditional on participation is that the magnitude is very close to zero.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked among prime-age US workers already employed, resulting from a 1 percent increase in non-labor income, holding the wage rate constant (income effect only).\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) AER\",\n    \"Saez, Slemrod, and Giertz (2012) JEL\"\n  ],\n  \"reasoning_summary\": \"The income effect for labor supply is theoretically negative but empirically small for prime-age workers. Estimates clustered around the zero to -0.10 range are most robust; higher absolute values are often found in older literature or specific subgroups, but the consensus for prime-age workers conditional on participation is that the magnitude is very close to zero.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
-      "error": null
-    },
-    {
-      "runIndex": 13,
-      "promptVersion": "v3",
-      "parsedOk": true,
-      "pointEstimate": -0.05,
-      "lowerBound": -0.15,
-      "upperBound": 0,
-      "confidenceLevel": 0.9,
-      "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
-        "p50": -0.05,
-        "p75": -0.02,
-        "p95": 0
-      },
-      "interpretation": "The intensive-margin response of annual hours worked by prime-age U.S. workers to a 1% increase in non-labor income, conditional on already being employed.",
-      "citations": [
-        "Blundell and MaCurdy (1999), Handbook of Labor Economics",
-        "Chetty et al. (2011), 'Adjustment Costs and the Elasticity of Labor Supply'",
-        "Keane (2011), 'Labor Supply and Taxes: A Survey'"
-      ],
-      "reasoningSummary": "Empirical evidence generally indicates that income effects on the intensive margin are small and negative, consistent with leisure being a normal good. Most studies of prime-age workers find elasticities clustered slightly below zero, with very few finding large magnitude responses.",
-      "rawResponse": "{\n  \"interpretation\": \"The intensive-margin response of annual hours worked by prime-age U.S. workers to a 1% increase in non-labor income, conditional on already being employed.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999), Handbook of Labor Economics\",\n    \"Chetty et al. (2011), 'Adjustment Costs and the Elasticity of Labor Supply'\",\n    \"Keane (2011), 'Labor Supply and Taxes: A Survey'\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence generally indicates that income effects on the intensive margin are small and negative, consistent with leisure being a normal good. Most studies of prime-age workers find elasticities clustered slightly below zero, with very few finding large magnitude responses.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Empirical evidence generally indicates that the income effect on hours worked for prime-age workers is negative but small in magnitude. While some historical studies found slightly larger negative values, more recent quasi-experimental evidence (tax policy variations, lottery winnings) tends to support estimates very close to zero or slightly negative, reflecting a weak preference for leisure as wealth increases.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) AER\",\n    \"Saez, Slemrod, and Giertz (2012) JEL\"\n  ],\n  \"reasoning_summary\": \"Empirical evidence generally indicates that the income effect on hours worked for prime-age workers is negative but small in magnitude. While some historical studies found slightly larger negative values, more recent quasi-experimental evidence (tax policy variations, lottery winnings) tends to support estimates very close to zero or slightly negative, reflecting a weak preference for leisure as wealth increases.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
       "runIndex": 14,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
       "parsedOk": true,
       "pointEstimate": -0.05,
-      "lowerBound": -0.15,
+      "lowerBound": -0.2,
       "upperBound": 0,
       "confidenceLevel": 0.9,
       "quantiles": {
-        "p05": -0.15,
-        "p25": -0.08,
+        "p05": -0.2,
+        "p25": -0.1,
         "p50": -0.05,
-        "p75": -0.02,
+        "p75": -0.01,
         "p95": 0
       },
-      "interpretation": "The percentage change in annual hours worked by currently employed prime-age workers in the US in response to a 1 percent increase in non-labor income, holding the net-of-tax wage constant.",
+      "interpretation": "The percentage change in annual hours worked for prime-age US workers currently employed, resulting from a 1 percent increase in non-labor income, holding net-of-tax wages constant.",
       "citations": [
         "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Chetty et al. (2011) QJE",
-        "Pencavel (1986) Handbook of Labor Economics"
+        "Chetty et al. (2011) 'Adjustment Costs, Firm Responses, and Micro vs. Macro Labor Supply Elasticities'",
+        "Keane (2011) 'Labor Supply and Taxes: A Survey'"
       ],
-      "reasoningSummary": "Empirical estimates of the intensive-margin income effect for prime-age workers are consistently small and negative, often statistically indistinguishable from zero or very close to it. While theory suggests leisure is a normal good (implying a negative elasticity), empirical identification is difficult due to the confounding nature of wealth shocks. Most modern labor supply literature points to a very weak negative response, significantly smaller in absolute magnitude than the compensated wage elasticity.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age workers in the US in response to a 1 percent increase in non-labor income, holding the net-of-tax wage constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) QJE\",\n    \"Pencavel (1986) Handbook of Labor Economics\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of the intensive-margin income effect for prime-age workers are consistently small and negative, often statistically indistinguishable from zero or very close to it. While theory suggests leisure is a normal good (implying a negative elasticity), empirical identification is difficult due to the confounding nature of wealth shocks. Most modern labor supply literature points to a very weak negative response, significantly smaller in absolute magnitude than the compensated wage elasticity.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Empirical estimates of the income effect on the intensive margin for prime-age workers are generally small and negative. Theoretical models treat leisure as a normal good, implying that higher non-labor income should reduce hours worked. Most micro-econometric studies find this effect to be close to zero, often clustered between -0.1 and 0, as many individuals have limited flexibility to adjust hours precisely in response to non-labor income shocks.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked for prime-age US workers currently employed, resulting from a 1 percent increase in non-labor income, holding net-of-tax wages constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.2,\n    \"p25\": -0.1,\n    \"p50\": -0.05,\n    \"p75\": -0.01,\n    \"p95\": 0.0\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) 'Adjustment Costs, Firm Responses, and Micro vs. Macro Labor Supply Elasticities'\",\n    \"Keane (2011) 'Labor Supply and Taxes: A Survey'\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates of the income effect on the intensive margin for prime-age workers are generally small and negative. Theoretical models treat leisure as a normal good, implying that higher non-labor income should reduce hours worked. Most micro-econometric studies find this effect to be close to zero, often clustered between -0.1 and 0, as many individuals have limited flexibility to adjust hours precisely in response to non-labor income shocks.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     },
     {
       "runIndex": 15,
-      "promptVersion": "v3",
+      "promptVersion": "income-signfix",
       "parsedOk": true,
       "pointEstimate": -0.05,
       "lowerBound": -0.15,
-      "upperBound": 0,
+      "upperBound": 0.01,
       "confidenceLevel": 0.9,
       "quantiles": {
         "p05": -0.15,
         "p25": -0.08,
         "p50": -0.05,
         "p75": -0.02,
-        "p95": 0
+        "p95": 0.01
       },
-      "interpretation": "The percentage change in annual hours worked by an already employed prime-age US worker resulting from a 1 percent increase in non-labor income, holding wages constant.",
+      "interpretation": "The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the wage rate constant.",
       "citations": [
+        "Killingsworth (1983) Labor Supply",
         "Blundell and MaCurdy (1999) Handbook of Labor Economics",
-        "Chetty et al. (2011) QJE",
-        "Pencavel (1986) Handbook of Labor Economics"
+        "Saez, Slemrod, and Giertz (2012) Journal of Economic Literature"
       ],
-      "reasoningSummary": "The income effect on labor supply is widely regarded as negative (leisure as a normal good) but very small for prime-age workers. Empirical estimates consistently show that non-labor income changes have minimal impact on the hours worked by those already participating in the labor market, with the consensus clustering near zero or slightly negative values.",
-      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by an already employed prime-age US worker resulting from a 1 percent increase in non-labor income, holding wages constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.00\n  },\n  \"citations\": [\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Chetty et al. (2011) QJE\",\n    \"Pencavel (1986) Handbook of Labor Economics\"\n  ],\n  \"reasoning_summary\": \"The income effect on labor supply is widely regarded as negative (leisure as a normal good) but very small for prime-age workers. Empirical estimates consistently show that non-labor income changes have minimal impact on the hours worked by those already participating in the labor market, with the consensus clustering near zero or slightly negative values.\"\n}",
-      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
+      "reasoningSummary": "Empirical estimates for the intensive-margin income effect are generally small and negative, consistent with leisure being a normal good. The consensus in labor economics suggests that while these effects are statistically detectable, they are economically modest for prime-age workers, as most major labor supply adjustments occur at the extensive (participation) margin.",
+      "rawResponse": "{\n  \"interpretation\": \"The percentage change in annual hours worked by currently employed prime-age US workers in response to a 1 percent increase in non-labor income, holding the wage rate constant.\",\n  \"point_estimate\": -0.05,\n  \"quantiles\": {\n    \"p05\": -0.15,\n    \"p25\": -0.08,\n    \"p50\": -0.05,\n    \"p75\": -0.02,\n    \"p95\": 0.01\n  },\n  \"citations\": [\n    \"Killingsworth (1983) Labor Supply\",\n    \"Blundell and MaCurdy (1999) Handbook of Labor Economics\",\n    \"Saez, Slemrod, and Giertz (2012) Journal of Economic Literature\"\n  ],\n  \"reasoning_summary\": \"Empirical estimates for the intensive-margin income effect are generally small and negative, consistent with leisure being a normal good. The consensus in labor economics suggests that while these effects are statistically detectable, they are economically modest for prime-age workers, as most major labor supply adjustments occur at the extensive (participation) margin.\"\n}",
+      "prompt": "Answer from your current memory and background knowledge only.\nDo not use tools, files, the web, code, or external resources.\nDo not try to reconstruct a literature review or search for a consensus estimate.\nReport the belief you currently endorse.\n\nQuantity of interest:\n- Name: Income elasticity of labor supply\n- Definition: Percent change in annual hours worked from a 1 percent increase in non-labor income, holding the net-of-tax wage fixed and excluding participation responses.\n- Target interpretation: Intensive-margin annual-hours elasticity conditional on employment\n- Population/context: Prime-age workers in the United States who are already working\n- Units: elasticity\n\nSign convention for this quantity:\n- A positive elasticity means individuals work more when they have more resources.\n- A negative elasticity means individuals work less when they have more resources.\n- Under the definition above, if additional non-labor income reduces annual hours worked, the elasticity should be negative.\n\nTask:\n1. Use exactly the target interpretation above. In `interpretation`, restate it briefly.\n2. Give your subjective quantiles p05, p25, p50, p75, and p95 for this quantity.\n3. Set `point_estimate` equal to `p50`.\n4. Make the quantiles weakly increasing and numerically coherent.\n5. In `citations`, list up to 3 source anchors from memory that influenced your belief. These are recall anchors only. If none come to mind confidently, return `[]`.\n6. Keep `reasoning_summary` brief and substantive.\n\nReturn valid JSON only with exactly this shape:\n{\n  \"interpretation\": \"...\",\n  \"point_estimate\": <number>,\n  \"quantiles\": {\n    \"p05\": <number>,\n    \"p25\": <number>,\n    \"p50\": <number>,\n    \"p75\": <number>,\n    \"p95\": <number>\n  },\n  \"citations\": [\"...\"],\n  \"reasoning_summary\": \"...\"\n}",
       "error": null
     }
   ]

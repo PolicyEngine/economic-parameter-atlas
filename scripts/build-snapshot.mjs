@@ -73,6 +73,9 @@ const MODEL_ORDER = [
 ];
 
 const runCache = new Map();
+const EXCLUDED_QUANTITY_IDS = new Set([
+  "labor_supply.policy_response.income_elasticity",
+]);
 
 main();
 
@@ -286,7 +289,7 @@ function loadSummaryRows(resultsDir) {
 
   for (const experimentDir of experimentDirs) {
     const experimentName = path.basename(experimentDir);
-    if (!experimentName.includes("elasticities")) {
+    if (!shouldIncludeExperiment(experimentName)) {
       continue;
     }
 
@@ -305,6 +308,9 @@ function loadSummaryRows(resultsDir) {
 
     for (const row of parsed) {
       const quantityId = row.quantity_id;
+      if (EXCLUDED_QUANTITY_IDS.has(quantityId)) {
+        continue;
+      }
       rows.push({
         modelName: row.model_name,
         quantityId,
@@ -341,6 +347,13 @@ function loadSummaryRows(resultsDir) {
   }
 
   return rows;
+}
+
+function shouldIncludeExperiment(experimentName) {
+  return (
+    experimentName.includes("elasticities") ||
+    experimentName.includes("income-elasticity")
+  );
 }
 
 function selectPreferredSummaries(rows) {
