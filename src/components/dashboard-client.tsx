@@ -7,7 +7,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Container, DashboardShell, Header, logos } from "@policyengine/ui-kit";
 
 import { IntervalPlot } from "@/components/interval-plot";
@@ -34,24 +33,22 @@ const DEFAULT_METHOD_ID: IntervalMethodId = "pooled";
 const DEFAULT_SORT_MODE = "model" as const;
 
 export function DashboardClient({ data }: DashboardClientProps) {
-  const pathname = usePathname();
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const initialParams = getCurrentSearchParams();
   const initialQuantityId = normalizeQuantityId(
-    searchParams.get("quantity"),
+    initialParams.get("quantity"),
     data,
   );
   const initialQuantity =
     data.quantities.find((quantity) => quantity.quantityId === initialQuantityId) ??
     data.quantities[0] ??
     null;
-  const initialMethodId = normalizeMethodId(searchParams.get("method"), data);
-  const initialSortMode = normalizeSortMode(searchParams.get("sort"));
+  const initialMethodId = normalizeMethodId(initialParams.get("method"), data);
+  const initialSortMode = normalizeSortMode(initialParams.get("sort"));
   const initialModelName = normalizeModelName(
-    searchParams.get("model"),
+    initialParams.get("model"),
     initialQuantity,
   );
-  const initialRunIndex = normalizeRunIndex(searchParams.get("run"));
+  const initialRunIndex = normalizeRunIndex(initialParams.get("run"));
   const initialInspectorOpen = Boolean(
     initialModelName &&
       initialQuantity?.availableModels.includes(initialModelName),
@@ -75,8 +72,8 @@ export function DashboardClient({ data }: DashboardClientProps) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "error">(
     "idle",
   );
+  const [urlHydrated, setUrlHydrated] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
-  const hydratedFromUrlRef = useRef(false);
   const copyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const filteredQuantities = data.quantities.filter((quantity) => {
@@ -208,54 +205,47 @@ export function DashboardClient({ data }: DashboardClientProps) {
   );
 
   useEffect(() => {
-    hydratedFromUrlRef.current = true;
-  }, []);
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    function applyUrlState() {
+      const params = getCurrentSearchParams();
+      const urlQuantityId = normalizeQuantityId(params.get("quantity"), data);
+      const urlQuantity =
+        data.quantities.find((quantity) => quantity.quantityId === urlQuantityId) ??
+        data.quantities[0] ??
+        null;
+      const urlMethodId = normalizeMethodId(params.get("method"), data);
+      const urlSortMode = normalizeSortMode(params.get("sort"));
+      const urlModelName = normalizeModelName(
+        params.get("model"),
+        urlQuantity,
+      );
+      const urlRunIndex = normalizeRunIndex(params.get("run"));
+      const nextInspectorOpen = Boolean(
+        urlModelName &&
+          urlQuantity?.availableModels.includes(urlModelName),
+      );
+
+      startTransition(() => {
+        setSelectedQuantityId(urlQuantityId);
+        setSelectedMethodId(urlMethodId);
+        setSortMode(urlSortMode);
+        setInspectedModelName(urlModelName);
+        setSelectedRunIndex(urlRunIndex);
+        setInspectorOpen(nextInspectorOpen);
+      });
+    }
+
+    applyUrlState();
+    setUrlHydrated(true);
+    window.addEventListener("popstate", applyUrlState);
+    return () => window.removeEventListener("popstate", applyUrlState);
+  }, [data]);
 
   useEffect(() => {
-    const urlQuantityId = normalizeQuantityId(
-      searchParams.get("quantity"),
-      data,
-    );
-    const urlQuantity =
-      data.quantities.find((quantity) => quantity.quantityId === urlQuantityId) ??
-      data.quantities[0] ??
-      null;
-    const urlMethodId = normalizeMethodId(searchParams.get("method"), data);
-    const urlSortMode = normalizeSortMode(searchParams.get("sort"));
-    const urlModelName = normalizeModelName(
-      searchParams.get("model"),
-      urlQuantity,
-    );
-    const urlRunIndex = normalizeRunIndex(searchParams.get("run"));
-    const nextInspectorOpen = Boolean(
-      urlModelName &&
-        urlQuantity?.availableModels.includes(urlModelName),
-    );
-
-    startTransition(() => {
-      setSelectedQuantityId((current) =>
-        current === urlQuantityId ? current : urlQuantityId,
-      );
-      setSelectedMethodId((current) =>
-        current === urlMethodId ? current : urlMethodId,
-      );
-      setSortMode((current) =>
-        current === urlSortMode ? current : urlSortMode,
-      );
-      setInspectedModelName((current) =>
-        current === urlModelName ? current : urlModelName,
-      );
-      setSelectedRunIndex((current) =>
-        current === urlRunIndex ? current : urlRunIndex,
-      );
-      setInspectorOpen((current) =>
-        current === nextInspectorOpen ? current : nextInspectorOpen,
-      );
-    });
-  }, [data, searchParams]);
-
-  useEffect(() => {
-    if (!hydratedFromUrlRef.current || !pathname) {
+    if (!urlHydrated || typeof window === "undefined") {
       return;
     }
 
@@ -268,24 +258,23 @@ export function DashboardClient({ data }: DashboardClientProps) {
       runIndex: selectedRunIndex,
     });
     const nextSearch = nextParams.toString();
-    const currentSearch = searchParams.toString();
+    const currentSearch = window.location.search.replace(/^\?/, "");
 
     if (nextSearch === currentSearch) {
       return;
     }
 
+    const pathname = window.location.pathname || "/";
     const nextUrl = nextSearch ? `${pathname}?${nextSearch}` : pathname;
-    router.replace(nextUrl, { scroll: false });
+    window.history.replaceState(window.history.state, "", nextUrl);
   }, [
     inspectedModelName,
     inspectorOpen,
-    pathname,
-    router,
-    searchParams,
     selectedMethodId,
     selectedQuantityId,
     selectedRunIndex,
     sortMode,
+    urlHydrated,
   ]);
 
   useEffect(() => {
@@ -523,7 +512,10 @@ export function DashboardClient({ data }: DashboardClientProps) {
                 type="button"
                 onClick={() => {
                   const nextUrl = buildShareUrl({
-                    pathname,
+                    pathname:
+                      typeof window === "undefined"
+                        ? "/"
+                        : window.location.pathname || "/",
                     quantityId: selectedQuantity.quantityId,
                     methodId: selectedMethod.id,
                     sortMode,
@@ -1216,6 +1208,13 @@ function normalizeRunIndex(value: string | null) {
   }
   const parsed = Number.parseInt(value, 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
+}
+
+function getCurrentSearchParams() {
+  if (typeof window === "undefined") {
+    return new URLSearchParams();
+  }
+  return new URLSearchParams(window.location.search);
 }
 
 function getQuantityNote(quantityId: string): string | null {
