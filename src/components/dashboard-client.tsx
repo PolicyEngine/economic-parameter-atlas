@@ -7,7 +7,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { Container, DashboardShell, Header, logos } from "@policyengine/ui-kit";
+import { Container, DashboardShell, Header } from "@policyengine/ui-kit";
 
 import { IntervalPlot } from "@/components/interval-plot";
 import { ProviderMark } from "@/components/provider-mark";
@@ -313,26 +313,24 @@ export function DashboardClient({ data }: DashboardClientProps) {
 
   return (
     <DashboardShell className="relative z-10 min-h-screen">
-      <Header
-        variant="dark"
-        logo={
-          <img
-            src={logos.whiteWordmark}
-            alt="PolicyEngine"
-            className="h-5 w-auto"
-          />
-        }
-        actions={
-          <div className="flex items-center gap-5">
-            <Stat label="Quantities" value={`${data.stats.quantityCount}`} />
-            <Stat label="Models" value={`${data.stats.modelCount}`} />
-          </div>
-        }
+      {/* TODO(ui-kit-migration): re-add header subtitle, actions stats, and dark variant when Header supports them */}
+      <Header navItems={[]} />
+
+      <Container
+        className="flex max-w-[1400px] items-center justify-between gap-4 px-6 py-3"
+        style={{ borderBottom: "1px solid var(--border)" }}
       >
-        <span className="ml-2 font-semibold text-white">
+        <span
+          className="font-serif text-lg font-semibold"
+          style={{ color: "var(--text-primary)" }}
+        >
           Economic Parameter Atlas
         </span>
-      </Header>
+        <div className="flex items-center gap-5">
+          <Stat label="Quantities" value={`${data.stats.quantityCount}`} />
+          <Stat label="Models" value={`${data.stats.modelCount}`} />
+        </div>
+      </Container>
 
       {/* Two-column layout: sidebar + main */}
       <Container className="grid max-w-[1400px] xl:grid-cols-[280px_minmax(0,1fr)]">
